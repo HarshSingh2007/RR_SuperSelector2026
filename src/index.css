@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0B1020;
+    color: #F7F7FB;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B1020;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #29334C;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E90074;
+  }
+}
+
+/* Glass & Card effects */
+.rr-glass-card {
+  background: rgba(23, 31, 53, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid #29334C;
+  border-radius: 14px;
+}
+
+.rr-glass-card:hover {
+  border-color: #384666;
+}
+
+.rr-gradient-border {
+  position: relative;
+  border-radius: 14px;
+  background: #171F35;
+}
+
+.rr-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 15px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(233, 0, 116, 0.4), rgba(117, 69, 200, 0.2), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Cricket Seam Background Texture */
+.cricket-seam-texture {
+  background-image: radial-gradient(rgba(233, 0, 116, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Stadium Floodlight Radial Ambient Glow */
+.stadium-ambient-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(117, 69, 200, 0.12) 0%, rgba(233, 0, 116, 0.05) 30%, transparent 70%);
+}
+
+/* Subtle Pitch Crease Accent */
+.pitch-crease-line {
+  border-bottom: 2px dashed rgba(41, 51, 76, 0.8);
+  position: relative;
+}
+
+.pitch-crease-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(233, 0, 116, 0.5), transparent);
+}
+
+/* Smooth Rotation for Cricket Ball Indicators */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Pulse animation for live indicators */
+@keyframes pulse-pink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-pink {
+  animation: pulse-pink 2s infinite ease-in-out;
+}
+
+/* Print styles for reporting */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .rr-glass-card {
+    background: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    color: #000000 !important;
+  }
+}

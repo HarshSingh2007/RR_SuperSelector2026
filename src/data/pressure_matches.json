@@ -1,0 +1,46 @@
+[
+  {
+    "id": "13512",
+    "name": "West Indies vs England (2022 Match 2)",
+    "situation": "Innings 2: West Indies chasing 172. 10 runs needed in final over with 8 wickets down.",
+    "result": "England Won by 1 Run",
+    "ballsRemaining": 6,
+    "runsNeeded": 10,
+    "wicketsInHand": 2,
+    "pressureIndex": 0.94,
+    "pressureCategory": "Extreme"
+  },
+  {
+    "id": "IPL_RR_KKR",
+    "name": "Rajasthan Royals vs Kolkata Knight Riders (IPL 2024)",
+    "situation": "Jos Buttler century chase: 46 runs needed off 18 balls with tailenders.",
+    "result": "Rajasthan Royals Won by 2 Wickets on Last Ball",
+    "ballsRemaining": 18,
+    "runsNeeded": 46,
+    "wicketsInHand": 2,
+    "pressureIndex": 0.98,
+    "pressureCategory": "Extreme"
+  },
+  {
+    "id": "IPL_GT_CSK",
+    "name": "Chennai Super Kings vs Gujarat Titans (IPL 2023 Final)",
+    "situation": "CSK revised target 171 in 15 overs: 10 needed off 2 balls with Ravindra Jadeja on strike.",
+    "result": "CSK Won by 5 Wickets (DLS)",
+    "ballsRemaining": 2,
+    "runsNeeded": 10,
+    "wicketsInHand": 5,
+    "pressureIndex": 1,
+    "pressureCategory": "Extreme"
+  },
+  {
+    "id": "IPL_RR_PBKS",
+    "name": "Rajasthan Royals vs Punjab Kings (IPL 2024)",
+    "situation": "Shimron Hetmyer & Rovman Powell finish: 34 runs needed off 16 balls.",
+    "result": "Rajasthan Royals Won by 3 Wickets with 1 ball to spare",
+    "ballsRemaining": 16,
+    "runsNeeded": 34,
+    "wicketsInHand": 4,
+    "pressureIndex": 0.89,
+    "pressureCategory": "Extreme"
+  }
+]

@@ -1,0 +1,5963 @@
+[
+  {
+    "rank": 1,
+    "id": "7897",
+    "name": "Namboori Tilak Varma",
+    "team": "Mumbai Indians",
+    "teams": [
+      "Mumbai Indians",
+      "India",
+      "India A"
+    ],
+    "matchesAnalysed": 127,
+    "pressureMatches": 17,
+    "totalBalls": 2507,
+    "totalRuns": 3578,
+    "totalSR": 142.7,
+    "normalBalls": 2348,
+    "normalRuns": 3272,
+    "normalSR": 139.4,
+    "pressureBalls": 159,
+    "pressureRuns": 306,
+    "pressureSR": 192.5,
+    "srDelta": 53.1,
+    "boundaryPct": 24.5,
+    "fours": 20,
+    "sixes": 19,
+    "dismissalRate": 43.7,
+    "dismissals": 7,
+    "dotPct": 22.6,
+    "deathSR": 191.2,
+    "chaseSR": 192.5,
+    "consistencyScore": 71.4,
+    "confidenceWeight": 0.93,
+    "rating": 95.1,
+    "verdict": "Namboori Tilak Varma ranks #1 with an overall Batting Pressure Index of 95.1. Characterized by explosive strike rate acceleration under pressure (+53.1 delta over baseline), elite boundary clearing capacity (24.5% boundary rate), outstanding wicket preservation (43.7 runs per dismissal). Across 17 high-leverage matches, scored 306 runs from 159 balls at an elite strike rate of 192.5, compared to a baseline of 139.4.",
+    "seasons": {
+      "2022": {
+        "balls": 302,
+        "runs": 395,
+        "pressureBalls": 9,
+        "pressureRuns": 11
+      },
+      "2023": {
+        "balls": 391,
+        "runs": 592,
+        "pressureBalls": 13,
+        "pressureRuns": 18
+      },
+      "2024": {
+        "balls": 535,
+        "runs": 833,
+        "pressureBalls": 18,
+        "pressureRuns": 47
+      },
+      "2025": {
+        "balls": 685,
+        "runs": 904,
+        "pressureBalls": 44,
+        "pressureRuns": 89
+      },
+      "2026": {
+        "balls": 594,
+        "runs": 854,
+        "pressureBalls": 75,
+        "pressureRuns": 141
+      }
+    },
+    "ipl": {
+      "balls": 65,
+      "runs": 131,
+      "sr": 201.5
+    },
+    "t20i": {
+      "balls": 94,
+      "runs": 175,
+      "sr": 186.2
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "7897",
+    "pressure_rating": 95.1,
+    "keyMetric": "SR 192.5"
+  },
+  {
+    "rank": 2,
+    "id": "20702",
+    "name": "Tristan Stubbs",
+    "team": "Delhi Capitals",
+    "teams": [
+      "Mumbai Indians",
+      "South Africa",
+      "Delhi Capitals"
+    ],
+    "matchesAnalysed": 69,
+    "pressureMatches": 16,
+    "totalBalls": 1080,
+    "totalRuns": 1616,
+    "totalSR": 149.6,
+    "normalBalls": 922,
+    "normalRuns": 1307,
+    "normalSR": 141.8,
+    "pressureBalls": 158,
+    "pressureRuns": 309,
+    "pressureSR": 195.6,
+    "srDelta": 53.8,
+    "boundaryPct": 25.9,
+    "fours": 18,
+    "sixes": 23,
+    "dismissalRate": 44.1,
+    "dismissals": 7,
+    "dotPct": 19.6,
+    "deathSR": 203.3,
+    "chaseSR": 195.6,
+    "consistencyScore": 70.6,
+    "confidenceWeight": 0.93,
+    "rating": 95,
+    "verdict": "Tristan Stubbs ranks #2 with an overall Batting Pressure Index of 95. Characterized by explosive strike rate acceleration under pressure (+53.8 delta over baseline), elite boundary clearing capacity (25.9% boundary rate), outstanding wicket preservation (44.1 runs per dismissal). Across 16 high-leverage matches, scored 309 runs from 158 balls at an elite strike rate of 195.6, compared to a baseline of 141.8.",
+    "seasons": {
+      "2022": {
+        "balls": 59,
+        "runs": 121,
+        "pressureBalls": 22,
+        "pressureRuns": 50
+      },
+      "2023": {
+        "balls": 80,
+        "runs": 91,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 376,
+        "runs": 638,
+        "pressureBalls": 62,
+        "pressureRuns": 134
+      },
+      "2025": {
+        "balls": 325,
+        "runs": 458,
+        "pressureBalls": 28,
+        "pressureRuns": 44
+      },
+      "2026": {
+        "balls": 221,
+        "runs": 285,
+        "pressureBalls": 46,
+        "pressureRuns": 81
+      },
+      "2022/23": {
+        "balls": 19,
+        "runs": 23,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 102,
+      "runs": 212,
+      "sr": 207.8
+    },
+    "t20i": {
+      "balls": 56,
+      "runs": 97,
+      "sr": 173.2
+    },
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "target",
+    "player_id": "20702",
+    "pressure_rating": 95,
+    "keyMetric": "SR 195.6"
+  },
+  {
+    "rank": 3,
+    "id": "4708",
+    "name": "Rinku Singh",
+    "team": "Kolkata Knight Riders",
+    "teams": [
+      "Kolkata Knight Riders",
+      "India"
+    ],
+    "matchesAnalysed": 83,
+    "pressureMatches": 13,
+    "totalBalls": 1278,
+    "totalRuns": 1953,
+    "totalSR": 152.8,
+    "normalBalls": 1138,
+    "normalRuns": 1644,
+    "normalSR": 144.5,
+    "pressureBalls": 140,
+    "pressureRuns": 309,
+    "pressureSR": 220.7,
+    "srDelta": 76.3,
+    "boundaryPct": 36.4,
+    "fours": 29,
+    "sixes": 22,
+    "dismissalRate": 77.3,
+    "dismissals": 4,
+    "dotPct": 25.7,
+    "deathSR": 240.9,
+    "chaseSR": 220.7,
+    "consistencyScore": 70.5,
+    "confidenceWeight": 0.92,
+    "rating": 94.5,
+    "verdict": "Rinku Singh ranks #3 with an overall Batting Pressure Index of 94.5. Characterized by explosive strike rate acceleration under pressure (+76.3 delta over baseline), elite boundary clearing capacity (36.4% boundary rate), outstanding wicket preservation (77.3 runs per dismissal). Across 13 high-leverage matches, scored 309 runs from 140 balls at an elite strike rate of 220.7, compared to a baseline of 144.5.",
+    "seasons": {
+      "2022": {
+        "balls": 117,
+        "runs": 174,
+        "pressureBalls": 17,
+        "pressureRuns": 48
+      },
+      "2023": {
+        "balls": 444,
+        "runs": 692,
+        "pressureBalls": 81,
+        "pressureRuns": 187
+      },
+      "2024": {
+        "balls": 273,
+        "runs": 413,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 166,
+        "runs": 247,
+        "pressureBalls": 25,
+        "pressureRuns": 52
+      },
+      "2026": {
+        "balls": 278,
+        "runs": 427,
+        "pressureBalls": 17,
+        "pressureRuns": 22
+      }
+    },
+    "ipl": {
+      "balls": 139,
+      "runs": 305,
+      "sr": 219.4
+    },
+    "t20i": {
+      "balls": 1,
+      "runs": 4,
+      "sr": 400
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "4708",
+    "pressure_rating": 94.5,
+    "keyMetric": "SR 220.7"
+  },
+  {
+    "rank": 4,
+    "id": "8",
+    "name": "Mahendra Singh Dhoni",
+    "team": "Chennai Super Kings",
+    "teams": [
+      "Chennai Super Kings"
+    ],
+    "matchesAnalysed": 48,
+    "pressureMatches": 15,
+    "totalBalls": 460,
+    "totalRuns": 690,
+    "totalSR": 150,
+    "normalBalls": 305,
+    "normalRuns": 422,
+    "normalSR": 138.4,
+    "pressureBalls": 155,
+    "pressureRuns": 268,
+    "pressureSR": 172.9,
+    "srDelta": 34.5,
+    "boundaryPct": 24.5,
+    "fours": 21,
+    "sixes": 17,
+    "dismissalRate": 38.3,
+    "dismissals": 7,
+    "dotPct": 25.2,
+    "deathSR": 183.1,
+    "chaseSR": 172.9,
+    "consistencyScore": 73.4,
+    "confidenceWeight": 0.93,
+    "rating": 93.1,
+    "verdict": "Mahendra Singh Dhoni ranks #4 with an overall Batting Pressure Index of 93.1. Characterized by marked positive strike rate boost (+34.5), elite boundary clearing capacity (24.5% boundary rate), outstanding wicket preservation (38.3 runs per dismissal). Across 15 high-leverage matches, scored 268 runs from 155 balls at an elite strike rate of 172.9, compared to a baseline of 138.4.",
+    "seasons": {
+      "2022": {
+        "balls": 187,
+        "runs": 231,
+        "pressureBalls": 36,
+        "pressureRuns": 55
+      },
+      "2023": {
+        "balls": 55,
+        "runs": 102,
+        "pressureBalls": 16,
+        "pressureRuns": 31
+      },
+      "2024": {
+        "balls": 73,
+        "runs": 161,
+        "pressureBalls": 31,
+        "pressureRuns": 64
+      },
+      "2025": {
+        "balls": 145,
+        "runs": 196,
+        "pressureBalls": 72,
+        "pressureRuns": 118
+      }
+    },
+    "ipl": {
+      "balls": 155,
+      "runs": 268,
+      "sr": 172.9
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "zap",
+    "player_id": "8",
+    "pressure_rating": 93.1,
+    "keyMetric": "SR 172.9"
+  },
+  {
+    "rank": 5,
+    "id": "796",
+    "name": "Matthew Wade",
+    "team": "Gujarat Titans",
+    "teams": [
+      "Australia",
+      "Gujarat Titans"
+    ],
+    "matchesAnalysed": 30,
+    "pressureMatches": 9,
+    "totalBalls": 425,
+    "totalRuns": 586,
+    "totalSR": 137.9,
+    "normalBalls": 337,
+    "normalRuns": 436,
+    "normalSR": 129.4,
+    "pressureBalls": 88,
+    "pressureRuns": 150,
+    "pressureSR": 170.5,
+    "srDelta": 41.1,
+    "boundaryPct": 21.6,
+    "fours": 14,
+    "sixes": 5,
+    "dismissalRate": 75,
+    "dismissals": 2,
+    "dotPct": 20.5,
+    "deathSR": 177.8,
+    "chaseSR": 170.5,
+    "consistencyScore": 73.8,
+    "confidenceWeight": 0.86,
+    "rating": 92.1,
+    "verdict": "Matthew Wade ranks #5 with an overall Batting Pressure Index of 92.1. Characterized by explosive strike rate acceleration under pressure (+41.1 delta over baseline), outstanding wicket preservation (75.0 runs per dismissal). Across 9 high-leverage matches, scored 150 runs from 88 balls at an elite strike rate of 170.5, compared to a baseline of 129.4.",
+    "seasons": {
+      "2022": {
+        "balls": 320,
+        "runs": 431,
+        "pressureBalls": 32,
+        "pressureRuns": 63
+      },
+      "2023": {
+        "balls": 75,
+        "runs": 122,
+        "pressureBalls": 49,
+        "pressureRuns": 80
+      },
+      "2024": {
+        "balls": 30,
+        "runs": 33,
+        "pressureBalls": 7,
+        "pressureRuns": 7
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 88,
+      "runs": 150,
+      "sr": 170.5
+    },
+    "country": "Australia",
+    "country_code": "AU",
+    "country_flag": "🇦🇺",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "zap",
+    "player_id": "796",
+    "pressure_rating": 92.1,
+    "keyMetric": "SR 170.5"
+  },
+  {
+    "rank": 6,
+    "id": "6651",
+    "name": "Towhid Hridoy",
+    "team": "Bangladesh",
+    "teams": [
+      "Bangladesh",
+      "Bangladesh A"
+    ],
+    "matchesAnalysed": 53,
+    "pressureMatches": 4,
+    "totalBalls": 994,
+    "totalRuns": 1253,
+    "totalSR": 126.1,
+    "normalBalls": 940,
+    "normalRuns": 1152,
+    "normalSR": 122.6,
+    "pressureBalls": 54,
+    "pressureRuns": 101,
+    "pressureSR": 187,
+    "srDelta": 64.5,
+    "boundaryPct": 25.9,
+    "fours": 9,
+    "sixes": 5,
+    "dismissalRate": 101,
+    "dismissals": 1,
+    "dotPct": 20.4,
+    "deathSR": 200,
+    "chaseSR": 187,
+    "consistencyScore": 78,
+    "confidenceWeight": 0.82,
+    "rating": 92,
+    "verdict": "Towhid Hridoy ranks #6 with an overall Batting Pressure Index of 92. Characterized by explosive strike rate acceleration under pressure (+64.5 delta over baseline), elite boundary clearing capacity (25.9% boundary rate), exceptional match-to-match consistency (78/100), outstanding wicket preservation (101.0 runs per dismissal). Across 4 high-leverage matches, scored 101 runs from 54 balls at an elite strike rate of 187.0, compared to a baseline of 122.6.",
+    "seasons": {
+      "2023": {
+        "balls": 151,
+        "runs": 191,
+        "pressureBalls": 3,
+        "pressureRuns": 11
+      },
+      "2024": {
+        "balls": 257,
+        "runs": 339,
+        "pressureBalls": 20,
+        "pressureRuns": 32
+      },
+      "2025": {
+        "balls": 421,
+        "runs": 491,
+        "pressureBalls": 18,
+        "pressureRuns": 33
+      },
+      "2026": {
+        "balls": 165,
+        "runs": 232,
+        "pressureBalls": 13,
+        "pressureRuns": 25
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 54,
+      "runs": 101,
+      "sr": 187
+    },
+    "country": "Bangladesh",
+    "country_code": "BD",
+    "country_flag": "🇧🇩",
+    "player_role": "Batter",
+    "avatar_icon": "flame",
+    "player_id": "6651",
+    "pressure_rating": 92,
+    "keyMetric": "SR 187"
+  },
+  {
+    "rank": 7,
+    "id": "37052",
+    "name": "Naman Dhir",
+    "team": "Mumbai Indians",
+    "teams": [
+      "Mumbai Indians",
+      "India A",
+      "India"
+    ],
+    "matchesAnalysed": 46,
+    "pressureMatches": 7,
+    "totalBalls": 588,
+    "totalRuns": 992,
+    "totalSR": 168.7,
+    "normalBalls": 515,
+    "normalRuns": 824,
+    "normalSR": 160,
+    "pressureBalls": 73,
+    "pressureRuns": 168,
+    "pressureSR": 230.1,
+    "srDelta": 70.1,
+    "boundaryPct": 35.6,
+    "fours": 14,
+    "sixes": 12,
+    "dismissalRate": 56,
+    "dismissals": 3,
+    "dotPct": 19.2,
+    "deathSR": 234.6,
+    "chaseSR": 230.1,
+    "consistencyScore": 68.6,
+    "confidenceWeight": 0.84,
+    "rating": 92,
+    "verdict": "Naman Dhir ranks #7 with an overall Batting Pressure Index of 92. Characterized by explosive strike rate acceleration under pressure (+70.1 delta over baseline), elite boundary clearing capacity (35.6% boundary rate), outstanding wicket preservation (56.0 runs per dismissal). Across 7 high-leverage matches, scored 168 runs from 73 balls at an elite strike rate of 230.1, compared to a baseline of 160.0.",
+    "seasons": {
+      "2024": {
+        "balls": 78,
+        "runs": 140,
+        "pressureBalls": 27,
+        "pressureRuns": 62
+      },
+      "2025": {
+        "balls": 212,
+        "runs": 358,
+        "pressureBalls": 15,
+        "pressureRuns": 25
+      },
+      "2026": {
+        "balls": 298,
+        "runs": 494,
+        "pressureBalls": 31,
+        "pressureRuns": 81
+      }
+    },
+    "ipl": {
+      "balls": 44,
+      "runs": 88,
+      "sr": 200
+    },
+    "t20i": {
+      "balls": 29,
+      "runs": 80,
+      "sr": 275.9
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "crosshair",
+    "player_id": "37052",
+    "pressure_rating": 89.1,
+    "keyMetric": "SR 199.6 (+52.3 delta)"
+  },
+  {
+    "rank": 8,
+    "id": "3605",
+    "name": "Aiden Markram",
+    "team": "Lucknow Super Giants",
+    "teams": [
+      "Sunrisers Hyderabad",
+      "South Africa",
+      "Lucknow Super Giants"
+    ],
+    "matchesAnalysed": 94,
+    "pressureMatches": 5,
+    "totalBalls": 1669,
+    "totalRuns": 2390,
+    "totalSR": 143.2,
+    "normalBalls": 1607,
+    "normalRuns": 2264,
+    "normalSR": 140.9,
+    "pressureBalls": 62,
+    "pressureRuns": 126,
+    "pressureSR": 203.2,
+    "srDelta": 62.3,
+    "boundaryPct": 29,
+    "fours": 12,
+    "sixes": 6,
+    "dismissalRate": 63,
+    "dismissals": 2,
+    "dotPct": 14.5,
+    "deathSR": 238.6,
+    "chaseSR": 203.2,
+    "consistencyScore": 72.8,
+    "confidenceWeight": 0.83,
+    "rating": 91.9,
+    "verdict": "Aiden Markram ranks #8 with an overall Batting Pressure Index of 91.9. Characterized by explosive strike rate acceleration under pressure (+62.3 delta over baseline), elite boundary clearing capacity (29.0% boundary rate), outstanding wicket preservation (63.0 runs per dismissal). Across 5 high-leverage matches, scored 126 runs from 62 balls at an elite strike rate of 203.2, compared to a baseline of 140.9.",
+    "seasons": {
+      "2022": {
+        "balls": 346,
+        "runs": 515,
+        "pressureBalls": 23,
+        "pressureRuns": 41
+      },
+      "2023": {
+        "balls": 344,
+        "runs": 487,
+        "pressureBalls": 17,
+        "pressureRuns": 43
+      },
+      "2024": {
+        "balls": 262,
+        "runs": 346,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 445,
+        "runs": 655,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 230,
+        "runs": 333,
+        "pressureBalls": 22,
+        "pressureRuns": 42
+      },
+      "2022/23": {
+        "balls": 42,
+        "runs": 54,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 48,
+      "runs": 87,
+      "sr": 181.3
+    },
+    "t20i": {
+      "balls": 14,
+      "runs": 39,
+      "sr": 278.6
+    },
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "player_role": "Batter",
+    "avatar_icon": "sword",
+    "player_id": "3605",
+    "pressure_rating": 91.9,
+    "keyMetric": "SR 203.2"
+  },
+  {
+    "rank": 9,
+    "id": "8221",
+    "name": "Nitish Reddy",
+    "team": "Sunrisers Hyderabad",
+    "teams": [
+      "Sunrisers Hyderabad",
+      "India"
+    ],
+    "matchesAnalysed": 45,
+    "pressureMatches": 5,
+    "totalBalls": 671,
+    "totalRuns": 1010,
+    "totalSR": 150.5,
+    "normalBalls": 617,
+    "normalRuns": 893,
+    "normalSR": 144.7,
+    "pressureBalls": 54,
+    "pressureRuns": 117,
+    "pressureSR": 216.7,
+    "srDelta": 71.9,
+    "boundaryPct": 27.8,
+    "fours": 6,
+    "sixes": 9,
+    "dismissalRate": 117,
+    "dismissals": 1,
+    "dotPct": 13,
+    "deathSR": 208.3,
+    "chaseSR": 216.7,
+    "consistencyScore": 74.6,
+    "confidenceWeight": 0.82,
+    "rating": 91.7,
+    "verdict": "Nitish Reddy ranks #9 with an overall Batting Pressure Index of 91.7. Characterized by explosive strike rate acceleration under pressure (+71.9 delta over baseline), elite boundary clearing capacity (27.8% boundary rate), outstanding wicket preservation (117.0 runs per dismissal). Across 5 high-leverage matches, scored 117 runs from 54 balls at an elite strike rate of 216.7, compared to a baseline of 144.7.",
+    "seasons": {
+      "2024": {
+        "balls": 262,
+        "runs": 393,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 152,
+        "runs": 181,
+        "pressureBalls": 10,
+        "pressureRuns": 21
+      },
+      "2026": {
+        "balls": 257,
+        "runs": 436,
+        "pressureBalls": 44,
+        "pressureRuns": 96
+      }
+    },
+    "ipl": {
+      "balls": 20,
+      "runs": 50,
+      "sr": 250
+    },
+    "t20i": {
+      "balls": 34,
+      "runs": 67,
+      "sr": 197.1
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "8221",
+    "pressure_rating": 91.7,
+    "keyMetric": "SR 216.7"
+  },
+  {
+    "rank": 10,
+    "id": "1077",
+    "name": "David Miller",
+    "team": "Delhi Capitals",
+    "teams": [
+      "Gujarat Titans",
+      "South Africa",
+      "Lucknow Super Giants",
+      "Delhi Capitals"
+    ],
+    "matchesAnalysed": 81,
+    "pressureMatches": 20,
+    "totalBalls": 1276,
+    "totalRuns": 1902,
+    "totalSR": 149.1,
+    "normalBalls": 1101,
+    "normalRuns": 1563,
+    "normalSR": 142,
+    "pressureBalls": 175,
+    "pressureRuns": 339,
+    "pressureSR": 193.7,
+    "srDelta": 51.8,
+    "boundaryPct": 26.9,
+    "fours": 20,
+    "sixes": 27,
+    "dismissalRate": 33.9,
+    "dismissals": 10,
+    "dotPct": 26.9,
+    "deathSR": 214.6,
+    "chaseSR": 193.7,
+    "consistencyScore": 65.9,
+    "confidenceWeight": 0.95,
+    "rating": 91.2,
+    "verdict": "David Miller ranks #10 with an overall Batting Pressure Index of 91.2. Characterized by explosive strike rate acceleration under pressure (+51.8 delta over baseline), elite boundary clearing capacity (26.9% boundary rate). Across 20 high-leverage matches, scored 339 runs from 175 balls at an elite strike rate of 193.7, compared to a baseline of 142.0.",
+    "seasons": {
+      "2022": {
+        "balls": 436,
+        "runs": 639,
+        "pressureBalls": 53,
+        "pressureRuns": 98
+      },
+      "2023": {
+        "balls": 256,
+        "runs": 378,
+        "pressureBalls": 11,
+        "pressureRuns": 5
+      },
+      "2024": {
+        "balls": 247,
+        "runs": 364,
+        "pressureBalls": 42,
+        "pressureRuns": 83
+      },
+      "2025": {
+        "balls": 149,
+        "runs": 192,
+        "pressureBalls": 10,
+        "pressureRuns": 13
+      },
+      "2026": {
+        "balls": 137,
+        "runs": 211,
+        "pressureBalls": 33,
+        "pressureRuns": 74
+      },
+      "2022/23": {
+        "balls": 51,
+        "runs": 118,
+        "pressureBalls": 26,
+        "pressureRuns": 66
+      }
+    },
+    "ipl": {
+      "balls": 107,
+      "runs": 215,
+      "sr": 200.9
+    },
+    "t20i": {
+      "balls": 68,
+      "runs": 124,
+      "sr": 182.4
+    },
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "player_role": "Batter",
+    "avatar_icon": "crosshair",
+    "player_id": "1077",
+    "pressure_rating": 91.2,
+    "keyMetric": "SR 193.7"
+  },
+  {
+    "rank": 11,
+    "id": "8101",
+    "name": "Ashutosh Sharma",
+    "team": "Delhi Capitals",
+    "teams": [
+      "Punjab Kings",
+      "Delhi Capitals",
+      "India A"
+    ],
+    "matchesAnalysed": 28,
+    "pressureMatches": 15,
+    "totalBalls": 343,
+    "totalRuns": 570,
+    "totalSR": 166.2,
+    "normalBalls": 231,
+    "normalRuns": 323,
+    "normalSR": 139.8,
+    "pressureBalls": 112,
+    "pressureRuns": 247,
+    "pressureSR": 220.5,
+    "srDelta": 80.7,
+    "boundaryPct": 34.8,
+    "fours": 22,
+    "sixes": 17,
+    "dismissalRate": 35.3,
+    "dismissals": 7,
+    "dotPct": 22.3,
+    "deathSR": 228.6,
+    "chaseSR": 220.5,
+    "consistencyScore": 70.1,
+    "confidenceWeight": 0.89,
+    "rating": 90.5,
+    "verdict": "Ashutosh Sharma ranks #11 with an overall Batting Pressure Index of 90.5. Characterized by explosive strike rate acceleration under pressure (+80.7 delta over baseline), elite boundary clearing capacity (34.8% boundary rate), outstanding wicket preservation (35.3 runs per dismissal). Across 15 high-leverage matches, scored 247 runs from 112 balls at an elite strike rate of 220.5, compared to a baseline of 139.8.",
+    "seasons": {
+      "2024": {
+        "balls": 110,
+        "runs": 183,
+        "pressureBalls": 43,
+        "pressureRuns": 84
+      },
+      "2025": {
+        "balls": 139,
+        "runs": 216,
+        "pressureBalls": 38,
+        "pressureRuns": 83
+      },
+      "2026": {
+        "balls": 94,
+        "runs": 171,
+        "pressureBalls": 31,
+        "pressureRuns": 80
+      }
+    },
+    "ipl": {
+      "balls": 106,
+      "runs": 234,
+      "sr": 220.8
+    },
+    "t20i": {
+      "balls": 6,
+      "runs": 13,
+      "sr": 216.7
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "flame",
+    "player_id": "8101",
+    "pressure_rating": 81.8,
+    "keyMetric": "SR 176.3 (+81.0 delta)"
+  },
+  {
+    "rank": 12,
+    "id": "7260",
+    "name": "Dhruv Jurel",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Rajasthan Royals",
+      "India"
+    ],
+    "matchesAnalysed": 54,
+    "pressureMatches": 14,
+    "totalBalls": 798,
+    "totalRuns": 1207,
+    "totalSR": 151.3,
+    "normalBalls": 695,
+    "normalRuns": 996,
+    "normalSR": 143.3,
+    "pressureBalls": 103,
+    "pressureRuns": 211,
+    "pressureSR": 204.9,
+    "srDelta": 61.5,
+    "boundaryPct": 31.1,
+    "fours": 16,
+    "sixes": 16,
+    "dismissalRate": 35.2,
+    "dismissals": 6,
+    "dotPct": 25.2,
+    "deathSR": 193.3,
+    "chaseSR": 204.9,
+    "consistencyScore": 66.3,
+    "confidenceWeight": 0.88,
+    "rating": 89.8,
+    "verdict": "Dhruv Jurel ranks #12 with an overall Batting Pressure Index of 89.8. Characterized by explosive strike rate acceleration under pressure (+61.5 delta over baseline), elite boundary clearing capacity (31.1% boundary rate), outstanding wicket preservation (35.2 runs per dismissal). Across 14 high-leverage matches, scored 211 runs from 103 balls at an elite strike rate of 204.9, compared to a baseline of 143.3.",
+    "seasons": {
+      "2023": {
+        "balls": 88,
+        "runs": 152,
+        "pressureBalls": 40,
+        "pressureRuns": 86
+      },
+      "2024": {
+        "balls": 155,
+        "runs": 201,
+        "pressureBalls": 31,
+        "pressureRuns": 49
+      },
+      "2025": {
+        "balls": 222,
+        "runs": 339,
+        "pressureBalls": 32,
+        "pressureRuns": 76
+      },
+      "2026": {
+        "balls": 333,
+        "runs": 515,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 100,
+      "runs": 209,
+      "sr": 209
+    },
+    "t20i": {
+      "balls": 3,
+      "runs": 2,
+      "sr": 66.7
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "crosshair",
+    "player_id": "7260",
+    "pressure_rating": 89.8,
+    "keyMetric": "SR 204.9"
+  },
+  {
+    "rank": 13,
+    "id": "2756",
+    "name": "Shashank Singh",
+    "team": "Punjab Kings",
+    "teams": [
+      "Sunrisers Hyderabad",
+      "Punjab Kings"
+    ],
+    "matchesAnalysed": 42,
+    "pressureMatches": 15,
+    "totalBalls": 560,
+    "totalRuns": 905,
+    "totalSR": 161.6,
+    "normalBalls": 425,
+    "normalRuns": 663,
+    "normalSR": 156,
+    "pressureBalls": 135,
+    "pressureRuns": 242,
+    "pressureSR": 179.3,
+    "srDelta": 23.3,
+    "boundaryPct": 25.9,
+    "fours": 18,
+    "sixes": 17,
+    "dismissalRate": 40.3,
+    "dismissals": 6,
+    "dotPct": 28.1,
+    "deathSR": 177.3,
+    "chaseSR": 179.3,
+    "consistencyScore": 63,
+    "confidenceWeight": 0.91,
+    "rating": 88.6,
+    "verdict": "Shashank Singh ranks #13 with an overall Batting Pressure Index of 88.6. Characterized by marked positive strike rate boost (+23.3), elite boundary clearing capacity (25.9% boundary rate), outstanding wicket preservation (40.3 runs per dismissal). Across 15 high-leverage matches, scored 242 runs from 135 balls at an elite strike rate of 179.3, compared to a baseline of 156.0.",
+    "seasons": {
+      "2022": {
+        "balls": 47,
+        "runs": 69,
+        "pressureBalls": 32,
+        "pressureRuns": 33
+      },
+      "2024": {
+        "balls": 215,
+        "runs": 354,
+        "pressureBalls": 37,
+        "pressureRuns": 82
+      },
+      "2025": {
+        "balls": 228,
+        "runs": 350,
+        "pressureBalls": 38,
+        "pressureRuns": 68
+      },
+      "2026": {
+        "balls": 70,
+        "runs": 132,
+        "pressureBalls": 28,
+        "pressureRuns": 59
+      }
+    },
+    "ipl": {
+      "balls": 135,
+      "runs": 242,
+      "sr": 179.3
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "sword",
+    "player_id": "2756",
+    "pressure_rating": 84.1,
+    "keyMetric": "SR 190.1 (+86.3 delta)"
+  },
+  {
+    "rank": 14,
+    "id": "8301",
+    "name": "Asif Khan",
+    "team": "United Arab Emirates",
+    "teams": [
+      "United Arab Emirates"
+    ],
+    "matchesAnalysed": 13,
+    "pressureMatches": 4,
+    "totalBalls": 200,
+    "totalRuns": 303,
+    "totalSR": 151.5,
+    "normalBalls": 148,
+    "normalRuns": 194,
+    "normalSR": 131.1,
+    "pressureBalls": 52,
+    "pressureRuns": 109,
+    "pressureSR": 209.6,
+    "srDelta": 78.5,
+    "boundaryPct": 34.6,
+    "fours": 10,
+    "sixes": 8,
+    "dismissalRate": 36.3,
+    "dismissals": 3,
+    "dotPct": 28.8,
+    "deathSR": 190.2,
+    "chaseSR": 209.6,
+    "consistencyScore": 66.4,
+    "confidenceWeight": 0.81,
+    "rating": 88.3,
+    "verdict": "Asif Khan ranks #14 with an overall Batting Pressure Index of 88.3. Characterized by explosive strike rate acceleration under pressure (+78.5 delta over baseline), elite boundary clearing capacity (34.6% boundary rate), outstanding wicket preservation (36.3 runs per dismissal). Across 4 high-leverage matches, scored 109 runs from 52 balls at an elite strike rate of 209.6, compared to a baseline of 131.1.",
+    "seasons": {
+      "2023": {
+        "balls": 54,
+        "runs": 72,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 146,
+        "runs": 231,
+        "pressureBalls": 52,
+        "pressureRuns": 109
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 52,
+      "runs": 109,
+      "sr": 209.6
+    },
+    "country": "United Arab Emirates",
+    "country_code": "AE",
+    "country_flag": "🇦🇪",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "8301",
+    "pressure_rating": 88.3,
+    "keyMetric": "SR 209.6"
+  },
+  {
+    "rank": 15,
+    "id": "2436",
+    "name": "Dasun Shanaka",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Sri Lanka",
+      "Gujarat Titans",
+      "Rajasthan Royals"
+    ],
+    "matchesAnalysed": 61,
+    "pressureMatches": 13,
+    "totalBalls": 773,
+    "totalRuns": 1072,
+    "totalSR": 138.7,
+    "normalBalls": 663,
+    "normalRuns": 866,
+    "normalSR": 130.6,
+    "pressureBalls": 110,
+    "pressureRuns": 206,
+    "pressureSR": 187.3,
+    "srDelta": 56.7,
+    "boundaryPct": 28.2,
+    "fours": 19,
+    "sixes": 12,
+    "dismissalRate": 29.4,
+    "dismissals": 7,
+    "dotPct": 26.4,
+    "deathSR": 191.1,
+    "chaseSR": 187.3,
+    "consistencyScore": 69.5,
+    "confidenceWeight": 0.89,
+    "rating": 87.7,
+    "verdict": "Dasun Shanaka ranks #15 with an overall Batting Pressure Index of 87.7. Characterized by explosive strike rate acceleration under pressure (+56.7 delta over baseline), elite boundary clearing capacity (28.2% boundary rate). Across 13 high-leverage matches, scored 206 runs from 110 balls at an elite strike rate of 187.3, compared to a baseline of 130.6.",
+    "seasons": {
+      "2022": {
+        "balls": 229,
+        "runs": 295,
+        "pressureBalls": 41,
+        "pressureRuns": 90
+      },
+      "2023": {
+        "balls": 108,
+        "runs": 166,
+        "pressureBalls": 18,
+        "pressureRuns": 31
+      },
+      "2024": {
+        "balls": 62,
+        "runs": 93,
+        "pressureBalls": 20,
+        "pressureRuns": 34
+      },
+      "2025": {
+        "balls": 168,
+        "runs": 221,
+        "pressureBalls": 21,
+        "pressureRuns": 35
+      },
+      "2026": {
+        "balls": 206,
+        "runs": 297,
+        "pressureBalls": 10,
+        "pressureRuns": 16
+      }
+    },
+    "ipl": {
+      "balls": 9,
+      "runs": 10,
+      "sr": 111.1
+    },
+    "t20i": {
+      "balls": 101,
+      "runs": 196,
+      "sr": 194.1
+    },
+    "country": "Sri Lanka",
+    "country_code": "LK",
+    "country_flag": "🇱🇰",
+    "player_role": "Batter",
+    "avatar_icon": "sword",
+    "player_id": "2436",
+    "pressure_rating": 87.7,
+    "keyMetric": "SR 187.3"
+  },
+  {
+    "rank": 16,
+    "id": "6396",
+    "name": "Tim David",
+    "team": "Royal Challengers Bengaluru",
+    "teams": [
+      "Mumbai Indians",
+      "Australia",
+      "Royal Challengers Bengaluru"
+    ],
+    "matchesAnalysed": 98,
+    "pressureMatches": 19,
+    "totalBalls": 1215,
+    "totalRuns": 2153,
+    "totalSR": 177.2,
+    "normalBalls": 1051,
+    "normalRuns": 1835,
+    "normalSR": 174.6,
+    "pressureBalls": 164,
+    "pressureRuns": 318,
+    "pressureSR": 193.9,
+    "srDelta": 19.3,
+    "boundaryPct": 25.6,
+    "fours": 14,
+    "sixes": 28,
+    "dismissalRate": 35.3,
+    "dismissals": 9,
+    "dotPct": 27.4,
+    "deathSR": 200,
+    "chaseSR": 193.9,
+    "consistencyScore": 69.8,
+    "confidenceWeight": 0.94,
+    "rating": 86.4,
+    "verdict": "Tim David ranks #16 with an overall Batting Pressure Index of 86.4. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (25.6% boundary rate), outstanding wicket preservation (35.3 runs per dismissal). Across 19 high-leverage matches, scored 318 runs from 164 balls at an elite strike rate of 193.9, compared to a baseline of 174.6.",
+    "seasons": {
+      "2022": {
+        "balls": 178,
+        "runs": 341,
+        "pressureBalls": 27,
+        "pressureRuns": 61
+      },
+      "2023": {
+        "balls": 247,
+        "runs": 383,
+        "pressureBalls": 40,
+        "pressureRuns": 73
+      },
+      "2024": {
+        "balls": 286,
+        "runs": 471,
+        "pressureBalls": 85,
+        "pressureRuns": 168
+      },
+      "2025": {
+        "balls": 298,
+        "runs": 576,
+        "pressureBalls": 5,
+        "pressureRuns": 1
+      },
+      "2026": {
+        "balls": 206,
+        "runs": 382,
+        "pressureBalls": 7,
+        "pressureRuns": 15
+      }
+    },
+    "ipl": {
+      "balls": 125,
+      "runs": 241,
+      "sr": 192.8
+    },
+    "t20i": {
+      "balls": 39,
+      "runs": 77,
+      "sr": 197.4
+    },
+    "country": "Australia",
+    "country_code": "AU",
+    "country_flag": "🇦🇺",
+    "player_role": "Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "6396",
+    "pressure_rating": 87,
+    "keyMetric": "SR 196.9 (+44.2 delta)"
+  },
+  {
+    "rank": 17,
+    "id": "4986",
+    "name": "Rovman Powell",
+    "team": "Kolkata Knight Riders",
+    "teams": [
+      "West Indies",
+      "Delhi Capitals",
+      "Rajasthan Royals",
+      "Kolkata Knight Riders"
+    ],
+    "matchesAnalysed": 100,
+    "pressureMatches": 22,
+    "totalBalls": 1555,
+    "totalRuns": 2287,
+    "totalSR": 147.1,
+    "normalBalls": 1322,
+    "normalRuns": 1884,
+    "normalSR": 142.5,
+    "pressureBalls": 233,
+    "pressureRuns": 403,
+    "pressureSR": 173,
+    "srDelta": 30.5,
+    "boundaryPct": 23.6,
+    "fours": 22,
+    "sixes": 33,
+    "dismissalRate": 23.7,
+    "dismissals": 17,
+    "dotPct": 32.2,
+    "deathSR": 192.7,
+    "chaseSR": 173,
+    "consistencyScore": 70.3,
+    "confidenceWeight": 0.99,
+    "rating": 86.2,
+    "verdict": "Rovman Powell ranks #17 with an overall Batting Pressure Index of 86.2. Characterized by marked positive strike rate boost (+30.5), elite boundary clearing capacity (23.6% boundary rate). Across 22 high-leverage matches, scored 403 runs from 233 balls at an elite strike rate of 173.0, compared to a baseline of 142.5.",
+    "seasons": {
+      "2022": {
+        "balls": 475,
+        "runs": 723,
+        "pressureBalls": 68,
+        "pressureRuns": 113
+      },
+      "2023": {
+        "balls": 199,
+        "runs": 331,
+        "pressureBalls": 4,
+        "pressureRuns": 2
+      },
+      "2024": {
+        "balls": 391,
+        "runs": 534,
+        "pressureBalls": 96,
+        "pressureRuns": 163
+      },
+      "2025": {
+        "balls": 211,
+        "runs": 326,
+        "pressureBalls": 31,
+        "pressureRuns": 69
+      },
+      "2026": {
+        "balls": 279,
+        "runs": 373,
+        "pressureBalls": 34,
+        "pressureRuns": 56
+      }
+    },
+    "ipl": {
+      "balls": 103,
+      "runs": 159,
+      "sr": 154.4
+    },
+    "t20i": {
+      "balls": 130,
+      "runs": 244,
+      "sr": 187.7
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "4986",
+    "pressure_rating": 86.2,
+    "keyMetric": "SR 173"
+  },
+  {
+    "rank": 18,
+    "id": "152",
+    "name": "Ravindra Jadeja",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Chennai Super Kings",
+      "India",
+      "Rajasthan Royals"
+    ],
+    "matchesAnalysed": 65,
+    "pressureMatches": 16,
+    "totalBalls": 956,
+    "totalRuns": 1293,
+    "totalSR": 135.3,
+    "normalBalls": 788,
+    "normalRuns": 1027,
+    "normalSR": 130.3,
+    "pressureBalls": 168,
+    "pressureRuns": 266,
+    "pressureSR": 158.3,
+    "srDelta": 28,
+    "boundaryPct": 19.6,
+    "fours": 19,
+    "sixes": 14,
+    "dismissalRate": 33.3,
+    "dismissals": 8,
+    "dotPct": 26.2,
+    "deathSR": 162.7,
+    "chaseSR": 158.3,
+    "consistencyScore": 73.1,
+    "confidenceWeight": 0.94,
+    "rating": 85.6,
+    "verdict": "Ravindra Jadeja ranks #18 with an overall Batting Pressure Index of 85.6. Characterized by marked positive strike rate boost (+28.0). Across 16 high-leverage matches, scored 266 runs from 168 balls at an elite strike rate of 158.3, compared to a baseline of 130.3.",
+    "seasons": {
+      "2022": {
+        "balls": 203,
+        "runs": 247,
+        "pressureBalls": 28,
+        "pressureRuns": 39
+      },
+      "2023": {
+        "balls": 148,
+        "runs": 212,
+        "pressureBalls": 28,
+        "pressureRuns": 46
+      },
+      "2024": {
+        "balls": 187,
+        "runs": 267,
+        "pressureBalls": 49,
+        "pressureRuns": 81
+      },
+      "2025": {
+        "balls": 222,
+        "runs": 301,
+        "pressureBalls": 45,
+        "pressureRuns": 71
+      },
+      "2026": {
+        "balls": 196,
+        "runs": 266,
+        "pressureBalls": 18,
+        "pressureRuns": 29
+      }
+    },
+    "ipl": {
+      "balls": 153,
+      "runs": 245,
+      "sr": 160.1
+    },
+    "t20i": {
+      "balls": 15,
+      "runs": 21,
+      "sr": 140
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "152",
+    "pressure_rating": 85.6,
+    "keyMetric": "SR 158.3"
+  },
+  {
+    "rank": 19,
+    "id": "1101",
+    "name": "George Dockrell",
+    "team": "Ireland",
+    "teams": [
+      "Ireland"
+    ],
+    "matchesAnalysed": 42,
+    "pressureMatches": 7,
+    "totalBalls": 497,
+    "totalRuns": 678,
+    "totalSR": 136.4,
+    "normalBalls": 442,
+    "normalRuns": 586,
+    "normalSR": 132.6,
+    "pressureBalls": 55,
+    "pressureRuns": 92,
+    "pressureSR": 167.3,
+    "srDelta": 34.7,
+    "boundaryPct": 25.5,
+    "fours": 11,
+    "sixes": 3,
+    "dismissalRate": 30.7,
+    "dismissals": 3,
+    "dotPct": 29.1,
+    "deathSR": 163.6,
+    "chaseSR": 167.3,
+    "consistencyScore": 65.8,
+    "confidenceWeight": 0.82,
+    "rating": 85.5,
+    "verdict": "George Dockrell ranks #19 with an overall Batting Pressure Index of 85.5. Characterized by marked positive strike rate boost (+34.7), elite boundary clearing capacity (25.5% boundary rate). Across 7 high-leverage matches, scored 92 runs from 55 balls at an elite strike rate of 167.3, compared to a baseline of 132.6.",
+    "seasons": {
+      "2022": {
+        "balls": 166,
+        "runs": 250,
+        "pressureBalls": 40,
+        "pressureRuns": 63
+      },
+      "2023": {
+        "balls": 52,
+        "runs": 63,
+        "pressureBalls": 3,
+        "pressureRuns": 3
+      },
+      "2024": {
+        "balls": 124,
+        "runs": 157,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 65,
+        "runs": 79,
+        "pressureBalls": 8,
+        "pressureRuns": 15
+      },
+      "2026": {
+        "balls": 40,
+        "runs": 60,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2023/24": {
+        "balls": 50,
+        "runs": 69,
+        "pressureBalls": 4,
+        "pressureRuns": 11
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 55,
+      "runs": 92,
+      "sr": 167.3
+    },
+    "country": "Ireland",
+    "country_code": "IE",
+    "country_flag": "🇮🇪",
+    "player_role": "All-Rounder",
+    "avatar_icon": "clover",
+    "player_id": "1101",
+    "pressure_rating": 71,
+    "keyMetric": "Econ 6.34 (3 wkts)"
+  },
+  {
+    "rank": 20,
+    "id": "4823",
+    "name": "Washington Sundar",
+    "team": "Gujarat Titans",
+    "teams": [
+      "India",
+      "Sunrisers Hyderabad",
+      "Gujarat Titans"
+    ],
+    "matchesAnalysed": 48,
+    "pressureMatches": 10,
+    "totalBalls": 634,
+    "totalRuns": 887,
+    "totalSR": 139.9,
+    "normalBalls": 549,
+    "normalRuns": 735,
+    "normalSR": 133.9,
+    "pressureBalls": 85,
+    "pressureRuns": 152,
+    "pressureSR": 178.8,
+    "srDelta": 44.9,
+    "boundaryPct": 28.2,
+    "fours": 18,
+    "sixes": 6,
+    "dismissalRate": 25.3,
+    "dismissals": 6,
+    "dotPct": 29.4,
+    "deathSR": 188,
+    "chaseSR": 178.8,
+    "consistencyScore": 70,
+    "confidenceWeight": 0.86,
+    "rating": 85,
+    "verdict": "Washington Sundar ranks #20 with an overall Batting Pressure Index of 85. Characterized by explosive strike rate acceleration under pressure (+44.9 delta over baseline), elite boundary clearing capacity (28.2% boundary rate). Across 10 high-leverage matches, scored 152 runs from 85 balls at an elite strike rate of 178.8, compared to a baseline of 133.9.",
+    "seasons": {
+      "2022": {
+        "balls": 68,
+        "runs": 100,
+        "pressureBalls": 30,
+        "pressureRuns": 55
+      },
+      "2023": {
+        "balls": 98,
+        "runs": 120,
+        "pressureBalls": 30,
+        "pressureRuns": 59
+      },
+      "2024": {
+        "balls": 55,
+        "runs": 54,
+        "pressureBalls": 14,
+        "pressureRuns": 14
+      },
+      "2025": {
+        "balls": 143,
+        "runs": 226,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 269,
+        "runs": 387,
+        "pressureBalls": 11,
+        "pressureRuns": 24
+      },
+      "2022/23": {
+        "balls": 1,
+        "runs": 0,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 58,
+      "runs": 108,
+      "sr": 186.2
+    },
+    "t20i": {
+      "balls": 27,
+      "runs": 44,
+      "sr": 163
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "4823",
+    "pressure_rating": 85,
+    "keyMetric": "SR 178.8"
+  },
+  {
+    "rank": 21,
+    "id": "4391",
+    "name": "Liam Livingstone",
+    "team": "Sunrisers Hyderabad",
+    "teams": [
+      "England",
+      "Punjab Kings",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad"
+    ],
+    "matchesAnalysed": 68,
+    "pressureMatches": 7,
+    "totalBalls": 990,
+    "totalRuns": 1525,
+    "totalSR": 154,
+    "normalBalls": 923,
+    "normalRuns": 1399,
+    "normalSR": 151.6,
+    "pressureBalls": 67,
+    "pressureRuns": 126,
+    "pressureSR": 188.1,
+    "srDelta": 36.5,
+    "boundaryPct": 29.9,
+    "fours": 10,
+    "sixes": 10,
+    "dismissalRate": 25.2,
+    "dismissals": 5,
+    "dotPct": 34.3,
+    "deathSR": 202.2,
+    "chaseSR": 188.1,
+    "consistencyScore": 68.8,
+    "confidenceWeight": 0.83,
+    "rating": 84.2,
+    "verdict": "Liam Livingstone ranks #21 with an overall Batting Pressure Index of 84.2. Characterized by marked positive strike rate boost (+36.5), elite boundary clearing capacity (29.9% boundary rate). Across 7 high-leverage matches, scored 126 runs from 67 balls at an elite strike rate of 188.1, compared to a baseline of 151.6.",
+    "seasons": {
+      "2022": {
+        "balls": 328,
+        "runs": 552,
+        "pressureBalls": 7,
+        "pressureRuns": 15
+      },
+      "2023": {
+        "balls": 295,
+        "runs": 469,
+        "pressureBalls": 44,
+        "pressureRuns": 80
+      },
+      "2024": {
+        "balls": 200,
+        "runs": 303,
+        "pressureBalls": 16,
+        "pressureRuns": 31
+      },
+      "2025": {
+        "balls": 142,
+        "runs": 186,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 25,
+        "runs": 15,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 49,
+      "runs": 100,
+      "sr": 204.1
+    },
+    "t20i": {
+      "balls": 18,
+      "runs": 26,
+      "sr": 144.4
+    },
+    "country": "England",
+    "country_code": "GB-ENG",
+    "country_flag": "🏴",
+    "player_role": "Batter",
+    "avatar_icon": "crosshair",
+    "player_id": "4391",
+    "pressure_rating": 84.2,
+    "keyMetric": "SR 188.1"
+  },
+  {
+    "rank": 22,
+    "id": "2633",
+    "name": "Jason Holder",
+    "team": "Gujarat Titans",
+    "teams": [
+      "West Indies",
+      "Lucknow Super Giants",
+      "Rajasthan Royals",
+      "Gujarat Titans"
+    ],
+    "matchesAnalysed": 59,
+    "pressureMatches": 18,
+    "totalBalls": 444,
+    "totalRuns": 633,
+    "totalSR": 142.6,
+    "normalBalls": 314,
+    "normalRuns": 412,
+    "normalSR": 131.2,
+    "pressureBalls": 130,
+    "pressureRuns": 221,
+    "pressureSR": 170,
+    "srDelta": 38.8,
+    "boundaryPct": 21.5,
+    "fours": 10,
+    "sixes": 18,
+    "dismissalRate": 22.1,
+    "dismissals": 10,
+    "dotPct": 30,
+    "deathSR": 180.4,
+    "chaseSR": 170,
+    "consistencyScore": 68,
+    "confidenceWeight": 0.91,
+    "rating": 83.7,
+    "verdict": "Jason Holder ranks #22 with an overall Batting Pressure Index of 83.7. Characterized by marked positive strike rate boost (+38.8). Across 18 high-leverage matches, scored 221 runs from 130 balls at an elite strike rate of 170.0, compared to a baseline of 131.2.",
+    "seasons": {
+      "2022": {
+        "balls": 145,
+        "runs": 176,
+        "pressureBalls": 43,
+        "pressureRuns": 76
+      },
+      "2023": {
+        "balls": 39,
+        "runs": 53,
+        "pressureBalls": 3,
+        "pressureRuns": 5
+      },
+      "2024": {
+        "balls": 31,
+        "runs": 62,
+        "pressureBalls": 20,
+        "pressureRuns": 35
+      },
+      "2025": {
+        "balls": 170,
+        "runs": 255,
+        "pressureBalls": 52,
+        "pressureRuns": 81
+      },
+      "2026": {
+        "balls": 59,
+        "runs": 87,
+        "pressureBalls": 12,
+        "pressureRuns": 24
+      }
+    },
+    "ipl": {
+      "balls": 19,
+      "runs": 21,
+      "sr": 110.5
+    },
+    "t20i": {
+      "balls": 111,
+      "runs": 200,
+      "sr": 180.2
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "2633",
+    "pressure_rating": 83.7,
+    "keyMetric": "SR 170"
+  },
+  {
+    "rank": 23,
+    "id": "2984",
+    "name": "Sikandar Raza",
+    "team": "Punjab Kings",
+    "teams": [
+      "Zimbabwe",
+      "Punjab Kings"
+    ],
+    "matchesAnalysed": 57,
+    "pressureMatches": 7,
+    "totalBalls": 1000,
+    "totalRuns": 1354,
+    "totalSR": 135.4,
+    "normalBalls": 933,
+    "normalRuns": 1224,
+    "normalSR": 131.2,
+    "pressureBalls": 67,
+    "pressureRuns": 130,
+    "pressureSR": 194,
+    "srDelta": 62.8,
+    "boundaryPct": 26.9,
+    "fours": 9,
+    "sixes": 9,
+    "dismissalRate": 26,
+    "dismissals": 5,
+    "dotPct": 28.4,
+    "deathSR": 186.8,
+    "chaseSR": 194,
+    "consistencyScore": 58.5,
+    "confidenceWeight": 0.83,
+    "rating": 83.6,
+    "verdict": "Sikandar Raza ranks #23 with an overall Batting Pressure Index of 83.6. Characterized by explosive strike rate acceleration under pressure (+62.8 delta over baseline), elite boundary clearing capacity (26.9% boundary rate). Across 7 high-leverage matches, scored 130 runs from 67 balls at an elite strike rate of 194.0, compared to a baseline of 131.2.",
+    "seasons": {
+      "2022": {
+        "balls": 133,
+        "runs": 213,
+        "pressureBalls": 3,
+        "pressureRuns": 2
+      },
+      "2023": {
+        "balls": 98,
+        "runs": 139,
+        "pressureBalls": 12,
+        "pressureRuns": 18
+      },
+      "2024": {
+        "balls": 339,
+        "runs": 413,
+        "pressureBalls": 14,
+        "pressureRuns": 18
+      },
+      "2025": {
+        "balls": 269,
+        "runs": 344,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 119,
+        "runs": 180,
+        "pressureBalls": 32,
+        "pressureRuns": 78
+      },
+      "2023/24": {
+        "balls": 42,
+        "runs": 65,
+        "pressureBalls": 6,
+        "pressureRuns": 14
+      }
+    },
+    "ipl": {
+      "balls": 12,
+      "runs": 18,
+      "sr": 150
+    },
+    "t20i": {
+      "balls": 55,
+      "runs": 112,
+      "sr": 203.6
+    },
+    "country": "Zimbabwe",
+    "country_code": "ZW",
+    "country_flag": "🇿🇼",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "2984",
+    "pressure_rating": 83.6,
+    "keyMetric": "SR 194"
+  },
+  {
+    "rank": 24,
+    "id": "20006",
+    "name": "Ramandeep Singh",
+    "team": "Kolkata Knight Riders",
+    "teams": [
+      "Mumbai Indians",
+      "Kolkata Knight Riders",
+      "India",
+      "India A"
+    ],
+    "matchesAnalysed": 33,
+    "pressureMatches": 7,
+    "totalBalls": 287,
+    "totalRuns": 436,
+    "totalSR": 151.9,
+    "normalBalls": 210,
+    "normalRuns": 298,
+    "normalSR": 141.9,
+    "pressureBalls": 77,
+    "pressureRuns": 138,
+    "pressureSR": 179.2,
+    "srDelta": 37.3,
+    "boundaryPct": 27.3,
+    "fours": 15,
+    "sixes": 6,
+    "dismissalRate": 23,
+    "dismissals": 6,
+    "dotPct": 26,
+    "deathSR": 196.1,
+    "chaseSR": 179.2,
+    "consistencyScore": 64.5,
+    "confidenceWeight": 0.85,
+    "rating": 83.2,
+    "verdict": "Ramandeep Singh ranks #24 with an overall Batting Pressure Index of 83.2. Characterized by marked positive strike rate boost (+37.3), elite boundary clearing capacity (27.3% boundary rate). Across 7 high-leverage matches, scored 138 runs from 77 balls at an elite strike rate of 179.2, compared to a baseline of 141.9.",
+    "seasons": {
+      "2022": {
+        "balls": 40,
+        "runs": 45,
+        "pressureBalls": 6,
+        "pressureRuns": 14
+      },
+      "2024": {
+        "balls": 116,
+        "runs": 228,
+        "pressureBalls": 32,
+        "pressureRuns": 62
+      },
+      "2025": {
+        "balls": 63,
+        "runs": 81,
+        "pressureBalls": 14,
+        "pressureRuns": 26
+      },
+      "2026": {
+        "balls": 68,
+        "runs": 82,
+        "pressureBalls": 25,
+        "pressureRuns": 36
+      }
+    },
+    "ipl": {
+      "balls": 38,
+      "runs": 64,
+      "sr": 168.4
+    },
+    "t20i": {
+      "balls": 39,
+      "runs": 74,
+      "sr": 189.7
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "flame",
+    "player_id": "20006",
+    "pressure_rating": 83.2,
+    "keyMetric": "SR 179.2"
+  },
+  {
+    "rank": 25,
+    "id": "4101",
+    "name": "Mitchell Santner",
+    "team": "Mumbai Indians",
+    "teams": [
+      "Chennai Super Kings",
+      "New Zealand",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 57,
+    "pressureMatches": 13,
+    "totalBalls": 540,
+    "totalRuns": 681,
+    "totalSR": 126.1,
+    "normalBalls": 443,
+    "normalRuns": 522,
+    "normalSR": 117.8,
+    "pressureBalls": 97,
+    "pressureRuns": 159,
+    "pressureSR": 163.9,
+    "srDelta": 46.1,
+    "boundaryPct": 22.7,
+    "fours": 14,
+    "sixes": 8,
+    "dismissalRate": 22.7,
+    "dismissals": 7,
+    "dotPct": 30.9,
+    "deathSR": 166.2,
+    "chaseSR": 163.9,
+    "consistencyScore": 64,
+    "confidenceWeight": 0.87,
+    "rating": 82.9,
+    "verdict": "Mitchell Santner ranks #25 with an overall Batting Pressure Index of 82.9. Characterized by explosive strike rate acceleration under pressure (+46.1 delta over baseline), elite boundary clearing capacity (22.7% boundary rate). Across 13 high-leverage matches, scored 159 runs from 97 balls at an elite strike rate of 163.9, compared to a baseline of 117.8.",
+    "seasons": {
+      "2022": {
+        "balls": 94,
+        "runs": 125,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2023": {
+        "balls": 121,
+        "runs": 121,
+        "pressureBalls": 7,
+        "pressureRuns": 7
+      },
+      "2024": {
+        "balls": 89,
+        "runs": 89,
+        "pressureBalls": 6,
+        "pressureRuns": 3
+      },
+      "2025": {
+        "balls": 87,
+        "runs": 153,
+        "pressureBalls": 48,
+        "pressureRuns": 105
+      },
+      "2026": {
+        "balls": 128,
+        "runs": 175,
+        "pressureBalls": 19,
+        "pressureRuns": 28
+      },
+      "2022/23": {
+        "balls": 10,
+        "runs": 3,
+        "pressureBalls": 7,
+        "pressureRuns": 2
+      },
+      "2024/25": {
+        "balls": 11,
+        "runs": 15,
+        "pressureBalls": 10,
+        "pressureRuns": 14
+      }
+    },
+    "ipl": {
+      "balls": 27,
+      "runs": 39,
+      "sr": 144.4
+    },
+    "t20i": {
+      "balls": 70,
+      "runs": 120,
+      "sr": 171.4
+    },
+    "country": "New Zealand",
+    "country_code": "NZ",
+    "country_flag": "🇳🇿",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "4101",
+    "pressure_rating": 82.9,
+    "keyMetric": "SR 163.9"
+  },
+  {
+    "rank": 26,
+    "id": "6725",
+    "name": "Sherfane Rutherford",
+    "team": "Mumbai Indians",
+    "teams": [
+      "Royal Challengers Bengaluru",
+      "West Indies",
+      "Kolkata Knight Riders",
+      "Gujarat Titans",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 56,
+    "pressureMatches": 12,
+    "totalBalls": 815,
+    "totalRuns": 1216,
+    "totalSR": 149.2,
+    "normalBalls": 715,
+    "normalRuns": 1037,
+    "normalSR": 145,
+    "pressureBalls": 100,
+    "pressureRuns": 179,
+    "pressureSR": 179,
+    "srDelta": 34,
+    "boundaryPct": 25,
+    "fours": 10,
+    "sixes": 15,
+    "dismissalRate": 19.9,
+    "dismissals": 9,
+    "dotPct": 33,
+    "deathSR": 171.4,
+    "chaseSR": 179,
+    "consistencyScore": 60.7,
+    "confidenceWeight": 0.88,
+    "rating": 81.6,
+    "verdict": "Sherfane Rutherford ranks #26 with an overall Batting Pressure Index of 81.6. Characterized by marked positive strike rate boost (+34.0), elite boundary clearing capacity (25.0% boundary rate). Across 12 high-leverage matches, scored 179 runs from 100 balls at an elite strike rate of 179.0, compared to a baseline of 145.0.",
+    "seasons": {
+      "2022": {
+        "balls": 50,
+        "runs": 33,
+        "pressureBalls": 3,
+        "pressureRuns": 1
+      },
+      "2023": {
+        "balls": 56,
+        "runs": 95,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 125,
+        "runs": 169,
+        "pressureBalls": 8,
+        "pressureRuns": 16
+      },
+      "2025": {
+        "balls": 313,
+        "runs": 450,
+        "pressureBalls": 37,
+        "pressureRuns": 59
+      },
+      "2026": {
+        "balls": 271,
+        "runs": 469,
+        "pressureBalls": 52,
+        "pressureRuns": 103
+      }
+    },
+    "ipl": {
+      "balls": 58,
+      "runs": 112,
+      "sr": 193.1
+    },
+    "t20i": {
+      "balls": 42,
+      "runs": 67,
+      "sr": 159.5
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "6725",
+    "pressure_rating": 81.6,
+    "keyMetric": "SR 179"
+  },
+  {
+    "rank": 27,
+    "id": "6460",
+    "name": "Ayush Badoni",
+    "team": "Lucknow Super Giants",
+    "teams": [
+      "Lucknow Super Giants",
+      "India A"
+    ],
+    "matchesAnalysed": 60,
+    "pressureMatches": 9,
+    "totalBalls": 898,
+    "totalRuns": 1273,
+    "totalSR": 141.8,
+    "normalBalls": 820,
+    "normalRuns": 1137,
+    "normalSR": 138.7,
+    "pressureBalls": 78,
+    "pressureRuns": 136,
+    "pressureSR": 174.4,
+    "srDelta": 35.7,
+    "boundaryPct": 20.5,
+    "fours": 7,
+    "sixes": 9,
+    "dismissalRate": 19.4,
+    "dismissals": 7,
+    "dotPct": 26.9,
+    "deathSR": 180.4,
+    "chaseSR": 174.4,
+    "consistencyScore": 64.4,
+    "confidenceWeight": 0.85,
+    "rating": 80.2,
+    "verdict": "Ayush Badoni ranks #27 with an overall Batting Pressure Index of 80.2. Characterized by marked positive strike rate boost (+35.7). Across 9 high-leverage matches, scored 136 runs from 78 balls at an elite strike rate of 174.4, compared to a baseline of 138.7.",
+    "seasons": {
+      "2022": {
+        "balls": 130,
+        "runs": 161,
+        "pressureBalls": 11,
+        "pressureRuns": 16
+      },
+      "2023": {
+        "balls": 171,
+        "runs": 237,
+        "pressureBalls": 22,
+        "pressureRuns": 34
+      },
+      "2024": {
+        "balls": 234,
+        "runs": 331,
+        "pressureBalls": 11,
+        "pressureRuns": 14
+      },
+      "2025": {
+        "balls": 222,
+        "runs": 329,
+        "pressureBalls": 26,
+        "pressureRuns": 56
+      },
+      "2026": {
+        "balls": 141,
+        "runs": 215,
+        "pressureBalls": 8,
+        "pressureRuns": 16
+      }
+    },
+    "ipl": {
+      "balls": 72,
+      "runs": 129,
+      "sr": 179.2
+    },
+    "t20i": {
+      "balls": 6,
+      "runs": 7,
+      "sr": 116.7
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "6460",
+    "pressure_rating": 80.2,
+    "keyMetric": "SR 174.4"
+  },
+  {
+    "rank": 28,
+    "id": "143",
+    "name": "Dinesh Karthik",
+    "team": "Royal Challengers Bengaluru",
+    "teams": [
+      "Royal Challengers Bengaluru",
+      "India"
+    ],
+    "matchesAnalysed": 61,
+    "pressureMatches": 13,
+    "totalBalls": 637,
+    "totalRuns": 1061,
+    "totalSR": 166.6,
+    "normalBalls": 519,
+    "normalRuns": 843,
+    "normalSR": 162.4,
+    "pressureBalls": 118,
+    "pressureRuns": 218,
+    "pressureSR": 184.7,
+    "srDelta": 22.3,
+    "boundaryPct": 26.3,
+    "fours": 16,
+    "sixes": 15,
+    "dismissalRate": 24.2,
+    "dismissals": 9,
+    "dotPct": 26.3,
+    "deathSR": 192.7,
+    "chaseSR": 184.7,
+    "consistencyScore": 59.8,
+    "confidenceWeight": 0.9,
+    "rating": 80.1,
+    "verdict": "Dinesh Karthik ranks #28 with an overall Batting Pressure Index of 80.1. Characterized by marked positive strike rate boost (+22.3), elite boundary clearing capacity (26.3% boundary rate). Across 13 high-leverage matches, scored 218 runs from 118 balls at an elite strike rate of 184.7, compared to a baseline of 162.4.",
+    "seasons": {
+      "2022": {
+        "balls": 332,
+        "runs": 536,
+        "pressureBalls": 36,
+        "pressureRuns": 66
+      },
+      "2023": {
+        "balls": 104,
+        "runs": 140,
+        "pressureBalls": 17,
+        "pressureRuns": 22
+      },
+      "2024": {
+        "balls": 173,
+        "runs": 322,
+        "pressureBalls": 65,
+        "pressureRuns": 130
+      },
+      "2022/23": {
+        "balls": 28,
+        "runs": 63,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 112,
+      "runs": 211,
+      "sr": 188.4
+    },
+    "t20i": {
+      "balls": 6,
+      "runs": 7,
+      "sr": 116.7
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "shield-check",
+    "player_id": "143",
+    "pressure_rating": 84.9,
+    "keyMetric": "SR 186.7 (+96.5 delta)"
+  },
+  {
+    "rank": 29,
+    "id": "1596",
+    "name": "Moeen Ali",
+    "team": "Kolkata Knight Riders",
+    "teams": [
+      "England",
+      "Chennai Super Kings",
+      "Kolkata Knight Riders"
+    ],
+    "matchesAnalysed": 53,
+    "pressureMatches": 10,
+    "totalBalls": 753,
+    "totalRuns": 1065,
+    "totalSR": 141.4,
+    "normalBalls": 682,
+    "normalRuns": 944,
+    "normalSR": 138.4,
+    "pressureBalls": 71,
+    "pressureRuns": 121,
+    "pressureSR": 170.4,
+    "srDelta": 32,
+    "boundaryPct": 25.4,
+    "fours": 7,
+    "sixes": 11,
+    "dismissalRate": 17.3,
+    "dismissals": 7,
+    "dotPct": 40.8,
+    "deathSR": 153.5,
+    "chaseSR": 170.4,
+    "consistencyScore": 69,
+    "confidenceWeight": 0.84,
+    "rating": 79.6,
+    "verdict": "Moeen Ali ranks #29 with an overall Batting Pressure Index of 79.6. Characterized by marked positive strike rate boost (+32.0), elite boundary clearing capacity (25.4% boundary rate). Across 10 high-leverage matches, scored 121 runs from 71 balls at an elite strike rate of 170.4, compared to a baseline of 138.4.",
+    "seasons": {
+      "2022": {
+        "balls": 454,
+        "runs": 694,
+        "pressureBalls": 37,
+        "pressureRuns": 68
+      },
+      "2023": {
+        "balls": 180,
+        "runs": 234,
+        "pressureBalls": 26,
+        "pressureRuns": 46
+      },
+      "2024": {
+        "balls": 105,
+        "runs": 132,
+        "pressureBalls": 6,
+        "pressureRuns": 7
+      },
+      "2025": {
+        "balls": 14,
+        "runs": 5,
+        "pressureBalls": 2,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 20,
+      "runs": 32,
+      "sr": 160
+    },
+    "t20i": {
+      "balls": 51,
+      "runs": 89,
+      "sr": 174.5
+    },
+    "country": "England",
+    "country_code": "GB-ENG",
+    "country_flag": "🏴",
+    "player_role": "Batter",
+    "avatar_icon": "flame",
+    "player_id": "1596",
+    "pressure_rating": 79.6,
+    "keyMetric": "SR 170.4"
+  },
+  {
+    "rank": 30,
+    "id": "2382",
+    "name": "Jamie Overton",
+    "team": "Chennai Super Kings",
+    "teams": [
+      "England",
+      "Chennai Super Kings"
+    ],
+    "matchesAnalysed": 18,
+    "pressureMatches": 6,
+    "totalBalls": 145,
+    "totalRuns": 203,
+    "totalSR": 140,
+    "normalBalls": 89,
+    "normalRuns": 111,
+    "normalSR": 124.7,
+    "pressureBalls": 56,
+    "pressureRuns": 92,
+    "pressureSR": 164.3,
+    "srDelta": 39.6,
+    "boundaryPct": 19.6,
+    "fours": 7,
+    "sixes": 4,
+    "dismissalRate": 18.4,
+    "dismissals": 5,
+    "dotPct": 23.2,
+    "deathSR": 135.9,
+    "chaseSR": 164.3,
+    "consistencyScore": 72.4,
+    "confidenceWeight": 0.82,
+    "rating": 79.2,
+    "verdict": "Jamie Overton ranks #30 with an overall Batting Pressure Index of 79.2. Characterized by marked positive strike rate boost (+39.6). Across 6 high-leverage matches, scored 92 runs from 56 balls at an elite strike rate of 164.3, compared to a baseline of 124.7.",
+    "seasons": {
+      "2024": {
+        "balls": 17,
+        "runs": 23,
+        "pressureBalls": 6,
+        "pressureRuns": 12
+      },
+      "2025": {
+        "balls": 40,
+        "runs": 46,
+        "pressureBalls": 20,
+        "pressureRuns": 31
+      },
+      "2026": {
+        "balls": 88,
+        "runs": 134,
+        "pressureBalls": 30,
+        "pressureRuns": 49
+      }
+    },
+    "ipl": {
+      "balls": 34,
+      "runs": 60,
+      "sr": 176.5
+    },
+    "t20i": {
+      "balls": 22,
+      "runs": 32,
+      "sr": 145.5
+    },
+    "country": "England",
+    "country_code": "GB-ENG",
+    "country_flag": "🏴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "2382",
+    "pressure_rating": 79.2,
+    "keyMetric": "SR 164.3"
+  },
+  {
+    "rank": 31,
+    "id": "1699",
+    "name": "Suryakumar Yadav",
+    "team": "Mumbai Indians",
+    "teams": [
+      "India",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 139,
+    "pressureMatches": 13,
+    "totalBalls": 2752,
+    "totalRuns": 4585,
+    "totalSR": 166.6,
+    "normalBalls": 2675,
+    "normalRuns": 4431,
+    "normalSR": 165.6,
+    "pressureBalls": 77,
+    "pressureRuns": 154,
+    "pressureSR": 200,
+    "srDelta": 34.4,
+    "boundaryPct": 33.8,
+    "fours": 16,
+    "sixes": 10,
+    "dismissalRate": 14,
+    "dismissals": 11,
+    "dotPct": 29.9,
+    "deathSR": 189.5,
+    "chaseSR": 200,
+    "consistencyScore": 66.6,
+    "confidenceWeight": 0.85,
+    "rating": 78.8,
+    "verdict": "Suryakumar Yadav ranks #31 with an overall Batting Pressure Index of 78.8. Characterized by marked positive strike rate boost (+34.4), elite boundary clearing capacity (33.8% boundary rate). Across 13 high-leverage matches, scored 154 runs from 77 balls at an elite strike rate of 200.0, compared to a baseline of 165.6.",
+    "seasons": {
+      "2022": {
+        "balls": 578,
+        "runs": 982,
+        "pressureBalls": 25,
+        "pressureRuns": 49
+      },
+      "2023": {
+        "balls": 801,
+        "runs": 1333,
+        "pressureBalls": 41,
+        "pressureRuns": 92
+      },
+      "2024": {
+        "balls": 341,
+        "runs": 579,
+        "pressureBalls": 2,
+        "pressureRuns": 8
+      },
+      "2025": {
+        "balls": 604,
+        "runs": 936,
+        "pressureBalls": 4,
+        "pressureRuns": 2
+      },
+      "2026": {
+        "balls": 306,
+        "runs": 512,
+        "pressureBalls": 5,
+        "pressureRuns": 3
+      },
+      "2022/23": {
+        "balls": 122,
+        "runs": 243,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 51,
+      "runs": 92,
+      "sr": 180.4
+    },
+    "t20i": {
+      "balls": 26,
+      "runs": 62,
+      "sr": 238.5
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "1699",
+    "pressure_rating": 78.8,
+    "keyMetric": "SR 200"
+  },
+  {
+    "rank": 32,
+    "id": "7808",
+    "name": "Marco Jansen",
+    "team": "Punjab Kings",
+    "teams": [
+      "Sunrisers Hyderabad",
+      "South Africa",
+      "Punjab Kings"
+    ],
+    "matchesAnalysed": 34,
+    "pressureMatches": 15,
+    "totalBalls": 277,
+    "totalRuns": 355,
+    "totalSR": 128.2,
+    "normalBalls": 190,
+    "normalRuns": 204,
+    "normalSR": 107.4,
+    "pressureBalls": 87,
+    "pressureRuns": 151,
+    "pressureSR": 173.6,
+    "srDelta": 66.2,
+    "boundaryPct": 24.1,
+    "fours": 9,
+    "sixes": 12,
+    "dismissalRate": 13.7,
+    "dismissals": 11,
+    "dotPct": 31,
+    "deathSR": 191.1,
+    "chaseSR": 173.6,
+    "consistencyScore": 57.9,
+    "confidenceWeight": 0.86,
+    "rating": 78.7,
+    "verdict": "Marco Jansen ranks #32 with an overall Batting Pressure Index of 78.7. Characterized by explosive strike rate acceleration under pressure (+66.2 delta over baseline), elite boundary clearing capacity (24.1% boundary rate). Across 15 high-leverage matches, scored 151 runs from 87 balls at an elite strike rate of 173.6, compared to a baseline of 107.4.",
+    "seasons": {
+      "2022": {
+        "balls": 24,
+        "runs": 21,
+        "pressureBalls": 4,
+        "pressureRuns": 1
+      },
+      "2023": {
+        "balls": 57,
+        "runs": 59,
+        "pressureBalls": 21,
+        "pressureRuns": 26
+      },
+      "2024": {
+        "balls": 60,
+        "runs": 120,
+        "pressureBalls": 32,
+        "pressureRuns": 88
+      },
+      "2025": {
+        "balls": 91,
+        "runs": 104,
+        "pressureBalls": 14,
+        "pressureRuns": 17
+      },
+      "2026": {
+        "balls": 45,
+        "runs": 51,
+        "pressureBalls": 16,
+        "pressureRuns": 19
+      }
+    },
+    "ipl": {
+      "balls": 40,
+      "runs": 43,
+      "sr": 107.5
+    },
+    "t20i": {
+      "balls": 47,
+      "runs": 108,
+      "sr": 229.8
+    },
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "7808",
+    "pressure_rating": 78.7,
+    "keyMetric": "SR 173.6"
+  },
+  {
+    "rank": 33,
+    "id": "4260",
+    "name": "Heinrich Klaasen",
+    "team": "Sunrisers Hyderabad",
+    "teams": [
+      "South Africa",
+      "Sunrisers Hyderabad"
+    ],
+    "matchesAnalysed": 72,
+    "pressureMatches": 11,
+    "totalBalls": 1410,
+    "totalRuns": 2356,
+    "totalSR": 167.1,
+    "normalBalls": 1311,
+    "normalRuns": 2170,
+    "normalSR": 165.5,
+    "pressureBalls": 99,
+    "pressureRuns": 186,
+    "pressureSR": 187.9,
+    "srDelta": 22.4,
+    "boundaryPct": 24.2,
+    "fours": 7,
+    "sixes": 17,
+    "dismissalRate": 20.7,
+    "dismissals": 9,
+    "dotPct": 26.3,
+    "deathSR": 206.5,
+    "chaseSR": 187.9,
+    "consistencyScore": 65.1,
+    "confidenceWeight": 0.87,
+    "rating": 78.4,
+    "verdict": "Heinrich Klaasen ranks #33 with an overall Batting Pressure Index of 78.4. Characterized by marked positive strike rate boost (+22.4), elite boundary clearing capacity (24.2% boundary rate). Across 11 high-leverage matches, scored 186 runs from 99 balls at an elite strike rate of 187.9, compared to a baseline of 165.5.",
+    "seasons": {
+      "2022": {
+        "balls": 125,
+        "runs": 202,
+        "pressureBalls": 5,
+        "pressureRuns": 7
+      },
+      "2023": {
+        "balls": 273,
+        "runs": 482,
+        "pressureBalls": 31,
+        "pressureRuns": 54
+      },
+      "2024": {
+        "balls": 343,
+        "runs": 564,
+        "pressureBalls": 49,
+        "pressureRuns": 97
+      },
+      "2025": {
+        "balls": 279,
+        "runs": 484,
+        "pressureBalls": 13,
+        "pressureRuns": 22
+      },
+      "2026": {
+        "balls": 390,
+        "runs": 624,
+        "pressureBalls": 1,
+        "pressureRuns": 6
+      }
+    },
+    "ipl": {
+      "balls": 77,
+      "runs": 141,
+      "sr": 183.1
+    },
+    "t20i": {
+      "balls": 22,
+      "runs": 45,
+      "sr": 204.5
+    },
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "4260",
+    "pressure_rating": 78.4,
+    "keyMetric": "SR 187.9"
+  },
+  {
+    "rank": 34,
+    "id": "4722",
+    "name": "Rashid Khan",
+    "team": "Gujarat Titans",
+    "teams": [
+      "Gujarat Titans",
+      "Afghanistan"
+    ],
+    "matchesAnalysed": 71,
+    "pressureMatches": 26,
+    "totalBalls": 506,
+    "totalRuns": 787,
+    "totalSR": 155.5,
+    "normalBalls": 308,
+    "normalRuns": 460,
+    "normalSR": 149.4,
+    "pressureBalls": 198,
+    "pressureRuns": 327,
+    "pressureSR": 165.2,
+    "srDelta": 15.8,
+    "boundaryPct": 24.2,
+    "fours": 23,
+    "sixes": 25,
+    "dismissalRate": 20.4,
+    "dismissals": 16,
+    "dotPct": 40.4,
+    "deathSR": 199.1,
+    "chaseSR": 165.2,
+    "consistencyScore": 63.3,
+    "confidenceWeight": 0.97,
+    "rating": 78.3,
+    "verdict": "Rashid Khan ranks #34 with an overall Batting Pressure Index of 78.3. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (24.2% boundary rate). Across 26 high-leverage matches, scored 327 runs from 198 balls at an elite strike rate of 165.2, compared to a baseline of 149.4.",
+    "seasons": {
+      "2022": {
+        "balls": 115,
+        "runs": 179,
+        "pressureBalls": 43,
+        "pressureRuns": 76
+      },
+      "2023": {
+        "balls": 79,
+        "runs": 155,
+        "pressureBalls": 52,
+        "pressureRuns": 106
+      },
+      "2024": {
+        "balls": 108,
+        "runs": 138,
+        "pressureBalls": 23,
+        "pressureRuns": 30
+      },
+      "2025": {
+        "balls": 115,
+        "runs": 175,
+        "pressureBalls": 47,
+        "pressureRuns": 81
+      },
+      "2026": {
+        "balls": 89,
+        "runs": 140,
+        "pressureBalls": 33,
+        "pressureRuns": 34
+      }
+    },
+    "ipl": {
+      "balls": 125,
+      "runs": 224,
+      "sr": 179.2
+    },
+    "t20i": {
+      "balls": 73,
+      "runs": 103,
+      "sr": 141.1
+    },
+    "country": "Afghanistan",
+    "country_code": "AF",
+    "country_flag": "🇦🇫",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "4722",
+    "pressure_rating": 78.3,
+    "keyMetric": "SR 165.2"
+  },
+  {
+    "rank": 35,
+    "id": "3125",
+    "name": "Nicholas Pooran",
+    "team": "Lucknow Super Giants",
+    "teams": [
+      "West Indies",
+      "Sunrisers Hyderabad",
+      "Lucknow Super Giants"
+    ],
+    "matchesAnalysed": 115,
+    "pressureMatches": 12,
+    "totalBalls": 1970,
+    "totalRuns": 3097,
+    "totalSR": 157.2,
+    "normalBalls": 1883,
+    "normalRuns": 2938,
+    "normalSR": 156,
+    "pressureBalls": 87,
+    "pressureRuns": 159,
+    "pressureSR": 182.8,
+    "srDelta": 26.7,
+    "boundaryPct": 28.7,
+    "fours": 13,
+    "sixes": 12,
+    "dismissalRate": 17.7,
+    "dismissals": 9,
+    "dotPct": 36.8,
+    "deathSR": 175.3,
+    "chaseSR": 182.8,
+    "consistencyScore": 64.1,
+    "confidenceWeight": 0.86,
+    "rating": 78,
+    "verdict": "Nicholas Pooran ranks #35 with an overall Batting Pressure Index of 78. Characterized by marked positive strike rate boost (+26.7), elite boundary clearing capacity (28.7% boundary rate). Across 12 high-leverage matches, scored 159 runs from 87 balls at an elite strike rate of 182.8, compared to a baseline of 156.0.",
+    "seasons": {
+      "2022": {
+        "balls": 626,
+        "runs": 862,
+        "pressureBalls": 55,
+        "pressureRuns": 120
+      },
+      "2023": {
+        "balls": 443,
+        "runs": 742,
+        "pressureBalls": 7,
+        "pressureRuns": 3
+      },
+      "2024": {
+        "balls": 450,
+        "runs": 735,
+        "pressureBalls": 20,
+        "pressureRuns": 30
+      },
+      "2025": {
+        "balls": 267,
+        "runs": 524,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 184,
+        "runs": 234,
+        "pressureBalls": 5,
+        "pressureRuns": 6
+      }
+    },
+    "ipl": {
+      "balls": 69,
+      "runs": 129,
+      "sr": 187
+    },
+    "t20i": {
+      "balls": 18,
+      "runs": 30,
+      "sr": 166.7
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "target",
+    "player_id": "3125",
+    "pressure_rating": 78,
+    "keyMetric": "SR 182.8"
+  },
+  {
+    "rank": 36,
+    "id": "3926",
+    "name": "Rahul Tewatia",
+    "team": "Gujarat Titans",
+    "teams": [
+      "Gujarat Titans"
+    ],
+    "matchesAnalysed": 57,
+    "pressureMatches": 23,
+    "totalBalls": 522,
+    "totalRuns": 779,
+    "totalSR": 149.2,
+    "normalBalls": 354,
+    "normalRuns": 515,
+    "normalSR": 145.5,
+    "pressureBalls": 168,
+    "pressureRuns": 264,
+    "pressureSR": 157.1,
+    "srDelta": 11.7,
+    "boundaryPct": 22,
+    "fours": 21,
+    "sixes": 16,
+    "dismissalRate": 26.4,
+    "dismissals": 10,
+    "dotPct": 35.7,
+    "deathSR": 167.2,
+    "chaseSR": 157.1,
+    "consistencyScore": 66.9,
+    "confidenceWeight": 0.94,
+    "rating": 76.9,
+    "verdict": "Rahul Tewatia ranks #36 with an overall Batting Pressure Index of 76.9. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.0% boundary rate). Across 23 high-leverage matches, scored 264 runs from 168 balls at an elite strike rate of 157.1, compared to a baseline of 145.5.",
+    "seasons": {
+      "2022": {
+        "balls": 147,
+        "runs": 217,
+        "pressureBalls": 40,
+        "pressureRuns": 83
+      },
+      "2023": {
+        "balls": 57,
+        "runs": 87,
+        "pressureBalls": 22,
+        "pressureRuns": 29
+      },
+      "2024": {
+        "balls": 127,
+        "runs": 186,
+        "pressureBalls": 48,
+        "pressureRuns": 68
+      },
+      "2025": {
+        "balls": 59,
+        "runs": 99,
+        "pressureBalls": 27,
+        "pressureRuns": 44
+      },
+      "2026": {
+        "balls": 132,
+        "runs": 190,
+        "pressureBalls": 31,
+        "pressureRuns": 40
+      }
+    },
+    "ipl": {
+      "balls": 168,
+      "runs": 264,
+      "sr": 157.1
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "crosshair",
+    "player_id": "3926",
+    "pressure_rating": 76.9,
+    "keyMetric": "SR 157.1"
+  },
+  {
+    "rank": 37,
+    "id": "3330",
+    "name": "Hardik Pandya",
+    "team": "Mumbai Indians",
+    "teams": [
+      "Gujarat Titans",
+      "India",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 118,
+    "pressureMatches": 15,
+    "totalBalls": 1920,
+    "totalRuns": 2722,
+    "totalSR": 141.8,
+    "normalBalls": 1798,
+    "normalRuns": 2529,
+    "normalSR": 140.7,
+    "pressureBalls": 122,
+    "pressureRuns": 193,
+    "pressureSR": 158.2,
+    "srDelta": 17.5,
+    "boundaryPct": 19.7,
+    "fours": 16,
+    "sixes": 8,
+    "dismissalRate": 24.1,
+    "dismissals": 8,
+    "dotPct": 25.4,
+    "deathSR": 154.1,
+    "chaseSR": 158.2,
+    "consistencyScore": 70.8,
+    "confidenceWeight": 0.9,
+    "rating": 76.4,
+    "verdict": "Hardik Pandya ranks #37 with an overall Batting Pressure Index of 76.4. Characterized by reliable baseline preservation under pressure. Across 15 high-leverage matches, scored 193 runs from 122 balls at an elite strike rate of 158.2, compared to a baseline of 140.7.",
+    "seasons": {
+      "2022": {
+        "balls": 656,
+        "runs": 921,
+        "pressureBalls": 40,
+        "pressureRuns": 67
+      },
+      "2023": {
+        "balls": 422,
+        "runs": 533,
+        "pressureBalls": 11,
+        "pressureRuns": 12
+      },
+      "2024": {
+        "balls": 290,
+        "runs": 424,
+        "pressureBalls": 12,
+        "pressureRuns": 17
+      },
+      "2025": {
+        "balls": 334,
+        "runs": 526,
+        "pressureBalls": 51,
+        "pressureRuns": 85
+      },
+      "2026": {
+        "balls": 187,
+        "runs": 275,
+        "pressureBalls": 8,
+        "pressureRuns": 12
+      },
+      "2022/23": {
+        "balls": 31,
+        "runs": 43,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 81,
+      "runs": 122,
+      "sr": 150.6
+    },
+    "t20i": {
+      "balls": 41,
+      "runs": 71,
+      "sr": 173.2
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "3330",
+    "pressure_rating": 76.4,
+    "keyMetric": "SR 158.2"
+  },
+  {
+    "rank": 38,
+    "id": "2490",
+    "name": "Mohammad Nawaz",
+    "team": "Pakistan",
+    "teams": [
+      "Pakistan"
+    ],
+    "matchesAnalysed": 46,
+    "pressureMatches": 9,
+    "totalBalls": 495,
+    "totalRuns": 705,
+    "totalSR": 142.4,
+    "normalBalls": 404,
+    "normalRuns": 565,
+    "normalSR": 139.9,
+    "pressureBalls": 91,
+    "pressureRuns": 140,
+    "pressureSR": 153.8,
+    "srDelta": 14,
+    "boundaryPct": 20.9,
+    "fours": 11,
+    "sixes": 8,
+    "dismissalRate": 28,
+    "dismissals": 5,
+    "dotPct": 31.9,
+    "deathSR": 172.9,
+    "chaseSR": 153.8,
+    "consistencyScore": 70.8,
+    "confidenceWeight": 0.87,
+    "rating": 75.7,
+    "verdict": "Mohammad Nawaz ranks #38 with an overall Batting Pressure Index of 75.7. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 140 runs from 91 balls at an elite strike rate of 153.8, compared to a baseline of 139.9.",
+    "seasons": {
+      "2022": {
+        "balls": 100,
+        "runs": 124,
+        "pressureBalls": 34,
+        "pressureRuns": 28
+      },
+      "2023": {
+        "balls": 3,
+        "runs": 5,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 28,
+        "runs": 50,
+        "pressureBalls": 15,
+        "pressureRuns": 28
+      },
+      "2025": {
+        "balls": 261,
+        "runs": 362,
+        "pressureBalls": 38,
+        "pressureRuns": 77
+      },
+      "2026": {
+        "balls": 36,
+        "runs": 57,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2022/23": {
+        "balls": 67,
+        "runs": 107,
+        "pressureBalls": 4,
+        "pressureRuns": 7
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 91,
+      "runs": 140,
+      "sr": 153.8
+    },
+    "country": "Pakistan",
+    "country_code": "PK",
+    "country_flag": "🇵🇰",
+    "player_role": "All-Rounder",
+    "avatar_icon": "gauge",
+    "player_id": "2490",
+    "pressure_rating": 88.9,
+    "keyMetric": "Econ 5.85 (23 wkts)"
+  },
+  {
+    "rank": 39,
+    "id": "5189",
+    "name": "Faheem Ashraf",
+    "team": "Pakistan",
+    "teams": [
+      "Pakistan"
+    ],
+    "matchesAnalysed": 27,
+    "pressureMatches": 5,
+    "totalBalls": 204,
+    "totalRuns": 295,
+    "totalSR": 144.6,
+    "normalBalls": 154,
+    "normalRuns": 214,
+    "normalSR": 139,
+    "pressureBalls": 50,
+    "pressureRuns": 81,
+    "pressureSR": 162,
+    "srDelta": 23,
+    "boundaryPct": 22,
+    "fours": 6,
+    "sixes": 5,
+    "dismissalRate": 20.3,
+    "dismissals": 4,
+    "dotPct": 36,
+    "deathSR": 190.3,
+    "chaseSR": 162,
+    "consistencyScore": 68.2,
+    "confidenceWeight": 0.81,
+    "rating": 75.7,
+    "verdict": "Faheem Ashraf ranks #39 with an overall Batting Pressure Index of 75.7. Characterized by marked positive strike rate boost (+23.0), elite boundary clearing capacity (22.0% boundary rate). Across 5 high-leverage matches, scored 81 runs from 50 balls at an elite strike rate of 162.0, compared to a baseline of 139.0.",
+    "seasons": {
+      "2023": {
+        "balls": 39,
+        "runs": 52,
+        "pressureBalls": 13,
+        "pressureRuns": 27
+      },
+      "2025": {
+        "balls": 158,
+        "runs": 224,
+        "pressureBalls": 37,
+        "pressureRuns": 54
+      },
+      "2026": {
+        "balls": 7,
+        "runs": 19,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 50,
+      "runs": 81,
+      "sr": 162
+    },
+    "country": "Pakistan",
+    "country_code": "PK",
+    "country_flag": "🇵🇰",
+    "player_role": "Batter",
+    "avatar_icon": "crosshair",
+    "player_id": "5189",
+    "pressure_rating": 75.7,
+    "keyMetric": "SR 162"
+  },
+  {
+    "rank": 40,
+    "id": "4755",
+    "name": "Shivam Dube",
+    "team": "Chennai Super Kings",
+    "teams": [
+      "Chennai Super Kings",
+      "India"
+    ],
+    "matchesAnalysed": 98,
+    "pressureMatches": 17,
+    "totalBalls": 1541,
+    "totalRuns": 2377,
+    "totalSR": 154.3,
+    "normalBalls": 1436,
+    "normalRuns": 2198,
+    "normalSR": 153.1,
+    "pressureBalls": 105,
+    "pressureRuns": 179,
+    "pressureSR": 170.5,
+    "srDelta": 17.4,
+    "boundaryPct": 23.8,
+    "fours": 12,
+    "sixes": 13,
+    "dismissalRate": 16.3,
+    "dismissals": 11,
+    "dotPct": 28.6,
+    "deathSR": 157.7,
+    "chaseSR": 170.5,
+    "consistencyScore": 68.4,
+    "confidenceWeight": 0.88,
+    "rating": 75.1,
+    "verdict": "Shivam Dube ranks #40 with an overall Batting Pressure Index of 75.1. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (23.8% boundary rate). Across 17 high-leverage matches, scored 179 runs from 105 balls at an elite strike rate of 170.5, compared to a baseline of 153.1.",
+    "seasons": {
+      "2022": {
+        "balls": 184,
+        "runs": 287,
+        "pressureBalls": 10,
+        "pressureRuns": 21
+      },
+      "2023": {
+        "balls": 280,
+        "runs": 440,
+        "pressureBalls": 18,
+        "pressureRuns": 30
+      },
+      "2024": {
+        "balls": 347,
+        "runs": 558,
+        "pressureBalls": 19,
+        "pressureRuns": 26
+      },
+      "2025": {
+        "balls": 394,
+        "runs": 548,
+        "pressureBalls": 30,
+        "pressureRuns": 64
+      },
+      "2026": {
+        "balls": 336,
+        "runs": 544,
+        "pressureBalls": 28,
+        "pressureRuns": 38
+      }
+    },
+    "ipl": {
+      "balls": 77,
+      "runs": 130,
+      "sr": 168.8
+    },
+    "t20i": {
+      "balls": 28,
+      "runs": 49,
+      "sr": 175
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "flame",
+    "player_id": "4755",
+    "pressure_rating": 75.1,
+    "keyMetric": "SR 170.5"
+  },
+  {
+    "rank": 41,
+    "id": "4409",
+    "name": "Sam Curran",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "England",
+      "Punjab Kings",
+      "Chennai Super Kings",
+      "Rajasthan Royals"
+    ],
+    "matchesAnalysed": 59,
+    "pressureMatches": 12,
+    "totalBalls": 854,
+    "totalRuns": 1115,
+    "totalSR": 130.6,
+    "normalBalls": 787,
+    "normalRuns": 1007,
+    "normalSR": 128,
+    "pressureBalls": 67,
+    "pressureRuns": 108,
+    "pressureSR": 161.2,
+    "srDelta": 33.2,
+    "boundaryPct": 19.4,
+    "fours": 6,
+    "sixes": 7,
+    "dismissalRate": 12,
+    "dismissals": 9,
+    "dotPct": 29.9,
+    "deathSR": 189.7,
+    "chaseSR": 161.2,
+    "consistencyScore": 68.2,
+    "confidenceWeight": 0.83,
+    "rating": 74.8,
+    "verdict": "Sam Curran ranks #41 with an overall Batting Pressure Index of 74.8. Characterized by marked positive strike rate boost (+33.2). Across 12 high-leverage matches, scored 108 runs from 67 balls at an elite strike rate of 161.2, compared to a baseline of 128.0.",
+    "seasons": {
+      "2022": {
+        "balls": 50,
+        "runs": 55,
+        "pressureBalls": 12,
+        "pressureRuns": 13
+      },
+      "2023": {
+        "balls": 300,
+        "runs": 377,
+        "pressureBalls": 38,
+        "pressureRuns": 70
+      },
+      "2024": {
+        "balls": 274,
+        "runs": 350,
+        "pressureBalls": 16,
+        "pressureRuns": 24
+      },
+      "2025": {
+        "balls": 138,
+        "runs": 206,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 92,
+        "runs": 127,
+        "pressureBalls": 1,
+        "pressureRuns": 1
+      }
+    },
+    "ipl": {
+      "balls": 37,
+      "runs": 66,
+      "sr": 178.4
+    },
+    "t20i": {
+      "balls": 30,
+      "runs": 42,
+      "sr": 140
+    },
+    "country": "England",
+    "country_code": "GB-ENG",
+    "country_flag": "🏴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "4409",
+    "pressure_rating": 74.8,
+    "keyMetric": "SR 161.2"
+  },
+  {
+    "rank": 42,
+    "id": "3297",
+    "name": "Shimron Hetmyer",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Rajasthan Royals",
+      "West Indies"
+    ],
+    "matchesAnalysed": 94,
+    "pressureMatches": 19,
+    "totalBalls": 1244,
+    "totalRuns": 1889,
+    "totalSR": 151.8,
+    "normalBalls": 1113,
+    "normalRuns": 1676,
+    "normalSR": 150.6,
+    "pressureBalls": 131,
+    "pressureRuns": 213,
+    "pressureSR": 162.6,
+    "srDelta": 12,
+    "boundaryPct": 22.9,
+    "fours": 16,
+    "sixes": 14,
+    "dismissalRate": 19.4,
+    "dismissals": 11,
+    "dotPct": 37.4,
+    "deathSR": 188.1,
+    "chaseSR": 162.6,
+    "consistencyScore": 64.8,
+    "confidenceWeight": 0.91,
+    "rating": 74.2,
+    "verdict": "Shimron Hetmyer ranks #42 with an overall Batting Pressure Index of 74.2. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.9% boundary rate). Across 19 high-leverage matches, scored 213 runs from 131 balls at an elite strike rate of 162.6, compared to a baseline of 150.6.",
+    "seasons": {
+      "2022": {
+        "balls": 316,
+        "runs": 445,
+        "pressureBalls": 24,
+        "pressureRuns": 30
+      },
+      "2023": {
+        "balls": 286,
+        "runs": 404,
+        "pressureBalls": 34,
+        "pressureRuns": 65
+      },
+      "2024": {
+        "balls": 100,
+        "runs": 153,
+        "pressureBalls": 18,
+        "pressureRuns": 30
+      },
+      "2025": {
+        "balls": 255,
+        "runs": 415,
+        "pressureBalls": 55,
+        "pressureRuns": 88
+      },
+      "2026": {
+        "balls": 287,
+        "runs": 472,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 110,
+      "runs": 191,
+      "sr": 173.6
+    },
+    "t20i": {
+      "balls": 21,
+      "runs": 22,
+      "sr": 104.8
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "3297",
+    "pressure_rating": 74.2,
+    "keyMetric": "SR 162.6"
+  },
+  {
+    "rank": 43,
+    "id": "2639",
+    "name": "Marcus Stoinis",
+    "team": "Punjab Kings",
+    "teams": [
+      "Australia",
+      "Lucknow Super Giants",
+      "Punjab Kings"
+    ],
+    "matchesAnalysed": 89,
+    "pressureMatches": 11,
+    "totalBalls": 1243,
+    "totalRuns": 1910,
+    "totalSR": 153.7,
+    "normalBalls": 1152,
+    "normalRuns": 1760,
+    "normalSR": 152.8,
+    "pressureBalls": 91,
+    "pressureRuns": 150,
+    "pressureSR": 164.8,
+    "srDelta": 12.1,
+    "boundaryPct": 22,
+    "fours": 10,
+    "sixes": 10,
+    "dismissalRate": 18.8,
+    "dismissals": 8,
+    "dotPct": 28.6,
+    "deathSR": 164.9,
+    "chaseSR": 164.8,
+    "consistencyScore": 70.8,
+    "confidenceWeight": 0.87,
+    "rating": 73.5,
+    "verdict": "Marcus Stoinis ranks #43 with an overall Batting Pressure Index of 73.5. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.0% boundary rate). Across 11 high-leverage matches, scored 150 runs from 91 balls at an elite strike rate of 164.8, compared to a baseline of 152.8.",
+    "seasons": {
+      "2022": {
+        "balls": 225,
+        "runs": 354,
+        "pressureBalls": 50,
+        "pressureRuns": 84
+      },
+      "2023": {
+        "balls": 353,
+        "runs": 520,
+        "pressureBalls": 3,
+        "pressureRuns": 3
+      },
+      "2024": {
+        "balls": 370,
+        "runs": 545,
+        "pressureBalls": 17,
+        "pressureRuns": 29
+      },
+      "2025": {
+        "balls": 154,
+        "runs": 253,
+        "pressureBalls": 10,
+        "pressureRuns": 17
+      },
+      "2026": {
+        "balls": 141,
+        "runs": 238,
+        "pressureBalls": 11,
+        "pressureRuns": 17
+      }
+    },
+    "ipl": {
+      "balls": 82,
+      "runs": 138,
+      "sr": 168.3
+    },
+    "t20i": {
+      "balls": 9,
+      "runs": 12,
+      "sr": 133.3
+    },
+    "country": "Australia",
+    "country_code": "AU",
+    "country_flag": "🇦🇺",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "2639",
+    "pressure_rating": 73.5,
+    "keyMetric": "SR 164.8"
+  },
+  {
+    "rank": 44,
+    "id": "2876",
+    "name": "Axar Patel",
+    "team": "Delhi Capitals",
+    "teams": [
+      "India",
+      "Delhi Capitals"
+    ],
+    "matchesAnalysed": 105,
+    "pressureMatches": 22,
+    "totalBalls": 1276,
+    "totalRuns": 1749,
+    "totalSR": 137.1,
+    "normalBalls": 1098,
+    "normalRuns": 1473,
+    "normalSR": 134.2,
+    "pressureBalls": 178,
+    "pressureRuns": 276,
+    "pressureSR": 155.1,
+    "srDelta": 20.9,
+    "boundaryPct": 17.4,
+    "fours": 15,
+    "sixes": 16,
+    "dismissalRate": 17.3,
+    "dismissals": 16,
+    "dotPct": 25.3,
+    "deathSR": 143.9,
+    "chaseSR": 155.1,
+    "consistencyScore": 62.3,
+    "confidenceWeight": 0.95,
+    "rating": 73.2,
+    "verdict": "Axar Patel ranks #44 with an overall Batting Pressure Index of 73.2. Characterized by marked positive strike rate boost (+20.9). Across 22 high-leverage matches, scored 276 runs from 178 balls at an elite strike rate of 155.1, compared to a baseline of 134.2.",
+    "seasons": {
+      "2022": {
+        "balls": 170,
+        "runs": 257,
+        "pressureBalls": 31,
+        "pressureRuns": 55
+      },
+      "2023": {
+        "balls": 322,
+        "runs": 465,
+        "pressureBalls": 82,
+        "pressureRuns": 154
+      },
+      "2024": {
+        "balls": 213,
+        "runs": 280,
+        "pressureBalls": 33,
+        "pressureRuns": 29
+      },
+      "2025": {
+        "balls": 321,
+        "runs": 446,
+        "pressureBalls": 8,
+        "pressureRuns": 11
+      },
+      "2026": {
+        "balls": 242,
+        "runs": 292,
+        "pressureBalls": 24,
+        "pressureRuns": 27
+      },
+      "2022/23": {
+        "balls": 8,
+        "runs": 9,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 122,
+      "runs": 179,
+      "sr": 146.7
+    },
+    "t20i": {
+      "balls": 56,
+      "runs": 97,
+      "sr": 173.2
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "2876",
+    "pressure_rating": 73.2,
+    "keyMetric": "SR 155.1"
+  },
+  {
+    "rank": 45,
+    "id": "2417",
+    "name": "Akeal Hosein",
+    "team": "Chennai Super Kings",
+    "teams": [
+      "West Indies",
+      "Sunrisers Hyderabad",
+      "Chennai Super Kings"
+    ],
+    "matchesAnalysed": 32,
+    "pressureMatches": 13,
+    "totalBalls": 222,
+    "totalRuns": 286,
+    "totalSR": 128.8,
+    "normalBalls": 134,
+    "normalRuns": 157,
+    "normalSR": 117.2,
+    "pressureBalls": 88,
+    "pressureRuns": 129,
+    "pressureSR": 146.6,
+    "srDelta": 29.4,
+    "boundaryPct": 19.3,
+    "fours": 7,
+    "sixes": 10,
+    "dismissalRate": 14.3,
+    "dismissals": 9,
+    "dotPct": 40.9,
+    "deathSR": 177.8,
+    "chaseSR": 146.6,
+    "consistencyScore": 68,
+    "confidenceWeight": 0.86,
+    "rating": 72.2,
+    "verdict": "Akeal Hosein ranks #45 with an overall Batting Pressure Index of 72.2. Characterized by marked positive strike rate boost (+29.4). Across 13 high-leverage matches, scored 129 runs from 88 balls at an elite strike rate of 146.6, compared to a baseline of 117.2.",
+    "seasons": {
+      "2022": {
+        "balls": 74,
+        "runs": 96,
+        "pressureBalls": 40,
+        "pressureRuns": 52
+      },
+      "2023": {
+        "balls": 34,
+        "runs": 52,
+        "pressureBalls": 11,
+        "pressureRuns": 15
+      },
+      "2024": {
+        "balls": 60,
+        "runs": 55,
+        "pressureBalls": 17,
+        "pressureRuns": 28
+      },
+      "2025": {
+        "balls": 36,
+        "runs": 49,
+        "pressureBalls": 14,
+        "pressureRuns": 20
+      },
+      "2026": {
+        "balls": 18,
+        "runs": 34,
+        "pressureBalls": 6,
+        "pressureRuns": 14
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 88,
+      "runs": 129,
+      "sr": 146.6
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "2417",
+    "pressure_rating": 72.2,
+    "keyMetric": "SR 146.6"
+  },
+  {
+    "rank": 46,
+    "id": "29888",
+    "name": "Harshit Rana",
+    "team": "Kolkata Knight Riders",
+    "teams": [
+      "Kolkata Knight Riders",
+      "India"
+    ],
+    "matchesAnalysed": 18,
+    "pressureMatches": 7,
+    "totalBalls": 147,
+    "totalRuns": 160,
+    "totalSR": 108.8,
+    "normalBalls": 92,
+    "normalRuns": 87,
+    "normalSR": 94.6,
+    "pressureBalls": 55,
+    "pressureRuns": 73,
+    "pressureSR": 132.7,
+    "srDelta": 38.2,
+    "boundaryPct": 18.2,
+    "fours": 5,
+    "sixes": 5,
+    "dismissalRate": 18.3,
+    "dismissals": 4,
+    "dotPct": 47.3,
+    "deathSR": 128.9,
+    "chaseSR": 132.7,
+    "consistencyScore": 67.4,
+    "confidenceWeight": 0.82,
+    "rating": 71.7,
+    "verdict": "Harshit Rana ranks #46 with an overall Batting Pressure Index of 71.7. Characterized by marked positive strike rate boost (+38.2). Across 7 high-leverage matches, scored 73 runs from 55 balls at an elite strike rate of 132.7, compared to a baseline of 94.6.",
+    "seasons": {
+      "2022": {
+        "balls": 2,
+        "runs": 2,
+        "pressureBalls": 1,
+        "pressureRuns": 2
+      },
+      "2023": {
+        "balls": 1,
+        "runs": 0,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 94,
+        "runs": 105,
+        "pressureBalls": 24,
+        "pressureRuns": 40
+      },
+      "2026": {
+        "balls": 50,
+        "runs": 53,
+        "pressureBalls": 30,
+        "pressureRuns": 31
+      }
+    },
+    "ipl": {
+      "balls": 25,
+      "runs": 42,
+      "sr": 168
+    },
+    "t20i": {
+      "balls": 30,
+      "runs": 31,
+      "sr": 103.3
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "29888",
+    "pressure_rating": 71.7,
+    "keyMetric": "SR 132.7"
+  },
+  {
+    "rank": 47,
+    "id": "3916",
+    "name": "Jitesh Sharma",
+    "team": "Royal Challengers Bengaluru",
+    "teams": [
+      "Punjab Kings",
+      "India",
+      "Royal Challengers Bengaluru",
+      "India A"
+    ],
+    "matchesAnalysed": 73,
+    "pressureMatches": 9,
+    "totalBalls": 894,
+    "totalRuns": 1388,
+    "totalSR": 155.3,
+    "normalBalls": 818,
+    "normalRuns": 1261,
+    "normalSR": 154.2,
+    "pressureBalls": 76,
+    "pressureRuns": 127,
+    "pressureSR": 167.1,
+    "srDelta": 12.9,
+    "boundaryPct": 22.4,
+    "fours": 7,
+    "sixes": 10,
+    "dismissalRate": 14.1,
+    "dismissals": 9,
+    "dotPct": 40.8,
+    "deathSR": 171.4,
+    "chaseSR": 167.1,
+    "consistencyScore": 70.7,
+    "confidenceWeight": 0.85,
+    "rating": 71.5,
+    "verdict": "Jitesh Sharma ranks #47 with an overall Batting Pressure Index of 71.5. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.4% boundary rate). Across 9 high-leverage matches, scored 127 runs from 76 balls at an elite strike rate of 167.1, compared to a baseline of 154.2.",
+    "seasons": {
+      "2022": {
+        "balls": 143,
+        "runs": 234,
+        "pressureBalls": 11,
+        "pressureRuns": 20
+      },
+      "2023": {
+        "balls": 239,
+        "runs": 372,
+        "pressureBalls": 33,
+        "pressureRuns": 60
+      },
+      "2024": {
+        "balls": 164,
+        "runs": 218,
+        "pressureBalls": 12,
+        "pressureRuns": 19
+      },
+      "2025": {
+        "balls": 253,
+        "runs": 448,
+        "pressureBalls": 20,
+        "pressureRuns": 28
+      },
+      "2026": {
+        "balls": 95,
+        "runs": 116,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 59,
+      "runs": 100,
+      "sr": 169.5
+    },
+    "t20i": {
+      "balls": 17,
+      "runs": 27,
+      "sr": 158.8
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Wicketkeeper-Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "3916",
+    "pressure_rating": 71.5,
+    "keyMetric": "SR 167.1"
+  },
+  {
+    "rank": 48,
+    "id": "1318",
+    "name": "Andre Russell",
+    "team": "Kolkata Knight Riders",
+    "teams": [
+      "Kolkata Knight Riders",
+      "West Indies"
+    ],
+    "matchesAnalysed": 57,
+    "pressureMatches": 11,
+    "totalBalls": 725,
+    "totalRuns": 1237,
+    "totalSR": 170.6,
+    "normalBalls": 635,
+    "normalRuns": 1081,
+    "normalSR": 170.2,
+    "pressureBalls": 90,
+    "pressureRuns": 156,
+    "pressureSR": 173.3,
+    "srDelta": 3.1,
+    "boundaryPct": 25.6,
+    "fours": 10,
+    "sixes": 13,
+    "dismissalRate": 19.5,
+    "dismissals": 8,
+    "dotPct": 36.7,
+    "deathSR": 178.2,
+    "chaseSR": 173.3,
+    "consistencyScore": 67.8,
+    "confidenceWeight": 0.86,
+    "rating": 71.4,
+    "verdict": "Andre Russell ranks #48 with an overall Batting Pressure Index of 71.4. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (25.6% boundary rate). Across 11 high-leverage matches, scored 156 runs from 90 balls at an elite strike rate of 173.3, compared to a baseline of 170.2.",
+    "seasons": {
+      "2022": {
+        "balls": 189,
+        "runs": 330,
+        "pressureBalls": 26,
+        "pressureRuns": 37
+      },
+      "2023": {
+        "balls": 217,
+        "runs": 331,
+        "pressureBalls": 40,
+        "pressureRuns": 82
+      },
+      "2024": {
+        "balls": 180,
+        "runs": 350,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 139,
+        "runs": 226,
+        "pressureBalls": 24,
+        "pressureRuns": 37
+      }
+    },
+    "ipl": {
+      "balls": 61,
+      "runs": 102,
+      "sr": 167.2
+    },
+    "t20i": {
+      "balls": 29,
+      "runs": 54,
+      "sr": 186.2
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "1318",
+    "pressure_rating": 71.4,
+    "keyMetric": "SR 173.3"
+  },
+  {
+    "rank": 49,
+    "id": "5379",
+    "name": "Mark Adair",
+    "team": "Ireland",
+    "teams": [
+      "Ireland"
+    ],
+    "matchesAnalysed": 27,
+    "pressureMatches": 11,
+    "totalBalls": 276,
+    "totalRuns": 387,
+    "totalSR": 140.2,
+    "normalBalls": 197,
+    "normalRuns": 267,
+    "normalSR": 135.5,
+    "pressureBalls": 79,
+    "pressureRuns": 120,
+    "pressureSR": 151.9,
+    "srDelta": 16.4,
+    "boundaryPct": 21.5,
+    "fours": 8,
+    "sixes": 9,
+    "dismissalRate": 15,
+    "dismissals": 8,
+    "dotPct": 40.5,
+    "deathSR": 152.4,
+    "chaseSR": 151.9,
+    "consistencyScore": 66.2,
+    "confidenceWeight": 0.85,
+    "rating": 69.7,
+    "verdict": "Mark Adair ranks #49 with an overall Batting Pressure Index of 69.7. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 120 runs from 79 balls at an elite strike rate of 151.9, compared to a baseline of 135.5.",
+    "seasons": {
+      "2022": {
+        "balls": 84,
+        "runs": 122,
+        "pressureBalls": 36,
+        "pressureRuns": 45
+      },
+      "2023": {
+        "balls": 57,
+        "runs": 61,
+        "pressureBalls": 15,
+        "pressureRuns": 23
+      },
+      "2024": {
+        "balls": 66,
+        "runs": 105,
+        "pressureBalls": 5,
+        "pressureRuns": 5
+      },
+      "2025": {
+        "balls": 23,
+        "runs": 39,
+        "pressureBalls": 14,
+        "pressureRuns": 31
+      },
+      "2026": {
+        "balls": 21,
+        "runs": 34,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2023/24": {
+        "balls": 25,
+        "runs": 26,
+        "pressureBalls": 9,
+        "pressureRuns": 16
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 79,
+      "runs": 120,
+      "sr": 151.9
+    },
+    "country": "Ireland",
+    "country_code": "IE",
+    "country_flag": "🇮🇪",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "5379",
+    "pressure_rating": 69.7,
+    "keyMetric": "SR 151.9"
+  },
+  {
+    "rank": 50,
+    "id": "3628",
+    "name": "Kagiso Rabada",
+    "team": "Gujarat Titans",
+    "teams": [
+      "Punjab Kings",
+      "South Africa",
+      "Gujarat Titans"
+    ],
+    "matchesAnalysed": 25,
+    "pressureMatches": 12,
+    "totalBalls": 141,
+    "totalRuns": 168,
+    "totalSR": 119.1,
+    "normalBalls": 72,
+    "normalRuns": 75,
+    "normalSR": 104.2,
+    "pressureBalls": 69,
+    "pressureRuns": 93,
+    "pressureSR": 134.8,
+    "srDelta": 30.6,
+    "boundaryPct": 18.8,
+    "fours": 8,
+    "sixes": 5,
+    "dismissalRate": 11.6,
+    "dismissals": 8,
+    "dotPct": 39.1,
+    "deathSR": 131.3,
+    "chaseSR": 134.8,
+    "consistencyScore": 69.9,
+    "confidenceWeight": 0.84,
+    "rating": 68.4,
+    "verdict": "Kagiso Rabada ranks #50 with an overall Batting Pressure Index of 68.4. Characterized by marked positive strike rate boost (+30.6). Across 12 high-leverage matches, scored 93 runs from 69 balls at an elite strike rate of 134.8, compared to a baseline of 104.2.",
+    "seasons": {
+      "2022": {
+        "balls": 52,
+        "runs": 57,
+        "pressureBalls": 16,
+        "pressureRuns": 17
+      },
+      "2023": {
+        "balls": 2,
+        "runs": 0,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 14,
+        "runs": 20,
+        "pressureBalls": 7,
+        "pressureRuns": 11
+      },
+      "2025": {
+        "balls": 24,
+        "runs": 37,
+        "pressureBalls": 11,
+        "pressureRuns": 21
+      },
+      "2026": {
+        "balls": 38,
+        "runs": 47,
+        "pressureBalls": 35,
+        "pressureRuns": 44
+      },
+      "2022/23": {
+        "balls": 11,
+        "runs": 7,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 52,
+      "runs": 65,
+      "sr": 125
+    },
+    "t20i": {
+      "balls": 17,
+      "runs": 28,
+      "sr": 164.7
+    },
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "3628",
+    "pressure_rating": 68.4,
+    "keyMetric": "SR 134.8"
+  },
+  {
+    "rank": 51,
+    "id": "2463",
+    "name": "Ryan Burl",
+    "team": "Zimbabwe",
+    "teams": [
+      "Zimbabwe"
+    ],
+    "matchesAnalysed": 42,
+    "pressureMatches": 9,
+    "totalBalls": 702,
+    "totalRuns": 852,
+    "totalSR": 121.4,
+    "normalBalls": 645,
+    "normalRuns": 770,
+    "normalSR": 119.4,
+    "pressureBalls": 57,
+    "pressureRuns": 82,
+    "pressureSR": 143.9,
+    "srDelta": 24.5,
+    "boundaryPct": 19.3,
+    "fours": 7,
+    "sixes": 4,
+    "dismissalRate": 13.7,
+    "dismissals": 6,
+    "dotPct": 38.6,
+    "deathSR": 142.4,
+    "chaseSR": 143.9,
+    "consistencyScore": 59.6,
+    "confidenceWeight": 0.82,
+    "rating": 68,
+    "verdict": "Ryan Burl ranks #51 with an overall Batting Pressure Index of 68. Characterized by marked positive strike rate boost (+24.5). Across 9 high-leverage matches, scored 82 runs from 57 balls at an elite strike rate of 143.9, compared to a baseline of 119.4.",
+    "seasons": {
+      "2022": {
+        "balls": 88,
+        "runs": 103,
+        "pressureBalls": 7,
+        "pressureRuns": 2
+      },
+      "2023": {
+        "balls": 38,
+        "runs": 53,
+        "pressureBalls": 1,
+        "pressureRuns": 6
+      },
+      "2024": {
+        "balls": 72,
+        "runs": 61,
+        "pressureBalls": 3,
+        "pressureRuns": 7
+      },
+      "2025": {
+        "balls": 227,
+        "runs": 319,
+        "pressureBalls": 23,
+        "pressureRuns": 39
+      },
+      "2026": {
+        "balls": 203,
+        "runs": 230,
+        "pressureBalls": 23,
+        "pressureRuns": 28
+      },
+      "2023/24": {
+        "balls": 74,
+        "runs": 86,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 57,
+      "runs": 82,
+      "sr": 143.9
+    },
+    "country": "Zimbabwe",
+    "country_code": "ZW",
+    "country_flag": "🇿🇼",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "2463",
+    "pressure_rating": 68,
+    "keyMetric": "SR 143.9"
+  },
+  {
+    "rank": 52,
+    "id": "4106",
+    "name": "Daryl Mitchell",
+    "team": "Chennai Super Kings",
+    "teams": [
+      "Rajasthan Royals",
+      "New Zealand",
+      "Chennai Super Kings"
+    ],
+    "matchesAnalysed": 69,
+    "pressureMatches": 6,
+    "totalBalls": 1147,
+    "totalRuns": 1661,
+    "totalSR": 144.8,
+    "normalBalls": 1097,
+    "normalRuns": 1583,
+    "normalSR": 144.3,
+    "pressureBalls": 50,
+    "pressureRuns": 78,
+    "pressureSR": 156,
+    "srDelta": 11.7,
+    "boundaryPct": 20,
+    "fours": 6,
+    "sixes": 4,
+    "dismissalRate": 15.6,
+    "dismissals": 5,
+    "dotPct": 28,
+    "deathSR": 133.3,
+    "chaseSR": 156,
+    "consistencyScore": 68.1,
+    "confidenceWeight": 0.81,
+    "rating": 67.9,
+    "verdict": "Daryl Mitchell ranks #52 with an overall Batting Pressure Index of 67.9. Characterized by reliable baseline preservation under pressure. Across 6 high-leverage matches, scored 78 runs from 50 balls at an elite strike rate of 156.0, compared to a baseline of 144.3.",
+    "seasons": {
+      "2022": {
+        "balls": 185,
+        "runs": 244,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2023": {
+        "balls": 256,
+        "runs": 309,
+        "pressureBalls": 16,
+        "pressureRuns": 23
+      },
+      "2024": {
+        "balls": 309,
+        "runs": 476,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 140,
+        "runs": 196,
+        "pressureBalls": 3,
+        "pressureRuns": 5
+      },
+      "2026": {
+        "balls": 168,
+        "runs": 301,
+        "pressureBalls": 27,
+        "pressureRuns": 49
+      },
+      "2022/23": {
+        "balls": 16,
+        "runs": 20,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024/25": {
+        "balls": 73,
+        "runs": 115,
+        "pressureBalls": 4,
+        "pressureRuns": 1
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 50,
+      "runs": 78,
+      "sr": 156
+    },
+    "country": "New Zealand",
+    "country_code": "NZ",
+    "country_flag": "🇳🇿",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "4106",
+    "pressure_rating": 67.9,
+    "keyMetric": "SR 156"
+  },
+  {
+    "rank": 53,
+    "id": "6671",
+    "name": "Lalit Yadav",
+    "team": "Delhi Capitals",
+    "teams": [
+      "Delhi Capitals"
+    ],
+    "matchesAnalysed": 16,
+    "pressureMatches": 7,
+    "totalBalls": 216,
+    "totalRuns": 237,
+    "totalSR": 109.7,
+    "normalBalls": 157,
+    "normalRuns": 161,
+    "normalSR": 102.5,
+    "pressureBalls": 59,
+    "pressureRuns": 76,
+    "pressureSR": 128.8,
+    "srDelta": 26.3,
+    "boundaryPct": 18.6,
+    "fours": 8,
+    "sixes": 3,
+    "dismissalRate": 12.7,
+    "dismissals": 6,
+    "dotPct": 44.1,
+    "deathSR": 114.3,
+    "chaseSR": 128.8,
+    "consistencyScore": 68,
+    "confidenceWeight": 0.82,
+    "rating": 65.7,
+    "verdict": "Lalit Yadav ranks #53 with an overall Batting Pressure Index of 65.7. Characterized by marked positive strike rate boost (+26.3). Across 7 high-leverage matches, scored 76 runs from 59 balls at an elite strike rate of 128.8, compared to a baseline of 102.5.",
+    "seasons": {
+      "2022": {
+        "balls": 145,
+        "runs": 161,
+        "pressureBalls": 23,
+        "pressureRuns": 44
+      },
+      "2023": {
+        "balls": 59,
+        "runs": 66,
+        "pressureBalls": 24,
+        "pressureRuns": 22
+      },
+      "2024": {
+        "balls": 12,
+        "runs": 10,
+        "pressureBalls": 12,
+        "pressureRuns": 10
+      }
+    },
+    "ipl": {
+      "balls": 59,
+      "runs": 76,
+      "sr": 128.8
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "6671",
+    "pressure_rating": 65.7,
+    "keyMetric": "SR 128.8"
+  },
+  {
+    "rank": 54,
+    "id": "6726",
+    "name": "Romario Shepherd",
+    "team": "Royal Challengers Bengaluru",
+    "teams": [
+      "West Indies",
+      "Sunrisers Hyderabad",
+      "Lucknow Super Giants",
+      "Mumbai Indians",
+      "Royal Challengers Bengaluru"
+    ],
+    "matchesAnalysed": 68,
+    "pressureMatches": 23,
+    "totalBalls": 681,
+    "totalRuns": 1048,
+    "totalSR": 153.9,
+    "normalBalls": 463,
+    "normalRuns": 733,
+    "normalSR": 158.3,
+    "pressureBalls": 218,
+    "pressureRuns": 315,
+    "pressureSR": 144.5,
+    "srDelta": -13.8,
+    "boundaryPct": 19.3,
+    "fours": 16,
+    "sixes": 26,
+    "dismissalRate": 22.5,
+    "dismissals": 14,
+    "dotPct": 42.7,
+    "deathSR": 145.2,
+    "chaseSR": 144.5,
+    "consistencyScore": 68,
+    "confidenceWeight": 0.98,
+    "rating": 63.5,
+    "verdict": "Romario Shepherd ranks #54 with an overall Batting Pressure Index of 63.5. Characterized by reliable baseline preservation under pressure. Across 23 high-leverage matches, scored 315 runs from 218 balls at an elite strike rate of 144.5, compared to a baseline of 158.3.",
+    "seasons": {
+      "2022": {
+        "balls": 138,
+        "runs": 200,
+        "pressureBalls": 90,
+        "pressureRuns": 133
+      },
+      "2023": {
+        "balls": 65,
+        "runs": 103,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 185,
+        "runs": 270,
+        "pressureBalls": 49,
+        "pressureRuns": 59
+      },
+      "2025": {
+        "balls": 195,
+        "runs": 330,
+        "pressureBalls": 67,
+        "pressureRuns": 109
+      },
+      "2026": {
+        "balls": 98,
+        "runs": 145,
+        "pressureBalls": 12,
+        "pressureRuns": 14
+      }
+    },
+    "ipl": {
+      "balls": 45,
+      "runs": 53,
+      "sr": 117.8
+    },
+    "t20i": {
+      "balls": 173,
+      "runs": 262,
+      "sr": 151.4
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "6726",
+    "pressure_rating": 63.5,
+    "keyMetric": "SR 144.5"
+  },
+  {
+    "rank": 55,
+    "id": "4219",
+    "name": "Krunal Pandya",
+    "team": "Royal Challengers Bengaluru",
+    "teams": [
+      "Lucknow Super Giants",
+      "Royal Challengers Bengaluru"
+    ],
+    "matchesAnalysed": 54,
+    "pressureMatches": 11,
+    "totalBalls": 653,
+    "totalRuns": 834,
+    "totalSR": 127.7,
+    "normalBalls": 585,
+    "normalRuns": 741,
+    "normalSR": 126.7,
+    "pressureBalls": 68,
+    "pressureRuns": 93,
+    "pressureSR": 136.8,
+    "srDelta": 10.1,
+    "boundaryPct": 17.6,
+    "fours": 9,
+    "sixes": 3,
+    "dismissalRate": 15.5,
+    "dismissals": 6,
+    "dotPct": 36.8,
+    "deathSR": 126.2,
+    "chaseSR": 136.8,
+    "consistencyScore": 65.6,
+    "confidenceWeight": 0.84,
+    "rating": 62.9,
+    "verdict": "Krunal Pandya ranks #55 with an overall Batting Pressure Index of 62.9. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 93 runs from 68 balls at an elite strike rate of 136.8, compared to a baseline of 126.7.",
+    "seasons": {
+      "2022": {
+        "balls": 145,
+        "runs": 183,
+        "pressureBalls": 15,
+        "pressureRuns": 25
+      },
+      "2023": {
+        "balls": 164,
+        "runs": 188,
+        "pressureBalls": 1,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 105,
+        "runs": 133,
+        "pressureBalls": 17,
+        "pressureRuns": 16
+      },
+      "2025": {
+        "balls": 85,
+        "runs": 105,
+        "pressureBalls": 4,
+        "pressureRuns": 8
+      },
+      "2026": {
+        "balls": 154,
+        "runs": 225,
+        "pressureBalls": 31,
+        "pressureRuns": 44
+      }
+    },
+    "ipl": {
+      "balls": 68,
+      "runs": 93,
+      "sr": 136.8
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "4219",
+    "pressure_rating": 62.9,
+    "keyMetric": "SR 136.8"
+  },
+  {
+    "rank": 56,
+    "id": "494",
+    "name": "Kieron Pollard",
+    "team": "Mumbai Indians",
+    "teams": [
+      "West Indies",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 18,
+    "pressureMatches": 7,
+    "totalBalls": 212,
+    "totalRuns": 245,
+    "totalSR": 115.6,
+    "normalBalls": 143,
+    "normalRuns": 161,
+    "normalSR": 112.6,
+    "pressureBalls": 69,
+    "pressureRuns": 84,
+    "pressureSR": 121.7,
+    "srDelta": 9.2,
+    "boundaryPct": 14.5,
+    "fours": 6,
+    "sixes": 4,
+    "dismissalRate": 21,
+    "dismissals": 4,
+    "dotPct": 39.1,
+    "deathSR": 124.6,
+    "chaseSR": 121.7,
+    "consistencyScore": 70.7,
+    "confidenceWeight": 0.84,
+    "rating": 61.3,
+    "verdict": "Kieron Pollard ranks #56 with an overall Batting Pressure Index of 61.3. Characterized by reliable baseline preservation under pressure. Across 7 high-leverage matches, scored 84 runs from 69 balls at an elite strike rate of 121.7, compared to a baseline of 112.6.",
+    "seasons": {
+      "2022": {
+        "balls": 212,
+        "runs": 245,
+        "pressureBalls": 69,
+        "pressureRuns": 84
+      }
+    },
+    "ipl": {
+      "balls": 50,
+      "runs": 63,
+      "sr": 126
+    },
+    "t20i": {
+      "balls": 19,
+      "runs": 21,
+      "sr": 110.5
+    },
+    "country": "West Indies",
+    "country_code": "WI",
+    "country_flag": "🌴",
+    "player_role": "Batter",
+    "avatar_icon": "sword",
+    "player_id": "494",
+    "pressure_rating": 61.3,
+    "keyMetric": "SR 121.7"
+  },
+  {
+    "rank": 57,
+    "id": "360",
+    "name": "Bhuvneshwar Kumar",
+    "team": "Royal Challengers Bengaluru",
+    "teams": [
+      "India",
+      "Sunrisers Hyderabad",
+      "Royal Challengers Bengaluru"
+    ],
+    "matchesAnalysed": 33,
+    "pressureMatches": 11,
+    "totalBalls": 169,
+    "totalRuns": 149,
+    "totalSR": 88.2,
+    "normalBalls": 107,
+    "normalRuns": 87,
+    "normalSR": 81.3,
+    "pressureBalls": 62,
+    "pressureRuns": 62,
+    "pressureSR": 100,
+    "srDelta": 18.7,
+    "boundaryPct": 12.9,
+    "fours": 7,
+    "sixes": 1,
+    "dismissalRate": 15.5,
+    "dismissals": 4,
+    "dotPct": 48.4,
+    "deathSR": 104.7,
+    "chaseSR": 100,
+    "consistencyScore": 63.7,
+    "confidenceWeight": 0.83,
+    "rating": 56.1,
+    "verdict": "Bhuvneshwar Kumar ranks #57 with an overall Batting Pressure Index of 56.1. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 62 runs from 62 balls at an elite strike rate of 100.0, compared to a baseline of 81.3.",
+    "seasons": {
+      "2022": {
+        "balls": 37,
+        "runs": 29,
+        "pressureBalls": 9,
+        "pressureRuns": 5
+      },
+      "2023": {
+        "balls": 47,
+        "runs": 42,
+        "pressureBalls": 36,
+        "pressureRuns": 34
+      },
+      "2024": {
+        "balls": 29,
+        "runs": 23,
+        "pressureBalls": 13,
+        "pressureRuns": 13
+      },
+      "2025": {
+        "balls": 25,
+        "runs": 14,
+        "pressureBalls": 2,
+        "pressureRuns": 3
+      },
+      "2026": {
+        "balls": 30,
+        "runs": 40,
+        "pressureBalls": 2,
+        "pressureRuns": 7
+      },
+      "2022/23": {
+        "balls": 1,
+        "runs": 1,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 62,
+      "runs": 62,
+      "sr": 100
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "360",
+    "pressure_rating": 56.1,
+    "keyMetric": "SR 100"
+  },
+  {
+    "rank": 58,
+    "id": "3323",
+    "name": "Jimmy Neesham",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Rajasthan Royals",
+      "New Zealand"
+    ],
+    "matchesAnalysed": 39,
+    "pressureMatches": 10,
+    "totalBalls": 421,
+    "totalRuns": 568,
+    "totalSR": 134.9,
+    "normalBalls": 367,
+    "normalRuns": 495,
+    "normalSR": 134.9,
+    "pressureBalls": 54,
+    "pressureRuns": 73,
+    "pressureSR": 135.2,
+    "srDelta": 0.3,
+    "boundaryPct": 16.7,
+    "fours": 6,
+    "sixes": 3,
+    "dismissalRate": 9.1,
+    "dismissals": 8,
+    "dotPct": 38.9,
+    "deathSR": 141.4,
+    "chaseSR": 135.2,
+    "consistencyScore": 70.4,
+    "confidenceWeight": 0.82,
+    "rating": 56.1,
+    "verdict": "Jimmy Neesham ranks #58 with an overall Batting Pressure Index of 56.1. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 73 runs from 54 balls at an elite strike rate of 135.2, compared to a baseline of 134.9.",
+    "seasons": {
+      "2022": {
+        "balls": 98,
+        "runs": 164,
+        "pressureBalls": 11,
+        "pressureRuns": 20
+      },
+      "2023": {
+        "balls": 139,
+        "runs": 212,
+        "pressureBalls": 14,
+        "pressureRuns": 26
+      },
+      "2024": {
+        "balls": 30,
+        "runs": 34,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 62,
+        "runs": 66,
+        "pressureBalls": 18,
+        "pressureRuns": 18
+      },
+      "2026": {
+        "balls": 64,
+        "runs": 64,
+        "pressureBalls": 9,
+        "pressureRuns": 9
+      },
+      "2022/23": {
+        "balls": 28,
+        "runs": 28,
+        "pressureBalls": 2,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 9,
+      "runs": 12,
+      "sr": 133.3
+    },
+    "t20i": {
+      "balls": 45,
+      "runs": 61,
+      "sr": 135.6
+    },
+    "country": "New Zealand",
+    "country_code": "NZ",
+    "country_flag": "🇳🇿",
+    "player_role": "Batter",
+    "avatar_icon": "zap",
+    "player_id": "3323",
+    "pressure_rating": 56.1,
+    "keyMetric": "SR 135.2"
+  },
+  {
+    "rank": 59,
+    "id": "21784",
+    "name": "Brad Evans",
+    "team": "Zimbabwe",
+    "teams": [
+      "Zimbabwe"
+    ],
+    "matchesAnalysed": 17,
+    "pressureMatches": 7,
+    "totalBalls": 121,
+    "totalRuns": 145,
+    "totalSR": 119.8,
+    "normalBalls": 62,
+    "normalRuns": 73,
+    "normalSR": 117.7,
+    "pressureBalls": 59,
+    "pressureRuns": 72,
+    "pressureSR": 122,
+    "srDelta": 4.3,
+    "boundaryPct": 13.6,
+    "fours": 3,
+    "sixes": 5,
+    "dismissalRate": 10.3,
+    "dismissals": 7,
+    "dotPct": 49.2,
+    "deathSR": 127.8,
+    "chaseSR": 122,
+    "consistencyScore": 68.4,
+    "confidenceWeight": 0.82,
+    "rating": 54,
+    "verdict": "Brad Evans ranks #59 with an overall Batting Pressure Index of 54. Characterized by reliable baseline preservation under pressure. Across 7 high-leverage matches, scored 72 runs from 59 balls at an elite strike rate of 122.0, compared to a baseline of 117.7.",
+    "seasons": {
+      "2022": {
+        "balls": 4,
+        "runs": 5,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2023": {
+        "balls": 10,
+        "runs": 11,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2025": {
+        "balls": 49,
+        "runs": 47,
+        "pressureBalls": 15,
+        "pressureRuns": 10
+      },
+      "2026": {
+        "balls": 58,
+        "runs": 82,
+        "pressureBalls": 44,
+        "pressureRuns": 62
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 59,
+      "runs": 72,
+      "sr": 122
+    },
+    "country": "Zimbabwe",
+    "country_code": "ZW",
+    "country_flag": "🇿🇼",
+    "player_role": "Batter",
+    "avatar_icon": "flame",
+    "player_id": "21784",
+    "pressure_rating": 54,
+    "keyMetric": "SR 122"
+  },
+  {
+    "rank": 60,
+    "id": "7059",
+    "name": "Nehal Wadhera",
+    "team": "Punjab Kings",
+    "teams": [
+      "Mumbai Indians",
+      "India A",
+      "Punjab Kings"
+    ],
+    "matchesAnalysed": 45,
+    "pressureMatches": 9,
+    "totalBalls": 680,
+    "totalRuns": 912,
+    "totalSR": 134.1,
+    "normalBalls": 625,
+    "normalRuns": 840,
+    "normalSR": 134.4,
+    "pressureBalls": 55,
+    "pressureRuns": 72,
+    "pressureSR": 130.9,
+    "srDelta": -3.5,
+    "boundaryPct": 16.4,
+    "fours": 5,
+    "sixes": 4,
+    "dismissalRate": 9,
+    "dismissals": 8,
+    "dotPct": 36.4,
+    "deathSR": 100,
+    "chaseSR": 130.9,
+    "consistencyScore": 54.7,
+    "confidenceWeight": 0.82,
+    "rating": 52.4,
+    "verdict": "Nehal Wadhera ranks #60 with an overall Batting Pressure Index of 52.4. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 72 runs from 55 balls at an elite strike rate of 130.9, compared to a baseline of 134.4.",
+    "seasons": {
+      "2023": {
+        "balls": 166,
+        "runs": 241,
+        "pressureBalls": 25,
+        "pressureRuns": 43
+      },
+      "2024": {
+        "balls": 133,
+        "runs": 161,
+        "pressureBalls": 5,
+        "pressureRuns": 5
+      },
+      "2025": {
+        "balls": 324,
+        "runs": 445,
+        "pressureBalls": 25,
+        "pressureRuns": 24
+      },
+      "2026": {
+        "balls": 57,
+        "runs": 65,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 44,
+      "runs": 62,
+      "sr": 140.9
+    },
+    "t20i": {
+      "balls": 11,
+      "runs": 10,
+      "sr": 90.9
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "target",
+    "player_id": "7059",
+    "pressure_rating": 52.4,
+    "keyMetric": "SR 130.9"
+  },
+  {
+    "rank": 61,
+    "id": "8380",
+    "name": "Mohammad Rishad Hossain",
+    "team": "Bangladesh",
+    "teams": [
+      "Bangladesh"
+    ],
+    "matchesAnalysed": 29,
+    "pressureMatches": 12,
+    "totalBalls": 165,
+    "totalRuns": 189,
+    "totalSR": 114.5,
+    "normalBalls": 107,
+    "normalRuns": 123,
+    "normalSR": 115,
+    "pressureBalls": 58,
+    "pressureRuns": 66,
+    "pressureSR": 113.8,
+    "srDelta": -1.2,
+    "boundaryPct": 17.2,
+    "fours": 6,
+    "sixes": 4,
+    "dismissalRate": 7.3,
+    "dismissals": 9,
+    "dotPct": 55.2,
+    "deathSR": 100,
+    "chaseSR": 113.8,
+    "consistencyScore": 58.4,
+    "confidenceWeight": 0.82,
+    "rating": 49.7,
+    "verdict": "Mohammad Rishad Hossain ranks #61 with an overall Batting Pressure Index of 49.7. Characterized by reliable baseline preservation under pressure. Across 12 high-leverage matches, scored 66 runs from 58 balls at an elite strike rate of 113.8, compared to a baseline of 115.0.",
+    "seasons": {
+      "2023": {
+        "balls": 20,
+        "runs": 18,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 64,
+        "runs": 88,
+        "pressureBalls": 28,
+        "pressureRuns": 36
+      },
+      "2025": {
+        "balls": 52,
+        "runs": 58,
+        "pressureBalls": 30,
+        "pressureRuns": 30
+      },
+      "2026": {
+        "balls": 29,
+        "runs": 25,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 58,
+      "runs": 66,
+      "sr": 113.8
+    },
+    "country": "Bangladesh",
+    "country_code": "BD",
+    "country_flag": "🇧🇩",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "8380",
+    "pressure_rating": 49.7,
+    "keyMetric": "SR 113.8"
+  },
+  {
+    "rank": 62,
+    "id": "1758",
+    "name": "Patrick Cummins",
+    "team": "Sunrisers Hyderabad",
+    "teams": [
+      "Australia",
+      "Kolkata Knight Riders",
+      "Sunrisers Hyderabad"
+    ],
+    "matchesAnalysed": 35,
+    "pressureMatches": 10,
+    "totalBalls": 246,
+    "totalRuns": 389,
+    "totalSR": 158.1,
+    "normalBalls": 193,
+    "normalRuns": 315,
+    "normalSR": 163.2,
+    "pressureBalls": 53,
+    "pressureRuns": 74,
+    "pressureSR": 139.6,
+    "srDelta": -23.6,
+    "boundaryPct": 17,
+    "fours": 5,
+    "sixes": 4,
+    "dismissalRate": 10.6,
+    "dismissals": 7,
+    "dotPct": 35.8,
+    "deathSR": 131.3,
+    "chaseSR": 139.6,
+    "consistencyScore": 64.9,
+    "confidenceWeight": 0.81,
+    "rating": 49.4,
+    "verdict": "Patrick Cummins ranks #62 with an overall Batting Pressure Index of 49.4. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 74 runs from 53 balls at an elite strike rate of 139.6, compared to a baseline of 163.2.",
+    "seasons": {
+      "2022": {
+        "balls": 53,
+        "runs": 98,
+        "pressureBalls": 15,
+        "pressureRuns": 22
+      },
+      "2024": {
+        "balls": 116,
+        "runs": 164,
+        "pressureBalls": 10,
+        "pressureRuns": 6
+      },
+      "2025": {
+        "balls": 58,
+        "runs": 97,
+        "pressureBalls": 20,
+        "pressureRuns": 28
+      },
+      "2026": {
+        "balls": 19,
+        "runs": 30,
+        "pressureBalls": 8,
+        "pressureRuns": 18
+      }
+    },
+    "ipl": {
+      "balls": 42,
+      "runs": 56,
+      "sr": 133.3
+    },
+    "t20i": {
+      "balls": 11,
+      "runs": 18,
+      "sr": 163.6
+    },
+    "country": "Australia",
+    "country_code": "AU",
+    "country_flag": "🇦🇺",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "1758",
+    "pressure_rating": 49.4,
+    "keyMetric": "SR 139.6"
+  },
+  {
+    "rank": 63,
+    "id": "7905",
+    "name": "Tanzim Sakib",
+    "team": "Bangladesh",
+    "teams": [
+      "Bangladesh"
+    ],
+    "matchesAnalysed": 17,
+    "pressureMatches": 9,
+    "totalBalls": 162,
+    "totalRuns": 183,
+    "totalSR": 113,
+    "normalBalls": 96,
+    "normalRuns": 110,
+    "normalSR": 114.6,
+    "pressureBalls": 66,
+    "pressureRuns": 73,
+    "pressureSR": 110.6,
+    "srDelta": -4,
+    "boundaryPct": 12.1,
+    "fours": 5,
+    "sixes": 3,
+    "dismissalRate": 12.2,
+    "dismissals": 6,
+    "dotPct": 42.4,
+    "deathSR": 91.9,
+    "chaseSR": 110.6,
+    "consistencyScore": 65.5,
+    "confidenceWeight": 0.83,
+    "rating": 49.2,
+    "verdict": "Tanzim Sakib ranks #63 with an overall Batting Pressure Index of 49.2. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 73 runs from 66 balls at an elite strike rate of 110.6, compared to a baseline of 114.6.",
+    "seasons": {
+      "2024": {
+        "balls": 46,
+        "runs": 48,
+        "pressureBalls": 18,
+        "pressureRuns": 16
+      },
+      "2025": {
+        "balls": 116,
+        "runs": 135,
+        "pressureBalls": 48,
+        "pressureRuns": 57
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 66,
+      "runs": 73,
+      "sr": 110.6
+    },
+    "country": "Bangladesh",
+    "country_code": "BD",
+    "country_flag": "🇧🇩",
+    "player_role": "Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "7905",
+    "pressure_rating": 49.2,
+    "keyMetric": "SR 110.6"
+  },
+  {
+    "rank": 64,
+    "id": "403",
+    "name": "Umesh Yadav",
+    "team": "Gujarat Titans",
+    "teams": [
+      "Kolkata Knight Riders",
+      "India",
+      "Gujarat Titans"
+    ],
+    "matchesAnalysed": 15,
+    "pressureMatches": 10,
+    "totalBalls": 90,
+    "totalRuns": 106,
+    "totalSR": 117.8,
+    "normalBalls": 35,
+    "normalRuns": 44,
+    "normalSR": 125.7,
+    "pressureBalls": 55,
+    "pressureRuns": 62,
+    "pressureSR": 112.7,
+    "srDelta": -13,
+    "boundaryPct": 10.9,
+    "fours": 3,
+    "sixes": 3,
+    "dismissalRate": 15.5,
+    "dismissals": 4,
+    "dotPct": 40,
+    "deathSR": 114.9,
+    "chaseSR": 112.7,
+    "consistencyScore": 63.4,
+    "confidenceWeight": 0.82,
+    "rating": 47.2,
+    "verdict": "Umesh Yadav ranks #64 with an overall Batting Pressure Index of 47.2. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 62 runs from 55 balls at an elite strike rate of 112.7, compared to a baseline of 125.7.",
+    "seasons": {
+      "2022": {
+        "balls": 40,
+        "runs": 55,
+        "pressureBalls": 18,
+        "pressureRuns": 29
+      },
+      "2023": {
+        "balls": 18,
+        "runs": 19,
+        "pressureBalls": 11,
+        "pressureRuns": 10
+      },
+      "2024": {
+        "balls": 15,
+        "runs": 12,
+        "pressureBalls": 10,
+        "pressureRuns": 4
+      },
+      "2022/23": {
+        "balls": 17,
+        "runs": 20,
+        "pressureBalls": 16,
+        "pressureRuns": 19
+      }
+    },
+    "ipl": {
+      "balls": 39,
+      "runs": 43,
+      "sr": 110.3
+    },
+    "t20i": {
+      "balls": 16,
+      "runs": 19,
+      "sr": 118.8
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "sparkles",
+    "player_id": "403",
+    "pressure_rating": 47.2,
+    "keyMetric": "SR 112.7"
+  },
+  {
+    "rank": 65,
+    "id": "7446",
+    "name": "Abdul Samad",
+    "team": "Lucknow Super Giants",
+    "teams": [
+      "Sunrisers Hyderabad",
+      "Lucknow Super Giants"
+    ],
+    "matchesAnalysed": 41,
+    "pressureMatches": 10,
+    "totalBalls": 422,
+    "totalRuns": 631,
+    "totalSR": 149.5,
+    "normalBalls": 321,
+    "normalRuns": 510,
+    "normalSR": 158.9,
+    "pressureBalls": 101,
+    "pressureRuns": 121,
+    "pressureSR": 119.8,
+    "srDelta": -39.1,
+    "boundaryPct": 12.9,
+    "fours": 5,
+    "sixes": 8,
+    "dismissalRate": 20.2,
+    "dismissals": 6,
+    "dotPct": 41.6,
+    "deathSR": 116.7,
+    "chaseSR": 119.8,
+    "consistencyScore": 64.7,
+    "confidenceWeight": 0.88,
+    "rating": 45,
+    "verdict": "Abdul Samad ranks #65 with an overall Batting Pressure Index of 45. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 121 runs from 101 balls at an elite strike rate of 119.8, compared to a baseline of 158.9.",
+    "seasons": {
+      "2022": {
+        "balls": 7,
+        "runs": 4,
+        "pressureBalls": 1,
+        "pressureRuns": 0
+      },
+      "2023": {
+        "balls": 126,
+        "runs": 165,
+        "pressureBalls": 46,
+        "pressureRuns": 37
+      },
+      "2024": {
+        "balls": 108,
+        "runs": 182,
+        "pressureBalls": 26,
+        "pressureRuns": 37
+      },
+      "2025": {
+        "balls": 93,
+        "runs": 164,
+        "pressureBalls": 28,
+        "pressureRuns": 47
+      },
+      "2026": {
+        "balls": 88,
+        "runs": 116,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 101,
+      "runs": 121,
+      "sr": 119.8
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "Batter",
+    "avatar_icon": "sword",
+    "player_id": "7446",
+    "pressure_rating": 45,
+    "keyMetric": "SR 119.8"
+  },
+  {
+    "rank": 66,
+    "id": "4900",
+    "name": "Wanindu Hasaranga",
+    "team": "Lucknow Super Giants",
+    "teams": [
+      "Sri Lanka",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad",
+      "Rajasthan Royals",
+      "Lucknow Super Giants"
+    ],
+    "matchesAnalysed": 62,
+    "pressureMatches": 16,
+    "totalBalls": 468,
+    "totalRuns": 584,
+    "totalSR": 124.8,
+    "normalBalls": 400,
+    "normalRuns": 507,
+    "normalSR": 126.8,
+    "pressureBalls": 68,
+    "pressureRuns": 77,
+    "pressureSR": 113.2,
+    "srDelta": -13.5,
+    "boundaryPct": 11.8,
+    "fours": 7,
+    "sixes": 1,
+    "dismissalRate": 5.5,
+    "dismissals": 14,
+    "dotPct": 38.2,
+    "deathSR": 125.6,
+    "chaseSR": 113.2,
+    "consistencyScore": 70.2,
+    "confidenceWeight": 0.84,
+    "rating": 43.9,
+    "verdict": "Wanindu Hasaranga ranks #66 with an overall Batting Pressure Index of 43.9. Characterized by reliable baseline preservation under pressure. Across 16 high-leverage matches, scored 77 runs from 68 balls at an elite strike rate of 113.2, compared to a baseline of 126.8.",
+    "seasons": {
+      "2022": {
+        "balls": 137,
+        "runs": 167,
+        "pressureBalls": 29,
+        "pressureRuns": 42
+      },
+      "2023": {
+        "balls": 64,
+        "runs": 93,
+        "pressureBalls": 14,
+        "pressureRuns": 16
+      },
+      "2024": {
+        "balls": 109,
+        "runs": 153,
+        "pressureBalls": 3,
+        "pressureRuns": 2
+      },
+      "2025": {
+        "balls": 75,
+        "runs": 70,
+        "pressureBalls": 11,
+        "pressureRuns": 7
+      },
+      "2026": {
+        "balls": 79,
+        "runs": 95,
+        "pressureBalls": 7,
+        "pressureRuns": 4
+      },
+      "2024/25": {
+        "balls": 4,
+        "runs": 6,
+        "pressureBalls": 4,
+        "pressureRuns": 6
+      }
+    },
+    "ipl": {
+      "balls": 24,
+      "runs": 29,
+      "sr": 120.8
+    },
+    "t20i": {
+      "balls": 44,
+      "runs": 48,
+      "sr": 109.1
+    },
+    "country": "Sri Lanka",
+    "country_code": "LK",
+    "country_flag": "🇱🇰",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "4900",
+    "pressure_rating": 43.9,
+    "keyMetric": "SR 113.2"
+  },
+  {
+    "rank": 67,
+    "id": "6355",
+    "name": "Shaheen Afridi",
+    "team": "Pakistan",
+    "teams": [
+      "Pakistan"
+    ],
+    "matchesAnalysed": 26,
+    "pressureMatches": 9,
+    "totalBalls": 182,
+    "totalRuns": 224,
+    "totalSR": 123.1,
+    "normalBalls": 120,
+    "normalRuns": 158,
+    "normalSR": 131.7,
+    "pressureBalls": 62,
+    "pressureRuns": 66,
+    "pressureSR": 106.5,
+    "srDelta": -25.2,
+    "boundaryPct": 12.9,
+    "fours": 4,
+    "sixes": 4,
+    "dismissalRate": 8.3,
+    "dismissals": 8,
+    "dotPct": 51.6,
+    "deathSR": 120,
+    "chaseSR": 106.5,
+    "consistencyScore": 65.3,
+    "confidenceWeight": 0.83,
+    "rating": 39.8,
+    "verdict": "Shaheen Afridi ranks #67 with an overall Batting Pressure Index of 39.8. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 66 runs from 62 balls at an elite strike rate of 106.5, compared to a baseline of 131.7.",
+    "seasons": {
+      "2023": {
+        "balls": 8,
+        "runs": 7,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2024": {
+        "balls": 81,
+        "runs": 98,
+        "pressureBalls": 47,
+        "pressureRuns": 56
+      },
+      "2025": {
+        "balls": 92,
+        "runs": 119,
+        "pressureBalls": 15,
+        "pressureRuns": 10
+      },
+      "2026": {
+        "balls": 1,
+        "runs": 0,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20i": {
+      "balls": 62,
+      "runs": 66,
+      "sr": 106.5
+    },
+    "country": "Pakistan",
+    "country_code": "PK",
+    "country_flag": "🇵🇰",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "6355",
+    "pressure_rating": 39.8,
+    "keyMetric": "SR 106.5"
+  },
+  {
+    "rank": 68,
+    "id": "19316",
+    "name": "Maheesh Theekshana",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Sri Lanka",
+      "Chennai Super Kings",
+      "Rajasthan Royals"
+    ],
+    "matchesAnalysed": 37,
+    "pressureMatches": 14,
+    "totalBalls": 203,
+    "totalRuns": 128,
+    "totalSR": 63.1,
+    "normalBalls": 114,
+    "normalRuns": 70,
+    "normalSR": 61.4,
+    "pressureBalls": 89,
+    "pressureRuns": 58,
+    "pressureSR": 65.2,
+    "srDelta": 3.8,
+    "boundaryPct": 4.5,
+    "fours": 4,
+    "sixes": 0,
+    "dismissalRate": 6.4,
+    "dismissals": 9,
+    "dotPct": 53.9,
+    "deathSR": 58.7,
+    "chaseSR": 65.2,
+    "consistencyScore": 46.9,
+    "confidenceWeight": 0.86,
+    "rating": 35.6,
+    "verdict": "Maheesh Theekshana ranks #68 with an overall Batting Pressure Index of 35.6. Characterized by reliable baseline preservation under pressure. Across 14 high-leverage matches, scored 58 runs from 89 balls at an elite strike rate of 65.2, compared to a baseline of 61.4.",
+    "seasons": {
+      "2022": {
+        "balls": 19,
+        "runs": 18,
+        "pressureBalls": 1,
+        "pressureRuns": 0
+      },
+      "2023": {
+        "balls": 15,
+        "runs": 3,
+        "pressureBalls": 9,
+        "pressureRuns": 3
+      },
+      "2024": {
+        "balls": 32,
+        "runs": 24,
+        "pressureBalls": 5,
+        "pressureRuns": 2
+      },
+      "2025": {
+        "balls": 78,
+        "runs": 37,
+        "pressureBalls": 31,
+        "pressureRuns": 15
+      },
+      "2026": {
+        "balls": 55,
+        "runs": 45,
+        "pressureBalls": 39,
+        "pressureRuns": 37
+      },
+      "2024/25": {
+        "balls": 4,
+        "runs": 1,
+        "pressureBalls": 4,
+        "pressureRuns": 1
+      }
+    },
+    "ipl": {
+      "balls": 15,
+      "runs": 6,
+      "sr": 40
+    },
+    "t20i": {
+      "balls": 74,
+      "runs": 52,
+      "sr": 70.3
+    },
+    "country": "Sri Lanka",
+    "country_code": "LK",
+    "country_flag": "🇱🇰",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "19316",
+    "pressure_rating": 35.6,
+    "keyMetric": "SR 65.2"
+  },
+  {
+    "rank": 69,
+    "id": "3298",
+    "name": "Jofra Archer",
+    "team": "Rajasthan Royals",
+    "teams": [
+      "Mumbai Indians",
+      "England",
+      "Rajasthan Royals"
+    ],
+    "matchesAnalysed": 29,
+    "pressureMatches": 11,
+    "totalBalls": 145,
+    "totalRuns": 187,
+    "totalSR": 129,
+    "normalBalls": 92,
+    "normalRuns": 131,
+    "normalSR": 142.4,
+    "pressureBalls": 53,
+    "pressureRuns": 56,
+    "pressureSR": 105.7,
+    "srDelta": -36.7,
+    "boundaryPct": 11.3,
+    "fours": 4,
+    "sixes": 2,
+    "dismissalRate": 9.3,
+    "dismissals": 6,
+    "dotPct": 45.3,
+    "deathSR": 81,
+    "chaseSR": 105.7,
+    "consistencyScore": 56,
+    "confidenceWeight": 0.81,
+    "rating": 35,
+    "verdict": "Jofra Archer ranks #69 with an overall Batting Pressure Index of 35. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 56 runs from 53 balls at an elite strike rate of 105.7, compared to a baseline of 142.4.",
+    "seasons": {
+      "2023": {
+        "balls": 5,
+        "runs": 4,
+        "pressureBalls": 2,
+        "pressureRuns": 1
+      },
+      "2024": {
+        "balls": 9,
+        "runs": 16,
+        "pressureBalls": 3,
+        "pressureRuns": 4
+      },
+      "2025": {
+        "balls": 75,
+        "runs": 88,
+        "pressureBalls": 37,
+        "pressureRuns": 44
+      },
+      "2026": {
+        "balls": 56,
+        "runs": 79,
+        "pressureBalls": 11,
+        "pressureRuns": 7
+      }
+    },
+    "ipl": {
+      "balls": 46,
+      "runs": 51,
+      "sr": 110.9
+    },
+    "t20i": {
+      "balls": 7,
+      "runs": 5,
+      "sr": 71.4
+    },
+    "country": "England",
+    "country_code": "GB-ENG",
+    "country_flag": "🏴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "3298",
+    "pressure_rating": 35,
+    "keyMetric": "SR 105.7"
+  },
+  {
+    "rank": 70,
+    "id": "786",
+    "name": "Chris Jordan",
+    "team": "Mumbai Indians",
+    "teams": [
+      "England",
+      "Chennai Super Kings",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 19,
+    "pressureMatches": 9,
+    "totalBalls": 129,
+    "totalRuns": 158,
+    "totalSR": 122.5,
+    "normalBalls": 77,
+    "normalRuns": 106,
+    "normalSR": 137.7,
+    "pressureBalls": 52,
+    "pressureRuns": 52,
+    "pressureSR": 100,
+    "srDelta": -37.7,
+    "boundaryPct": 9.6,
+    "fours": 5,
+    "sixes": 0,
+    "dismissalRate": 7.4,
+    "dismissals": 7,
+    "dotPct": 38.5,
+    "deathSR": 89.2,
+    "chaseSR": 100,
+    "consistencyScore": 68.5,
+    "confidenceWeight": 0.81,
+    "rating": 33.5,
+    "verdict": "Chris Jordan ranks #70 with an overall Batting Pressure Index of 33.5. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 52 runs from 52 balls at an elite strike rate of 100.0, compared to a baseline of 137.7.",
+    "seasons": {
+      "2022": {
+        "balls": 94,
+        "runs": 137,
+        "pressureBalls": 40,
+        "pressureRuns": 46
+      },
+      "2023": {
+        "balls": 32,
+        "runs": 18,
+        "pressureBalls": 12,
+        "pressureRuns": 6
+      },
+      "2024": {
+        "balls": 3,
+        "runs": 3,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      }
+    },
+    "ipl": {
+      "balls": 10,
+      "runs": 7,
+      "sr": 70
+    },
+    "t20i": {
+      "balls": 42,
+      "runs": 45,
+      "sr": 107.1
+    },
+    "country": "England",
+    "country_code": "GB-ENG",
+    "country_flag": "🏴",
+    "player_role": "All-Rounder",
+    "avatar_icon": "shield",
+    "player_id": "786",
+    "pressure_rating": 33.5,
+    "keyMetric": "SR 100"
+  },
+  {
+    "rank": 71,
+    "id": "2847",
+    "name": "Shardul Thakur",
+    "team": "Mumbai Indians",
+    "teams": [
+      "India",
+      "Delhi Capitals",
+      "Kolkata Knight Riders",
+      "Chennai Super Kings",
+      "Lucknow Super Giants",
+      "Mumbai Indians"
+    ],
+    "matchesAnalysed": 30,
+    "pressureMatches": 12,
+    "totalBalls": 216,
+    "totalRuns": 296,
+    "totalSR": 137,
+    "normalBalls": 151,
+    "normalRuns": 233,
+    "normalSR": 154.3,
+    "pressureBalls": 65,
+    "pressureRuns": 63,
+    "pressureSR": 96.9,
+    "srDelta": -57.4,
+    "boundaryPct": 7.7,
+    "fours": 2,
+    "sixes": 3,
+    "dismissalRate": 9,
+    "dismissals": 7,
+    "dotPct": 41.5,
+    "deathSR": 115.9,
+    "chaseSR": 96.9,
+    "consistencyScore": 65.5,
+    "confidenceWeight": 0.83,
+    "rating": 32.7,
+    "verdict": "Shardul Thakur ranks #71 with an overall Batting Pressure Index of 32.7. Characterized by reliable baseline preservation under pressure. Across 12 high-leverage matches, scored 63 runs from 65 balls at an elite strike rate of 96.9, compared to a baseline of 154.3.",
+    "seasons": {
+      "2022": {
+        "balls": 87,
+        "runs": 120,
+        "pressureBalls": 33,
+        "pressureRuns": 37
+      },
+      "2023": {
+        "balls": 70,
+        "runs": 113,
+        "pressureBalls": 14,
+        "pressureRuns": 15
+      },
+      "2024": {
+        "balls": 17,
+        "runs": 21,
+        "pressureBalls": 2,
+        "pressureRuns": 1
+      },
+      "2025": {
+        "balls": 12,
+        "runs": 18,
+        "pressureBalls": 0,
+        "pressureRuns": 0
+      },
+      "2026": {
+        "balls": 30,
+        "runs": 24,
+        "pressureBalls": 16,
+        "pressureRuns": 10
+      }
+    },
+    "ipl": {
+      "balls": 65,
+      "runs": 63,
+      "sr": 96.9
+    },
+    "t20i": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "zap",
+    "player_id": "2847",
+    "pressure_rating": 32.7,
+    "keyMetric": "SR 96.9"
+  },
+  {
+    "rank": 72,
+    "id": "3644",
+    "name": "Kuldeep Yadav",
+    "team": "Delhi Capitals",
+    "teams": [
+      "India",
+      "Delhi Capitals"
+    ],
+    "matchesAnalysed": 37,
+    "pressureMatches": 19,
+    "totalBalls": 201,
+    "totalRuns": 157,
+    "totalSR": 78.1,
+    "normalBalls": 95,
+    "normalRuns": 86,
+    "normalSR": 90.5,
+    "pressureBalls": 106,
+    "pressureRuns": 71,
+    "pressureSR": 67,
+    "srDelta": -23.5,
+    "boundaryPct": 4.7,
+    "fours": 4,
+    "sixes": 1,
+    "dismissalRate": 14.2,
+    "dismissals": 5,
+    "dotPct": 51.9,
+    "deathSR": 72.5,
+    "chaseSR": 67,
+    "consistencyScore": 63.9,
+    "confidenceWeight": 0.88,
+    "rating": 32.3,
+    "verdict": "Kuldeep Yadav ranks #72 with an overall Batting Pressure Index of 32.3. Characterized by reliable baseline preservation under pressure. Across 19 high-leverage matches, scored 71 runs from 106 balls at an elite strike rate of 67.0, compared to a baseline of 90.5.",
+    "seasons": {
+      "2022": {
+        "balls": 52,
+        "runs": 48,
+        "pressureBalls": 44,
+        "pressureRuns": 37
+      },
+      "2023": {
+        "balls": 59,
+        "runs": 34,
+        "pressureBalls": 37,
+        "pressureRuns": 17
+      },
+      "2024": {
+        "balls": 41,
+        "runs": 47,
+        "pressureBalls": 5,
+        "pressureRuns": 3
+      },
+      "2025": {
+        "balls": 25,
+        "runs": 19,
+        "pressureBalls": 11,
+        "pressureRuns": 10
+      },
+      "2026": {
+        "balls": 24,
+        "runs": 9,
+        "pressureBalls": 9,
+        "pressureRuns": 4
+      }
+    },
+    "ipl": {
+      "balls": 95,
+      "runs": 68,
+      "sr": 71.6
+    },
+    "t20i": {
+      "balls": 11,
+      "runs": 3,
+      "sr": 27.3
+    },
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "player_role": "All-Rounder",
+    "avatar_icon": "star",
+    "player_id": "3644",
+    "pressure_rating": 32.3,
+    "keyMetric": "SR 67"
+  }
+]

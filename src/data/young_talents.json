@@ -1,0 +1,2089 @@
+[
+  {
+    "id": "50284",
+    "name": "Vaibhav Sooryavanshi",
+    "dob": "2011-03-27",
+    "age": 15,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Batter",
+    "sub_role": "Teenage Left-Handed Powerplay Prodigy",
+    "current_teams": [
+      "Rajasthan Royals",
+      "India",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "Asia Cup Rising Stars 2025 (CSV Verified)",
+      "IPL 2025–2026 Rajasthan Royals"
+    ],
+    "avatar_icon": "flame",
+    "is_next_big_star": true,
+    "stats": {
+      "matches": 35,
+      "batting": {
+        "balls": 676,
+        "runs": 1509,
+        "strike_rate": 223.2,
+        "average": 43.1,
+        "boundaries_count": 257,
+        "boundary_pct": 38,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 97,
+      "consistency": 76,
+      "development_potential": 98.5,
+      "overall_talent_score": 92.3
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Once-in-a-Generation All-Format Opening Superstar",
+      "floor": "High-Impact T20 Powerplay Enforcer",
+      "projected_peak_year": 2030
+    },
+    "why_this_player": "1,509 runs in 676 balls (SR 223.2).",
+    "scouting_report": {
+      "strengths": [
+        "High-tempo boundary scoring at SR 223.2 (257 fours & sixes in 676 balls)",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Physical maturity & multi-season workload resilience building for full T20 campaigns",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "32862",
+    "name": "Allah Ghazanfar",
+    "dob": "2006-03-20",
+    "age": 20,
+    "country": "Afghanistan",
+    "country_code": "AF",
+    "country_flag": "🇦🇫",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Spinner",
+    "sub_role": "Teen Mystery Finger-Spinner (Carrom & Offshore Turn)",
+    "current_teams": [
+      "Kolkata Knight Riders",
+      "Afghanistan",
+      "Afghanistan A",
+      "Mumbai Indians"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Mens T20 Emerging Teams Asia Cup 2024",
+      "Asia Cup Rising Stars 2025",
+      "Mens T20 Emerging Teams Asia Cup 2024 (Winner)"
+    ],
+    "avatar_icon": "sparkles",
+    "is_next_big_star": true,
+    "stats": {
+      "matches": 22,
+      "batting": {
+        "balls": 15,
+        "runs": 10,
+        "strike_rate": 66.7,
+        "average": 3.3,
+        "boundaries_count": 1,
+        "boundary_pct": 6.7,
+        "pressure_sr": 87.5
+      },
+      "bowling": {
+        "balls": 461,
+        "wickets": 28,
+        "economy": 7.98,
+        "bowling_avg": 21.9,
+        "dot_pct": 42.5,
+        "pressure_econ": 7.06
+      }
+    },
+    "scores": {
+      "current_performance": 89.4,
+      "consistency": 81.3,
+      "development_potential": 96.5,
+      "overall_talent_score": 89.9
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Elite Global T20 Mystery Spinner in Powerplay & Middle Overs",
+      "floor": "Franchise Economy-First Spin Option",
+      "projected_peak_year": 2029
+    },
+    "why_this_player": "10 runs in 15 balls (SR 66.7, Pressure SR 87.5) | 28 wkts in 76.8 ov (Econ 7.98, Dot 42.5%, Pressure Econ 7.06).",
+    "scouting_report": {
+      "strengths": [
+        "Proven strike threat with 28 T20 wickets in dataset",
+        "Strong dot-ball squeeze (42.5% dots) building scoreboard pressure",
+        "Disciplined containment economy of 7.98 across 461 legal balls"
+      ],
+      "development_areas": [
+        "Physical maturity & multi-season workload resilience building for full T20 campaigns",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "7897",
+    "name": "Namboori Tilak Varma",
+    "dob": "2002-11-08",
+    "age": 23,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Batter",
+    "sub_role": "All-Phase Left-Handed No. 3/4 Orchestrator",
+    "current_teams": [
+      "Mumbai Indians",
+      "India",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Mens T20 Emerging Teams Asia Cup 2024",
+      "ICC U-19 World Cup 2020"
+    ],
+    "avatar_icon": "target",
+    "is_next_big_star": true,
+    "stats": {
+      "matches": 133,
+      "batting": {
+        "balls": 2515,
+        "runs": 3596,
+        "strike_rate": 143,
+        "average": 40,
+        "boundaries_count": 447,
+        "boundary_pct": 17.8,
+        "pressure_sr": 192.5
+      },
+      "bowling": {
+        "balls": 85,
+        "wickets": 3,
+        "economy": 7.55,
+        "bowling_avg": 35.7,
+        "dot_pct": 40,
+        "pressure_econ": 9
+      }
+    },
+    "scores": {
+      "current_performance": 93.1,
+      "consistency": 78.2,
+      "development_potential": 89.8,
+      "overall_talent_score": 88.2
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Indian Middle-Order Captaincy Pillar & Chase Master",
+      "floor": "Elite International White-Ball Starter",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "3,596 runs in 2515 balls (SR 143, Pressure SR 192.5) | 3 wkts in 14.2 ov (Econ 7.55, Dot 40%, Pressure Econ 9).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 143 across 133 matches",
+        "Raises scoring tempo under high-pressure overs (Pressure SR 192.5)",
+        "Strong dot-ball squeeze (40% dots) building scoreboard pressure"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "7967",
+    "name": "Noor Ahmad",
+    "dob": "2005-01-03",
+    "age": 21,
+    "country": "Afghanistan",
+    "country_code": "AF",
+    "country_flag": "🇦🇫",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Spinner",
+    "sub_role": "High-Arm Left-Arm Wrist Spinner",
+    "current_teams": [
+      "Gujarat Titans",
+      "Afghanistan",
+      "Chennai Super Kings"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2020 & 2022",
+      "IPL Championship & Elite Middle-Overs Wicket Taker"
+    ],
+    "avatar_icon": "sparkles",
+    "is_next_big_star": true,
+    "stats": {
+      "matches": 70,
+      "batting": {
+        "balls": 114,
+        "runs": 92,
+        "strike_rate": 80.7,
+        "average": 5.1,
+        "boundaries_count": 9,
+        "boundary_pct": 7.9,
+        "pressure_sr": 65.1
+      },
+      "bowling": {
+        "balls": 1467,
+        "wickets": 85,
+        "economy": 7.93,
+        "bowling_avg": 22.8,
+        "dot_pct": 36.3,
+        "pressure_econ": 8.25
+      }
+    },
+    "scores": {
+      "current_performance": 87.3,
+      "consistency": 79.1,
+      "development_potential": 88.8,
+      "overall_talent_score": 85.8
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "World-Leading Left-Arm Wrist Spin Match-Winner",
+      "floor": "Guaranteed Starting Overseas Franchise Spinner",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "92 runs in 114 balls (SR 80.7, Pressure SR 65.1) | 85 wkts in 244.5 ov (Econ 7.93, Dot 36.3%, Pressure Econ 8.25).",
+    "scouting_report": {
+      "strengths": [
+        "Proven strike threat with 85 T20 wickets in dataset",
+        "Disciplined containment economy of 7.93 across 1467 legal balls"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "7052",
+    "name": "Dunith Wellalage",
+    "dob": "2003-01-09",
+    "age": 23,
+    "country": "Sri Lanka",
+    "country_code": "LK",
+    "country_flag": "🇱🇰",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Spinner",
+    "sub_role": "Left-Arm Orthodox Control Spinner & Lower Bat",
+    "current_teams": [
+      "Sri Lanka",
+      "Sri Lanka A"
+    ],
+    "competitions": [
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "ICC U-19 World Cup 2022 Captain & Top Wicket-Taker"
+    ],
+    "avatar_icon": "compass",
+    "is_next_big_star": true,
+    "stats": {
+      "matches": 16,
+      "batting": {
+        "balls": 137,
+        "runs": 161,
+        "strike_rate": 117.5,
+        "average": 17.9,
+        "boundaries_count": 23,
+        "boundary_pct": 16.8,
+        "pressure_sr": 163.6
+      },
+      "bowling": {
+        "balls": 332,
+        "wickets": 20,
+        "economy": 8.08,
+        "bowling_avg": 22.4,
+        "dot_pct": 39.5,
+        "pressure_econ": 5.33
+      }
+    },
+    "scores": {
+      "current_performance": 85.5,
+      "consistency": 82.8,
+      "development_potential": 87.2,
+      "overall_talent_score": 85.4
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "Captaincy-Calibre Spin-Bowling All-Rounder",
+      "floor": "Economical Left-Arm Spin Controller",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "161 runs in 137 balls (SR 117.5, Pressure SR 163.6) | 20 wkts in 55.3 ov (Econ 8.08, Dot 39.5%, Pressure Econ 5.33).",
+    "scouting_report": {
+      "strengths": [
+        "Raises scoring tempo under high-pressure overs (Pressure SR 163.6)",
+        "Proven strike threat with 20 T20 wickets in dataset",
+        "Disciplined containment economy of 8.08 across 332 legal balls"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "48504",
+    "name": "Ayush Mhatre",
+    "dob": "2007-07-16",
+    "age": 19,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Batter",
+    "sub_role": "Fearless Teen Top-Order Strokeplay Specialist",
+    "current_teams": [
+      "Chennai Super Kings"
+    ],
+    "competitions": [
+      "IPL"
+    ],
+    "youth_tournaments": [
+      "India U-19 Prospect",
+      "IPL 2025–2026 Chennai Super Kings"
+    ],
+    "avatar_icon": "zap",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 13,
+      "batting": {
+        "balls": 240,
+        "runs": 441,
+        "strike_rate": 183.8,
+        "average": 36.8,
+        "boundaries_count": 74,
+        "boundary_pct": 30.8,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 81.5,
+      "consistency": 74.1,
+      "development_potential": 91.8,
+      "overall_talent_score": 83.3
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "Aggressive Modern All-Condition Indian Opener",
+      "floor": "Uncapped IPL Powerplay Specialist",
+      "projected_peak_year": 2029
+    },
+    "why_this_player": "441 runs in 240 balls (SR 183.8).",
+    "scouting_report": {
+      "strengths": [
+        "High-tempo boundary scoring at SR 183.8 (74 fours & sixes in 240 balls)",
+        "Early career exposure at age 19 within Chennai Super Kings setup"
+      ],
+      "development_areas": [
+        "Physical maturity & multi-season workload resilience building for full T20 campaigns",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "8661",
+    "name": "Matheesha Pathirana",
+    "dob": "2002-12-18",
+    "age": 23,
+    "country": "Sri Lanka",
+    "country_code": "LK",
+    "country_flag": "🇱🇰",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Fast Bowler",
+    "sub_role": "Sling-Arm Death-Overs Yorker Specialist",
+    "current_teams": [
+      "Chennai Super Kings",
+      "Sri Lanka",
+      "Kolkata Knight Riders"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2020 & 2022",
+      "Multi-Title IPL Death Spearhead"
+    ],
+    "avatar_icon": "rocket",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 55,
+      "batting": {
+        "balls": 32,
+        "runs": 19,
+        "strike_rate": 59.4,
+        "average": 3.8,
+        "boundaries_count": 1,
+        "boundary_pct": 3.1,
+        "pressure_sr": 66.7
+      },
+      "bowling": {
+        "balls": 1135,
+        "wickets": 82,
+        "economy": 8.6,
+        "bowling_avg": 19.8,
+        "dot_pct": 37.4,
+        "pressure_econ": 8.36
+      }
+    },
+    "scores": {
+      "current_performance": 83.5,
+      "consistency": 78.6,
+      "development_potential": 84.5,
+      "overall_talent_score": 82.6
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "World’s Deadliest T20 Death-Overs Yorker Strike Weapon",
+      "floor": "Premier Overseas Death-Overs Specialist",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "19 runs in 32 balls (SR 59.4, Pressure SR 66.7) | 82 wkts in 189.2 ov (Econ 8.6, Dot 37.4%, Pressure Econ 8.36).",
+    "scouting_report": {
+      "strengths": [
+        "Proven strike threat with 82 T20 wickets in dataset",
+        "Early career exposure at age 23 within Chennai Super Kings & Sri Lanka setup"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "27960",
+    "name": "Mayank Yadav",
+    "dob": "2002-06-17",
+    "age": 24,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Fast Bowler",
+    "sub_role": "Outright Express Right-Arm Pacer (155+ km/h)",
+    "current_teams": [
+      "Lucknow Super Giants",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "CK Nayudu U-23 Trophy",
+      "IPL Speed-Gun Record Holder"
+    ],
+    "avatar_icon": "flame",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 22,
+      "batting": {
+        "balls": 12,
+        "runs": 9,
+        "strike_rate": 75,
+        "average": 4.5,
+        "boundaries_count": 1,
+        "boundary_pct": 8.3,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 494,
+        "wickets": 26,
+        "economy": 9.3,
+        "bowling_avg": 29.5,
+        "dot_pct": 46.4,
+        "pressure_econ": 7.16
+      }
+    },
+    "scores": {
+      "current_performance": 83.1,
+      "consistency": 78.5,
+      "development_potential": 81.3,
+      "overall_talent_score": 81.3
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "India’s Premier Express Enforcer Across Formats",
+      "floor": "High-Impact Enforcer Bowler (Managed Overs)",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "9 runs in 12 balls (SR 75) | 26 wkts in 82.3 ov (Econ 9.3, Dot 46.4%, Pressure Econ 7.16).",
+    "scouting_report": {
+      "strengths": [
+        "Proven strike threat with 26 T20 wickets in dataset",
+        "Strong dot-ball squeeze (46.4% dots) building scoreboard pressure"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "6819",
+    "name": "Yashasvi Jaiswal",
+    "dob": "2001-12-28",
+    "age": 24,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Batter",
+    "sub_role": "Rajasthan Royals Franchise Opening Cornerstone",
+    "current_teams": [
+      "Rajasthan Royals",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2020 Player of the Tournament",
+      "IPL 2023 Emerging Player"
+    ],
+    "avatar_icon": "crown",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 90,
+      "batting": {
+        "balls": 1872,
+        "runs": 2927,
+        "strike_rate": 156.4,
+        "average": 35.3,
+        "boundaries_count": 479,
+        "boundary_pct": 25.6,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 7,
+        "wickets": 0,
+        "economy": 14.57,
+        "bowling_avg": 0,
+        "dot_pct": 14.3,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 84,
+      "consistency": 75.6,
+      "development_potential": 81.7,
+      "overall_talent_score": 81.1
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Generational All-Format Superstar & RR Captaincy Core",
+      "floor": "Marquee International Opening Anchor",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "2,927 runs in 1872 balls (SR 156.4) | 0 wkts in 1.2 ov (Econ 14.57, Dot 14.3%).",
+    "scouting_report": {
+      "strengths": [
+        "High-tempo boundary scoring at SR 156.4 (479 fours & sixes in 1872 balls)",
+        "Early career exposure at age 24 within Rajasthan Royals & India setup"
+      ],
+      "development_areas": [
+        "Overall economy (14.57) leaves room to tighten boundary leakage in death overs",
+        "Dot-ball frequency (14.3%) can climb with sharper length variation"
+      ]
+    }
+  },
+  {
+    "id": "29888",
+    "name": "Harshit Rana",
+    "dob": "2001-12-22",
+    "age": 24,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Fast Bowler",
+    "sub_role": "High-Release Hit-the-Deck & Death Slower-Ball Seamer",
+    "current_teams": [
+      "Kolkata Knight Riders",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "IPL 2024 Championship Strike Bowler",
+      "India Multi-Format Pace Call-Up"
+    ],
+    "avatar_icon": "flame",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 48,
+      "batting": {
+        "balls": 147,
+        "runs": 160,
+        "strike_rate": 108.8,
+        "average": 12.3,
+        "boundaries_count": 20,
+        "boundary_pct": 13.6,
+        "pressure_sr": 132.7
+      },
+      "bowling": {
+        "balls": 902,
+        "wickets": 56,
+        "economy": 9.55,
+        "bowling_avg": 25.6,
+        "dot_pct": 40.7,
+        "pressure_econ": 8.53
+      }
+    },
+    "scores": {
+      "current_performance": 79.5,
+      "consistency": 76.9,
+      "development_potential": 80.1,
+      "overall_talent_score": 79.1
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "All-Phase Indian White-Ball Strike Bowler",
+      "floor": "Everyday Starting IPL Powerplay & Death Seamer",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "160 runs in 147 balls (SR 108.8, Pressure SR 132.7) | 56 wkts in 150.3 ov (Econ 9.55, Dot 40.7%, Pressure Econ 8.53).",
+    "scouting_report": {
+      "strengths": [
+        "Proven strike threat with 56 T20 wickets in dataset",
+        "Strong dot-ball squeeze (40.7% dots) building scoreboard pressure"
+      ],
+      "development_areas": [
+        "Overall economy (9.55) leaves room to tighten boundary leakage in death overs",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "48278",
+    "name": "Ubaid Shah",
+    "dob": "2006-02-05",
+    "age": 20,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "country_flag": "🇵🇰",
+    "is_domestic_indian": false,
+    "is_uncapped": true,
+    "primary_role": "Fast Bowler",
+    "sub_role": "Skiddy Right-Arm Youth Pace Prospect",
+    "current_teams": [
+      "Pakistan A"
+    ],
+    "competitions": [
+      "Emerging / Rising Stars"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "ICC U-19 World Cup 2024 Leading Seam Wicket-Taker"
+    ],
+    "avatar_icon": "rocket",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 4,
+      "batting": {
+        "balls": 3,
+        "runs": 0,
+        "strike_rate": 0,
+        "average": 0,
+        "boundaries_count": 0,
+        "boundary_pct": 0,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 72,
+        "wickets": 5,
+        "economy": 8.42,
+        "bowling_avg": 20.2,
+        "dot_pct": 50,
+        "pressure_econ": 8.57
+      }
+    },
+    "scores": {
+      "current_performance": 71.2,
+      "consistency": 75.2,
+      "development_potential": 90.2,
+      "overall_talent_score": 78.9
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "limited",
+      "sample_note": "Small sample (4 matches in 2022–2026 dataset)"
+    },
+    "ceiling_floor": {
+      "ceiling": "Skiddy New-Ball Seam Attack Leader",
+      "floor": "Emerging Pace Rotation Prospect",
+      "projected_peak_year": 2029
+    },
+    "why_this_player": "0 runs in 3 balls (SR 0) | 5 wkts in 12.0 ov (Econ 8.42, Dot 50%, Pressure Econ 8.57). Note: Small senior T20 sample in 2022–2026 dataset.",
+    "scouting_report": {
+      "strengths": [
+        "Strong dot-ball squeeze (50% dots) building scoreboard pressure",
+        "Disciplined containment economy of 8.42 across 72 legal balls",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Limited dataset sample (4 matches); larger innings sample needed to confirm sustainability",
+        "Physical maturity & multi-season workload resilience building for full T20 campaigns"
+      ]
+    }
+  },
+  {
+    "id": "34466",
+    "name": "Arafat Minhas",
+    "dob": "2005-01-02",
+    "age": 21,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "country_flag": "🇵🇰",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "All-Rounder",
+    "sub_role": "Left-Arm Spin & Lower-Order Slogger",
+    "current_teams": [
+      "Pakistan",
+      "Pakistan A"
+    ],
+    "competitions": [
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Mens T20 Emerging Teams Asia Cup 2024",
+      "Asia Cup Rising Stars 2025"
+    ],
+    "avatar_icon": "shield",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 8,
+      "batting": {
+        "balls": 121,
+        "runs": 163,
+        "strike_rate": 134.7,
+        "average": 54.3,
+        "boundaries_count": 21,
+        "boundary_pct": 17.4,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 132,
+        "wickets": 7,
+        "economy": 5.14,
+        "bowling_avg": 16.1,
+        "dot_pct": 46.2,
+        "pressure_econ": 3.5
+      }
+    },
+    "scores": {
+      "current_performance": 68.1,
+      "consistency": 82.5,
+      "development_potential": 84.1,
+      "overall_talent_score": 77.3
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "Balanced Spin All-Rounder & Pinch-Hitter",
+      "floor": "Utility Left-Arm Spin All-Rounder",
+      "projected_peak_year": 2029
+    },
+    "why_this_player": "163 runs in 121 balls (SR 134.7) | 7 wkts in 22.0 ov (Econ 5.14, Dot 46.2%, Pressure Econ 3.5).",
+    "scouting_report": {
+      "strengths": [
+        "Strong dot-ball squeeze (46.2% dots) building scoreboard pressure",
+        "Disciplined containment economy of 5.14 across 132 legal balls",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Limited dataset sample (8 matches); larger innings sample needed to confirm sustainability",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "8221",
+    "name": "Nitish Reddy",
+    "dob": "2003-05-26",
+    "age": 23,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "All-Rounder",
+    "sub_role": "Seam-Bowling Fast-Bowling All-Rounder",
+    "current_teams": [
+      "Sunrisers Hyderabad",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "IPL 2024 Emerging Player of the Season",
+      "India T20I Seam All-Rounder"
+    ],
+    "avatar_icon": "star",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 56,
+      "batting": {
+        "balls": 672,
+        "runs": 1011,
+        "strike_rate": 150.4,
+        "average": 29.7,
+        "boundaries_count": 123,
+        "boundary_pct": 18.3,
+        "pressure_sr": 216.7
+      },
+      "bowling": {
+        "balls": 567,
+        "wickets": 27,
+        "economy": 10.32,
+        "bowling_avg": 36.1,
+        "dot_pct": 28.9,
+        "pressure_econ": 9.29
+      }
+    },
+    "scores": {
+      "current_performance": 76.5,
+      "consistency": 71.3,
+      "development_potential": 82,
+      "overall_talent_score": 77.1
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Franchise-Cornerstone Pace-Bowling All-Rounder",
+      "floor": "Everyday Starting Indian No. 4/5 & Seam Option",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "1,011 runs in 672 balls (SR 150.4, Pressure SR 216.7) | 27 wkts in 94.5 ov (Econ 10.32, Dot 28.9%, Pressure Econ 9.29).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 150.4 across 56 matches",
+        "Raises scoring tempo under high-pressure overs (Pressure SR 216.7)",
+        "Proven strike threat with 27 T20 wickets in dataset"
+      ],
+      "development_areas": [
+        "Overall economy (10.32) leaves room to tighten boundary leakage in death overs",
+        "Dot-ball frequency (28.9%) can climb with sharper length variation"
+      ]
+    }
+  },
+  {
+    "id": "6423",
+    "name": "Riyan Parag",
+    "dob": "2001-11-10",
+    "age": 24,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "All-Rounder",
+    "sub_role": "Rajasthan Royals Middle-Order Enforcer & Spin Option",
+    "current_teams": [
+      "Rajasthan Royals",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2018 Champion",
+      "IPL 2024 573-Run Breakout Season"
+    ],
+    "avatar_icon": "star",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 77,
+      "batting": {
+        "balls": 1086,
+        "runs": 1646,
+        "strike_rate": 151.6,
+        "average": 27.4,
+        "boundaries_count": 215,
+        "boundary_pct": 19.8,
+        "pressure_sr": 158.8
+      },
+      "bowling": {
+        "balls": 260,
+        "wickets": 10,
+        "economy": 8.68,
+        "bowling_avg": 37.6,
+        "dot_pct": 27.7,
+        "pressure_econ": 8.31
+      }
+    },
+    "scores": {
+      "current_performance": 77.4,
+      "consistency": 71.4,
+      "development_potential": 79.3,
+      "overall_talent_score": 76.6
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Rajasthan Royals Future Leadership Core & Finishing Pillar",
+      "floor": "High-Leverage Indian No. 4 + Sixth Bowler",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "1,646 runs in 1086 balls (SR 151.6, Pressure SR 158.8) | 10 wkts in 43.3 ov (Econ 8.68, Dot 27.7%, Pressure Econ 8.31).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 151.6 across 77 matches",
+        "Raises scoring tempo under high-pressure overs (Pressure SR 158.8)"
+      ],
+      "development_areas": [
+        "Dot-ball frequency (27.7%) can climb with sharper length variation",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "46066",
+    "name": "Vipraj Nigam",
+    "dob": "2004-07-28",
+    "age": 22,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "All-Rounder",
+    "sub_role": "Wrist-Spinning Lower-Order Clutch Finisher",
+    "current_teams": [
+      "Delhi Capitals",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "BCCI U-23 / UP T20 Breakout",
+      "IPL 2025–2026 Delhi Capitals"
+    ],
+    "avatar_icon": "zap",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 19,
+      "batting": {
+        "balls": 89,
+        "runs": 157,
+        "strike_rate": 176.4,
+        "average": 19.6,
+        "boundaries_count": 25,
+        "boundary_pct": 28.1,
+        "pressure_sr": 209.3
+      },
+      "bowling": {
+        "balls": 288,
+        "wickets": 13,
+        "economy": 9.75,
+        "bowling_avg": 36,
+        "dot_pct": 30.6,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 73,
+      "consistency": 70.4,
+      "development_potential": 83.8,
+      "overall_talent_score": 76.1
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Elite All-Phase Leg-Spin All-Rounder & Death Finisher",
+      "floor": "High-Impact Franchise No. 7/8 & Leg-Spin Option",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "157 runs in 89 balls (SR 176.4, Pressure SR 209.3) | 13 wkts in 48.0 ov (Econ 9.75, Dot 30.6%).",
+    "scouting_report": {
+      "strengths": [
+        "High-tempo boundary scoring at SR 176.4 (25 fours & sixes in 89 balls)",
+        "Raises scoring tempo under high-pressure overs (Pressure SR 209.3)"
+      ],
+      "development_areas": [
+        "Overall economy (9.75) leaves room to tighten boundary leakage in death overs",
+        "Dot-ball frequency (30.6%) can climb with sharper length variation"
+      ]
+    }
+  },
+  {
+    "id": "36982",
+    "name": "Suyash Sharma",
+    "dob": "2003-05-15",
+    "age": 23,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Spinner",
+    "sub_role": "Rapid Quick-Arm Wrist Spinner (Uncapped)",
+    "current_teams": [
+      "Kolkata Knight Riders",
+      "Royal Challengers Bengaluru",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "IPL 2023–2026 (KKR / RCB)"
+    ],
+    "avatar_icon": "radar",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 43,
+      "batting": {
+        "balls": 2,
+        "runs": 0,
+        "strike_rate": 0,
+        "average": 0,
+        "boundaries_count": 0,
+        "boundary_pct": 0,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 900,
+        "wickets": 32,
+        "economy": 8.63,
+        "bowling_avg": 40.4,
+        "dot_pct": 34.3,
+        "pressure_econ": 9.65
+      }
+    },
+    "scores": {
+      "current_performance": 70.5,
+      "consistency": 76.4,
+      "development_potential": 81.9,
+      "overall_talent_score": 76
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Middle-Overs T20 Wicket-Taking Leg-Spinner",
+      "floor": "High-Attack Uncapped Impact-Sub Spinner",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "0 runs in 2 balls (SR 0) | 32 wkts in 150.0 ov (Econ 8.63, Dot 34.3%, Pressure Econ 9.65).",
+    "scouting_report": {
+      "strengths": [
+        "Proven strike threat with 32 T20 wickets in dataset",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Dot-ball frequency (34.3%) can climb with sharper length variation",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "8238",
+    "name": "Sameer Rizvi",
+    "dob": "2003-12-06",
+    "age": 22,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Batter",
+    "sub_role": "Spin-Hitting Middle-Order Powerhouse (Uncapped)",
+    "current_teams": [
+      "Chennai Super Kings",
+      "Delhi Capitals",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "BCCI U-23 CK Nayudu Trophy Record Scorer"
+    ],
+    "avatar_icon": "flame",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 25,
+      "batting": {
+        "balls": 293,
+        "runs": 424,
+        "strike_rate": 144.7,
+        "average": 30.3,
+        "boundaries_count": 56,
+        "boundary_pct": 19.1,
+        "pressure_sr": 175.8
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 70.2,
+      "consistency": 70.5,
+      "development_potential": 84.8,
+      "overall_talent_score": 75.4
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Premier Middle-Overs Spin Enforcer & Finisher",
+      "floor": "Uncapped Specialist Six-Hitter vs Spin",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "424 runs in 293 balls (SR 144.7, Pressure SR 175.8).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 144.7 across 25 matches",
+        "Raises scoring tempo under high-pressure overs (Pressure SR 175.8)",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "35318",
+    "name": "Sakib Hussain",
+    "dob": "2004-12-14",
+    "age": 21,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Fast Bowler",
+    "sub_role": "Right-Arm Express Seam Prospect (Uncapped)",
+    "current_teams": [
+      "Kolkata Knight Riders",
+      "Sunrisers Hyderabad"
+    ],
+    "competitions": [
+      "IPL"
+    ],
+    "youth_tournaments": [
+      "Bihar Domestic Pace Discovery",
+      "IPL 2024–2026 (KKR / SRH)"
+    ],
+    "avatar_icon": "flame",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 11,
+      "batting": {
+        "balls": 7,
+        "runs": 5,
+        "strike_rate": 71.4,
+        "average": 5,
+        "boundaries_count": 1,
+        "boundary_pct": 14.3,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 253,
+        "wickets": 15,
+        "economy": 9.3,
+        "bowling_avg": 26.1,
+        "dot_pct": 34.4,
+        "pressure_econ": 7.3
+      }
+    },
+    "scores": {
+      "current_performance": 66.6,
+      "consistency": 76.9,
+      "development_potential": 81.6,
+      "overall_talent_score": 74.4
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "High-Velocity Indian Middle- & Death-Overs Strike Bowler",
+      "floor": "Uncapped IPL Pace Asset",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "5 runs in 7 balls (SR 71.4) | 15 wkts in 42.2 ov (Econ 9.3, Dot 34.4%, Pressure Econ 7.3).",
+    "scouting_report": {
+      "strengths": [
+        "Early career exposure at age 21 within Kolkata Knight Riders & Sunrisers Hyderabad setup"
+      ],
+      "development_areas": [
+        "Dot-ball frequency (34.4%) can climb with sharper length variation",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "26830",
+    "name": "Nishant Kumar Sindhu",
+    "dob": "2004-04-09",
+    "age": 22,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "All-Rounder",
+    "sub_role": "Left-Arm Spin & Left-Hand Middle-Order All-Rounder",
+    "current_teams": [
+      "Chennai Super Kings",
+      "India A",
+      "Gujarat Titans"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars"
+    ],
+    "youth_tournaments": [
+      "Mens T20 Emerging Teams Asia Cup 2024",
+      "ICC U-19 World Cup 2022 Final Fifty"
+    ],
+    "avatar_icon": "shield",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 12,
+      "batting": {
+        "balls": 66,
+        "runs": 92,
+        "strike_rate": 139.4,
+        "average": 13.1,
+        "boundaries_count": 13,
+        "boundary_pct": 19.7,
+        "pressure_sr": 176.9
+      },
+      "bowling": {
+        "balls": 36,
+        "wickets": 3,
+        "economy": 7.33,
+        "bowling_avg": 14.7,
+        "dot_pct": 38.9,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 63.8,
+      "consistency": 78,
+      "development_potential": 83,
+      "overall_talent_score": 74.1
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "Balanced Left-Arm Finger-Spin & Middle-Overs Floater",
+      "floor": "Uncapped Domestic Multitool Asset",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "92 runs in 66 balls (SR 139.4, Pressure SR 176.9) | 3 wkts in 6.0 ov (Econ 7.33, Dot 38.9%).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 139.4 across 12 matches",
+        "Raises scoring tempo under high-pressure overs (Pressure SR 176.9)",
+        "Disciplined containment economy of 7.33 across 36 legal balls"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "26906",
+    "name": "Angkrish Raghuvanshi",
+    "dob": "2004-06-05",
+    "age": 22,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Batter",
+    "sub_role": "Elegant Top-Order Strokemaker (Uncapped)",
+    "current_teams": [
+      "Kolkata Knight Riders"
+    ],
+    "competitions": [
+      "IPL"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2022 Champion (278 Runs)",
+      "IPL 2024 Championship Winner (KKR)"
+    ],
+    "avatar_icon": "crown",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 35,
+      "batting": {
+        "balls": 608,
+        "runs": 885,
+        "strike_rate": 145.6,
+        "average": 34,
+        "boundaries_count": 121,
+        "boundary_pct": 19.9,
+        "pressure_sr": 120.8
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 65.6,
+      "consistency": 75.5,
+      "development_potential": 81.2,
+      "overall_talent_score": 73.5
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Classical All-Format Indian Top-Order Pillar",
+      "floor": "Reliable Uncapped IPL Top-3 Starter",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "885 runs in 608 balls (SR 145.6, Pressure SR 120.8).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 145.6 across 35 matches",
+        "Early career exposure at age 22 within Kolkata Knight Riders setup"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "25213",
+    "name": "Dewald Brevis",
+    "dob": "2003-04-29",
+    "age": 23,
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Batter",
+    "sub_role": "360-Degree Power-Hitting Top/Middle Batter",
+    "current_teams": [
+      "Mumbai Indians",
+      "South Africa",
+      "Chennai Super Kings"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2022 Record 506 Runs",
+      "IPL & South Africa T20I"
+    ],
+    "avatar_icon": "flame",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 44,
+      "batting": {
+        "balls": 630,
+        "runs": 963,
+        "strike_rate": 152.9,
+        "average": 24.7,
+        "boundaries_count": 131,
+        "boundary_pct": 20.8,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 3,
+        "wickets": 1,
+        "economy": 16,
+        "bowling_avg": 8,
+        "dot_pct": 33.3,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 66.2,
+      "consistency": 72.1,
+      "development_potential": 78.4,
+      "overall_talent_score": 71.9
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "World-Class All-Spin & Pace Destructor Across T20 Leagues",
+      "floor": "Overseas High-Ceiling Boundary Battery",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "963 runs in 630 balls (SR 152.9) | 1 wkts in 0.5 ov (Econ 16, Dot 33.3%).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 152.9 across 44 matches",
+        "Early career exposure at age 23 within Mumbai Indians & South Africa setup"
+      ],
+      "development_areas": [
+        "Overall economy (16) leaves room to tighten boundary leakage in death overs",
+        "Dot-ball frequency (33.3%) can climb with sharper length variation"
+      ]
+    }
+  },
+  {
+    "id": "26663",
+    "name": "Kwena Maphaka",
+    "dob": "2006-04-08",
+    "age": 20,
+    "country": "South Africa",
+    "country_code": "ZA",
+    "country_flag": "🇿🇦",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Fast Bowler",
+    "sub_role": "Left-Arm High-Pace Prospect (U-19 WC MVP)",
+    "current_teams": [
+      "Mumbai Indians",
+      "South Africa",
+      "Rajasthan Royals"
+    ],
+    "competitions": [
+      "IPL",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "ICC U-19 World Cup 2024 Player of the Tournament",
+      "IPL 2024–2026 (MI / RR)"
+    ],
+    "avatar_icon": "zap",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 17,
+      "batting": {
+        "balls": 25,
+        "runs": 27,
+        "strike_rate": 108,
+        "average": 27,
+        "boundaries_count": 4,
+        "boundary_pct": 16,
+        "pressure_sr": 125
+      },
+      "bowling": {
+        "balls": 308,
+        "wickets": 15,
+        "economy": 10.54,
+        "bowling_avg": 36.1,
+        "dot_pct": 35.4,
+        "pressure_econ": 14.8
+      }
+    },
+    "scores": {
+      "current_performance": 54,
+      "consistency": 69.3,
+      "development_potential": 86,
+      "overall_talent_score": 69
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "Premier Left-Arm Express Strike Bowler Across All Phases",
+      "floor": "International T20 Powerplay Enforcer",
+      "projected_peak_year": 2029
+    },
+    "why_this_player": "27 runs in 25 balls (SR 108, Pressure SR 125) | 15 wkts in 51.3 ov (Econ 10.54, Dot 35.4%, Pressure Econ 14.8).",
+    "scouting_report": {
+      "strengths": [
+        "Early career exposure at age 20 within Mumbai Indians & South Africa setup"
+      ],
+      "development_areas": [
+        "Overall economy (10.54) leaves room to tighten boundary leakage in death overs",
+        "Dot-ball frequency (35.4%) can climb with sharper length variation"
+      ]
+    }
+  },
+  {
+    "id": "25138",
+    "name": "Harsh Dubey",
+    "dob": "2002-07-23",
+    "age": 24,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Spinner",
+    "sub_role": "Attacking Left-Arm Finger Spinner & Domestic MVP",
+    "current_teams": [
+      "Sunrisers Hyderabad",
+      "India A",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "BCCI Domestic Record Season Wicket-Taker"
+    ],
+    "avatar_icon": "radar",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 15,
+      "batting": {
+        "balls": 69,
+        "runs": 88,
+        "strike_rate": 127.5,
+        "average": 29.3,
+        "boundaries_count": 13,
+        "boundary_pct": 18.8,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 264,
+        "wickets": 17,
+        "economy": 9.09,
+        "bowling_avg": 23.5,
+        "dot_pct": 32.2,
+        "pressure_econ": 10.31
+      }
+    },
+    "scores": {
+      "current_performance": 57.9,
+      "consistency": 74.8,
+      "development_potential": 77,
+      "overall_talent_score": 68.8
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "All-Condition Left-Arm Spinner & Handy Lower Bat",
+      "floor": "High-Wicket Domestic & Franchise Spin Option",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "88 runs in 69 balls (SR 127.5) | 17 wkts in 44.0 ov (Econ 9.09, Dot 32.2%, Pressure Econ 10.31).",
+    "scouting_report": {
+      "strengths": [
+        "Tested in ACC Emerging / Rising Stars youth international competition",
+        "Early career exposure at age 24 within Sunrisers Hyderabad & India A setup"
+      ],
+      "development_areas": [
+        "Dot-ball frequency (32.2%) can climb with sharper length variation",
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "7690",
+    "name": "Saim Ayub",
+    "dob": "2002-05-24",
+    "age": 24,
+    "country": "Pakistan",
+    "country_code": "PK",
+    "country_flag": "🇵🇰",
+    "is_domestic_indian": false,
+    "is_uncapped": false,
+    "primary_role": "Batter",
+    "sub_role": "No-Look Pick-Up Opener & Part-Time Carrom Spinner",
+    "current_teams": [
+      "Pakistan"
+    ],
+    "competitions": [
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Pakistan Emerging & Senior Top-Order Spearhead",
+      "Top-10 Bowler Rating Bonus Utility"
+    ],
+    "avatar_icon": "star",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 62,
+      "batting": {
+        "balls": 880,
+        "runs": 1213,
+        "strike_rate": 137.8,
+        "average": 22.1,
+        "boundaries_count": 181,
+        "boundary_pct": 20.6,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 510,
+        "wickets": 26,
+        "economy": 7.13,
+        "bowling_avg": 23.3,
+        "dot_pct": 39.2,
+        "pressure_econ": 7.37
+      }
+    },
+    "scores": {
+      "current_performance": 60.2,
+      "consistency": 69.5,
+      "development_potential": 76,
+      "overall_talent_score": 68.1
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "Global White-Ball Dual-Skill Opening Match-Winner",
+      "floor": "High-Impact International All-Phase Opener",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "1,213 runs in 880 balls (SR 137.8) | 26 wkts in 85.0 ov (Econ 7.13, Dot 39.2%, Pressure Econ 7.37).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 137.8 across 62 matches",
+        "Proven strike threat with 26 T20 wickets in dataset",
+        "Disciplined containment economy of 7.13 across 510 legal balls"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "26913",
+    "name": "Shaik Rasheed",
+    "dob": "2004-09-24",
+    "age": 22,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Batter",
+    "sub_role": "Classical Top-Order Batter (U-19 WC Vice-Captain)",
+    "current_teams": [
+      "Chennai Super Kings",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "ICC U-19 World Cup 2022 Vice-Captain (Champion)"
+    ],
+    "avatar_icon": "award",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 5,
+      "batting": {
+        "balls": 63,
+        "runs": 71,
+        "strike_rate": 112.7,
+        "average": 14.2,
+        "boundaries_count": 11,
+        "boundary_pct": 17.5,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 54,
+      "consistency": 65.5,
+      "development_potential": 83,
+      "overall_talent_score": 67
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "limited",
+      "sample_note": "Small sample (5 matches in 2022–2026 dataset)"
+    },
+    "ceiling_floor": {
+      "ceiling": "Composed All-Phase Number 3 Anchor & Tempo Controller",
+      "floor": "Uncapped Indian Top-Order Squad Reserve",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "71 runs in 63 balls (SR 112.7). Note: Small senior T20 sample in 2022–2026 dataset.",
+    "scouting_report": {
+      "strengths": [
+        "Tested in ACC Emerging / Rising Stars youth international competition",
+        "Early career exposure at age 22 within Chennai Super Kings & India A setup"
+      ],
+      "development_areas": [
+        "Limited dataset sample (5 matches); larger innings sample needed to confirm sustainability",
+        "Batting average (14.2) indicates innings consolidation opportunity after fast starts"
+      ]
+    }
+  },
+  {
+    "id": "19714",
+    "name": "Abishek Porel",
+    "dob": "2002-10-17",
+    "age": 24,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": true,
+    "primary_role": "Wicketkeeper",
+    "sub_role": "Aggressive Left-Handed Keeper-Opener (Uncapped)",
+    "current_teams": [
+      "Delhi Capitals",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "ICC U-19 World Cup 2022 Squad Reserve"
+    ],
+    "avatar_icon": "zap",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 36,
+      "batting": {
+        "balls": 529,
+        "runs": 769,
+        "strike_rate": 145.4,
+        "average": 25.6,
+        "boundaries_count": 108,
+        "boundary_pct": 20.4,
+        "pressure_sr": 77.8
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 54,
+      "consistency": 73,
+      "development_potential": 77,
+      "overall_talent_score": 66.8
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "robust"
+    },
+    "ceiling_floor": {
+      "ceiling": "First-Choice Indian Franchise Wicketkeeper-Opener",
+      "floor": "Uncapped Flexible Keeper-Batter (Top-5)",
+      "projected_peak_year": 2027
+    },
+    "why_this_player": "769 runs in 529 balls (SR 145.4, Pressure SR 77.8).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 145.4 across 36 matches",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Continuous adaptation against varied pace/spin match-ups across away conditions"
+      ]
+    }
+  },
+  {
+    "id": "8251",
+    "name": "Kumar Kushagra",
+    "dob": "2004-10-23",
+    "age": 22,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "Wicketkeeper",
+    "sub_role": "Right-Handed Wicketkeeper-Batter",
+    "current_teams": [
+      "Delhi Capitals",
+      "Gujarat Titans",
+      "India A",
+      "India"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "ICC U-19 World Cup 2020 Squad"
+    ],
+    "avatar_icon": "shield",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 5,
+      "batting": {
+        "balls": 21,
+        "runs": 21,
+        "strike_rate": 100,
+        "average": 5.3,
+        "boundaries_count": 3,
+        "boundary_pct": 14.3,
+        "pressure_sr": null
+      },
+      "bowling": {
+        "balls": 0,
+        "wickets": 0,
+        "economy": 0,
+        "bowling_avg": 0,
+        "dot_pct": 0,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 54,
+      "consistency": 62.7,
+      "development_potential": 83,
+      "overall_talent_score": 66.3
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "limited",
+      "sample_note": "Small sample (5 matches in 2022–2026 dataset)"
+    },
+    "ceiling_floor": {
+      "ceiling": "Technical Top/Middle-Order Wicketkeeper-Batter",
+      "floor": "Franchise Backup Keeper & Domestic Heavyweight",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "21 runs in 21 balls (SR 100). Note: Small senior T20 sample in 2022–2026 dataset.",
+    "scouting_report": {
+      "strengths": [
+        "Tested in ACC Emerging / Rising Stars youth international competition",
+        "Early career exposure at age 22 within Delhi Capitals & Gujarat Titans setup"
+      ],
+      "development_areas": [
+        "Limited dataset sample (5 matches); larger innings sample needed to confirm sustainability",
+        "Batting average (5.3) indicates innings consolidation opportunity after fast starts"
+      ]
+    }
+  },
+  {
+    "id": "7625",
+    "name": "Suryansh Shedge",
+    "dob": "2003-01-29",
+    "age": 23,
+    "country": "India",
+    "country_code": "IN",
+    "country_flag": "🇮🇳",
+    "is_domestic_indian": true,
+    "is_uncapped": false,
+    "primary_role": "All-Rounder",
+    "sub_role": "Lower-Order Finisher & Part-Time Seam Bowler",
+    "current_teams": [
+      "Lucknow Super Giants",
+      "Punjab Kings",
+      "India",
+      "India A"
+    ],
+    "competitions": [
+      "IPL",
+      "Emerging / Rising Stars",
+      "T20I"
+    ],
+    "youth_tournaments": [
+      "Asia Cup Rising Stars 2025",
+      "SMAT 2024 Title-Winning Finisher (Mumbai)"
+    ],
+    "avatar_icon": "zap",
+    "is_next_big_star": false,
+    "stats": {
+      "matches": 15,
+      "batting": {
+        "balls": 112,
+        "runs": 173,
+        "strike_rate": 154.5,
+        "average": 19.2,
+        "boundaries_count": 22,
+        "boundary_pct": 19.6,
+        "pressure_sr": 66.7
+      },
+      "bowling": {
+        "balls": 60,
+        "wickets": 0,
+        "economy": 11.9,
+        "bowling_avg": 0,
+        "dot_pct": 21.7,
+        "pressure_econ": null
+      }
+    },
+    "scores": {
+      "current_performance": 54,
+      "consistency": 60.9,
+      "development_potential": 80,
+      "overall_talent_score": 64.8
+    },
+    "data_basis": {
+      "stats_source": "Computed dynamically from 2022–2026 ball_by_ball.csv & playing_eleven.csv",
+      "dob_source": "Verified ESPNcricinfo/BCCI player profile (DOB not present in CSV)",
+      "sample_size_flag": "moderate"
+    },
+    "ceiling_floor": {
+      "ceiling": "Clutch Death-Overs Six-Hitting Seam All-Rounder",
+      "floor": "Franchise Lower-Order Impact Finisher",
+      "projected_peak_year": 2028
+    },
+    "why_this_player": "173 runs in 112 balls (SR 154.5, Pressure SR 66.7) | 0 wkts in 10.0 ov (Econ 11.9, Dot 21.7%).",
+    "scouting_report": {
+      "strengths": [
+        "Balanced T20 scoring rate of SR 154.5 across 15 matches",
+        "Tested in ACC Emerging / Rising Stars youth international competition"
+      ],
+      "development_areas": [
+        "Overall economy (11.9) leaves room to tighten boundary leakage in death overs",
+        "Dot-ball frequency (21.7%) can climb with sharper length variation"
+      ]
+    }
+  }
+]

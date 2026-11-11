@@ -1,0 +1,67 @@
+# Dependencies (root & isolated demo tooling)
+node_modules/
+demo-assets/node_modules/
+.pnp
+.pnp.*
+
+# Production builds & bundler caches
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+.cache/
+*.tsbuildinfo
+coverage/
+
+# Environment variables, credentials & keys
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.crt
+*.p12
+*.secret
+*credentials*
+
+# Python & virtual environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs, temporary & backup files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Large generated demo video & audio binaries (kept locally, excluded from Git)
+demo-assets/*.mp4
+demo-assets/*.aac
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.aac
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
