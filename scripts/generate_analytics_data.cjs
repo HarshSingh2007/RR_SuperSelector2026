@@ -1,6 +1,13 @@
 const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
+const {
+  computeChasePressure,
+  computeFirstInningsPressure,
+  classifyPressure,
+  computeBattingBPI,
+  computeBowlingBPI,
+} = require('./lib/formulas.cjs');
 
 const rawDir = path.join(__dirname, '..', 'data', 'raw');
 const outDir = path.join(__dirname, '..', 'src', 'data');
@@ -141,6 +148,7 @@ async function buildAnalytics() {
   // Global KPIs & distributions
   let totalDeliveries = 0;
   let totalPressureDeliveries = 0;
+  const matchesWithBallsSet = new Set();
   const pressureCategoryCounts = { Normal: 0, Moderate: 0, High: 0, Extreme: 0 };
   const phaseDistribution = {
     powerplay: { total: 0, pressure: 0, runs: 0, wickets: 0 },
@@ -168,6 +176,15 @@ async function buildAnalytics() {
         totalFours: 0,
         totalSixes: 0,
         totalMatches: new Set(),
+        // Overall Match-by-match & Phase Breakdown
+        matchTotalRuns: {},
+        matchDismissed: {},
+        ppBalls: 0,
+        ppRuns: 0,
+        midBalls: 0,
+        midRuns: 0,
+        deathAllBalls: 0,
+        deathAllRuns: 0,
         // Normal Situations (Low / Normal pressure)
         normalBalls: 0,
         normalRuns: 0,
@@ -201,9 +218,11 @@ async function buildAnalytics() {
         matchPressureRuns: {},
         // Competition splits
         iplBalls: 0,
+        iplRuns: 0,
         iplPressureBalls: 0,
         iplPressureRuns: 0,
         t20iBalls: 0,
+        t20iRuns: 0,
         t20iPressureBalls: 0,
         t20iPressureRuns: 0,
         // Season breakdown
@@ -229,6 +248,18 @@ async function buildAnalytics() {
         totalWickets: 0,
         totalDots: 0,
         totalMatches: new Set(),
+        // Overall Phase, Maiden & Best Figures
+        ppBalls: 0,
+        ppRuns: 0,
+        ppWkts: 0,
+        midBalls: 0,
+        midRuns: 0,
+        midWkts: 0,
+        deathAllBalls: 0,
+        deathAllRuns: 0,
+        deathAllWkts: 0,
+        overStats: {},
+        matchInningsFigures: {},
         // Normal
         normalLegalBalls: 0,
         normalRunsConceded: 0,
@@ -280,10 +311,14 @@ async function buildAnalytics() {
   let lineIndex2 = 0;
   for await (const line of rl2) {
     if (lineIndex2++ === 0) continue;
-    totalDeliveries++;
+    if (!line || !line.trim()) continue;
 
     const p = line.split(',');
+    if (p.length < 26 || !p[0]) continue;
+    totalDeliveries++;
+
     const matchId = p[0];
+    matchesWithBallsSet.add(matchId);
     const inn = p[1];
     const overid = parseInt(p[2], 10);
     const overBallNum = parseInt(p[3], 10);
@@ -369,94 +404,25 @@ async function buildAnalytics() {
     let pressureIndex = 0;
 
     if (inn === '2') {
-      // INNINGS 2: Target Chase Pressure
-      let rrrFactor = 0;
-      if (rrr <= 6) {
-        rrrFactor = 0.10;
-      } else if (rrr <= 8.5) {
-        rrrFactor = 0.10 + (rrr - 6) * 0.12; // 0.10 to 0.40
-      } else if (rrr <= 12) {
-        rrrFactor = 0.40 + (rrr - 8.5) * 0.10; // 0.40 to 0.75
-      } else if (rrr <= 16) {
-        rrrFactor = 0.75 + (rrr - 12) * 0.05; // 0.75 to 0.95
-      } else {
-        rrrFactor = 0.95 + Math.min(0.05, (rrr - 16) * 0.01);
-      }
-
-      const wicketFactor = priorWickets / 10; // 0 to 0.9
-
-      let phaseUrgency = 0;
-      if (ballsRemaining <= 24) {
-        phaseUrgency = 0.40;
-      } else if (ballsRemaining <= 48) {
-        phaseUrgency = 0.22;
-      } else {
-        phaseUrgency = 0.08;
-      }
-
-      // Closeness context: avoid inflating dead rubbers
-      let closenessModifier = 1.0;
-      if (runsRequired <= 12 && wicketsInHand >= 6) {
-        closenessModifier = 0.35; // Cruising to victory
-      } else if (rrr > 26 && wicketsInHand <= 2) {
-        closenessModifier = 0.55; // Match already out of reach
-      } else if (ballsRemaining <= 36 && runsRequired <= 50 && wicketsInHand >= 3) {
-        closenessModifier = 1.25; // High-stakes close finish
-      }
-
-      pressureIndex = (0.42 * rrrFactor + 0.30 * wicketFactor + 0.28 * phaseUrgency) * closenessModifier;
-
+      pressureIndex = computeChasePressure({
+        runsRequired,
+        ballsRemaining,
+        wicketsLost: priorWickets,
+        isKnockout,
+      });
     } else {
-      // INNINGS 1: Target Setting Pressure
-      const oversCompleted = priorLegalBalls / 6;
-      let collapseFactor = 0;
-      if (priorWickets >= 3 && oversCompleted <= 6) {
-        collapseFactor = 0.65; // Early collapse in Powerplay
-      } else if (priorWickets >= 5 && oversCompleted <= 12) {
-        collapseFactor = 0.55;
-      } else {
-        collapseFactor = (priorWickets / 10) * 0.45;
-      }
-
-      let phaseFactor = 0;
-      if (overid >= 16) {
-        // Death overs
-        phaseFactor = 0.50 + (wicketsInHand >= 4 ? 0.15 : -0.10);
-      } else if (overid <= 6) {
-        phaseFactor = 0.15;
-      } else {
-        phaseFactor = 0.22;
-      }
-
-      let scoringHealthFactor = 0;
-      if (oversCompleted >= 8 && crr < 7.0) {
-        scoringHealthFactor = 0.22;
-      }
-
-      pressureIndex = 0.40 * collapseFactor + 0.45 * phaseFactor + 0.15 * scoringHealthFactor;
+      pressureIndex = computeFirstInningsPressure({
+        oversCompleted: priorLegalBalls / 6,
+        overid,
+        currentScore: priorScore,
+        wicketsLost: priorWickets,
+        isKnockout,
+      });
     }
-
-    if (isKnockout) {
-      pressureIndex *= 1.15;
-    }
-
-    // Normalized bounds
-    pressureIndex = Math.min(1.0, Math.max(0.0, pressureIndex));
 
     // Classification
-    let pressureCat = 'Normal';
-    if (pressureIndex >= 0.75) {
-      pressureCat = 'Extreme';
-      pressureCategoryCounts.Extreme++;
-    } else if (pressureIndex >= 0.55) {
-      pressureCat = 'High';
-      pressureCategoryCounts.High++;
-    } else if (pressureIndex >= 0.38) {
-      pressureCat = 'Moderate';
-      pressureCategoryCounts.Moderate++;
-    } else {
-      pressureCategoryCounts.Normal++;
-    }
+    const pressureCat = classifyPressure(pressureIndex);
+    pressureCategoryCounts[pressureCat]++;
 
     const isHighOrExtreme = (pressureCat === 'High' || pressureCat === 'Extreme');
     if (isHighOrExtreme) totalPressureDeliveries++;
@@ -502,8 +468,28 @@ async function buildAnalytics() {
       b.totalRuns += runs;
       b.seasons[season].balls++;
       b.seasons[season].runs += runs;
-      if (isIpl) b.iplBalls++;
-      else b.t20iBalls++;
+      b.matchTotalRuns[matchId] = (b.matchTotalRuns[matchId] || 0) + runs;
+      if (isFour) b.totalFours++;
+      if (isSix) b.totalSixes++;
+
+      if (overid <= 6) {
+        b.ppBalls++;
+        b.ppRuns += runs;
+      } else if (overid <= 15) {
+        b.midBalls++;
+        b.midRuns += runs;
+      } else {
+        b.deathAllBalls++;
+        b.deathAllRuns += runs;
+      }
+
+      if (isIpl) {
+        b.iplBalls++;
+        b.iplRuns += runs;
+      } else {
+        b.t20iBalls++;
+        b.t20iRuns += runs;
+      }
 
       if (isHighOrExtreme) {
         b.pressureBalls++;
@@ -557,6 +543,7 @@ async function buildAnalytics() {
 
     if (isWicket && dismissedPlayerId === strikerId) {
       b.totalDismissals++;
+      b.matchDismissed[matchId] = true;
       if (isHighOrExtreme) {
         b.pressureDismissals++;
       } else {
@@ -576,6 +563,34 @@ async function buildAnalytics() {
       bw.seasons[season] = { balls: 0, runs: 0, wickets: 0, pressureBalls: 0, pressureRuns: 0, pressureWickets: 0 };
     }
 
+    const overKey = `${matchId}_${inn}_${overid}`;
+    if (!bw.overStats[overKey]) {
+      bw.overStats[overKey] = { legalBalls: 0, runs: 0 };
+    }
+    const figKey = `${matchId}_${inn}`;
+    if (!bw.matchInningsFigures[figKey]) {
+      bw.matchInningsFigures[figKey] = { wkts: 0, runs: 0 };
+    }
+    bw.overStats[overKey].runs += bowlerRunsConceded;
+    bw.matchInningsFigures[figKey].runs += bowlerRunsConceded;
+    if (isLegalBall) {
+      bw.overStats[overKey].legalBalls++;
+    }
+
+    if (overid <= 6) {
+      if (isLegalBall) bw.ppBalls++;
+      bw.ppRuns += bowlerRunsConceded;
+      if (isBowlerWicket) bw.ppWkts++;
+    } else if (overid <= 15) {
+      if (isLegalBall) bw.midBalls++;
+      bw.midRuns += bowlerRunsConceded;
+      if (isBowlerWicket) bw.midWkts++;
+    } else {
+      if (isLegalBall) bw.deathAllBalls++;
+      bw.deathAllRuns += bowlerRunsConceded;
+      if (isBowlerWicket) bw.deathAllWkts++;
+    }
+
     if (isLegalBall) {
       bw.totalLegalBalls++;
       bw.totalRunsConceded += bowlerRunsConceded;
@@ -590,6 +605,7 @@ async function buildAnalytics() {
     if (isBowlerWicket) {
       bw.totalWickets++;
       bw.seasons[season].wickets++;
+      bw.matchInningsFigures[figKey].wkts++;
     }
 
     if (isHighOrExtreme) {
@@ -682,9 +698,28 @@ async function buildAnalytics() {
     const dismissalRate = b.pressureDismissals > 0 ? (b.pressureRuns / b.pressureDismissals) : b.pressureRuns;
     const dotPct = (b.pressureDots / b.pressureBalls) * 100;
 
-    // Confidence Weight: empirical Bayesian shrinkage
-    // Benchmarks: 50 balls = 0.70 weight, 150 balls = 0.88 weight, 250+ balls = 1.0 weight
-    const confidenceWeight = Math.min(1.0, 0.65 + 0.35 * Math.sqrt(Math.min(b.pressureBalls, 240) / 240));
+    // Overall Batting Average, Highest Score, Totals & Phase Splits
+    const battingAvg = b.totalDismissals > 0 ? (b.totalRuns / b.totalDismissals) : b.totalRuns;
+    const totalBoundaryPct = b.totalBalls > 0 ? ((b.totalFours + b.totalSixes) / b.totalBalls) * 100 : boundaryPct;
+    let highestScore = 0;
+    let highestScoreNotOut = false;
+    for (const [mId, mRuns] of Object.entries(b.matchTotalRuns)) {
+      const isOut = !!b.matchDismissed[mId];
+      if (mRuns > highestScore || (mRuns === highestScore && !isOut && highestScoreNotOut === false)) {
+        highestScore = mRuns;
+        highestScoreNotOut = !isOut;
+      }
+    }
+    const powerplaySR = b.ppBalls > 0 ? (b.ppRuns / b.ppBalls) * 100 : 0;
+    const middleSR = b.midBalls > 0 ? (b.midRuns / b.midBalls) * 100 : 0;
+    const deathOverallSR = b.deathAllBalls > 0 ? (b.deathAllRuns / b.deathAllBalls) * 100 : 0;
+
+    const seasonEntries = Object.entries(b.seasons)
+      .filter(([, s]) => s.balls >= 15)
+      .sort(([kA], [kB]) => kA.localeCompare(kB));
+    const trendDelta = seasonEntries.length >= 2
+      ? parseFloat((((seasonEntries[seasonEntries.length - 1][1].runs / seasonEntries[seasonEntries.length - 1][1].balls) * 100) - ((seasonEntries[0][1].runs / seasonEntries[0][1].balls) * 100)).toFixed(1))
+      : null;
 
     // Consistency score: standard deviation across pressure innings
     const inningsScores = Object.values(b.matchPressureRuns);
@@ -698,14 +733,14 @@ async function buildAnalytics() {
     const deathSR = b.deathPressureBalls > 0 ? (b.deathPressureRuns / b.deathPressureBalls) * 100 : pressSR;
     const chaseSR = b.chasePressureBalls > 0 ? (b.chasePressureRuns / b.chasePressureBalls) * 100 : pressSR;
 
-    // Core BPI Model
-    const rawRating = (
-      0.35 * Math.min(100, (pressSR / 165) * 100) +
-      0.25 * Math.max(0, Math.min(100, 50 + srDelta * 1.4)) +
-      0.20 * Math.min(100, (dismissalRate / 42) * 100) +
-      0.10 * Math.min(100, (boundaryPct / 24) * 100) +
-      0.10 * consistencyScore
-    );
+    const bpi = computeBattingBPI({
+      pressSR,
+      srDelta,
+      dismissalRateRPD: dismissalRate,
+      boundaryPct,
+      consistencyScore,
+      pressureBalls: b.pressureBalls,
+    });
 
     b.pressSR = parseFloat(pressSR.toFixed(1));
     b.normSR = parseFloat(normSR.toFixed(1));
@@ -717,8 +752,16 @@ async function buildAnalytics() {
     b.deathSR = parseFloat(deathSR.toFixed(1));
     b.chaseSR = parseFloat(chaseSR.toFixed(1));
     b.consistencyScore = parseFloat(consistencyScore.toFixed(1));
-    b.confidenceWeight = parseFloat(confidenceWeight.toFixed(2));
-    b.rating = parseFloat((rawRating * (0.68 + 0.32 * confidenceWeight)).toFixed(1));
+    b.confidenceWeight = bpi.confidenceWeight;
+    b.rating = bpi.rating;
+    b.battingAvg = parseFloat(battingAvg.toFixed(1));
+    b.highestScore = highestScore;
+    b.highestScoreNotOut = highestScoreNotOut;
+    b.totalBoundaryPct = parseFloat(totalBoundaryPct.toFixed(1));
+    b.powerplaySR = parseFloat(powerplaySR.toFixed(1));
+    b.middleSR = parseFloat(middleSR.toFixed(1));
+    b.deathOverallSR = parseFloat(deathOverallSR.toFixed(1));
+    b.trendDelta = trendDelta;
   }
 
   qualifiedBatters.sort((a, b) => b.rating - a.rating);
@@ -759,8 +802,36 @@ async function buildAnalytics() {
     const deathOvers = bw.deathPressureBalls / 6;
     const deathEcon = deathOvers > 0 ? bw.deathPressureRuns / deathOvers : pressEcon;
 
-    // Confidence weight: empirical Bayesian shrinkage
-    const confidenceWeight = Math.min(1.0, 0.65 + 0.35 * Math.sqrt(Math.min(bw.pressureLegalBalls, 240) / 240));
+    // Overall career bowling figures, maidens, best bowling & phase breakdown
+    const overallBowlingAvg = bw.totalWickets > 0 ? (bw.totalRunsConceded / bw.totalWickets) : bw.totalRunsConceded;
+    const overallWicketSR = bw.totalWickets > 0 ? (bw.totalLegalBalls / bw.totalWickets) : 999;
+    const overallDotPct = bw.totalLegalBalls > 0 ? (bw.totalDots / bw.totalLegalBalls) * 100 : 0;
+
+    let maidenOvers = 0;
+    for (const ov of Object.values(bw.overStats)) {
+      if (ov.legalBalls >= 6 && ov.runs === 0) maidenOvers++;
+    }
+
+    let bestWkts = 0;
+    let bestRuns = 9999;
+    for (const fig of Object.values(bw.matchInningsFigures)) {
+      if (fig.wkts > bestWkts || (fig.wkts === bestWkts && fig.runs < bestRuns)) {
+        bestWkts = fig.wkts;
+        bestRuns = fig.runs;
+      }
+    }
+    const bestBowling = bestWkts > 0 || bestRuns < 9999 ? `${bestWkts}/${bestRuns === 9999 ? 0 : bestRuns}` : '0/0';
+
+    const ppOvers = bw.ppBalls / 6;
+    const midOvers = bw.midBalls / 6;
+    const deathAllOvers = bw.deathAllBalls / 6;
+
+    const seasonEntries = Object.entries(bw.seasons)
+      .filter(([, s]) => s.balls >= 18)
+      .sort(([kA], [kB]) => kA.localeCompare(kB));
+    const trendDelta = seasonEntries.length >= 2
+      ? parseFloat(((seasonEntries[0][1].runs / (seasonEntries[0][1].balls / 6)) - (seasonEntries[seasonEntries.length - 1][1].runs / (seasonEntries[seasonEntries.length - 1][1].balls / 6))).toFixed(2))
+      : null;
 
     // Consistency score
     const inningsWkts = Object.values(bw.matchPressureWickets);
@@ -768,14 +839,14 @@ async function buildAnalytics() {
     const variance = inningsWkts.reduce((sum, w) => sum + Math.pow(w - meanWkts, 2), 0) / (inningsWkts.length || 1);
     const consistencyScore = Math.max(25, Math.min(95, 78 - Math.sqrt(variance) * 8));
 
-    // Core BPI-Bowl Model
-    const rawRating = (
-      0.35 * Math.max(0, Math.min(100, ((12.0 - pressEcon) / 5.2) * 100)) +
-      0.25 * Math.max(0, Math.min(100, 50 + econDelta * 14)) +
-      0.20 * Math.max(0, Math.min(100, ((30 - Math.min(30, wicketSR)) / 20) * 100)) +
-      0.10 * Math.min(100, (dotPct / 46) * 100) +
-      0.10 * consistencyScore
-    );
+    const bpiBowl = computeBowlingBPI({
+      pressEcon,
+      econDelta,
+      wicketSR,
+      dotPct,
+      consistencyScore,
+      pressureLegalBalls: bw.pressureLegalBalls,
+    });
 
     bw.pressEcon = parseFloat(pressEcon.toFixed(2));
     bw.normEcon = parseFloat(normEcon.toFixed(2));
@@ -786,9 +857,26 @@ async function buildAnalytics() {
     bw.bowlingAvg = parseFloat(bowlingAvg.toFixed(1));
     bw.deathEcon = parseFloat(deathEcon.toFixed(2));
     bw.consistencyScore = parseFloat(consistencyScore.toFixed(1));
-    bw.confidenceWeight = parseFloat(confidenceWeight.toFixed(2));
+    bw.confidenceWeight = bpiBowl.confidenceWeight;
     bw.pressureOvers = parseFloat(pressOvers.toFixed(1));
-    bw.rating = parseFloat((rawRating * (0.68 + 0.32 * confidenceWeight)).toFixed(1));
+    bw.rating = bpiBowl.rating;
+    bw.overallBowlingAvg = parseFloat(overallBowlingAvg.toFixed(1));
+    bw.overallWicketSR = parseFloat(overallWicketSR.toFixed(1));
+    bw.overallDotPct = parseFloat(overallDotPct.toFixed(1));
+    bw.maidenOvers = maidenOvers;
+    bw.bestBowling = bestBowling;
+    bw.bestBowlingWkts = bestWkts;
+    bw.bestBowlingRuns = bestRuns === 9999 ? 0 : bestRuns;
+    bw.powerplayOvers = parseFloat(ppOvers.toFixed(1));
+    bw.powerplayEcon = ppOvers > 0 ? parseFloat((bw.ppRuns / ppOvers).toFixed(2)) : 0;
+    bw.powerplayWickets = bw.ppWkts;
+    bw.middleOvers = parseFloat(midOvers.toFixed(1));
+    bw.middleEcon = midOvers > 0 ? parseFloat((bw.midRuns / midOvers).toFixed(2)) : 0;
+    bw.middleWickets = bw.midWkts;
+    bw.deathOverallOvers = parseFloat(deathAllOvers.toFixed(1));
+    bw.deathOverallEcon = deathAllOvers > 0 ? parseFloat((bw.deathAllRuns / deathAllOvers).toFixed(2)) : 0;
+    bw.deathOverallWickets = bw.deathAllWkts;
+    bw.trendDelta = trendDelta;
   }
 
   qualifiedBowlers.sort((a, b) => b.rating - a.rating);
@@ -812,6 +900,12 @@ async function buildAnalytics() {
     totalBalls: b.totalBalls,
     totalRuns: b.totalRuns,
     totalSR: b.totalSR,
+    battingAvg: b.battingAvg,
+    highestScore: b.highestScore,
+    highestScoreNotOut: b.highestScoreNotOut,
+    totalFours: b.totalFours,
+    totalSixes: b.totalSixes,
+    totalBoundaryPct: b.totalBoundaryPct,
     normalBalls: b.normalBalls,
     normalRuns: b.normalRuns,
     normalSR: b.normSR,
@@ -825,10 +919,14 @@ async function buildAnalytics() {
     dismissalRate: b.dismissalRate,
     dismissals: b.pressureDismissals,
     dotPct: b.dotPct,
+    powerplaySR: b.powerplaySR,
+    middleSR: b.middleSR,
+    deathOverallSR: b.deathOverallSR,
     deathSR: b.deathSR,
     chaseSR: b.chaseSR,
     consistencyScore: b.consistencyScore,
     confidenceWeight: b.confidenceWeight,
+    trendDelta: b.trendDelta,
     rating: b.rating,
     verdict: b.verdict,
     seasons: b.seasons,
@@ -841,6 +939,16 @@ async function buildAnalytics() {
       balls: b.t20iPressureBalls,
       runs: b.t20iPressureRuns,
       sr: b.t20iPressureBalls > 0 ? parseFloat(((b.t20iPressureRuns / b.t20iPressureBalls) * 100).toFixed(1)) : 0
+    },
+    iplTotal: {
+      balls: b.iplBalls,
+      runs: b.iplRuns,
+      sr: b.iplBalls > 0 ? parseFloat(((b.iplRuns / b.iplBalls) * 100).toFixed(1)) : 0
+    },
+    t20iTotal: {
+      balls: b.t20iBalls,
+      runs: b.t20iRuns,
+      sr: b.t20iBalls > 0 ? parseFloat(((b.t20iRuns / b.t20iBalls) * 100).toFixed(1)) : 0
     }
   }));
 
@@ -856,6 +964,22 @@ async function buildAnalytics() {
     totalOvers: parseFloat((bw.totalLegalBalls / 6).toFixed(1)),
     totalEcon: bw.totalEcon,
     totalWickets: bw.totalWickets,
+    overallBowlingAvg: bw.overallBowlingAvg,
+    overallWicketSR: bw.overallWicketSR,
+    overallDotPct: bw.overallDotPct,
+    maidenOvers: bw.maidenOvers,
+    bestBowling: bw.bestBowling,
+    bestBowlingWkts: bw.bestBowlingWkts,
+    bestBowlingRuns: bw.bestBowlingRuns,
+    powerplayOvers: bw.powerplayOvers,
+    powerplayEcon: bw.powerplayEcon,
+    powerplayWickets: bw.powerplayWickets,
+    middleOvers: bw.middleOvers,
+    middleEcon: bw.middleEcon,
+    middleWickets: bw.middleWickets,
+    deathOverallOvers: bw.deathOverallOvers,
+    deathOverallEcon: bw.deathOverallEcon,
+    deathOverallWickets: bw.deathOverallWickets,
     normalOvers: parseFloat((bw.normalLegalBalls / 6).toFixed(1)),
     normalEcon: bw.normEcon,
     pressureLegalBalls: bw.pressureLegalBalls,
@@ -871,6 +995,7 @@ async function buildAnalytics() {
     deathPressureWickets: bw.deathPressureWickets,
     consistencyScore: bw.consistencyScore,
     confidenceWeight: bw.confidenceWeight,
+    trendDelta: bw.trendDelta,
     rating: bw.rating,
     verdict: bw.verdict,
     seasons: bw.seasons,
@@ -893,7 +1018,7 @@ async function buildAnalytics() {
   // Overview KPIs metadata
   const metadata = {
     totalMatches: Object.keys(matches).length,
-    matchesWithBalls: 867,
+    matchesWithBalls: matchesWithBallsSet.size,
     totalDeliveries,
     totalPressureDeliveries,
     totalPlayersEvaluated: Object.keys(playerInfo).length,

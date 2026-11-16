@@ -159,9 +159,10 @@ export const MethodologyPage: React.FC = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 0.10 · ConsistencyScore
           </div>
           <p className="text-[11px]">
-            Final BPI incorporates an <strong>Empirical Bayesian Shrinkage Weight (W_conf)</strong> based on sample volume:
-            <code className="text-[#E90074] ml-1">BPI = BPI_raw · [ 0.68 + 0.32 · sqrt(min(Balls, 240) / 240) ]</code>.
-            This mathematically ensures that small-sample outliers (e.g. 10 balls at SR 300) cannot usurp consistent performers with hundreds of deliveries under pressure.
+            Final BPI applies two-stage Empirical Bayesian Shrinkage:{' '}
+            <code className="text-[#E90074]">W_conf = min(1.0, 0.65 + 0.35 · sqrt(min(Balls, 240) / 240))</code>, followed by{' '}
+            <code className="text-[#E90074]">BPI = BPI_raw · (0.68 + 0.32 · W_conf)</code>.
+            This mathematically ensures that small-sample outliers (e.g. 50 balls vs 240+ balls) receive appropriate volume shrinkage without distorting true pressure reliability.
           </p>
         </div>
       </section>
@@ -184,7 +185,9 @@ export const MethodologyPage: React.FC = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 0.10 · ConsistencyScore
           </div>
           <p className="text-[11px]">
-            Scaled by Bayesian volume shrinkage: <code className="text-[#7545C8]">BPI_bowl = BPI_bowl_raw · [ 0.68 + 0.32 · sqrt(min(Balls, 240) / 240) ]</code>.
+            Scaled by identical Bayesian volume shrinkage:{' '}
+            <code className="text-[#7545C8]">W_conf = min(1.0, 0.65 + 0.35 · sqrt(min(Balls, 240) / 240))</code> and{' '}
+            <code className="text-[#7545C8]">BPI_bowl = BPI_bowl_raw · (0.68 + 0.32 · W_conf)</code>.
           </p>
         </div>
       </section>

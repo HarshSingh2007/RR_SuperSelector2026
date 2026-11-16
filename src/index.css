@@ -115,6 +115,40 @@
   animation: pulse-pink 2s infinite ease-in-out;
 }
 
+/* Smooth panel fade & tabular figures for stats */
+@keyframes fade-in-subtle {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rr-panel-enter {
+  animation: fade-in-subtle 0.22s ease-out both;
+}
+
+.rr-glass-card {
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Respect accessibility motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Print styles for reporting */
 @media print {
   body {

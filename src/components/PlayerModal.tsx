@@ -11,9 +11,13 @@ import {
   Layers,
   ChevronRight,
   GitCompare,
-  TrendingUp,
-  BarChart3,
   Award,
+  BarChart3,
+  Bookmark,
+  Dna,
+  Swords,
+  Gavel,
+  Download,
 } from 'lucide-react';
 import { Batter, Bowler } from '../types';
 import { Badge } from './Badge';
@@ -22,6 +26,8 @@ import { getTeamTheme } from '../utils/teamColors';
 import { MetricTooltip } from './MetricTooltip';
 import { PressureMeter } from './PressureMeter';
 import { BoundaryIndicator } from './BoundaryIndicator';
+import { useEcosystem } from '../context/EcosystemContext';
+import { downloadScoutingReport, playerDataService } from '../services/playerDataService';
 import {
   CricketBatIcon,
   CricketBallIcon,
@@ -45,6 +51,17 @@ export const PlayerModal: React.FC<PlayerModalProps> = ({
   onCompare,
 }) => {
   if (!player) return null;
+
+  const {
+    isShortlisted,
+    toggleShortlist,
+    openPlayerDNA,
+    openMatchupLab,
+    sendToAuctionBlock,
+    openPlayerProfile,
+  } = useEcosystem();
+  const shortlisted = isShortlisted(player.id) || isShortlisted(player.name);
+  const auctionCandidate = playerDataService.findAuctionCandidate(player.id) || playerDataService.findAuctionCandidate(player.name);
 
   const isBatter = type === 'batter';
   const batter = isBatter ? (player as Batter) : null;
@@ -379,17 +396,78 @@ export const PlayerModal: React.FC<PlayerModalProps> = ({
           </div>
 
           {/* Action Footer */}
-          <div className="pt-4 border-t border-[#29334C] flex items-center justify-between">
-            <button
-              onClick={() => {
-                onCompare(player);
-                onClose();
-              }}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#E90074] to-[#7545C8] text-white font-bold text-xs flex items-center gap-2 hover:opacity-95 shadow-md shadow-pink-500/20 transition-opacity"
-            >
-              <GitCompare size={14} />
-              <span>Add to Comparison Studio</span>
-            </button>
+          <div className="pt-4 border-t border-[#29334C] flex flex-wrap items-center justify-between gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => {
+                  onClose();
+                  openPlayerProfile(player.id);
+                }}
+                className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#E90074] to-[#7545C8] text-white font-bold text-xs flex items-center gap-1.5 hover:opacity-95 shadow-md shadow-pink-500/20 transition-all"
+              >
+                <Sparkles size={13} />
+                <span>Full Profile & Pitch Map</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  onCompare(player);
+                  onClose();
+                }}
+                className="px-3 py-2 rounded-xl bg-[#121A2D] hover:bg-[#192340] text-[#C9C3DF] border border-[#29334C] font-bold text-xs flex items-center gap-1.5 transition-colors"
+              >
+                <GitCompare size={13} />
+                <span>Compare</span>
+              </button>
+
+              <button
+                onClick={() => openPlayerDNA(player, type)}
+                className="px-3 py-2 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 font-bold text-xs flex items-center gap-1.5 transition-colors"
+              >
+                <Dna size={13} />
+                <span>6-Axis DNA</span>
+              </button>
+
+              <button
+                onClick={() =>
+                  openMatchupLab(isBatter ? player.id : undefined, !isBatter ? player.id : undefined)
+                }
+                className="px-3 py-2 rounded-xl bg-[#121A2D] hover:bg-[#192340] text-amber-300 border border-[#29334C] font-bold text-xs flex items-center gap-1.5 transition-colors"
+              >
+                <Swords size={13} />
+                <span>Matchups</span>
+              </button>
+
+              <button
+                onClick={() => toggleShortlist(player.id, 'Player Dossier Modal')}
+                className={`px-3 py-2 rounded-xl font-bold text-xs flex items-center gap-1.5 border transition-colors ${
+                  shortlisted
+                    ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                    : 'bg-[#121A2D] hover:bg-[#192340] text-[#C9C3DF] border-[#29334C]'
+                }`}
+              >
+                <Bookmark size={13} className={shortlisted ? 'fill-current' : ''} />
+                <span>{shortlisted ? 'Shortlisted' : 'Shortlist'}</span>
+              </button>
+
+              {auctionCandidate && (
+                <button
+                  onClick={() => sendToAuctionBlock(player.id)}
+                  className="px-3 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 font-bold text-xs flex items-center gap-1.5 transition-colors"
+                >
+                  <Gavel size={13} />
+                  <span>Send to Auction</span>
+                </button>
+              )}
+
+              <button
+                onClick={() => downloadScoutingReport(player, type)}
+                className="px-3 py-2 rounded-xl bg-[#121A2D] hover:bg-[#192340] text-[#C9C3DF] border border-[#29334C] font-bold text-xs flex items-center gap-1.5 transition-colors"
+              >
+                <Download size={13} />
+                <span>Report (.md)</span>
+              </button>
+            </div>
 
             <button
               onClick={onClose}

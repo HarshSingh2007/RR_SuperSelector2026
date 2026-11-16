@@ -47,6 +47,7 @@ import {
 import { YoungTalent, WatchlistItem } from '../types';
 import youngTalentsData from '../data/young_talents.json';
 import { PlayerAvatar } from '../components/PlayerAvatar';
+import { useEcosystem } from '../context/EcosystemContext';
 import {
   YoungTalentRadarIcon,
   RoyalCrestEmblem,
@@ -61,6 +62,7 @@ import {
 const WATCHLIST_STORAGE_KEY = 'superr_scout_watchlist_v1';
 
 export const YoungTalentPage: React.FC = () => {
+  const { toggleShortlist, isShortlisted } = useEcosystem();
   const allTalents = useMemo(() => youngTalentsData as unknown as YoungTalent[], []);
 
   // Top 5 "NEXT BIG STAR" Prospects
@@ -146,10 +148,13 @@ export const YoungTalentPage: React.FC = () => {
     [watchlist]
   );
 
-  // Toggle watchlist
+  // Toggle watchlist (synced bidirectionally with central Scouting Shortlist)
   const handleToggleWatchlist = (talent: YoungTalent) => {
     if (watchlistPlayerIds.has(talent.id)) {
       setWatchlist((prev) => prev.filter((w) => w.player.id !== talent.id));
+      if (isShortlisted(talent.id)) {
+        toggleShortlist(talent.id, 'Young Talent Radar');
+      }
     } else {
       const newItem: WatchlistItem = {
         player: talent,
@@ -158,6 +163,9 @@ export const YoungTalentPage: React.FC = () => {
         addedAt: new Date().toLocaleDateString(),
       };
       setWatchlist((prev) => [newItem, ...prev]);
+      if (!isShortlisted(talent.id)) {
+        toggleShortlist(talent.id, 'Young Talent Radar', 'high');
+      }
       confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 }, colors: ['#F59E0B', '#E90074'] });
     }
   };
@@ -462,7 +470,9 @@ export const YoungTalentPage: React.FC = () => {
                         <span className="font-bold text-[#E90074]">
                           {player.primary_role === 'Fast Bowler' || player.primary_role === 'Spinner'
                             ? `${player.stats.bowling.economy} Econ`
-                            : `${player.stats.batting.pressure_sr} SR`}
+                            : player.stats.batting.pressure_sr !== null
+                              ? `${player.stats.batting.pressure_sr} SR`
+                              : 'N/A (0b)'}
                         </span>
                       </div>
                     </div>

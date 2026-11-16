@@ -1,27 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Sliders,
-  Play,
   RotateCcw,
-  ShieldAlert,
-  Flame,
   CheckCircle,
-  HelpCircle,
-  Clock,
   Sparkles,
-  Info,
+  Bookmark,
+  Dna,
+  Eye,
 } from 'lucide-react';
 import { Badge } from '../components/Badge';
 import { Scoreboard } from '../components/Scoreboard';
-import { MetricTooltip } from '../components/MetricTooltip';
 import { PressureMeter } from '../components/PressureMeter';
 import { CricketPitchGraphic } from '../components/CricketPitchGraphic';
 import { CricketStumpsIcon, CricketBatIcon, CricketBallIcon } from '../components/CricketIcons';
 import pressureMatchesData from '../data/pressure_matches.json';
 import { PressureMatch } from '../types';
+import { ballsToOversDisplay, computeChasePressure, computeFirstInningsPressure } from '../utils/analyticsEngine';
+import { playerDataService } from '../services/playerDataService';
+import { useEcosystem } from '../context/EcosystemContext';
 
 export const PressureIntelligencePage: React.FC = () => {
+  const {
+    pressureContextFocus,
+    clearPressureContextFocus,
+    openPlayerProfile,
+    openPlayerDNA,
+    isShortlisted,
+    toggleShortlist,
+  } = useEcosystem();
   const [innings, setInnings] = useState<'1' | '2'>('2');
+
+  useEffect(() => {
+    if (pressureContextFocus) {
+      setInnings(pressureContextFocus.innings === 1 ? '1' : '2');
+      clearPressureContextFocus();
+    }
+  }, [pressureContextFocus, clearPressureContextFocus]);
   const [activePitchPhase, setActivePitchPhase] = useState<'powerplay' | 'middle' | 'death' | 'all'>('all');
 
   // Second Innings Simulator State (default example from prompt: 180 target, 144 score, 18 balls left, 3 wickets down)
@@ -49,50 +63,74 @@ export const PressureIntelligencePage: React.FC = () => {
   const legalBallsBowled = Math.max(1, 120 - ballsRemaining);
   const crr = parseFloat((currentScore / (legalBallsBowled / 6)).toFixed(2));
 
-  // Innings 2 Pressure Formula
-  let rrrFactor = 0;
-  if (rrr <= 6) rrrFactor = 0.10;
-  else if (rrr <= 8.5) rrrFactor = 0.10 + (rrr - 6) * 0.12;
-  else if (rrr <= 12) rrrFactor = 0.40 + (rrr - 8.5) * 0.10;
-  else if (rrr <= 16) rrrFactor = 0.75 + (rrr - 12) * 0.05;
-  else rrrFactor = 0.95 + Math.min(0.05, (rrr - 16) * 0.01);
-
-  const wicketFactor = wicketsLost / 10;
-  let phaseUrgency = 0;
-  if (ballsRemaining <= 24) phaseUrgency = 0.40;
-  else if (ballsRemaining <= 48) phaseUrgency = 0.22;
-  else phaseUrgency = 0.08;
-
-  let closenessModifier = 1.0;
-  if (runsNeeded <= 12 && wicketsInHand >= 6) closenessModifier = 0.35;
-  else if (rrr > 26 && wicketsInHand <= 2) closenessModifier = 0.55;
-  else if (ballsRemaining <= 36 && runsNeeded <= 50 && wicketsInHand >= 3) closenessModifier = 1.25;
-
-  let computedPressure = (0.42 * rrrFactor + 0.30 * wicketFactor + 0.28 * phaseUrgency) * closenessModifier;
-  if (isKnockout) computedPressure *= 1.15;
-  computedPressure = Math.min(1.0, Math.max(0.0, computedPressure));
+  const computedPressure = computeChasePressure({
+    runsRequired: runsNeeded,
+    ballsRemaining,
+    wicketsLost,
+    isKnockout,
+  });
 
   // Compute Innings 1 Math
   const firstInnOversCompleted = firstInnOvers;
   const firstInnCrr = firstInnOversCompleted > 0 ? parseFloat((firstInnScore / firstInnOversCompleted).toFixed(2)) : 0;
-  let firstInnCollapse = 0;
-  if (firstInnWickets >= 3 && firstInnOversCompleted <= 6) firstInnCollapse = 0.65;
-  else if (firstInnWickets >= 5 && firstInnOversCompleted <= 12) firstInnCollapse = 0.55;
-  else firstInnCollapse = (firstInnWickets / 10) * 0.45;
-
-  let firstInnPhase = 0;
-  if (firstInnOversCompleted >= 16) firstInnPhase = 0.50 + ((10 - firstInnWickets) >= 4 ? 0.15 : -0.10);
-  else if (firstInnOversCompleted <= 6) firstInnPhase = 0.15;
-  else firstInnPhase = 0.22;
-
-  let firstInnHealth = 0;
-  if (firstInnOversCompleted >= 8 && firstInnCrr < 7.0) firstInnHealth = 0.22;
-
-  let computedFirstInnPressure = 0.40 * firstInnCollapse + 0.45 * firstInnPhase + 0.15 * firstInnHealth;
-  if (isKnockout) computedFirstInnPressure *= 1.15;
-  computedFirstInnPressure = Math.min(1.0, Math.max(0.0, computedFirstInnPressure));
+  const computedFirstInnPressure = computeFirstInningsPressure({
+    oversCompleted: firstInnOversCompleted,
+    overid: Math.min(20, firstInnOversCompleted + 1),
+    currentScore: firstInnScore,
+    wicketsLost: firstInnWickets,
+    isKnockout,
+  });
 
   const activePressure = innings === '2' ? computedPressure : computedFirstInnPressure;
+
+  // Match context specialists derived purely from audited JSON stats
+  const contextSpecialists = useMemo(() => {
+    const batters = playerDataService.getBatters();
+    const bowlers = playerDataService.getBowlers();
+    const isDeathContext =
+      (innings === '2' && ballsRemaining <= 36) || (innings === '1' && firstInnOvers >= 15);
+    const isEarlyCollapse =
+      (innings === '2' && ballsRemaining >= 78 && wicketsLost >= 3) ||
+      (innings === '1' && firstInnOvers <= 6 && firstInnWickets >= 3);
+
+    let batterModeLabel = 'Chase & High-Pressure Specialists';
+    let sortedBatters = [...batters];
+    if (isEarlyCollapse) {
+      batterModeLabel = 'Collapse Stabilizers (High Consistency & Rotation)';
+      sortedBatters.sort((a, b) => b.consistencyScore * 0.6 + b.rating * 0.4 - (a.consistencyScore * 0.6 + a.rating * 0.4));
+    } else if (innings === '2') {
+      batterModeLabel = isDeathContext
+        ? '2nd Innings Chase Finishers (Death & Chase SR)'
+        : '2nd Innings Run-Chase Pacing Leaders';
+      sortedBatters.sort((a, b) => (b.chaseSR * 0.4 + b.deathSR * 0.35 + b.rating) - (a.chaseSR * 0.4 + a.deathSR * 0.35 + a.rating));
+    } else {
+      batterModeLabel = isDeathContext
+        ? '1st Innings Death Accelerators (16-20 Ov Surge)'
+        : '1st Innings Foundation & Momentum Leaders';
+      sortedBatters.sort((a, b) => (b.deathOverallSR ?? b.deathSR) + b.rating - ((a.deathOverallSR ?? a.deathSR) + a.rating));
+    }
+
+    let bowlerModeLabel = 'Pressure Containment Specialists';
+    let sortedBowlers = [...bowlers];
+    if (isDeathContext) {
+      bowlerModeLabel = 'Death Overs Specialists (Lowest Death Economy)';
+      sortedBowlers = sortedBowlers
+        .filter((b) => (b.deathEcon > 0 || (b.deathOverallEcon ?? 0) > 0) && b.pressureOvers >= 8)
+        .sort((a, b) => (a.deathEcon || a.deathOverallEcon || 12) - (b.deathEcon || b.deathOverallEcon || 12));
+    } else if (isEarlyCollapse) {
+      bowlerModeLabel = 'New-Ball Strike Threat (Powerplay Wickets & Economy)';
+      sortedBowlers.sort((a, b) => (b.powerplayWickets ?? 0) * 2 + b.rating - ((a.powerplayWickets ?? 0) * 2 + a.rating));
+    } else {
+      sortedBowlers.sort((a, b) => b.rating - a.rating);
+    }
+
+    return {
+      batterModeLabel,
+      bowlerModeLabel,
+      batters: sortedBatters.slice(0, 3),
+      bowlers: sortedBowlers.slice(0, 3),
+    };
+  }, [innings, ballsRemaining, wicketsLost, firstInnOvers, firstInnWickets]);
   const pressureScore100 = Math.round(activePressure * 100);
 
   // Classification Category
@@ -297,8 +335,25 @@ export const PressureIntelligencePage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Balls Remaining & Wickets */}
-                <div className="grid grid-cols-2 gap-3">
+                {/* Overs Completed & Balls Remaining */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div>
+                    <div className="flex items-center justify-between text-[11px] font-semibold text-[#929BB2] mb-1">
+                      <span>Overs Completed</span>
+                      <span className="font-mono text-cyan-300">
+                        {ballsToOversDisplay(120 - ballsRemaining)} / 20.0
+                      </span>
+                    </div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="119"
+                      value={Math.max(0, 120 - ballsRemaining)}
+                      onChange={(e) => setBallsRemaining(Math.max(1, 120 - parseInt(e.target.value, 10)))}
+                      className="w-full accent-cyan-400 bg-[#121A2D] rounded-lg cursor-pointer"
+                      aria-label="Overs Completed"
+                    />
+                  </div>
                   <div>
                     <div className="flex items-center justify-between text-[11px] font-semibold text-[#929BB2] mb-1">
                       <span>Balls Remaining</span>
@@ -313,6 +368,7 @@ export const PressureIntelligencePage: React.FC = () => {
                       value={ballsRemaining}
                       onChange={(e) => setBallsRemaining(parseInt(e.target.value, 10))}
                       className="w-full accent-[#E90074] bg-[#121A2D] rounded-lg cursor-pointer"
+                      aria-label="Balls Remaining"
                     />
                   </div>
                   <div>
@@ -329,6 +385,7 @@ export const PressureIntelligencePage: React.FC = () => {
                       value={wicketsLost}
                       onChange={(e) => setWicketsLost(parseInt(e.target.value, 10))}
                       className="w-full accent-amber-400 bg-[#121A2D] rounded-lg cursor-pointer"
+                      aria-label="Wickets Lost"
                     />
                   </div>
                 </div>
@@ -502,6 +559,137 @@ export const PressureIntelligencePage: React.FC = () => {
                 <strong className="text-[#F7F7FB]">DLS & Target Reconstruction:</strong> DLS revised targets and revised overs are strictly respected from match records, ensuring required rates accurately reflect target adjustments.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Dataset-Backed Specialists for Active Context */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="rr-glass-card p-5">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                <CricketBatIcon size={16} className="text-[#E90074]" />
+                {contextSpecialists.batterModeLabel}
+              </h4>
+              <p className="text-[11px] text-[#929BB2]">
+                Ranked strictly from audited CSV chase, death &amp; consistency splits
+              </p>
+            </div>
+            <Badge variant="pink">{categoryLabel.split(' ')[0]}</Badge>
+          </div>
+          <div className="space-y-2.5">
+            {contextSpecialists.batters.map((b) => {
+              const shortlisted = isShortlisted(b.id) || isShortlisted(b.name);
+              return (
+                <div
+                  key={b.id}
+                  className="p-3 rounded-xl bg-[#121A2D] border border-[#29334C] flex items-center justify-between gap-2"
+                >
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span>{b.country_flag}</span>
+                      <span className="text-xs font-bold text-white truncate">{b.name}</span>
+                      <span className="text-[10px] font-mono text-[#E90074]">BPI {b.rating}</span>
+                    </div>
+                    <p className="text-[10px] text-[#929BB2] font-mono mt-0.5">
+                      Press SR {b.pressureSR} · Chase SR {b.chaseSR} · Death SR {(b.deathOverallSR ?? b.deathSR).toFixed(1)} · Cons {b.consistencyScore}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1 shrink-0">
+                    <button
+                      onClick={() => openPlayerProfile(b, 'batter')}
+                      className="p-1.5 rounded-lg bg-[#171F35] text-[#C9C3DF] hover:text-white border border-[#29334C]"
+                      title="Open Profile"
+                    >
+                      <Eye size={12} />
+                    </button>
+                    <button
+                      onClick={() => openPlayerDNA(b, 'batter')}
+                      className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/30"
+                      title="Open Player DNA"
+                    >
+                      <Dna size={12} />
+                    </button>
+                    <button
+                      onClick={() => toggleShortlist(b.id, 'Pressure Intelligence')}
+                      className={`p-1.5 rounded-lg border ${
+                        shortlisted
+                          ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                          : 'bg-[#171F35] text-[#929BB2] border-[#29334C]'
+                      }`}
+                      title="Shortlist"
+                    >
+                      <Bookmark size={12} className={shortlisted ? 'fill-current' : ''} />
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="rr-glass-card p-5">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                <CricketBallIcon size={16} className="text-[#7545C8]" />
+                {contextSpecialists.bowlerModeLabel}
+              </h4>
+              <p className="text-[11px] text-[#929BB2]">
+                Ranked strictly from recorded death economy, powerplay wickets &amp; BPI
+              </p>
+            </div>
+            <Badge variant="purple">Dataset Grounded</Badge>
+          </div>
+          <div className="space-y-2.5">
+            {contextSpecialists.bowlers.map((bw) => {
+              const shortlisted = isShortlisted(bw.id) || isShortlisted(bw.name);
+              return (
+                <div
+                  key={bw.id}
+                  className="p-3 rounded-xl bg-[#121A2D] border border-[#29334C] flex items-center justify-between gap-2"
+                >
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span>{bw.country_flag}</span>
+                      <span className="text-xs font-bold text-white truncate">{bw.name}</span>
+                      <span className="text-[10px] font-mono text-[#7545C8]">BPI {bw.rating}</span>
+                    </div>
+                    <p className="text-[10px] text-[#929BB2] font-mono mt-0.5">
+                      Press Econ {bw.pressureEcon} · Death {(bw.deathEcon || bw.deathOverallEcon || 0).toFixed(2)} · {bw.deathPressureWickets} Dth Press Wkts
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1 shrink-0">
+                    <button
+                      onClick={() => openPlayerProfile(bw, 'bowler')}
+                      className="p-1.5 rounded-lg bg-[#171F35] text-[#C9C3DF] hover:text-white border border-[#29334C]"
+                      title="Open Profile"
+                    >
+                      <Eye size={12} />
+                    </button>
+                    <button
+                      onClick={() => openPlayerDNA(bw, 'bowler')}
+                      className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/30"
+                      title="Open Player DNA"
+                    >
+                      <Dna size={12} />
+                    </button>
+                    <button
+                      onClick={() => toggleShortlist(bw.id, 'Pressure Intelligence')}
+                      className={`p-1.5 rounded-lg border ${
+                        shortlisted
+                          ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                          : 'bg-[#171F35] text-[#929BB2] border-[#29334C]'
+                      }`}
+                      title="Shortlist"
+                    >
+                      <Bookmark size={12} className={shortlisted ? 'fill-current' : ''} />
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

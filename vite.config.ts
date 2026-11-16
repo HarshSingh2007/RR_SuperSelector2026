@@ -9,12 +9,22 @@ export default defineConfig({
     host: true,
   },
   build: {
-    chunkSizeWarningLimit: 3500,
+    chunkSizeWarningLimit: 15000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          charts: ['recharts'],
-          icons: ['lucide-react', 'canvas-confetti'],
+        manualChunks(id) {
+          if (id.includes('player_profiles.json')) {
+            return 'player-profiles-data';
+          }
+          if (id.includes('node_modules/recharts')) {
+            return 'charts';
+          }
+          if (id.includes('node_modules/lucide-react') || id.includes('node_modules/canvas-confetti')) {
+            return 'icons';
+          }
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'vendor-react';
+          }
         },
       },
     },

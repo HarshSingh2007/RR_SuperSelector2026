@@ -1,20 +1,13 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Swords,
   Search,
-  Filter,
-  Shield,
-  Award,
-  TrendingUp,
   AlertCircle,
-  CheckCircle2,
   ChevronRight,
-  Flame,
-  Zap,
   RotateCcw,
-  ExternalLink,
   Target,
-  Sparkles,
+  Bookmark,
+  Dna,
 } from 'lucide-react';
 import {
   HeadToHeadRecord,
@@ -32,14 +25,21 @@ import {
   HeadToHeadIcon,
   RoyalCrestEmblem,
   CricketBatIcon,
-  CricketBallIcon,
-  CricketStumpsIcon,
   BowlingMotionIcon,
 } from '../components/CricketIcons';
+import { useEcosystem } from '../context/EcosystemContext';
+import { assessMatchupSample } from '../utils/analyticsEngine';
 
 type FormatFilter = 'ALL' | 'IPL' | 'T20I';
 
 export const BatterBowlerPage: React.FC = () => {
+  const {
+    matchupFocus,
+    clearMatchupFocus,
+    openPlayerDNA,
+    isShortlisted,
+    toggleShortlist,
+  } = useEcosystem();
   const matrix = useMemo(() => h2hMatrixData as unknown as HeadToHeadMatrixData, []);
 
   // Batter & Bowler Options
@@ -130,6 +130,20 @@ export const BatterBowlerPage: React.FC = () => {
   const [batterSearch, setBatterSearch] = useState<string>('');
   const [bowlerSearch, setBowlerSearch] = useState<string>('');
 
+  useEffect(() => {
+    if (matchupFocus) {
+      if (matchupFocus.batterId) {
+        const found = battersList.find((b) => b.id === matchupFocus.batterId);
+        if (found) setSelectedBatterId(found.id);
+      }
+      if (matchupFocus.bowlerId) {
+        const foundBw = bowlersList.find((bw) => bw.id === matchupFocus.bowlerId);
+        if (foundBw) setSelectedBowlerId(foundBw.id);
+      }
+      clearMatchupFocus();
+    }
+  }, [matchupFocus, battersList, bowlersList, clearMatchupFocus]);
+
   const selectedBatter = useMemo(
     () => battersList.find((b) => b.id === selectedBatterId) || battersList[0],
     [battersList, selectedBatterId]
@@ -206,6 +220,57 @@ export const BatterBowlerPage: React.FC = () => {
       advantage: rawRecord.advantage,
     };
   }, [rawRecord, format]);
+
+  // Favourite Batters placeholder stays below, while we also compute real Pace vs Spin & Role matchup splits
+  const archetypeMatchups = useMemo(() => {
+    const bowlerStyleMap = new Map<string, string>();
+    (bowlersData as unknown as Bowler[]).forEach((bw) => {
+      bowlerStyleMap.set(bw.id, (bw.bowlingType || bw.player_role || '').toLowerCase());
+    });
+    const batterRoleMap = new Map<string, string>();
+    (battersData as unknown as Batter[]).forEach((b) => {
+      batterRoleMap.set(b.id, (b.player_role || 'Batter').toLowerCase());
+    });
+
+    const pace = { balls: 0, runs: 0, dots: 0, dismissals: 0, boundaries: 0 };
+    const spin = { balls: 0, runs: 0, dots: 0, dismissals: 0, boundaries: 0 };
+    const vsOpeners = { balls: 0, runs: 0, dots: 0, dismissals: 0 };
+    const vsMiddle = { balls: 0, runs: 0, dots: 0, dismissals: 0 };
+
+    Object.values(matrix.matchups).forEach((m) => {
+      if (selectedBatter && m.batter_id === selectedBatter.id) {
+        const style = bowlerStyleMap.get(m.bowler_id) || '';
+        const targetBucket =
+          style.includes('spin') || style.includes('orthodox') || style.includes('leg') || style.includes('off')
+            ? spin
+            : pace;
+        targetBucket.balls += m.balls_faced;
+        targetBucket.runs += m.runs_scored;
+        targetBucket.dots += m.dots;
+        targetBucket.dismissals += m.dismissals;
+        targetBucket.boundaries += m.fours + m.sixes;
+      }
+      if (selectedBowler && m.bowler_id === selectedBowler.id) {
+        const role = batterRoleMap.get(m.batter_id) || '';
+        const bucket = role.includes('opener') || role.includes('top') ? vsOpeners : vsMiddle;
+        bucket.balls += m.balls_faced;
+        bucket.runs += m.runs_scored;
+        bucket.dots += m.dots;
+        bucket.dismissals += m.dismissals;
+      }
+    });
+
+    const calcRate = (r: number, b: number) => (b > 0 ? ((r / b) * 100).toFixed(1) : 'N/A');
+    const calcDot = (d: number, b: number) => (b > 0 ? ((d / b) * 100).toFixed(1) : 'N/A');
+    const calcEcon = (r: number, b: number) => (b > 0 ? ((r / b) * 6).toFixed(2) : 'N/A');
+
+    return {
+      pace: { ...pace, sr: calcRate(pace.runs, pace.balls), dotPct: calcDot(pace.dots, pace.balls) },
+      spin: { ...spin, sr: calcRate(spin.runs, spin.balls), dotPct: calcDot(spin.dots, spin.balls) },
+      vsOpeners: { ...vsOpeners, econ: calcEcon(vsOpeners.runs, vsOpeners.balls), sr: calcRate(vsOpeners.runs, vsOpeners.balls) },
+      vsMiddle: { ...vsMiddle, econ: calcEcon(vsMiddle.runs, vsMiddle.balls), sr: calcRate(vsMiddle.runs, vsMiddle.balls) },
+    };
+  }, [matrix, selectedBatter, selectedBowler]);
 
   // Toughest Opponents for the selected batter
   const toughestOpponents: HeadToHeadRecord[] = useMemo(() => {
@@ -436,14 +501,20 @@ export const BatterBowlerPage: React.FC = () => {
                 Format: <span className="font-bold text-[#F7F7FB]">{format}</span>
               </div>
             </div>
-            {activeStats.balls < 6 && (
-              <div className="mt-2.5 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[11px] text-amber-200 flex items-center gap-2">
-                <AlertCircle size={13} className="text-amber-400 shrink-0" />
-                <span>
-                  <strong>Small Sample Caution ({activeStats.balls} {activeStats.balls === 1 ? 'ball' : 'balls'}):</strong> Limited historical encounter data — dominance metrics carry higher statistical variance.
-                </span>
-              </div>
-            )}
+            {(() => {
+              const sampleCheck = assessMatchupSample(activeStats.balls);
+              return sampleCheck.warning ? (
+                <div className="mt-2.5 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[11px] text-amber-200 flex items-center justify-between gap-2 flex-wrap">
+                  <span className="flex items-center gap-2">
+                    <AlertCircle size={13} className="text-amber-400 shrink-0" />
+                    <span>{sampleCheck.warning}</span>
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono font-bold text-[10px]">
+                    {sampleCheck.badge}
+                  </span>
+                </div>
+              ) : null;
+            })()}
           </div>
         )}
       </div>
@@ -707,6 +778,119 @@ export const BatterBowlerPage: React.FC = () => {
                 No dominant victim profile recorded in database for this bowler.
               </div>
             )}
+          </div>
+        </div>
+      </div>
+
+      {/* Pace vs Spin & Batting Role Archetype Split (Computed Live from Recorded Matrix) */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-[#171F35] border border-[#29334C] rounded-2xl p-5 shadow-xl space-y-3">
+          <div className="flex items-center justify-between border-b border-[#29334C] pb-3">
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">
+                {selectedBatter?.name}: Pace vs Spin Archetype Split
+              </h3>
+              <p className="text-[11px] text-[#929BB2]">
+                Aggregated from all recorded ball-by-ball head-to-head duels
+              </p>
+            </div>
+            <div className="flex items-center gap-1.5">
+              {selectedBatter && (
+                <>
+                  <button
+                    onClick={() => openPlayerDNA(selectedBatter.id, 'batter')}
+                    className="px-2 py-1 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-[11px] font-bold inline-flex items-center gap-1"
+                  >
+                    <Dna size={12} /> DNA
+                  </button>
+                  <button
+                    onClick={() => toggleShortlist(selectedBatter.id, 'Matchup Intelligence Lab')}
+                    className={`px-2 py-1 rounded border text-[11px] font-bold inline-flex items-center gap-1 ${
+                      isShortlisted(selectedBatter.id)
+                        ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                        : 'bg-[#121A2D] border-[#29334C] text-[#C9C3DF]'
+                    }`}
+                  >
+                    <Bookmark size={12} /> {isShortlisted(selectedBatter.id) ? 'Saved' : 'Shortlist'}
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 text-xs font-mono">
+            <div className="p-3.5 rounded-xl bg-[#121A2D] border border-[#29334C]">
+              <span className="text-[10px] font-sans uppercase text-amber-300 font-bold block mb-1">
+                vs Pace / Seam Attack
+              </span>
+              <div className="text-lg font-black text-white">{archetypeMatchups.pace.sr} SR</div>
+              <p className="text-[11px] text-[#929BB2] mt-1">
+                {archetypeMatchups.pace.runs}r off {archetypeMatchups.pace.balls}b · {archetypeMatchups.pace.dismissals} out · {archetypeMatchups.pace.dotPct}% dots
+              </p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-[#121A2D] border border-[#29334C]">
+              <span className="text-[10px] font-sans uppercase text-purple-300 font-bold block mb-1">
+                vs Spin / Slow Bowlers
+              </span>
+              <div className="text-lg font-black text-white">{archetypeMatchups.spin.sr} SR</div>
+              <p className="text-[11px] text-[#929BB2] mt-1">
+                {archetypeMatchups.spin.runs}r off {archetypeMatchups.spin.balls}b · {archetypeMatchups.spin.dismissals} out · {archetypeMatchups.spin.dotPct}% dots
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-[#171F35] border border-[#29334C] rounded-2xl p-5 shadow-xl space-y-3">
+          <div className="flex items-center justify-between border-b border-[#29334C] pb-3">
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">
+                {selectedBowler?.name}: vs Batting Role Matchups
+              </h3>
+              <p className="text-[11px] text-[#929BB2]">
+                Aggregated against Openers vs Middle/Finishers in recorded duels
+              </p>
+            </div>
+            {selectedBowler && (
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={() => openPlayerDNA(selectedBowler.id, 'bowler')}
+                  className="px-2 py-1 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-[11px] font-bold inline-flex items-center gap-1"
+                >
+                  <Dna size={12} /> DNA
+                </button>
+                <button
+                  onClick={() => toggleShortlist(selectedBowler.id, 'Matchup Intelligence Lab')}
+                  className={`px-2 py-1 rounded border text-[11px] font-bold inline-flex items-center gap-1 ${
+                    isShortlisted(selectedBowler.id)
+                      ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                      : 'bg-[#121A2D] border-[#29334C] text-[#C9C3DF]'
+                  }`}
+                >
+                  <Bookmark size={12} /> {isShortlisted(selectedBowler.id) ? 'Saved' : 'Shortlist'}
+                </button>
+              </div>
+            )}
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 text-xs font-mono">
+            <div className="p-3.5 rounded-xl bg-[#121A2D] border border-[#29334C]">
+              <span className="text-[10px] font-sans uppercase text-cyan-300 font-bold block mb-1">
+                vs Openers / Top-Order
+              </span>
+              <div className="text-lg font-black text-white">{archetypeMatchups.vsOpeners.econ} Econ</div>
+              <p className="text-[11px] text-[#929BB2] mt-1">
+                {archetypeMatchups.vsOpeners.dismissals} wkts in {archetypeMatchups.vsOpeners.balls}b · Bat SR {archetypeMatchups.vsOpeners.sr}
+              </p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-[#121A2D] border border-[#29334C]">
+              <span className="text-[10px] font-sans uppercase text-[#FF47A3] font-bold block mb-1">
+                vs Middle-Order / Finishers
+              </span>
+              <div className="text-lg font-black text-white">{archetypeMatchups.vsMiddle.econ} Econ</div>
+              <p className="text-[11px] text-[#929BB2] mt-1">
+                {archetypeMatchups.vsMiddle.dismissals} wkts in {archetypeMatchups.vsMiddle.balls}b · Bat SR {archetypeMatchups.vsMiddle.sr}
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Crown, Sparkles, ChevronRight, GitCompare, Activity, Flame, Shield } from 'lucide-react';
+import { Crown, Sparkles, ChevronRight, GitCompare, Bookmark, Dna } from 'lucide-react';
 import { Batter, Bowler } from '../types';
 import { PlayerAvatar } from './PlayerAvatar';
 import { getTeamTheme } from '../utils/teamColors';
+import { useEcosystem } from '../context/EcosystemContext';
 import { Badge } from './Badge';
 import {
   CricketBatIcon,
@@ -32,6 +33,8 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
   const batter = isBatter ? (player as Batter) : null;
   const bowler = !isBatter ? (player as Bowler) : null;
 
+  const { isShortlisted, toggleShortlist, openPlayerDNA } = useEcosystem();
+  const shortlisted = isShortlisted(player.id) || isShortlisted(player.name);
   const theme = getTeamTheme(player.team);
 
   const country = player.country || 'International';
@@ -259,25 +262,49 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
 
       {/* Footer Controls */}
       <div
-        className="pt-3 border-t border-[#29334C]/70 flex items-center justify-between text-xs mt-1"
+        className="pt-3 border-t border-[#29334C]/70 flex items-center justify-between gap-2 text-xs mt-1"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={() => onSelect(player)}
           className="text-[#929BB2] hover:text-[#F7F7FB] flex items-center gap-1 font-semibold group-hover:text-[#E90074] transition-colors"
         >
-          <span>View Detailed Profile</span>
+          <span>Profile</span>
           <ChevronRight size={13} />
         </button>
 
-        <button
-          onClick={() => onCompare(player)}
-          className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0F1626] hover:bg-[#1C253E] text-[#C9C3DF] hover:text-white border border-[#29334C] transition-colors"
-          title="Add to Head-to-Head Comparison"
-        >
-          <GitCompare size={12} className="text-[#E90074]" />
-          <span>Compare</span>
-        </button>
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={() => openPlayerDNA(player, type)}
+            className="flex items-center gap-1 px-2 py-1 rounded-lg bg-[#0F1626] hover:bg-[#1C253E] text-[#C9C3DF] hover:text-white border border-[#29334C] transition-colors"
+            title="Inspect 6-Axis Player DNA"
+          >
+            <Dna size={12} className="text-cyan-400" />
+            <span className="text-[11px]">DNA</span>
+          </button>
+
+          <button
+            onClick={() => toggleShortlist(player.id, isBatter ? 'Batting Leaderboard' : 'Bowling Leaderboard')}
+            className={`p-1.5 rounded-lg border transition-colors ${
+              shortlisted
+                ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                : 'bg-[#0F1626] hover:bg-[#1C253E] text-[#929BB2] hover:text-white border-[#29334C]'
+            }`}
+            title={shortlisted ? 'Remove from Shortlist' : 'Add to Recruitment Shortlist'}
+            aria-label={shortlisted ? `Remove ${player.name} from Shortlist` : `Add ${player.name} to Shortlist`}
+          >
+            <Bookmark size={12} className={shortlisted ? 'fill-current' : ''} />
+          </button>
+
+          <button
+            onClick={() => onCompare(player)}
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#0F1626] hover:bg-[#1C253E] text-[#C9C3DF] hover:text-white border border-[#29334C] transition-colors"
+            title="Add to Head-to-Head Comparison"
+          >
+            <GitCompare size={12} className="text-[#E90074]" />
+            <span className="text-[11px]">Compare</span>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import confetti from 'canvas-confetti';
-import { NavigationTab, Batter, Bowler, Metadata } from './types';
+import React from 'react';
+import { EcosystemProvider, useEcosystem } from './context/EcosystemContext';
+import { playerDataService } from './services/playerDataService';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { PlayerModal } from './components/PlayerModal';
+import { ShortlistDrawer } from './components/ShortlistDrawer';
 
 // Pages
 import { OverviewPage } from './pages/OverviewPage';
+import { PlayerProfilePage } from './pages/PlayerProfilePage';
 import { PressureIntelligencePage } from './pages/PressureIntelligencePage';
 import { BattingAnalyticsPage } from './pages/BattingAnalyticsPage';
 import { BowlingAnalyticsPage } from './pages/BowlingAnalyticsPage';
 import { PlayerRankingsPage } from './pages/PlayerRankingsPage';
 import { PlayerComparisonStudio } from './pages/PlayerComparisonStudio';
+import { SquadGapAnalyzerPage } from './pages/SquadGapAnalyzerPage';
+import { RecruitmentAssistantPage } from './pages/RecruitmentAssistantPage';
 import { AuctionWarRoomPage } from './pages/AuctionWarRoomPage';
 import { HiddenGemsPage } from './pages/HiddenGemsPage';
 import { BatterBowlerPage } from './pages/BatterBowlerPage';
@@ -19,62 +23,34 @@ import { YoungTalentPage } from './pages/YoungTalentPage';
 import { MethodologyPage } from './pages/MethodologyPage';
 import { AboutPage } from './pages/AboutPage';
 
-// Imported Data
-import metadataData from './data/metadata.json';
-import battersData from './data/batters.json';
-import bowlersData from './data/bowlers.json';
+const AppShell: React.FC = () => {
+  const {
+    activeTab,
+    navigateTo,
+    selectedComp,
+    setSelectedComp,
+    selectedSeason,
+    setSelectedSeason,
+    mobileMenuOpen,
+    setMobileMenuOpen,
+    inspectedPlayer,
+    inspectedPlayerType,
+    openPlayerProfile,
+    closePlayerProfile,
+    comparisonQueue,
+    addToCompare,
+    clearComparisonQueue,
+  } = useEcosystem();
 
-export function App() {
-  const [activeTab, setActiveTab] = useState<NavigationTab>('overview');
-  const [selectedComp, setSelectedComp] = useState<string>('ALL');
-  const [selectedSeason, setSelectedSeason] = useState<string>('ALL');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-
-  // Modal inspection state
-  const [inspectedPlayer, setInspectedPlayer] = useState<Batter | Bowler | null>(null);
-  const [inspectedPlayerType, setInspectedPlayerType] = useState<'batter' | 'bowler'>('batter');
-
-  // Player comparison queue
-  const [comparisonQueue, setComparisonQueue] = useState<Array<Batter | Bowler>>([]);
-
-  const metadata = metadataData as unknown as Metadata;
-  const batters = battersData as unknown as Batter[];
-  const bowlers = bowlersData as unknown as Bowler[];
-
-  const handleTabChange = (tab: NavigationTab) => {
-    setActiveTab(tab);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (tab === 'rankings') {
-      confetti({
-        particleCount: 40,
-        spread: 60,
-        origin: { y: 0.8 },
-        colors: ['#E90074', '#7545C8', '#C9C3DF'],
-      });
-    }
-  };
-
-  const handleSelectPlayer = (player: Batter | Bowler, type: 'batter' | 'bowler' = 'batter') => {
-    setInspectedPlayer(player);
-    setInspectedPlayerType(type);
-  };
-
-  const handleAddToCompare = (player: Batter | Bowler) => {
-    setComparisonQueue((prev) => {
-      const exists = prev.some((p) => p.id === player.id);
-      if (exists) return prev;
-      return [player, ...prev].slice(0, 3);
-    });
-    setActiveTab('comparison');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const metadata = playerDataService.getMetadata();
+  const batters = playerDataService.getBatters();
+  const bowlers = playerDataService.getBowlers();
 
   return (
     <div className="min-h-screen bg-[#0B1020] text-[#F7F7FB] flex flex-col font-sans selection:bg-[#E90074] selection:text-white">
-      {/* Top Application Header */}
       <Header
         activeTab={activeTab}
-        onTabChange={handleTabChange}
+        onTabChange={navigateTo}
         selectedComp={selectedComp}
         onCompChange={setSelectedComp}
         selectedSeason={selectedSeason}
@@ -83,23 +59,27 @@ export function App() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
 
-      {/* Main Layout Container */}
       <div className="flex flex-1 relative">
-        {/* Navigation Sidebar */}
         <Sidebar
           activeTab={activeTab}
-          onTabChange={handleTabChange}
+          onTabChange={navigateTo}
           mobileMenuOpen={mobileMenuOpen}
           setMobileMenuOpen={setMobileMenuOpen}
         />
 
-        {/* Content Viewport */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto w-full overflow-hidden">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto w-full overflow-x-hidden">
           {activeTab === 'overview' && (
             <OverviewPage
               metadata={metadata}
-              onNavigate={handleTabChange}
-              onSelectPlayer={handleSelectPlayer}
+              onNavigate={navigateTo}
+              onSelectPlayer={openPlayerProfile}
+            />
+          )}
+
+          {activeTab === 'player-profile' && (
+            <PlayerProfilePage
+              onBack={closePlayerProfile}
+              onSelectPlayer={(id) => openPlayerProfile(id)}
             />
           )}
 
@@ -110,8 +90,8 @@ export function App() {
               batters={batters}
               selectedComp={selectedComp}
               selectedSeason={selectedSeason}
-              onSelectPlayer={(b) => handleSelectPlayer(b, 'batter')}
-              onComparePlayer={handleAddToCompare}
+              onSelectPlayer={(b) => openPlayerProfile(b, 'batter')}
+              onComparePlayer={(b) => addToCompare(b, true)}
             />
           )}
 
@@ -120,8 +100,8 @@ export function App() {
               bowlers={bowlers}
               selectedComp={selectedComp}
               selectedSeason={selectedSeason}
-              onSelectPlayer={(bw) => handleSelectPlayer(bw, 'bowler')}
-              onComparePlayer={handleAddToCompare}
+              onSelectPlayer={(bw) => openPlayerProfile(bw, 'bowler')}
+              onComparePlayer={(bw) => addToCompare(bw, true)}
             />
           )}
 
@@ -131,10 +111,23 @@ export function App() {
               bowlers={bowlers}
               selectedComp={selectedComp}
               selectedSeason={selectedSeason}
-              onSelectPlayer={handleSelectPlayer}
-              onComparePlayer={handleAddToCompare}
+              onSelectPlayer={openPlayerProfile}
+              onComparePlayer={(p) => addToCompare(p, true)}
             />
           )}
+
+          {activeTab === 'comparison' && (
+            <PlayerComparisonStudio
+              batters={batters}
+              bowlers={bowlers}
+              comparisonQueue={comparisonQueue}
+              onClearQueue={clearComparisonQueue}
+            />
+          )}
+
+          {activeTab === 'squad-gaps' && <SquadGapAnalyzerPage />}
+
+          {activeTab === 'ai-assistant' && <RecruitmentAssistantPage />}
 
           {activeTab === 'auction' && <AuctionWarRoomPage />}
 
@@ -144,31 +137,32 @@ export function App() {
 
           {activeTab === 'young-talent' && <YoungTalentPage />}
 
-          {activeTab === 'comparison' && (
-            <PlayerComparisonStudio
-              batters={batters}
-              bowlers={bowlers}
-              comparisonQueue={comparisonQueue}
-              onClearQueue={() => setComparisonQueue([])}
-            />
-          )}
-
           {activeTab === 'methodology' && <MethodologyPage />}
 
           {activeTab === 'about' && <AboutPage />}
         </main>
       </div>
 
-      {/* Detailed Analytical Profile Drawer / Modal */}
-      {inspectedPlayer && (
+      <ShortlistDrawer />
+
+      {inspectedPlayer && activeTab !== 'player-profile' && (
         <PlayerModal
           player={inspectedPlayer}
           type={inspectedPlayerType}
-          onClose={() => setInspectedPlayer(null)}
-          onCompare={handleAddToCompare}
+          onClose={closePlayerProfile}
+          onCompare={(p) => addToCompare(p, true)}
         />
       )}
     </div>
   );
+};
+
+export function App() {
+  return (
+    <EcosystemProvider>
+      <AppShell />
+    </EcosystemProvider>
+  );
 }
+
 export default App;

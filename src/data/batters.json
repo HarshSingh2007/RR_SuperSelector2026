@@ -14,6 +14,12 @@
     "totalBalls": 2507,
     "totalRuns": 3578,
     "totalSR": 142.7,
+    "battingAvg": 41.1,
+    "highestScore": 120,
+    "highestScoreNotOut": true,
+    "totalFours": 274,
+    "totalSixes": 170,
+    "totalBoundaryPct": 17.7,
     "normalBalls": 2348,
     "normalRuns": 3272,
     "normalSR": 139.4,
@@ -27,10 +33,14 @@
     "dismissalRate": 43.7,
     "dismissals": 7,
     "dotPct": 22.6,
+    "powerplaySR": 125.9,
+    "middleSR": 130.5,
+    "deathOverallSR": 189.3,
     "deathSR": 191.2,
     "chaseSR": 192.5,
     "consistencyScore": 71.4,
     "confidenceWeight": 0.93,
+    "trendDelta": 13,
     "rating": 95.1,
     "verdict": "Namboori Tilak Varma ranks #1 with an overall Batting Pressure Index of 95.1. Characterized by explosive strike rate acceleration under pressure (+53.1 delta over baseline), elite boundary clearing capacity (24.5% boundary rate), outstanding wicket preservation (43.7 runs per dismissal). Across 17 high-leverage matches, scored 306 runs from 159 balls at an elite strike rate of 192.5, compared to a baseline of 139.4.",
     "seasons": {
@@ -75,6 +85,16 @@
       "runs": 175,
       "sr": 186.2
     },
+    "iplTotal": {
+      "balls": 1281,
+      "runs": 1850,
+      "sr": 144.4
+    },
+    "t20iTotal": {
+      "balls": 1226,
+      "runs": 1728,
+      "sr": 140.9
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -99,6 +119,12 @@
     "totalBalls": 1080,
     "totalRuns": 1616,
     "totalSR": 149.6,
+    "battingAvg": 37.6,
+    "highestScore": 76,
+    "highestScoreNotOut": false,
+    "totalFours": 124,
+    "totalSixes": 73,
+    "totalBoundaryPct": 18.2,
     "normalBalls": 922,
     "normalRuns": 1307,
     "normalSR": 141.8,
@@ -112,10 +138,14 @@
     "dismissalRate": 44.1,
     "dismissals": 7,
     "dotPct": 19.6,
+    "powerplaySR": 109.2,
+    "middleSR": 128.6,
+    "deathOverallSR": 195.9,
     "deathSR": 203.3,
     "chaseSR": 195.6,
     "consistencyScore": 70.6,
     "confidenceWeight": 0.93,
+    "trendDelta": -76.1,
     "rating": 95,
     "verdict": "Tristan Stubbs ranks #2 with an overall Batting Pressure Index of 95. Characterized by explosive strike rate acceleration under pressure (+53.8 delta over baseline), elite boundary clearing capacity (25.9% boundary rate), outstanding wicket preservation (44.1 runs per dismissal). Across 16 high-leverage matches, scored 309 runs from 158 balls at an elite strike rate of 195.6, compared to a baseline of 141.8.",
     "seasons": {
@@ -166,6 +196,16 @@
       "runs": 97,
       "sr": 173.2
     },
+    "iplTotal": {
+      "balls": 647,
+      "runs": 980,
+      "sr": 151.5
+    },
+    "t20iTotal": {
+      "balls": 433,
+      "runs": 636,
+      "sr": 146.9
+    },
     "country": "South Africa",
     "country_code": "ZA",
     "country_flag": "🇿🇦",
@@ -189,6 +229,12 @@
     "totalBalls": 1278,
     "totalRuns": 1953,
     "totalSR": 152.8,
+    "battingAvg": 39.1,
+    "highestScore": 87,
+    "highestScoreNotOut": true,
+    "totalFours": 163,
+    "totalSixes": 98,
+    "totalBoundaryPct": 20.4,
     "normalBalls": 1138,
     "normalRuns": 1644,
     "normalSR": 144.5,
@@ -202,10 +248,14 @@
     "dismissalRate": 77.3,
     "dismissals": 4,
     "dotPct": 25.7,
+    "powerplaySR": 136.8,
+    "middleSR": 116.8,
+    "deathOverallSR": 192.4,
     "deathSR": 240.9,
     "chaseSR": 220.7,
     "consistencyScore": 70.5,
     "confidenceWeight": 0.92,
+    "trendDelta": 4.9,
     "rating": 94.5,
     "verdict": "Rinku Singh ranks #3 with an overall Batting Pressure Index of 94.5. Characterized by explosive strike rate acceleration under pressure (+76.3 delta over baseline), elite boundary clearing capacity (36.4% boundary rate), outstanding wicket preservation (77.3 runs per dismissal). Across 13 high-leverage matches, scored 309 runs from 140 balls at an elite strike rate of 220.7, compared to a baseline of 144.5.",
     "seasons": {
@@ -250,6 +300,16 @@
       "runs": 4,
       "sr": 400
     },
+    "iplTotal": {
+      "balls": 875,
+      "runs": 1312,
+      "sr": 149.9
+    },
+    "t20iTotal": {
+      "balls": 403,
+      "runs": 641,
+      "sr": 159.1
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -272,6 +332,12 @@
     "totalBalls": 460,
     "totalRuns": 690,
     "totalSR": 150,
+    "battingAvg": 31.4,
+    "highestScore": 50,
+    "highestScoreNotOut": true,
+    "totalFours": 50,
+    "totalSixes": 45,
+    "totalBoundaryPct": 20.7,
     "normalBalls": 305,
     "normalRuns": 422,
     "normalSR": 138.4,
@@ -285,10 +351,14 @@
     "dismissalRate": 38.3,
     "dismissals": 7,
     "dotPct": 25.2,
+    "powerplaySR": 120,
+    "middleSR": 66.4,
+    "deathOverallSR": 176.1,
     "deathSR": 183.1,
     "chaseSR": 172.9,
     "consistencyScore": 73.4,
     "confidenceWeight": 0.93,
+    "trendDelta": 11.6,
     "rating": 93.1,
     "verdict": "Mahendra Singh Dhoni ranks #4 with an overall Batting Pressure Index of 93.1. Characterized by marked positive strike rate boost (+34.5), elite boundary clearing capacity (24.5% boundary rate), outstanding wicket preservation (38.3 runs per dismissal). Across 15 high-leverage matches, scored 268 runs from 155 balls at an elite strike rate of 172.9, compared to a baseline of 138.4.",
     "seasons": {
@@ -327,6 +397,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 460,
+      "runs": 690,
+      "sr": 150
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -350,6 +430,12 @@
     "totalBalls": 425,
     "totalRuns": 586,
     "totalSR": 137.9,
+    "battingAvg": 34.5,
+    "highestScore": 45,
+    "highestScoreNotOut": true,
+    "totalFours": 59,
+    "totalSixes": 18,
+    "totalBoundaryPct": 18.1,
     "normalBalls": 337,
     "normalRuns": 436,
     "normalSR": 129.4,
@@ -363,10 +449,14 @@
     "dismissalRate": 75,
     "dismissals": 2,
     "dotPct": 20.5,
+    "powerplaySR": 126.2,
+    "middleSR": 100,
+    "deathOverallSR": 170.9,
     "deathSR": 177.8,
     "chaseSR": 170.5,
     "consistencyScore": 73.8,
     "confidenceWeight": 0.86,
+    "trendDelta": -24.7,
     "rating": 92.1,
     "verdict": "Matthew Wade ranks #5 with an overall Batting Pressure Index of 92.1. Characterized by explosive strike rate acceleration under pressure (+41.1 delta over baseline), outstanding wicket preservation (75.0 runs per dismissal). Across 9 high-leverage matches, scored 150 runs from 88 balls at an elite strike rate of 170.5, compared to a baseline of 129.4.",
     "seasons": {
@@ -399,6 +489,16 @@
       "runs": 150,
       "sr": 170.5
     },
+    "iplTotal": {
+      "balls": 144,
+      "runs": 161,
+      "sr": 111.8
+    },
+    "t20iTotal": {
+      "balls": 281,
+      "runs": 425,
+      "sr": 151.2
+    },
     "country": "Australia",
     "country_code": "AU",
     "country_flag": "🇦🇺",
@@ -422,6 +522,12 @@
     "totalBalls": 994,
     "totalRuns": 1253,
     "totalSR": 126.1,
+    "battingAvg": 30.6,
+    "highestScore": 83,
+    "highestScoreNotOut": true,
+    "totalFours": 81,
+    "totalSixes": 47,
+    "totalBoundaryPct": 12.9,
     "normalBalls": 940,
     "normalRuns": 1152,
     "normalSR": 122.6,
@@ -435,10 +541,14 @@
     "dismissalRate": 101,
     "dismissals": 1,
     "dotPct": 20.4,
+    "powerplaySR": 99.4,
+    "middleSR": 122.6,
+    "deathOverallSR": 155.6,
     "deathSR": 200,
     "chaseSR": 187,
     "consistencyScore": 78,
     "confidenceWeight": 0.82,
+    "trendDelta": 14.1,
     "rating": 92,
     "verdict": "Towhid Hridoy ranks #6 with an overall Batting Pressure Index of 92. Characterized by explosive strike rate acceleration under pressure (+64.5 delta over baseline), elite boundary clearing capacity (25.9% boundary rate), exceptional match-to-match consistency (78/100), outstanding wicket preservation (101.0 runs per dismissal). Across 4 high-leverage matches, scored 101 runs from 54 balls at an elite strike rate of 187.0, compared to a baseline of 122.6.",
     "seasons": {
@@ -477,6 +587,16 @@
       "runs": 101,
       "sr": 187
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 994,
+      "runs": 1253,
+      "sr": 126.1
+    },
     "country": "Bangladesh",
     "country_code": "BD",
     "country_flag": "🇧🇩",
@@ -501,6 +621,12 @@
     "totalBalls": 588,
     "totalRuns": 992,
     "totalSR": 168.7,
+    "battingAvg": 28.3,
+    "highestScore": 62,
+    "highestScoreNotOut": true,
+    "totalFours": 94,
+    "totalSixes": 53,
+    "totalBoundaryPct": 25,
     "normalBalls": 515,
     "normalRuns": 824,
     "normalSR": 160,
@@ -514,10 +640,14 @@
     "dismissalRate": 56,
     "dismissals": 3,
     "dotPct": 19.2,
+    "powerplaySR": 139.1,
+    "middleSR": 163.6,
+    "deathOverallSR": 201.7,
     "deathSR": 234.6,
     "chaseSR": 230.1,
     "consistencyScore": 68.6,
     "confidenceWeight": 0.84,
+    "trendDelta": -13.7,
     "rating": 92,
     "verdict": "Naman Dhir ranks #7 with an overall Batting Pressure Index of 92. Characterized by explosive strike rate acceleration under pressure (+70.1 delta over baseline), elite boundary clearing capacity (35.6% boundary rate), outstanding wicket preservation (56.0 runs per dismissal). Across 7 high-leverage matches, scored 168 runs from 73 balls at an elite strike rate of 230.1, compared to a baseline of 160.0.",
     "seasons": {
@@ -550,6 +680,16 @@
       "runs": 80,
       "sr": 275.9
     },
+    "iplTotal": {
+      "balls": 432,
+      "runs": 710,
+      "sr": 164.4
+    },
+    "t20iTotal": {
+      "balls": 156,
+      "runs": 282,
+      "sr": 180.8
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -574,6 +714,12 @@
     "totalBalls": 1669,
     "totalRuns": 2390,
     "totalSR": 143.2,
+    "battingAvg": 30.3,
+    "highestScore": 86,
+    "highestScoreNotOut": true,
+    "totalFours": 197,
+    "totalSixes": 105,
+    "totalBoundaryPct": 18.1,
     "normalBalls": 1607,
     "normalRuns": 2264,
     "normalSR": 140.9,
@@ -587,10 +733,14 @@
     "dismissalRate": 63,
     "dismissals": 2,
     "dotPct": 14.5,
+    "powerplaySR": 136.4,
+    "middleSR": 136.4,
+    "deathOverallSR": 187.1,
     "deathSR": 238.6,
     "chaseSR": 203.2,
     "consistencyScore": 72.8,
     "confidenceWeight": 0.83,
+    "trendDelta": -4.1,
     "rating": 91.9,
     "verdict": "Aiden Markram ranks #8 with an overall Batting Pressure Index of 91.9. Characterized by explosive strike rate acceleration under pressure (+62.3 delta over baseline), elite boundary clearing capacity (29.0% boundary rate), outstanding wicket preservation (63.0 runs per dismissal). Across 5 high-leverage matches, scored 126 runs from 62 balls at an elite strike rate of 203.2, compared to a baseline of 140.9.",
     "seasons": {
@@ -641,6 +791,16 @@
       "runs": 39,
       "sr": 278.6
     },
+    "iplTotal": {
+      "balls": 1112,
+      "runs": 1524,
+      "sr": 137.1
+    },
+    "t20iTotal": {
+      "balls": 557,
+      "runs": 866,
+      "sr": 155.5
+    },
     "country": "South Africa",
     "country_code": "ZA",
     "country_flag": "🇿🇦",
@@ -664,6 +824,12 @@
     "totalBalls": 671,
     "totalRuns": 1010,
     "totalSR": 150.5,
+    "battingAvg": 29.7,
+    "highestScore": 76,
+    "highestScoreNotOut": true,
+    "totalFours": 61,
+    "totalSixes": 62,
+    "totalBoundaryPct": 18.3,
     "normalBalls": 617,
     "normalRuns": 893,
     "normalSR": 144.7,
@@ -677,10 +843,14 @@
     "dismissalRate": 117,
     "dismissals": 1,
     "dotPct": 13,
+    "powerplaySR": 92.3,
+    "middleSR": 147.6,
+    "deathOverallSR": 190.7,
     "deathSR": 208.3,
     "chaseSR": 216.7,
     "consistencyScore": 74.6,
     "confidenceWeight": 0.82,
+    "trendDelta": 19.6,
     "rating": 91.7,
     "verdict": "Nitish Reddy ranks #9 with an overall Batting Pressure Index of 91.7. Characterized by explosive strike rate acceleration under pressure (+71.9 delta over baseline), elite boundary clearing capacity (27.8% boundary rate), outstanding wicket preservation (117.0 runs per dismissal). Across 5 high-leverage matches, scored 117 runs from 54 balls at an elite strike rate of 216.7, compared to a baseline of 144.7.",
     "seasons": {
@@ -713,6 +883,16 @@
       "runs": 67,
       "sr": 197.1
     },
+    "iplTotal": {
+      "balls": 540,
+      "runs": 786,
+      "sr": 145.6
+    },
+    "t20iTotal": {
+      "balls": 131,
+      "runs": 224,
+      "sr": 171
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -738,6 +918,12 @@
     "totalBalls": 1276,
     "totalRuns": 1902,
     "totalSR": 149.1,
+    "battingAvg": 38.8,
+    "highestScore": 105,
+    "highestScoreNotOut": true,
+    "totalFours": 136,
+    "totalSixes": 102,
+    "totalBoundaryPct": 18.7,
     "normalBalls": 1101,
     "normalRuns": 1563,
     "normalSR": 142,
@@ -751,10 +937,14 @@
     "dismissalRate": 33.9,
     "dismissals": 10,
     "dotPct": 26.9,
+    "powerplaySR": 92.8,
+    "middleSR": 136.3,
+    "deathOverallSR": 175.3,
     "deathSR": 214.6,
     "chaseSR": 193.7,
     "consistencyScore": 65.9,
     "confidenceWeight": 0.95,
+    "trendDelta": 7.5,
     "rating": 91.2,
     "verdict": "David Miller ranks #10 with an overall Batting Pressure Index of 91.2. Characterized by explosive strike rate acceleration under pressure (+51.8 delta over baseline), elite boundary clearing capacity (26.9% boundary rate). Across 20 high-leverage matches, scored 339 runs from 175 balls at an elite strike rate of 193.7, compared to a baseline of 142.0.",
     "seasons": {
@@ -805,6 +995,16 @@
       "runs": 124,
       "sr": 182.4
     },
+    "iplTotal": {
+      "balls": 911,
+      "runs": 1314,
+      "sr": 144.2
+    },
+    "t20iTotal": {
+      "balls": 365,
+      "runs": 588,
+      "sr": 161.1
+    },
     "country": "South Africa",
     "country_code": "ZA",
     "country_flag": "🇿🇦",
@@ -829,6 +1029,12 @@
     "totalBalls": 343,
     "totalRuns": 570,
     "totalSR": 166.2,
+    "battingAvg": 25.9,
+    "highestScore": 66,
+    "highestScoreNotOut": true,
+    "totalFours": 40,
+    "totalSixes": 40,
+    "totalBoundaryPct": 23.3,
     "normalBalls": 231,
     "normalRuns": 323,
     "normalSR": 139.8,
@@ -842,10 +1048,14 @@
     "dismissalRate": 35.3,
     "dismissals": 7,
     "dotPct": 22.3,
+    "powerplaySR": 0,
+    "middleSR": 120.5,
+    "deathOverallSR": 192.3,
     "deathSR": 228.6,
     "chaseSR": 220.5,
     "consistencyScore": 70.1,
     "confidenceWeight": 0.89,
+    "trendDelta": 15.6,
     "rating": 90.5,
     "verdict": "Ashutosh Sharma ranks #11 with an overall Batting Pressure Index of 90.5. Characterized by explosive strike rate acceleration under pressure (+80.7 delta over baseline), elite boundary clearing capacity (34.8% boundary rate), outstanding wicket preservation (35.3 runs per dismissal). Across 15 high-leverage matches, scored 247 runs from 112 balls at an elite strike rate of 220.5, compared to a baseline of 139.8.",
     "seasons": {
@@ -878,6 +1088,16 @@
       "runs": 13,
       "sr": 216.7
     },
+    "iplTotal": {
+      "balls": 330,
+      "runs": 557,
+      "sr": 168.8
+    },
+    "t20iTotal": {
+      "balls": 13,
+      "runs": 13,
+      "sr": 100
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -901,6 +1121,12 @@
     "totalBalls": 798,
     "totalRuns": 1207,
     "totalSR": 151.3,
+    "battingAvg": 30.9,
+    "highestScore": 81,
+    "highestScoreNotOut": true,
+    "totalFours": 99,
+    "totalSixes": 62,
+    "totalBoundaryPct": 20.2,
     "normalBalls": 695,
     "normalRuns": 996,
     "normalSR": 143.3,
@@ -914,10 +1140,14 @@
     "dismissalRate": 35.2,
     "dismissals": 6,
     "dotPct": 25.2,
+    "powerplaySR": 161.7,
+    "middleSR": 134.9,
+    "deathOverallSR": 172.1,
     "deathSR": 193.3,
     "chaseSR": 204.9,
     "consistencyScore": 66.3,
     "confidenceWeight": 0.88,
+    "trendDelta": -18.1,
     "rating": 89.8,
     "verdict": "Dhruv Jurel ranks #12 with an overall Batting Pressure Index of 89.8. Characterized by explosive strike rate acceleration under pressure (+61.5 delta over baseline), elite boundary clearing capacity (31.1% boundary rate), outstanding wicket preservation (35.2 runs per dismissal). Across 14 high-leverage matches, scored 211 runs from 103 balls at an elite strike rate of 204.9, compared to a baseline of 143.3.",
     "seasons": {
@@ -956,6 +1186,16 @@
       "runs": 2,
       "sr": 66.7
     },
+    "iplTotal": {
+      "balls": 775,
+      "runs": 1195,
+      "sr": 154.2
+    },
+    "t20iTotal": {
+      "balls": 23,
+      "runs": 12,
+      "sr": 52.2
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -979,6 +1219,12 @@
     "totalBalls": 560,
     "totalRuns": 905,
     "totalSR": 161.6,
+    "battingAvg": 37.7,
+    "highestScore": 68,
+    "highestScoreNotOut": true,
+    "totalFours": 67,
+    "totalSixes": 51,
+    "totalBoundaryPct": 21.1,
     "normalBalls": 425,
     "normalRuns": 663,
     "normalSR": 156,
@@ -992,10 +1238,14 @@
     "dismissalRate": 40.3,
     "dismissals": 6,
     "dotPct": 28.1,
+    "powerplaySR": 136,
+    "middleSR": 131.5,
+    "deathOverallSR": 195.4,
     "deathSR": 177.3,
     "chaseSR": 179.3,
     "consistencyScore": 63,
     "confidenceWeight": 0.91,
+    "trendDelta": 41.8,
     "rating": 88.6,
     "verdict": "Shashank Singh ranks #13 with an overall Batting Pressure Index of 88.6. Characterized by marked positive strike rate boost (+23.3), elite boundary clearing capacity (25.9% boundary rate), outstanding wicket preservation (40.3 runs per dismissal). Across 15 high-leverage matches, scored 242 runs from 135 balls at an elite strike rate of 179.3, compared to a baseline of 156.0.",
     "seasons": {
@@ -1034,6 +1284,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 560,
+      "runs": 905,
+      "sr": 161.6
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -1056,6 +1316,12 @@
     "totalBalls": 200,
     "totalRuns": 303,
     "totalSR": 151.5,
+    "battingAvg": 27.5,
+    "highestScore": 77,
+    "highestScoreNotOut": false,
+    "totalFours": 21,
+    "totalSixes": 21,
+    "totalBoundaryPct": 21,
     "normalBalls": 148,
     "normalRuns": 194,
     "normalSR": 131.1,
@@ -1069,10 +1335,14 @@
     "dismissalRate": 36.3,
     "dismissals": 3,
     "dotPct": 28.8,
+    "powerplaySR": 146.2,
+    "middleSR": 122.3,
+    "deathOverallSR": 206.1,
     "deathSR": 190.2,
     "chaseSR": 209.6,
     "consistencyScore": 66.4,
     "confidenceWeight": 0.81,
+    "trendDelta": 24.9,
     "rating": 88.3,
     "verdict": "Asif Khan ranks #14 with an overall Batting Pressure Index of 88.3. Characterized by explosive strike rate acceleration under pressure (+78.5 delta over baseline), elite boundary clearing capacity (34.6% boundary rate), outstanding wicket preservation (36.3 runs per dismissal). Across 4 high-leverage matches, scored 109 runs from 52 balls at an elite strike rate of 209.6, compared to a baseline of 131.1.",
     "seasons": {
@@ -1099,6 +1369,16 @@
       "runs": 109,
       "sr": 209.6
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 200,
+      "runs": 303,
+      "sr": 151.5
+    },
     "country": "United Arab Emirates",
     "country_code": "AE",
     "country_flag": "🇦🇪",
@@ -1123,6 +1403,12 @@
     "totalBalls": 773,
     "totalRuns": 1072,
     "totalSR": 138.7,
+    "battingAvg": 21.9,
+    "highestScore": 64,
+    "highestScoreNotOut": true,
+    "totalFours": 72,
+    "totalSixes": 63,
+    "totalBoundaryPct": 17.5,
     "normalBalls": 663,
     "normalRuns": 866,
     "normalSR": 130.6,
@@ -1136,10 +1422,14 @@
     "dismissalRate": 29.4,
     "dismissals": 7,
     "dotPct": 26.4,
+    "powerplaySR": 55.6,
+    "middleSR": 122,
+    "deathOverallSR": 164.3,
     "deathSR": 191.1,
     "chaseSR": 187.3,
     "consistencyScore": 69.5,
     "confidenceWeight": 0.89,
+    "trendDelta": 15.4,
     "rating": 87.7,
     "verdict": "Dasun Shanaka ranks #15 with an overall Batting Pressure Index of 87.7. Characterized by explosive strike rate acceleration under pressure (+56.7 delta over baseline), elite boundary clearing capacity (28.2% boundary rate). Across 13 high-leverage matches, scored 206 runs from 110 balls at an elite strike rate of 187.3, compared to a baseline of 130.6.",
     "seasons": {
@@ -1184,6 +1474,16 @@
       "runs": 196,
       "sr": 194.1
     },
+    "iplTotal": {
+      "balls": 72,
+      "runs": 89,
+      "sr": 123.6
+    },
+    "t20iTotal": {
+      "balls": 701,
+      "runs": 983,
+      "sr": 140.2
+    },
     "country": "Sri Lanka",
     "country_code": "LK",
     "country_flag": "🇱🇰",
@@ -1208,6 +1508,12 @@
     "totalBalls": 1215,
     "totalRuns": 2153,
     "totalSR": 177.2,
+    "battingAvg": 34.7,
+    "highestScore": 102,
+    "highestScoreNotOut": true,
+    "totalFours": 146,
+    "totalSixes": 159,
+    "totalBoundaryPct": 25.1,
     "normalBalls": 1051,
     "normalRuns": 1835,
     "normalSR": 174.6,
@@ -1221,10 +1527,14 @@
     "dismissalRate": 35.3,
     "dismissals": 9,
     "dotPct": 27.4,
+    "powerplaySR": 191.8,
+    "middleSR": 153.4,
+    "deathOverallSR": 200.2,
     "deathSR": 200,
     "chaseSR": 193.9,
     "consistencyScore": 69.8,
     "confidenceWeight": 0.94,
+    "trendDelta": -6.1,
     "rating": 86.4,
     "verdict": "Tim David ranks #16 with an overall Batting Pressure Index of 86.4. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (25.6% boundary rate), outstanding wicket preservation (35.3 runs per dismissal). Across 19 high-leverage matches, scored 318 runs from 164 balls at an elite strike rate of 193.9, compared to a baseline of 174.6.",
     "seasons": {
@@ -1269,6 +1579,16 @@
       "runs": 77,
       "sr": 197.4
     },
+    "iplTotal": {
+      "balls": 644,
+      "runs": 1143,
+      "sr": 177.5
+    },
+    "t20iTotal": {
+      "balls": 571,
+      "runs": 1010,
+      "sr": 176.9
+    },
     "country": "Australia",
     "country_code": "AU",
     "country_flag": "🇦🇺",
@@ -1294,6 +1614,12 @@
     "totalBalls": 1555,
     "totalRuns": 2287,
     "totalSR": 147.1,
+    "battingAvg": 27.9,
+    "highestScore": 107,
+    "highestScoreNotOut": false,
+    "totalFours": 139,
+    "totalSixes": 161,
+    "totalBoundaryPct": 19.3,
     "normalBalls": 1322,
     "normalRuns": 1884,
     "normalSR": 142.5,
@@ -1307,10 +1633,14 @@
     "dismissalRate": 23.7,
     "dismissals": 17,
     "dotPct": 32.2,
+    "powerplaySR": 134.2,
+    "middleSR": 124.6,
+    "deathOverallSR": 189.9,
     "deathSR": 192.7,
     "chaseSR": 173,
     "consistencyScore": 70.3,
     "confidenceWeight": 0.99,
+    "trendDelta": -18.5,
     "rating": 86.2,
     "verdict": "Rovman Powell ranks #17 with an overall Batting Pressure Index of 86.2. Characterized by marked positive strike rate boost (+30.5), elite boundary clearing capacity (23.6% boundary rate). Across 22 high-leverage matches, scored 403 runs from 233 balls at an elite strike rate of 173.0, compared to a baseline of 142.5.",
     "seasons": {
@@ -1355,6 +1685,16 @@
       "runs": 244,
       "sr": 187.7
     },
+    "iplTotal": {
+      "balls": 389,
+      "runs": 555,
+      "sr": 142.7
+    },
+    "t20iTotal": {
+      "balls": 1166,
+      "runs": 1732,
+      "sr": 148.5
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -1379,6 +1719,12 @@
     "totalBalls": 956,
     "totalRuns": 1293,
     "totalSR": 135.3,
+    "battingAvg": 33.2,
+    "highestScore": 77,
+    "highestScoreNotOut": true,
+    "totalFours": 99,
+    "totalSixes": 42,
+    "totalBoundaryPct": 14.7,
     "normalBalls": 788,
     "normalRuns": 1027,
     "normalSR": 130.3,
@@ -1392,10 +1738,14 @@
     "dismissalRate": 33.3,
     "dismissals": 8,
     "dotPct": 26.2,
+    "powerplaySR": 161.5,
+    "middleSR": 112.4,
+    "deathOverallSR": 151.4,
     "deathSR": 162.7,
     "chaseSR": 158.3,
     "consistencyScore": 73.1,
     "confidenceWeight": 0.94,
+    "trendDelta": 14,
     "rating": 85.6,
     "verdict": "Ravindra Jadeja ranks #18 with an overall Batting Pressure Index of 85.6. Characterized by marked positive strike rate boost (+28.0). Across 16 high-leverage matches, scored 266 runs from 168 balls at an elite strike rate of 158.3, compared to a baseline of 130.3.",
     "seasons": {
@@ -1440,6 +1790,16 @@
       "runs": 21,
       "sr": 140
     },
+    "iplTotal": {
+      "balls": 835,
+      "runs": 1139,
+      "sr": 136.4
+    },
+    "t20iTotal": {
+      "balls": 121,
+      "runs": 154,
+      "sr": 127.3
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -1462,6 +1822,12 @@
     "totalBalls": 497,
     "totalRuns": 678,
     "totalSR": 136.4,
+    "battingAvg": 27.1,
+    "highestScore": 58,
+    "highestScoreNotOut": true,
+    "totalFours": 57,
+    "totalSixes": 27,
+    "totalBoundaryPct": 16.9,
     "normalBalls": 442,
     "normalRuns": 586,
     "normalSR": 132.6,
@@ -1475,10 +1841,14 @@
     "dismissalRate": 30.7,
     "dismissals": 3,
     "dotPct": 29.1,
+    "powerplaySR": 90.9,
+    "middleSR": 128.8,
+    "deathOverallSR": 147.7,
     "deathSR": 163.6,
     "chaseSR": 167.3,
     "consistencyScore": 65.8,
     "confidenceWeight": 0.82,
+    "trendDelta": -0.6,
     "rating": 85.5,
     "verdict": "George Dockrell ranks #19 with an overall Batting Pressure Index of 85.5. Characterized by marked positive strike rate boost (+34.7), elite boundary clearing capacity (25.5% boundary rate). Across 7 high-leverage matches, scored 92 runs from 55 balls at an elite strike rate of 167.3, compared to a baseline of 132.6.",
     "seasons": {
@@ -1529,6 +1899,16 @@
       "runs": 92,
       "sr": 167.3
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 497,
+      "runs": 678,
+      "sr": 136.4
+    },
     "country": "Ireland",
     "country_code": "IE",
     "country_flag": "🇮🇪",
@@ -1553,6 +1933,12 @@
     "totalBalls": 634,
     "totalRuns": 887,
     "totalSR": 139.9,
+    "battingAvg": 25.3,
+    "highestScore": 51,
+    "highestScoreNotOut": false,
+    "totalFours": 81,
+    "totalSixes": 32,
+    "totalBoundaryPct": 17.8,
     "normalBalls": 549,
     "normalRuns": 735,
     "normalSR": 133.9,
@@ -1566,10 +1952,14 @@
     "dismissalRate": 25.3,
     "dismissals": 6,
     "dotPct": 29.4,
+    "powerplaySR": 195.5,
+    "middleSR": 120.8,
+    "deathOverallSR": 154.7,
     "deathSR": 188,
     "chaseSR": 178.8,
     "consistencyScore": 70,
     "confidenceWeight": 0.86,
+    "trendDelta": -3.2,
     "rating": 85,
     "verdict": "Washington Sundar ranks #20 with an overall Batting Pressure Index of 85. Characterized by explosive strike rate acceleration under pressure (+44.9 delta over baseline), elite boundary clearing capacity (28.2% boundary rate). Across 10 high-leverage matches, scored 152 runs from 85 balls at an elite strike rate of 178.8, compared to a baseline of 133.9.",
     "seasons": {
@@ -1620,6 +2010,16 @@
       "runs": 44,
       "sr": 163
     },
+    "iplTotal": {
+      "balls": 458,
+      "runs": 666,
+      "sr": 145.4
+    },
+    "t20iTotal": {
+      "balls": 176,
+      "runs": 221,
+      "sr": 125.6
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -1645,6 +2045,12 @@
     "totalBalls": 990,
     "totalRuns": 1525,
     "totalSR": 154,
+    "battingAvg": 27.2,
+    "highestScore": 94,
+    "highestScoreNotOut": false,
+    "totalFours": 94,
+    "totalSixes": 105,
+    "totalBoundaryPct": 20.1,
     "normalBalls": 923,
     "normalRuns": 1399,
     "normalSR": 151.6,
@@ -1658,10 +2064,14 @@
     "dismissalRate": 25.2,
     "dismissals": 5,
     "dotPct": 34.3,
+    "powerplaySR": 130.3,
+    "middleSR": 134.2,
+    "deathOverallSR": 208.9,
     "deathSR": 202.2,
     "chaseSR": 188.1,
     "consistencyScore": 68.8,
     "confidenceWeight": 0.83,
+    "trendDelta": -108.3,
     "rating": 84.2,
     "verdict": "Liam Livingstone ranks #21 with an overall Batting Pressure Index of 84.2. Characterized by marked positive strike rate boost (+36.5), elite boundary clearing capacity (29.9% boundary rate). Across 7 high-leverage matches, scored 126 runs from 67 balls at an elite strike rate of 188.1, compared to a baseline of 151.6.",
     "seasons": {
@@ -1706,6 +2116,16 @@
       "runs": 26,
       "sr": 144.4
     },
+    "iplTotal": {
+      "balls": 594,
+      "runs": 949,
+      "sr": 159.8
+    },
+    "t20iTotal": {
+      "balls": 396,
+      "runs": 576,
+      "sr": 145.5
+    },
     "country": "England",
     "country_code": "GB-ENG",
     "country_flag": "🏴",
@@ -1731,6 +2151,12 @@
     "totalBalls": 444,
     "totalRuns": 633,
     "totalSR": 142.6,
+    "battingAvg": 15.1,
+    "highestScore": 36,
+    "highestScoreNotOut": false,
+    "totalFours": 35,
+    "totalSixes": 45,
+    "totalBoundaryPct": 18,
     "normalBalls": 314,
     "normalRuns": 412,
     "normalSR": 131.2,
@@ -1744,10 +2170,14 @@
     "dismissalRate": 22.1,
     "dismissals": 10,
     "dotPct": 30,
+    "powerplaySR": 33.3,
+    "middleSR": 124.9,
+    "deathOverallSR": 170.8,
     "deathSR": 180.4,
     "chaseSR": 170,
     "consistencyScore": 68,
     "confidenceWeight": 0.91,
+    "trendDelta": 26.1,
     "rating": 83.7,
     "verdict": "Jason Holder ranks #22 with an overall Batting Pressure Index of 83.7. Characterized by marked positive strike rate boost (+38.8). Across 18 high-leverage matches, scored 221 runs from 130 balls at an elite strike rate of 170.0, compared to a baseline of 131.2.",
     "seasons": {
@@ -1792,6 +2222,16 @@
       "runs": 200,
       "sr": 180.2
     },
+    "iplTotal": {
+      "balls": 107,
+      "runs": 135,
+      "sr": 126.2
+    },
+    "t20iTotal": {
+      "balls": 337,
+      "runs": 498,
+      "sr": 147.8
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -1815,6 +2255,12 @@
     "totalBalls": 1000,
     "totalRuns": 1354,
     "totalSR": 135.4,
+    "battingAvg": 26.5,
+    "highestScore": 106,
+    "highestScoreNotOut": true,
+    "totalFours": 110,
+    "totalSixes": 56,
+    "totalBoundaryPct": 16.6,
     "normalBalls": 933,
     "normalRuns": 1224,
     "normalSR": 131.2,
@@ -1828,10 +2274,14 @@
     "dismissalRate": 26,
     "dismissals": 5,
     "dotPct": 28.4,
+    "powerplaySR": 103.7,
+    "middleSR": 126.7,
+    "deathOverallSR": 197.3,
     "deathSR": 186.8,
     "chaseSR": 194,
     "consistencyScore": 58.5,
     "confidenceWeight": 0.83,
+    "trendDelta": -8.9,
     "rating": 83.6,
     "verdict": "Sikandar Raza ranks #23 with an overall Batting Pressure Index of 83.6. Characterized by explosive strike rate acceleration under pressure (+62.8 delta over baseline), elite boundary clearing capacity (26.9% boundary rate). Across 7 high-leverage matches, scored 130 runs from 67 balls at an elite strike rate of 194.0, compared to a baseline of 131.2.",
     "seasons": {
@@ -1882,6 +2332,16 @@
       "runs": 112,
       "sr": 203.6
     },
+    "iplTotal": {
+      "balls": 136,
+      "runs": 182,
+      "sr": 133.8
+    },
+    "t20iTotal": {
+      "balls": 864,
+      "runs": 1172,
+      "sr": 135.6
+    },
     "country": "Zimbabwe",
     "country_code": "ZW",
     "country_flag": "🇿🇼",
@@ -1907,6 +2367,12 @@
     "totalBalls": 287,
     "totalRuns": 436,
     "totalSR": 151.9,
+    "battingAvg": 22.9,
+    "highestScore": 64,
+    "highestScoreNotOut": false,
+    "totalFours": 30,
+    "totalSixes": 25,
+    "totalBoundaryPct": 19.2,
     "normalBalls": 210,
     "normalRuns": 298,
     "normalSR": 141.9,
@@ -1920,10 +2386,14 @@
     "dismissalRate": 23,
     "dismissals": 6,
     "dotPct": 26,
+    "powerplaySR": 66.7,
+    "middleSR": 116.4,
+    "deathOverallSR": 185.3,
     "deathSR": 196.1,
     "chaseSR": 179.2,
     "consistencyScore": 64.5,
     "confidenceWeight": 0.85,
+    "trendDelta": 8.1,
     "rating": 83.2,
     "verdict": "Ramandeep Singh ranks #24 with an overall Batting Pressure Index of 83.2. Characterized by marked positive strike rate boost (+37.3), elite boundary clearing capacity (27.3% boundary rate). Across 7 high-leverage matches, scored 138 runs from 77 balls at an elite strike rate of 179.2, compared to a baseline of 141.9.",
     "seasons": {
@@ -1962,6 +2432,16 @@
       "runs": 74,
       "sr": 189.7
     },
+    "iplTotal": {
+      "balls": 204,
+      "runs": 293,
+      "sr": 143.6
+    },
+    "t20iTotal": {
+      "balls": 83,
+      "runs": 143,
+      "sr": 172.3
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -1986,6 +2466,12 @@
     "totalBalls": 540,
     "totalRuns": 681,
     "totalSR": 126.1,
+    "battingAvg": 22.7,
+    "highestScore": 77,
+    "highestScoreNotOut": true,
+    "totalFours": 67,
+    "totalSixes": 22,
+    "totalBoundaryPct": 16.5,
     "normalBalls": 443,
     "normalRuns": 522,
     "normalSR": 117.8,
@@ -1999,10 +2485,14 @@
     "dismissalRate": 22.7,
     "dismissals": 7,
     "dotPct": 30.9,
+    "powerplaySR": 98.7,
+    "middleSR": 113.2,
+    "deathOverallSR": 146.3,
     "deathSR": 166.2,
     "chaseSR": 163.9,
     "consistencyScore": 64,
     "confidenceWeight": 0.87,
+    "trendDelta": 3.7,
     "rating": 82.9,
     "verdict": "Mitchell Santner ranks #25 with an overall Batting Pressure Index of 82.9. Characterized by explosive strike rate acceleration under pressure (+46.1 delta over baseline), elite boundary clearing capacity (22.7% boundary rate). Across 13 high-leverage matches, scored 159 runs from 97 balls at an elite strike rate of 163.9, compared to a baseline of 117.8.",
     "seasons": {
@@ -2059,6 +2549,16 @@
       "runs": 120,
       "sr": 171.4
     },
+    "iplTotal": {
+      "balls": 100,
+      "runs": 104,
+      "sr": 104
+    },
+    "t20iTotal": {
+      "balls": 440,
+      "runs": 577,
+      "sr": 131.1
+    },
     "country": "New Zealand",
     "country_code": "NZ",
     "country_flag": "🇳🇿",
@@ -2085,6 +2585,12 @@
     "totalBalls": 815,
     "totalRuns": 1216,
     "totalSR": 149.2,
+    "battingAvg": 26.4,
+    "highestScore": 84,
+    "highestScoreNotOut": false,
+    "totalFours": 95,
+    "totalSixes": 77,
+    "totalBoundaryPct": 21.1,
     "normalBalls": 715,
     "normalRuns": 1037,
     "normalSR": 145,
@@ -2098,10 +2604,14 @@
     "dismissalRate": 19.9,
     "dismissals": 9,
     "dotPct": 33,
+    "powerplaySR": 143.1,
+    "middleSR": 136.8,
+    "deathOverallSR": 170,
     "deathSR": 171.4,
     "chaseSR": 179,
     "consistencyScore": 60.7,
     "confidenceWeight": 0.88,
+    "trendDelta": 107.1,
     "rating": 81.6,
     "verdict": "Sherfane Rutherford ranks #26 with an overall Batting Pressure Index of 81.6. Characterized by marked positive strike rate boost (+34.0), elite boundary clearing capacity (25.0% boundary rate). Across 12 high-leverage matches, scored 179 runs from 100 balls at an elite strike rate of 179.0, compared to a baseline of 145.0.",
     "seasons": {
@@ -2146,6 +2656,16 @@
       "runs": 67,
       "sr": 159.5
     },
+    "iplTotal": {
+      "balls": 308,
+      "runs": 446,
+      "sr": 144.8
+    },
+    "t20iTotal": {
+      "balls": 507,
+      "runs": 770,
+      "sr": 151.9
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -2169,6 +2689,12 @@
     "totalBalls": 898,
     "totalRuns": 1273,
     "totalSR": 141.8,
+    "battingAvg": 26.5,
+    "highestScore": 74,
+    "highestScoreNotOut": false,
+    "totalFours": 105,
+    "totalSixes": 51,
+    "totalBoundaryPct": 17.4,
     "normalBalls": 820,
     "normalRuns": 1137,
     "normalSR": 138.7,
@@ -2182,10 +2708,14 @@
     "dismissalRate": 19.4,
     "dismissals": 7,
     "dotPct": 26.9,
+    "powerplaySR": 126.2,
+    "middleSR": 129.3,
+    "deathOverallSR": 164.5,
     "deathSR": 180.4,
     "chaseSR": 174.4,
     "consistencyScore": 64.4,
     "confidenceWeight": 0.85,
+    "trendDelta": 28.6,
     "rating": 80.2,
     "verdict": "Ayush Badoni ranks #27 with an overall Batting Pressure Index of 80.2. Characterized by marked positive strike rate boost (+35.7). Across 9 high-leverage matches, scored 136 runs from 78 balls at an elite strike rate of 174.4, compared to a baseline of 138.7.",
     "seasons": {
@@ -2230,6 +2760,16 @@
       "runs": 7,
       "sr": 116.7
     },
+    "iplTotal": {
+      "balls": 835,
+      "runs": 1177,
+      "sr": 141
+    },
+    "t20iTotal": {
+      "balls": 63,
+      "runs": 96,
+      "sr": 152.4
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -2253,6 +2793,12 @@
     "totalBalls": 637,
     "totalRuns": 1061,
     "totalSR": 166.6,
+    "battingAvg": 31.2,
+    "highestScore": 83,
+    "highestScoreNotOut": false,
+    "totalFours": 93,
+    "totalSixes": 62,
+    "totalBoundaryPct": 24.3,
     "normalBalls": 519,
     "normalRuns": 843,
     "normalSR": 162.4,
@@ -2266,10 +2812,14 @@
     "dismissalRate": 24.2,
     "dismissals": 9,
     "dotPct": 26.3,
+    "powerplaySR": 206.3,
+    "middleSR": 122.3,
+    "deathOverallSR": 185,
     "deathSR": 192.7,
     "chaseSR": 184.7,
     "consistencyScore": 59.8,
     "confidenceWeight": 0.9,
+    "trendDelta": 24.7,
     "rating": 80.1,
     "verdict": "Dinesh Karthik ranks #28 with an overall Batting Pressure Index of 80.1. Characterized by marked positive strike rate boost (+22.3), elite boundary clearing capacity (26.3% boundary rate). Across 13 high-leverage matches, scored 218 runs from 118 balls at an elite strike rate of 184.7, compared to a baseline of 162.4.",
     "seasons": {
@@ -2308,6 +2858,16 @@
       "runs": 7,
       "sr": 116.7
     },
+    "iplTotal": {
+      "balls": 456,
+      "runs": 788,
+      "sr": 172.8
+    },
+    "t20iTotal": {
+      "balls": 181,
+      "runs": 273,
+      "sr": 150.8
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -2332,6 +2892,12 @@
     "totalBalls": 753,
     "totalRuns": 1065,
     "totalSR": 141.4,
+    "battingAvg": 23.7,
+    "highestScore": 93,
+    "highestScoreNotOut": false,
+    "totalFours": 77,
+    "totalSixes": 62,
+    "totalBoundaryPct": 18.5,
     "normalBalls": 682,
     "normalRuns": 944,
     "normalSR": 138.4,
@@ -2345,10 +2911,14 @@
     "dismissalRate": 17.3,
     "dismissals": 7,
     "dotPct": 40.8,
+    "powerplaySR": 137.5,
+    "middleSR": 129.6,
+    "deathOverallSR": 169.9,
     "deathSR": 153.5,
     "chaseSR": 170.4,
     "consistencyScore": 69,
     "confidenceWeight": 0.84,
+    "trendDelta": -27.1,
     "rating": 79.6,
     "verdict": "Moeen Ali ranks #29 with an overall Batting Pressure Index of 79.6. Characterized by marked positive strike rate boost (+32.0), elite boundary clearing capacity (25.4% boundary rate). Across 10 high-leverage matches, scored 121 runs from 71 balls at an elite strike rate of 170.4, compared to a baseline of 138.4.",
     "seasons": {
@@ -2387,6 +2957,16 @@
       "runs": 89,
       "sr": 174.5
     },
+    "iplTotal": {
+      "balls": 380,
+      "runs": 501,
+      "sr": 131.8
+    },
+    "t20iTotal": {
+      "balls": 373,
+      "runs": 564,
+      "sr": 151.2
+    },
     "country": "England",
     "country_code": "GB-ENG",
     "country_flag": "🏴",
@@ -2410,6 +2990,12 @@
     "totalBalls": 145,
     "totalRuns": 203,
     "totalSR": 140,
+    "battingAvg": 16.9,
+    "highestScore": 43,
+    "highestScoreNotOut": false,
+    "totalFours": 17,
+    "totalSixes": 8,
+    "totalBoundaryPct": 17.2,
     "normalBalls": 89,
     "normalRuns": 111,
     "normalSR": 124.7,
@@ -2423,10 +3009,14 @@
     "dismissalRate": 18.4,
     "dismissals": 5,
     "dotPct": 23.2,
+    "powerplaySR": 0,
+    "middleSR": 132.7,
+    "deathOverallSR": 144.1,
     "deathSR": 135.9,
     "chaseSR": 164.3,
     "consistencyScore": 72.4,
     "confidenceWeight": 0.82,
+    "trendDelta": 17,
     "rating": 79.2,
     "verdict": "Jamie Overton ranks #30 with an overall Batting Pressure Index of 79.2. Characterized by marked positive strike rate boost (+39.6). Across 6 high-leverage matches, scored 92 runs from 56 balls at an elite strike rate of 164.3, compared to a baseline of 124.7.",
     "seasons": {
@@ -2459,6 +3049,16 @@
       "runs": 32,
       "sr": 145.5
     },
+    "iplTotal": {
+      "balls": 92,
+      "runs": 147,
+      "sr": 159.8
+    },
+    "t20iTotal": {
+      "balls": 53,
+      "runs": 56,
+      "sr": 105.7
+    },
     "country": "England",
     "country_code": "GB-ENG",
     "country_flag": "🏴",
@@ -2482,6 +3082,12 @@
     "totalBalls": 2752,
     "totalRuns": 4585,
     "totalSR": 166.6,
+    "battingAvg": 39.2,
+    "highestScore": 117,
+    "highestScoreNotOut": false,
+    "totalFours": 431,
+    "totalSixes": 248,
+    "totalBoundaryPct": 24.7,
     "normalBalls": 2675,
     "normalRuns": 4431,
     "normalSR": 165.6,
@@ -2495,10 +3101,14 @@
     "dismissalRate": 14,
     "dismissals": 11,
     "dotPct": 29.9,
+    "powerplaySR": 141.6,
+    "middleSR": 165.5,
+    "deathOverallSR": 217.2,
     "deathSR": 189.5,
     "chaseSR": 200,
     "consistencyScore": 66.6,
     "confidenceWeight": 0.85,
+    "trendDelta": -2.6,
     "rating": 78.8,
     "verdict": "Suryakumar Yadav ranks #31 with an overall Batting Pressure Index of 78.8. Characterized by marked positive strike rate boost (+34.4), elite boundary clearing capacity (33.8% boundary rate). Across 13 high-leverage matches, scored 154 runs from 77 balls at an elite strike rate of 200.0, compared to a baseline of 165.6.",
     "seasons": {
@@ -2549,6 +3159,16 @@
       "runs": 62,
       "sr": 238.5
     },
+    "iplTotal": {
+      "balls": 1354,
+      "runs": 2234,
+      "sr": 165
+    },
+    "t20iTotal": {
+      "balls": 1398,
+      "runs": 2351,
+      "sr": 168.2
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -2573,6 +3193,12 @@
     "totalBalls": 277,
     "totalRuns": 355,
     "totalSR": 128.2,
+    "battingAvg": 16.1,
+    "highestScore": 54,
+    "highestScoreNotOut": false,
+    "totalFours": 21,
+    "totalSixes": 23,
+    "totalBoundaryPct": 15.9,
     "normalBalls": 190,
     "normalRuns": 204,
     "normalSR": 107.4,
@@ -2586,10 +3212,14 @@
     "dismissalRate": 13.7,
     "dismissals": 11,
     "dotPct": 31,
+    "powerplaySR": 0,
+    "middleSR": 106,
+    "deathOverallSR": 144.4,
     "deathSR": 191.1,
     "chaseSR": 173.6,
     "consistencyScore": 57.9,
     "confidenceWeight": 0.86,
+    "trendDelta": 25.8,
     "rating": 78.7,
     "verdict": "Marco Jansen ranks #32 with an overall Batting Pressure Index of 78.7. Characterized by explosive strike rate acceleration under pressure (+66.2 delta over baseline), elite boundary clearing capacity (24.1% boundary rate). Across 15 high-leverage matches, scored 151 runs from 87 balls at an elite strike rate of 173.6, compared to a baseline of 107.4.",
     "seasons": {
@@ -2634,6 +3264,16 @@
       "runs": 108,
       "sr": 229.8
     },
+    "iplTotal": {
+      "balls": 171,
+      "runs": 192,
+      "sr": 112.3
+    },
+    "t20iTotal": {
+      "balls": 106,
+      "runs": 163,
+      "sr": 153.8
+    },
     "country": "South Africa",
     "country_code": "ZA",
     "country_flag": "🇿🇦",
@@ -2657,6 +3297,12 @@
     "totalBalls": 1410,
     "totalRuns": 2356,
     "totalSR": 167.1,
+    "battingAvg": 39.9,
+    "highestScore": 104,
+    "highestScoreNotOut": true,
+    "totalFours": 169,
+    "totalSixes": 136,
+    "totalBoundaryPct": 21.6,
     "normalBalls": 1311,
     "normalRuns": 2170,
     "normalSR": 165.5,
@@ -2670,10 +3316,14 @@
     "dismissalRate": 20.7,
     "dismissals": 9,
     "dotPct": 26.3,
+    "powerplaySR": 119.8,
+    "middleSR": 158.9,
+    "deathOverallSR": 198.5,
     "deathSR": 206.5,
     "chaseSR": 187.9,
     "consistencyScore": 65.1,
     "confidenceWeight": 0.87,
+    "trendDelta": -1.6,
     "rating": 78.4,
     "verdict": "Heinrich Klaasen ranks #33 with an overall Batting Pressure Index of 78.4. Characterized by marked positive strike rate boost (+22.4), elite boundary clearing capacity (24.2% boundary rate). Across 11 high-leverage matches, scored 186 runs from 99 balls at an elite strike rate of 187.9, compared to a baseline of 165.5.",
     "seasons": {
@@ -2718,6 +3368,16 @@
       "runs": 45,
       "sr": 204.5
     },
+    "iplTotal": {
+      "balls": 1198,
+      "runs": 2031,
+      "sr": 169.5
+    },
+    "t20iTotal": {
+      "balls": 212,
+      "runs": 325,
+      "sr": 153.3
+    },
     "country": "South Africa",
     "country_code": "ZA",
     "country_flag": "🇿🇦",
@@ -2741,6 +3401,12 @@
     "totalBalls": 506,
     "totalRuns": 787,
     "totalSR": 155.5,
+    "battingAvg": 17.9,
+    "highestScore": 79,
+    "highestScoreNotOut": true,
+    "totalFours": 49,
+    "totalSixes": 59,
+    "totalBoundaryPct": 21.3,
     "normalBalls": 308,
     "normalRuns": 460,
     "normalSR": 149.4,
@@ -2754,10 +3420,14 @@
     "dismissalRate": 20.4,
     "dismissals": 16,
     "dotPct": 40.4,
+    "powerplaySR": 0,
+    "middleSR": 127.3,
+    "deathOverallSR": 170.1,
     "deathSR": 199.1,
     "chaseSR": 165.2,
     "consistencyScore": 63.3,
     "confidenceWeight": 0.97,
+    "trendDelta": 1.7,
     "rating": 78.3,
     "verdict": "Rashid Khan ranks #34 with an overall Batting Pressure Index of 78.3. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (24.2% boundary rate). Across 26 high-leverage matches, scored 327 runs from 198 balls at an elite strike rate of 165.2, compared to a baseline of 149.4.",
     "seasons": {
@@ -2802,6 +3472,16 @@
       "runs": 103,
       "sr": 141.1
     },
+    "iplTotal": {
+      "balls": 243,
+      "runs": 409,
+      "sr": 168.3
+    },
+    "t20iTotal": {
+      "balls": 263,
+      "runs": 378,
+      "sr": 143.7
+    },
     "country": "Afghanistan",
     "country_code": "AF",
     "country_flag": "🇦🇫",
@@ -2826,6 +3506,12 @@
     "totalBalls": 1970,
     "totalRuns": 3097,
     "totalSR": 157.2,
+    "battingAvg": 32.9,
+    "highestScore": 87,
+    "highestScoreNotOut": true,
+    "totalFours": 210,
+    "totalSixes": 222,
+    "totalBoundaryPct": 21.9,
     "normalBalls": 1883,
     "normalRuns": 2938,
     "normalSR": 156,
@@ -2839,10 +3525,14 @@
     "dismissalRate": 17.7,
     "dismissals": 9,
     "dotPct": 36.8,
+    "powerplaySR": 163.4,
+    "middleSR": 142.2,
+    "deathOverallSR": 189.9,
     "deathSR": 175.3,
     "chaseSR": 182.8,
     "consistencyScore": 64.1,
     "confidenceWeight": 0.86,
+    "trendDelta": -10.5,
     "rating": 78,
     "verdict": "Nicholas Pooran ranks #35 with an overall Batting Pressure Index of 78. Characterized by marked positive strike rate boost (+26.7), elite boundary clearing capacity (28.7% boundary rate). Across 12 high-leverage matches, scored 159 runs from 87 balls at an elite strike rate of 182.8, compared to a baseline of 156.0.",
     "seasons": {
@@ -2887,6 +3577,16 @@
       "runs": 30,
       "sr": 166.7
     },
+    "iplTotal": {
+      "balls": 1150,
+      "runs": 1921,
+      "sr": 167
+    },
+    "t20iTotal": {
+      "balls": 820,
+      "runs": 1176,
+      "sr": 143.4
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -2909,6 +3609,12 @@
     "totalBalls": 522,
     "totalRuns": 779,
     "totalSR": 149.2,
+    "battingAvg": 25.1,
+    "highestScore": 68,
+    "highestScoreNotOut": false,
+    "totalFours": 75,
+    "totalSixes": 36,
+    "totalBoundaryPct": 21.3,
     "normalBalls": 354,
     "normalRuns": 515,
     "normalSR": 145.5,
@@ -2922,10 +3628,14 @@
     "dismissalRate": 26.4,
     "dismissals": 10,
     "dotPct": 35.7,
+    "powerplaySR": 0,
+    "middleSR": 102.9,
+    "deathOverallSR": 172.8,
     "deathSR": 167.2,
     "chaseSR": 157.1,
     "consistencyScore": 66.9,
     "confidenceWeight": 0.94,
+    "trendDelta": -3.7,
     "rating": 76.9,
     "verdict": "Rahul Tewatia ranks #36 with an overall Batting Pressure Index of 76.9. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.0% boundary rate). Across 23 high-leverage matches, scored 264 runs from 168 balls at an elite strike rate of 157.1, compared to a baseline of 145.5.",
     "seasons": {
@@ -2970,6 +3680,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 522,
+      "runs": 779,
+      "sr": 149.2
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -2994,6 +3714,12 @@
     "totalBalls": 1920,
     "totalRuns": 2722,
     "totalSR": 141.8,
+    "battingAvg": 31.7,
+    "highestScore": 87,
+    "highestScoreNotOut": true,
+    "totalFours": 234,
+    "totalSixes": 120,
+    "totalBoundaryPct": 18.4,
     "normalBalls": 1798,
     "normalRuns": 2529,
     "normalSR": 140.7,
@@ -3007,10 +3733,14 @@
     "dismissalRate": 24.1,
     "dismissals": 8,
     "dotPct": 25.4,
+    "powerplaySR": 121.6,
+    "middleSR": 130.9,
+    "deathOverallSR": 165.4,
     "deathSR": 154.1,
     "chaseSR": 158.2,
     "consistencyScore": 70.8,
     "confidenceWeight": 0.9,
+    "trendDelta": 6.7,
     "rating": 76.4,
     "verdict": "Hardik Pandya ranks #37 with an overall Batting Pressure Index of 76.4. Characterized by reliable baseline preservation under pressure. Across 15 high-leverage matches, scored 193 runs from 122 balls at an elite strike rate of 158.2, compared to a baseline of 140.7.",
     "seasons": {
@@ -3061,6 +3791,16 @@
       "runs": 71,
       "sr": 173.2
     },
+    "iplTotal": {
+      "balls": 1059,
+      "runs": 1477,
+      "sr": 139.5
+    },
+    "t20iTotal": {
+      "balls": 861,
+      "runs": 1245,
+      "sr": 144.6
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -3083,6 +3823,12 @@
     "totalBalls": 495,
     "totalRuns": 705,
     "totalSR": 142.4,
+    "battingAvg": 21.4,
+    "highestScore": 45,
+    "highestScoreNotOut": true,
+    "totalFours": 51,
+    "totalSixes": 39,
+    "totalBoundaryPct": 18.2,
     "normalBalls": 404,
     "normalRuns": 565,
     "normalSR": 139.9,
@@ -3096,10 +3842,14 @@
     "dismissalRate": 28,
     "dismissals": 5,
     "dotPct": 31.9,
+    "powerplaySR": 85.7,
+    "middleSR": 130.9,
+    "deathOverallSR": 152.3,
     "deathSR": 172.9,
     "chaseSR": 153.8,
     "consistencyScore": 70.8,
     "confidenceWeight": 0.87,
+    "trendDelta": 34.3,
     "rating": 75.7,
     "verdict": "Mohammad Nawaz ranks #38 with an overall Batting Pressure Index of 75.7. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 140 runs from 91 balls at an elite strike rate of 153.8, compared to a baseline of 139.9.",
     "seasons": {
@@ -3150,6 +3900,16 @@
       "runs": 140,
       "sr": 153.8
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 495,
+      "runs": 705,
+      "sr": 142.4
+    },
     "country": "Pakistan",
     "country_code": "PK",
     "country_flag": "🇵🇰",
@@ -3172,6 +3932,12 @@
     "totalBalls": 204,
     "totalRuns": 295,
     "totalSR": 144.6,
+    "battingAvg": 15.5,
+    "highestScore": 51,
+    "highestScoreNotOut": false,
+    "totalFours": 22,
+    "totalSixes": 15,
+    "totalBoundaryPct": 18.1,
     "normalBalls": 154,
     "normalRuns": 214,
     "normalSR": 139,
@@ -3185,10 +3951,14 @@
     "dismissalRate": 20.3,
     "dismissals": 4,
     "dotPct": 36,
+    "powerplaySR": 0,
+    "middleSR": 105.2,
+    "deathOverallSR": 160.3,
     "deathSR": 190.3,
     "chaseSR": 162,
     "consistencyScore": 68.2,
     "confidenceWeight": 0.81,
+    "trendDelta": 8.4,
     "rating": 75.7,
     "verdict": "Faheem Ashraf ranks #39 with an overall Batting Pressure Index of 75.7. Characterized by marked positive strike rate boost (+23.0), elite boundary clearing capacity (22.0% boundary rate). Across 5 high-leverage matches, scored 81 runs from 50 balls at an elite strike rate of 162.0, compared to a baseline of 139.0.",
     "seasons": {
@@ -3221,6 +3991,16 @@
       "runs": 81,
       "sr": 162
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 204,
+      "runs": 295,
+      "sr": 144.6
+    },
     "country": "Pakistan",
     "country_code": "PK",
     "country_flag": "🇵🇰",
@@ -3244,6 +4024,12 @@
     "totalBalls": 1541,
     "totalRuns": 2377,
     "totalSR": 154.3,
+    "battingAvg": 34.4,
+    "highestScore": 95,
+    "highestScoreNotOut": true,
+    "totalFours": 154,
+    "totalSixes": 153,
+    "totalBoundaryPct": 19.9,
     "normalBalls": 1436,
     "normalRuns": 2198,
     "normalSR": 153.1,
@@ -3257,10 +4043,14 @@
     "dismissalRate": 16.3,
     "dismissals": 11,
     "dotPct": 28.6,
+    "powerplaySR": 71.9,
+    "middleSR": 147.3,
+    "deathOverallSR": 174.4,
     "deathSR": 157.7,
     "chaseSR": 170.5,
     "consistencyScore": 68.4,
     "confidenceWeight": 0.88,
+    "trendDelta": 5.9,
     "rating": 75.1,
     "verdict": "Shivam Dube ranks #40 with an overall Batting Pressure Index of 75.1. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (23.8% boundary rate). Across 17 high-leverage matches, scored 179 runs from 105 balls at an elite strike rate of 170.5, compared to a baseline of 153.1.",
     "seasons": {
@@ -3305,6 +4095,16 @@
       "runs": 49,
       "sr": 175
     },
+    "iplTotal": {
+      "balls": 1131,
+      "runs": 1727,
+      "sr": 152.7
+    },
+    "t20iTotal": {
+      "balls": 410,
+      "runs": 650,
+      "sr": 158.5
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -3330,6 +4130,12 @@
     "totalBalls": 854,
     "totalRuns": 1115,
     "totalSR": 130.6,
+    "battingAvg": 24.2,
+    "highestScore": 86,
+    "highestScoreNotOut": false,
+    "totalFours": 83,
+    "totalSixes": 40,
+    "totalBoundaryPct": 14.4,
     "normalBalls": 787,
     "normalRuns": 1007,
     "normalSR": 128,
@@ -3343,10 +4149,14 @@
     "dismissalRate": 12,
     "dismissals": 9,
     "dotPct": 29.9,
+    "powerplaySR": 111.8,
+    "middleSR": 115.5,
+    "deathOverallSR": 160.4,
     "deathSR": 189.7,
     "chaseSR": 161.2,
     "consistencyScore": 68.2,
     "confidenceWeight": 0.83,
+    "trendDelta": 28,
     "rating": 74.8,
     "verdict": "Sam Curran ranks #41 with an overall Batting Pressure Index of 74.8. Characterized by marked positive strike rate boost (+33.2). Across 12 high-leverage matches, scored 108 runs from 67 balls at an elite strike rate of 161.2, compared to a baseline of 128.0.",
     "seasons": {
@@ -3391,6 +4201,16 @@
       "runs": 42,
       "sr": 140
     },
+    "iplTotal": {
+      "balls": 503,
+      "runs": 653,
+      "sr": 129.8
+    },
+    "t20iTotal": {
+      "balls": 351,
+      "runs": 462,
+      "sr": 131.6
+    },
     "country": "England",
     "country_code": "GB-ENG",
     "country_flag": "🏴",
@@ -3414,6 +4234,12 @@
     "totalBalls": 1244,
     "totalRuns": 1889,
     "totalSR": 151.8,
+    "battingAvg": 27,
+    "highestScore": 75,
+    "highestScoreNotOut": false,
+    "totalFours": 128,
+    "totalSixes": 122,
+    "totalBoundaryPct": 20.1,
     "normalBalls": 1113,
     "normalRuns": 1676,
     "normalSR": 150.6,
@@ -3427,10 +4253,14 @@
     "dismissalRate": 19.4,
     "dismissals": 11,
     "dotPct": 37.4,
+    "powerplaySR": 155.9,
+    "middleSR": 137.5,
+    "deathOverallSR": 168.5,
     "deathSR": 188.1,
     "chaseSR": 162.6,
     "consistencyScore": 64.8,
     "confidenceWeight": 0.91,
+    "trendDelta": 23.6,
     "rating": 74.2,
     "verdict": "Shimron Hetmyer ranks #42 with an overall Batting Pressure Index of 74.2. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.9% boundary rate). Across 19 high-leverage matches, scored 213 runs from 131 balls at an elite strike rate of 162.6, compared to a baseline of 150.6.",
     "seasons": {
@@ -3475,6 +4305,16 @@
       "runs": 22,
       "sr": 104.8
     },
+    "iplTotal": {
+      "balls": 705,
+      "runs": 1049,
+      "sr": 148.8
+    },
+    "t20iTotal": {
+      "balls": 539,
+      "runs": 840,
+      "sr": 155.8
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -3499,6 +4339,12 @@
     "totalBalls": 1243,
     "totalRuns": 1910,
     "totalSR": 153.7,
+    "battingAvg": 30.3,
+    "highestScore": 120,
+    "highestScoreNotOut": true,
+    "totalFours": 150,
+    "totalSixes": 112,
+    "totalBoundaryPct": 21.1,
     "normalBalls": 1152,
     "normalRuns": 1760,
     "normalSR": 152.8,
@@ -3512,10 +4358,14 @@
     "dismissalRate": 18.8,
     "dismissals": 8,
     "dotPct": 28.6,
+    "powerplaySR": 131.4,
+    "middleSR": 141.2,
+    "deathOverallSR": 191.3,
     "deathSR": 164.9,
     "chaseSR": 164.8,
     "consistencyScore": 70.8,
     "confidenceWeight": 0.87,
+    "trendDelta": 11.5,
     "rating": 73.5,
     "verdict": "Marcus Stoinis ranks #43 with an overall Batting Pressure Index of 73.5. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.0% boundary rate). Across 11 high-leverage matches, scored 150 runs from 91 balls at an elite strike rate of 164.8, compared to a baseline of 152.8.",
     "seasons": {
@@ -3560,6 +4410,16 @@
       "runs": 12,
       "sr": 133.3
     },
+    "iplTotal": {
+      "balls": 844,
+      "runs": 1324,
+      "sr": 156.9
+    },
+    "t20iTotal": {
+      "balls": 399,
+      "runs": 586,
+      "sr": 146.9
+    },
     "country": "Australia",
     "country_code": "AU",
     "country_flag": "🇦🇺",
@@ -3583,6 +4443,12 @@
     "totalBalls": 1276,
     "totalRuns": 1749,
     "totalSR": 137.1,
+    "battingAvg": 23.3,
+    "highestScore": 66,
+    "highestScoreNotOut": false,
+    "totalFours": 136,
+    "totalSixes": 77,
+    "totalBoundaryPct": 16.7,
     "normalBalls": 1098,
     "normalRuns": 1473,
     "normalSR": 134.2,
@@ -3596,10 +4462,14 @@
     "dismissalRate": 17.3,
     "dismissals": 16,
     "dotPct": 25.3,
+    "powerplaySR": 111.1,
+    "middleSR": 129.2,
+    "deathOverallSR": 151.6,
     "deathSR": 143.9,
     "chaseSR": 155.1,
     "consistencyScore": 62.3,
     "confidenceWeight": 0.95,
+    "trendDelta": -30.5,
     "rating": 73.2,
     "verdict": "Axar Patel ranks #44 with an overall Batting Pressure Index of 73.2. Characterized by marked positive strike rate boost (+20.9). Across 22 high-leverage matches, scored 276 runs from 178 balls at an elite strike rate of 155.1, compared to a baseline of 134.2.",
     "seasons": {
@@ -3650,6 +4520,16 @@
       "runs": 97,
       "sr": 173.2
     },
+    "iplTotal": {
+      "balls": 798,
+      "runs": 1124,
+      "sr": 140.9
+    },
+    "t20iTotal": {
+      "balls": 478,
+      "runs": 625,
+      "sr": 130.8
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -3674,6 +4554,12 @@
     "totalBalls": 222,
     "totalRuns": 286,
     "totalSR": 128.8,
+    "battingAvg": 17.9,
+    "highestScore": 44,
+    "highestScoreNotOut": true,
+    "totalFours": 17,
+    "totalSixes": 18,
+    "totalBoundaryPct": 15.8,
     "normalBalls": 134,
     "normalRuns": 157,
     "normalSR": 117.2,
@@ -3687,10 +4573,14 @@
     "dismissalRate": 14.3,
     "dismissals": 9,
     "dotPct": 40.9,
+    "powerplaySR": 0,
+    "middleSR": 68.1,
+    "deathOverallSR": 171,
     "deathSR": 177.8,
     "chaseSR": 146.6,
     "consistencyScore": 68,
     "confidenceWeight": 0.86,
+    "trendDelta": 59.2,
     "rating": 72.2,
     "verdict": "Akeal Hosein ranks #45 with an overall Batting Pressure Index of 72.2. Characterized by marked positive strike rate boost (+29.4). Across 13 high-leverage matches, scored 129 runs from 88 balls at an elite strike rate of 146.6, compared to a baseline of 117.2.",
     "seasons": {
@@ -3735,6 +4625,16 @@
       "runs": 129,
       "sr": 146.6
     },
+    "iplTotal": {
+      "balls": 13,
+      "runs": 21,
+      "sr": 161.5
+    },
+    "t20iTotal": {
+      "balls": 209,
+      "runs": 265,
+      "sr": 126.8
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -3758,6 +4658,12 @@
     "totalBalls": 147,
     "totalRuns": 160,
     "totalSR": 108.8,
+    "battingAvg": 12.3,
+    "highestScore": 35,
+    "highestScoreNotOut": false,
+    "totalFours": 12,
+    "totalSixes": 8,
+    "totalBoundaryPct": 13.6,
     "normalBalls": 92,
     "normalRuns": 87,
     "normalSR": 94.6,
@@ -3771,10 +4677,14 @@
     "dismissalRate": 18.3,
     "dismissals": 4,
     "dotPct": 47.3,
+    "powerplaySR": 100,
+    "middleSR": 104.1,
+    "deathOverallSR": 113.7,
     "deathSR": 128.9,
     "chaseSR": 132.7,
     "consistencyScore": 67.4,
     "confidenceWeight": 0.82,
+    "trendDelta": -5.7,
     "rating": 71.7,
     "verdict": "Harshit Rana ranks #46 with an overall Batting Pressure Index of 71.7. Characterized by marked positive strike rate boost (+38.2). Across 7 high-leverage matches, scored 73 runs from 55 balls at an elite strike rate of 132.7, compared to a baseline of 94.6.",
     "seasons": {
@@ -3813,6 +4723,16 @@
       "runs": 31,
       "sr": 103.3
     },
+    "iplTotal": {
+      "balls": 56,
+      "runs": 59,
+      "sr": 105.4
+    },
+    "t20iTotal": {
+      "balls": 91,
+      "runs": 101,
+      "sr": 111
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -3838,6 +4758,12 @@
     "totalBalls": 894,
     "totalRuns": 1388,
     "totalSR": 155.3,
+    "battingAvg": 23.5,
+    "highestScore": 85,
+    "highestScoreNotOut": true,
+    "totalFours": 111,
+    "totalSixes": 83,
+    "totalBoundaryPct": 21.7,
     "normalBalls": 818,
     "normalRuns": 1261,
     "normalSR": 154.2,
@@ -3851,10 +4777,14 @@
     "dismissalRate": 14.1,
     "dismissals": 9,
     "dotPct": 40.8,
+    "powerplaySR": 54.2,
+    "middleSR": 141.2,
+    "deathOverallSR": 185.5,
     "deathSR": 171.4,
     "chaseSR": 167.1,
     "consistencyScore": 70.7,
     "confidenceWeight": 0.85,
+    "trendDelta": -41.5,
     "rating": 71.5,
     "verdict": "Jitesh Sharma ranks #47 with an overall Batting Pressure Index of 71.5. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (22.4% boundary rate). Across 9 high-leverage matches, scored 127 runs from 76 balls at an elite strike rate of 167.1, compared to a baseline of 154.2.",
     "seasons": {
@@ -3899,6 +4829,16 @@
       "runs": 27,
       "sr": 158.8
     },
+    "iplTotal": {
+      "balls": 725,
+      "runs": 1106,
+      "sr": 152.6
+    },
+    "t20iTotal": {
+      "balls": 169,
+      "runs": 282,
+      "sr": 166.9
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -3922,6 +4862,12 @@
     "totalBalls": 725,
     "totalRuns": 1237,
     "totalSR": 170.6,
+    "battingAvg": 28.1,
+    "highestScore": 68,
+    "highestScoreNotOut": false,
+    "totalFours": 79,
+    "totalSixes": 109,
+    "totalBoundaryPct": 25.9,
     "normalBalls": 635,
     "normalRuns": 1081,
     "normalSR": 170.2,
@@ -3935,10 +4881,14 @@
     "dismissalRate": 19.5,
     "dismissals": 8,
     "dotPct": 36.7,
+    "powerplaySR": 0,
+    "middleSR": 157,
+    "deathOverallSR": 186.5,
     "deathSR": 178.2,
     "chaseSR": 173.3,
     "consistencyScore": 67.8,
     "confidenceWeight": 0.86,
+    "trendDelta": -12,
     "rating": 71.4,
     "verdict": "Andre Russell ranks #48 with an overall Batting Pressure Index of 71.4. Characterized by reliable baseline preservation under pressure, elite boundary clearing capacity (25.6% boundary rate). Across 11 high-leverage matches, scored 156 runs from 90 balls at an elite strike rate of 173.3, compared to a baseline of 170.2.",
     "seasons": {
@@ -3977,6 +4927,16 @@
       "runs": 54,
       "sr": 186.2
     },
+    "iplTotal": {
+      "balls": 563,
+      "runs": 937,
+      "sr": 166.4
+    },
+    "t20iTotal": {
+      "balls": 162,
+      "runs": 300,
+      "sr": 185.2
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -3999,6 +4959,12 @@
     "totalBalls": 276,
     "totalRuns": 387,
     "totalSR": 140.2,
+    "battingAvg": 18.4,
+    "highestScore": 49,
+    "highestScoreNotOut": false,
+    "totalFours": 29,
+    "totalSixes": 22,
+    "totalBoundaryPct": 18.5,
     "normalBalls": 197,
     "normalRuns": 267,
     "normalSR": 135.5,
@@ -4012,10 +4978,14 @@
     "dismissalRate": 15,
     "dismissals": 8,
     "dotPct": 40.5,
+    "powerplaySR": 0,
+    "middleSR": 104.1,
+    "deathOverallSR": 159.8,
     "deathSR": 152.4,
     "chaseSR": 151.9,
     "consistencyScore": 66.2,
     "confidenceWeight": 0.85,
+    "trendDelta": 16.7,
     "rating": 69.7,
     "verdict": "Mark Adair ranks #49 with an overall Batting Pressure Index of 69.7. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 120 runs from 79 balls at an elite strike rate of 151.9, compared to a baseline of 135.5.",
     "seasons": {
@@ -4066,6 +5036,16 @@
       "runs": 120,
       "sr": 151.9
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 276,
+      "runs": 387,
+      "sr": 140.2
+    },
     "country": "Ireland",
     "country_code": "IE",
     "country_flag": "🇮🇪",
@@ -4090,6 +5070,12 @@
     "totalBalls": 141,
     "totalRuns": 168,
     "totalSR": 119.1,
+    "battingAvg": 12,
+    "highestScore": 25,
+    "highestScoreNotOut": false,
+    "totalFours": 15,
+    "totalSixes": 8,
+    "totalBoundaryPct": 16.3,
     "normalBalls": 72,
     "normalRuns": 75,
     "normalSR": 104.2,
@@ -4103,10 +5089,14 @@
     "dismissalRate": 11.6,
     "dismissals": 8,
     "dotPct": 39.1,
+    "powerplaySR": 0,
+    "middleSR": 110.3,
+    "deathOverallSR": 121.4,
     "deathSR": 131.3,
     "chaseSR": 134.8,
     "consistencyScore": 69.9,
     "confidenceWeight": 0.84,
+    "trendDelta": 14.1,
     "rating": 68.4,
     "verdict": "Kagiso Rabada ranks #50 with an overall Batting Pressure Index of 68.4. Characterized by marked positive strike rate boost (+30.6). Across 12 high-leverage matches, scored 93 runs from 69 balls at an elite strike rate of 134.8, compared to a baseline of 104.2.",
     "seasons": {
@@ -4157,6 +5147,16 @@
       "runs": 28,
       "sr": 164.7
     },
+    "iplTotal": {
+      "balls": 105,
+      "runs": 124,
+      "sr": 118.1
+    },
+    "t20iTotal": {
+      "balls": 36,
+      "runs": 44,
+      "sr": 122.2
+    },
     "country": "South Africa",
     "country_code": "ZA",
     "country_flag": "🇿🇦",
@@ -4179,6 +5179,12 @@
     "totalBalls": 702,
     "totalRuns": 852,
     "totalSR": 121.4,
+    "battingAvg": 24.3,
+    "highestScore": 66,
+    "highestScoreNotOut": true,
+    "totalFours": 59,
+    "totalSixes": 34,
+    "totalBoundaryPct": 13.2,
     "normalBalls": 645,
     "normalRuns": 770,
     "normalSR": 119.4,
@@ -4192,10 +5198,14 @@
     "dismissalRate": 13.7,
     "dismissals": 6,
     "dotPct": 38.6,
+    "powerplaySR": 127.9,
+    "middleSR": 110.6,
+    "deathOverallSR": 150,
     "deathSR": 142.4,
     "chaseSR": 143.9,
     "consistencyScore": 59.6,
     "confidenceWeight": 0.82,
+    "trendDelta": -3.7,
     "rating": 68,
     "verdict": "Ryan Burl ranks #51 with an overall Batting Pressure Index of 68. Characterized by marked positive strike rate boost (+24.5). Across 9 high-leverage matches, scored 82 runs from 57 balls at an elite strike rate of 143.9, compared to a baseline of 119.4.",
     "seasons": {
@@ -4246,6 +5256,16 @@
       "runs": 82,
       "sr": 143.9
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 702,
+      "runs": 852,
+      "sr": 121.4
+    },
     "country": "Zimbabwe",
     "country_code": "ZW",
     "country_flag": "🇿🇼",
@@ -4270,6 +5290,12 @@
     "totalBalls": 1147,
     "totalRuns": 1661,
     "totalSR": 144.8,
+    "battingAvg": 28.6,
+    "highestScore": 89,
+    "highestScoreNotOut": true,
+    "totalFours": 118,
+    "totalSixes": 69,
+    "totalBoundaryPct": 16.3,
     "normalBalls": 1097,
     "normalRuns": 1583,
     "normalSR": 144.3,
@@ -4283,10 +5309,14 @@
     "dismissalRate": 15.6,
     "dismissals": 5,
     "dotPct": 28,
+    "powerplaySR": 136.5,
+    "middleSR": 138.5,
+    "deathOverallSR": 170.5,
     "deathSR": 133.3,
     "chaseSR": 156,
     "consistencyScore": 68.1,
     "confidenceWeight": 0.81,
+    "trendDelta": 47.3,
     "rating": 67.9,
     "verdict": "Daryl Mitchell ranks #52 with an overall Batting Pressure Index of 67.9. Characterized by reliable baseline preservation under pressure. Across 6 high-leverage matches, scored 78 runs from 50 balls at an elite strike rate of 156.0, compared to a baseline of 144.3.",
     "seasons": {
@@ -4343,6 +5373,16 @@
       "runs": 78,
       "sr": 156
     },
+    "iplTotal": {
+      "balls": 267,
+      "runs": 351,
+      "sr": 131.5
+    },
+    "t20iTotal": {
+      "balls": 880,
+      "runs": 1310,
+      "sr": 148.9
+    },
     "country": "New Zealand",
     "country_code": "NZ",
     "country_flag": "🇳🇿",
@@ -4365,6 +5405,12 @@
     "totalBalls": 216,
     "totalRuns": 237,
     "totalSR": 109.7,
+    "battingAvg": 18.2,
+    "highestScore": 48,
+    "highestScoreNotOut": true,
+    "totalFours": 20,
+    "totalSixes": 7,
+    "totalBoundaryPct": 12.5,
     "normalBalls": 157,
     "normalRuns": 161,
     "normalSR": 102.5,
@@ -4378,10 +5424,14 @@
     "dismissalRate": 12.7,
     "dismissals": 6,
     "dotPct": 44.1,
+    "powerplaySR": 80.6,
+    "middleSR": 115.8,
+    "deathOverallSR": 111.5,
     "deathSR": 114.3,
     "chaseSR": 128.8,
     "consistencyScore": 68,
     "confidenceWeight": 0.82,
+    "trendDelta": 0.8,
     "rating": 65.7,
     "verdict": "Lalit Yadav ranks #53 with an overall Batting Pressure Index of 65.7. Characterized by marked positive strike rate boost (+26.3). Across 7 high-leverage matches, scored 76 runs from 59 balls at an elite strike rate of 128.8, compared to a baseline of 102.5.",
     "seasons": {
@@ -4414,6 +5464,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 216,
+      "runs": 237,
+      "sr": 109.7
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -4440,6 +5500,12 @@
     "totalBalls": 681,
     "totalRuns": 1048,
     "totalSR": 153.9,
+    "battingAvg": 26.2,
+    "highestScore": 49,
+    "highestScoreNotOut": false,
+    "totalFours": 63,
+    "totalSixes": 80,
+    "totalBoundaryPct": 21,
     "normalBalls": 463,
     "normalRuns": 733,
     "normalSR": 158.3,
@@ -4453,10 +5519,14 @@
     "dismissalRate": 22.5,
     "dismissals": 14,
     "dotPct": 42.7,
+    "powerplaySR": 100,
+    "middleSR": 123.6,
+    "deathOverallSR": 176.5,
     "deathSR": 145.2,
     "chaseSR": 144.5,
     "consistencyScore": 68,
     "confidenceWeight": 0.98,
+    "trendDelta": 3,
     "rating": 63.5,
     "verdict": "Romario Shepherd ranks #54 with an overall Batting Pressure Index of 63.5. Characterized by reliable baseline preservation under pressure. Across 23 high-leverage matches, scored 315 runs from 218 balls at an elite strike rate of 144.5, compared to a baseline of 158.3.",
     "seasons": {
@@ -4501,6 +5571,16 @@
       "runs": 262,
       "sr": 151.4
     },
+    "iplTotal": {
+      "balls": 150,
+      "runs": 262,
+      "sr": 174.7
+    },
+    "t20iTotal": {
+      "balls": 531,
+      "runs": 786,
+      "sr": 148
+    },
     "country": "West Indies",
     "country_code": "WI",
     "country_flag": "🌴",
@@ -4524,6 +5604,12 @@
     "totalBalls": 653,
     "totalRuns": 834,
     "totalSR": 127.7,
+    "battingAvg": 23.8,
+    "highestScore": 73,
+    "highestScoreNotOut": false,
+    "totalFours": 67,
+    "totalSixes": 30,
+    "totalBoundaryPct": 14.9,
     "normalBalls": 585,
     "normalRuns": 741,
     "normalSR": 126.7,
@@ -4537,10 +5623,14 @@
     "dismissalRate": 15.5,
     "dismissals": 6,
     "dotPct": 36.8,
+    "powerplaySR": 98.4,
+    "middleSR": 121.1,
+    "deathOverallSR": 150.5,
     "deathSR": 126.2,
     "chaseSR": 136.8,
     "consistencyScore": 65.6,
     "confidenceWeight": 0.84,
+    "trendDelta": 19.9,
     "rating": 62.9,
     "verdict": "Krunal Pandya ranks #55 with an overall Batting Pressure Index of 62.9. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 93 runs from 68 balls at an elite strike rate of 136.8, compared to a baseline of 126.7.",
     "seasons": {
@@ -4585,6 +5675,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 653,
+      "runs": 834,
+      "sr": 127.7
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -4608,6 +5708,12 @@
     "totalBalls": 212,
     "totalRuns": 245,
     "totalSR": 115.6,
+    "battingAvg": 20.4,
+    "highestScore": 41,
+    "highestScoreNotOut": true,
+    "totalFours": 14,
+    "totalSixes": 12,
+    "totalBoundaryPct": 12.3,
     "normalBalls": 143,
     "normalRuns": 161,
     "normalSR": 112.6,
@@ -4621,10 +5727,14 @@
     "dismissalRate": 21,
     "dismissals": 4,
     "dotPct": 39.1,
+    "powerplaySR": 0,
+    "middleSR": 74.1,
+    "deathOverallSR": 141.2,
     "deathSR": 124.6,
     "chaseSR": 121.7,
     "consistencyScore": 70.7,
     "confidenceWeight": 0.84,
+    "trendDelta": null,
     "rating": 61.3,
     "verdict": "Kieron Pollard ranks #56 with an overall Batting Pressure Index of 61.3. Characterized by reliable baseline preservation under pressure. Across 7 high-leverage matches, scored 84 runs from 69 balls at an elite strike rate of 121.7, compared to a baseline of 112.6.",
     "seasons": {
@@ -4644,6 +5754,16 @@
       "balls": 19,
       "runs": 21,
       "sr": 110.5
+    },
+    "iplTotal": {
+      "balls": 134,
+      "runs": 144,
+      "sr": 107.5
+    },
+    "t20iTotal": {
+      "balls": 78,
+      "runs": 101,
+      "sr": 129.5
     },
     "country": "West Indies",
     "country_code": "WI",
@@ -4669,6 +5789,12 @@
     "totalBalls": 169,
     "totalRuns": 149,
     "totalSR": 88.2,
+    "battingAvg": 9.9,
+    "highestScore": 27,
+    "highestScoreNotOut": false,
+    "totalFours": 15,
+    "totalSixes": 1,
+    "totalBoundaryPct": 9.5,
     "normalBalls": 107,
     "normalRuns": 87,
     "normalSR": 81.3,
@@ -4682,10 +5808,14 @@
     "dismissalRate": 15.5,
     "dismissals": 4,
     "dotPct": 48.4,
+    "powerplaySR": 0,
+    "middleSR": 79.5,
+    "deathOverallSR": 91.2,
     "deathSR": 104.7,
     "chaseSR": 100,
     "consistencyScore": 63.7,
     "confidenceWeight": 0.83,
+    "trendDelta": 55,
     "rating": 56.1,
     "verdict": "Bhuvneshwar Kumar ranks #57 with an overall Batting Pressure Index of 56.1. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 62 runs from 62 balls at an elite strike rate of 100.0, compared to a baseline of 81.3.",
     "seasons": {
@@ -4736,6 +5866,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 153,
+      "runs": 137,
+      "sr": 89.5
+    },
+    "t20iTotal": {
+      "balls": 16,
+      "runs": 12,
+      "sr": 75
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -4759,6 +5899,12 @@
     "totalBalls": 421,
     "totalRuns": 568,
     "totalSR": 134.9,
+    "battingAvg": 20.3,
+    "highestScore": 48,
+    "highestScoreNotOut": false,
+    "totalFours": 48,
+    "totalSixes": 21,
+    "totalBoundaryPct": 16.4,
     "normalBalls": 367,
     "normalRuns": 495,
     "normalSR": 134.9,
@@ -4772,10 +5918,14 @@
     "dismissalRate": 9.1,
     "dismissals": 8,
     "dotPct": 38.9,
+    "powerplaySR": 33.3,
+    "middleSR": 129.2,
+    "deathOverallSR": 146,
     "deathSR": 141.4,
     "chaseSR": 135.2,
     "consistencyScore": 70.4,
     "confidenceWeight": 0.82,
+    "trendDelta": -67.3,
     "rating": 56.1,
     "verdict": "Jimmy Neesham ranks #58 with an overall Batting Pressure Index of 56.1. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 73 runs from 54 balls at an elite strike rate of 135.2, compared to a baseline of 134.9.",
     "seasons": {
@@ -4826,6 +5976,16 @@
       "runs": 61,
       "sr": 135.6
     },
+    "iplTotal": {
+      "balls": 27,
+      "runs": 31,
+      "sr": 114.8
+    },
+    "t20iTotal": {
+      "balls": 394,
+      "runs": 537,
+      "sr": 136.3
+    },
     "country": "New Zealand",
     "country_code": "NZ",
     "country_flag": "🇳🇿",
@@ -4848,6 +6008,12 @@
     "totalBalls": 121,
     "totalRuns": 145,
     "totalSR": 119.8,
+    "battingAvg": 10.4,
+    "highestScore": 25,
+    "highestScoreNotOut": false,
+    "totalFours": 12,
+    "totalSixes": 5,
+    "totalBoundaryPct": 14,
     "normalBalls": 62,
     "normalRuns": 73,
     "normalSR": 117.7,
@@ -4861,10 +6027,14 @@
     "dismissalRate": 10.3,
     "dismissals": 7,
     "dotPct": 49.2,
+    "powerplaySR": 0,
+    "middleSR": 122.9,
+    "deathOverallSR": 118.6,
     "deathSR": 127.8,
     "chaseSR": 122,
     "consistencyScore": 68.4,
     "confidenceWeight": 0.82,
+    "trendDelta": 45.5,
     "rating": 54,
     "verdict": "Brad Evans ranks #59 with an overall Batting Pressure Index of 54. Characterized by reliable baseline preservation under pressure. Across 7 high-leverage matches, scored 72 runs from 59 balls at an elite strike rate of 122.0, compared to a baseline of 117.7.",
     "seasons": {
@@ -4903,6 +6073,16 @@
       "runs": 72,
       "sr": 122
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 121,
+      "runs": 145,
+      "sr": 119.8
+    },
     "country": "Zimbabwe",
     "country_code": "ZW",
     "country_flag": "🇿🇼",
@@ -4927,6 +6107,12 @@
     "totalBalls": 680,
     "totalRuns": 912,
     "totalSR": 134.1,
+    "battingAvg": 24,
+    "highestScore": 70,
+    "highestScoreNotOut": false,
+    "totalFours": 72,
+    "totalSixes": 48,
+    "totalBoundaryPct": 17.6,
     "normalBalls": 625,
     "normalRuns": 840,
     "normalSR": 134.4,
@@ -4940,10 +6126,14 @@
     "dismissalRate": 9,
     "dismissals": 8,
     "dotPct": 36.4,
+    "powerplaySR": 103.9,
+    "middleSR": 132,
+    "deathOverallSR": 157.5,
     "deathSR": 100,
     "chaseSR": 130.9,
     "consistencyScore": 54.7,
     "confidenceWeight": 0.82,
+    "trendDelta": -31.1,
     "rating": 52.4,
     "verdict": "Nehal Wadhera ranks #60 with an overall Batting Pressure Index of 52.4. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 72 runs from 55 balls at an elite strike rate of 130.9, compared to a baseline of 134.4.",
     "seasons": {
@@ -4982,6 +6172,16 @@
       "runs": 10,
       "sr": 90.9
     },
+    "iplTotal": {
+      "balls": 558,
+      "runs": 783,
+      "sr": 140.3
+    },
+    "t20iTotal": {
+      "balls": 122,
+      "runs": 129,
+      "sr": 105.7
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -5004,6 +6204,12 @@
     "totalBalls": 165,
     "totalRuns": 189,
     "totalSR": 114.5,
+    "battingAvg": 8.2,
+    "highestScore": 53,
+    "highestScoreNotOut": false,
+    "totalFours": 12,
+    "totalSixes": 12,
+    "totalBoundaryPct": 14.5,
     "normalBalls": 107,
     "normalRuns": 123,
     "normalSR": 115,
@@ -5017,10 +6223,14 @@
     "dismissalRate": 7.3,
     "dismissals": 9,
     "dotPct": 55.2,
+    "powerplaySR": 0,
+    "middleSR": 123.6,
+    "deathOverallSR": 103.9,
     "deathSR": 100,
     "chaseSR": 113.8,
     "consistencyScore": 58.4,
     "confidenceWeight": 0.82,
+    "trendDelta": -3.8,
     "rating": 49.7,
     "verdict": "Mohammad Rishad Hossain ranks #61 with an overall Batting Pressure Index of 49.7. Characterized by reliable baseline preservation under pressure. Across 12 high-leverage matches, scored 66 runs from 58 balls at an elite strike rate of 113.8, compared to a baseline of 115.0.",
     "seasons": {
@@ -5059,6 +6269,16 @@
       "runs": 66,
       "sr": 113.8
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 165,
+      "runs": 189,
+      "sr": 114.5
+    },
     "country": "Bangladesh",
     "country_code": "BD",
     "country_flag": "🇧🇩",
@@ -5083,6 +6303,12 @@
     "totalBalls": 246,
     "totalRuns": 389,
     "totalSR": 158.1,
+    "battingAvg": 20.5,
+    "highestScore": 56,
+    "highestScoreNotOut": true,
+    "totalFours": 27,
+    "totalSixes": 25,
+    "totalBoundaryPct": 21.1,
     "normalBalls": 193,
     "normalRuns": 315,
     "normalSR": 163.2,
@@ -5096,10 +6322,14 @@
     "dismissalRate": 10.6,
     "dismissals": 7,
     "dotPct": 35.8,
+    "powerplaySR": 0,
+    "middleSR": 152.1,
+    "deathOverallSR": 160.7,
     "deathSR": 131.3,
     "chaseSR": 139.6,
     "consistencyScore": 64.9,
     "confidenceWeight": 0.81,
+    "trendDelta": -27,
     "rating": 49.4,
     "verdict": "Patrick Cummins ranks #62 with an overall Batting Pressure Index of 49.4. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 74 runs from 53 balls at an elite strike rate of 139.6, compared to a baseline of 163.2.",
     "seasons": {
@@ -5138,6 +6368,16 @@
       "runs": 18,
       "sr": 163.6
     },
+    "iplTotal": {
+      "balls": 196,
+      "runs": 326,
+      "sr": 166.3
+    },
+    "t20iTotal": {
+      "balls": 50,
+      "runs": 63,
+      "sr": 126
+    },
     "country": "Australia",
     "country_code": "AU",
     "country_flag": "🇦🇺",
@@ -5160,6 +6400,12 @@
     "totalBalls": 162,
     "totalRuns": 183,
     "totalSR": 113,
+    "battingAvg": 15.3,
+    "highestScore": 50,
+    "highestScoreNotOut": false,
+    "totalFours": 13,
+    "totalSixes": 8,
+    "totalBoundaryPct": 13,
     "normalBalls": 96,
     "normalRuns": 110,
     "normalSR": 114.6,
@@ -5173,10 +6419,14 @@
     "dismissalRate": 12.2,
     "dismissals": 6,
     "dotPct": 42.4,
+    "powerplaySR": 0,
+    "middleSR": 100,
+    "deathOverallSR": 122.8,
     "deathSR": 91.9,
     "chaseSR": 110.6,
     "consistencyScore": 65.5,
     "confidenceWeight": 0.83,
+    "trendDelta": 12,
     "rating": 49.2,
     "verdict": "Tanzim Sakib ranks #63 with an overall Batting Pressure Index of 49.2. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 73 runs from 66 balls at an elite strike rate of 110.6, compared to a baseline of 114.6.",
     "seasons": {
@@ -5203,6 +6453,16 @@
       "runs": 73,
       "sr": 110.6
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 162,
+      "runs": 183,
+      "sr": 113
+    },
     "country": "Bangladesh",
     "country_code": "BD",
     "country_flag": "🇧🇩",
@@ -5227,6 +6487,12 @@
     "totalBalls": 90,
     "totalRuns": 106,
     "totalSR": 117.8,
+    "battingAvg": 15.1,
+    "highestScore": 21,
+    "highestScoreNotOut": false,
+    "totalFours": 7,
+    "totalSixes": 5,
+    "totalBoundaryPct": 13.3,
     "normalBalls": 35,
     "normalRuns": 44,
     "normalSR": 125.7,
@@ -5240,10 +6506,14 @@
     "dismissalRate": 15.5,
     "dismissals": 4,
     "dotPct": 40,
+    "powerplaySR": 0,
+    "middleSR": 90.9,
+    "deathOverallSR": 121.5,
     "deathSR": 114.9,
     "chaseSR": 112.7,
     "consistencyScore": 63.4,
     "confidenceWeight": 0.82,
+    "trendDelta": -57.5,
     "rating": 47.2,
     "verdict": "Umesh Yadav ranks #64 with an overall Batting Pressure Index of 47.2. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 62 runs from 55 balls at an elite strike rate of 112.7, compared to a baseline of 125.7.",
     "seasons": {
@@ -5282,6 +6552,16 @@
       "runs": 19,
       "sr": 118.8
     },
+    "iplTotal": {
+      "balls": 73,
+      "runs": 86,
+      "sr": 117.8
+    },
+    "t20iTotal": {
+      "balls": 17,
+      "runs": 20,
+      "sr": 117.6
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -5305,6 +6585,12 @@
     "totalBalls": 422,
     "totalRuns": 631,
     "totalSR": 149.5,
+    "battingAvg": 21.8,
+    "highestScore": 45,
+    "highestScoreNotOut": false,
+    "totalFours": 42,
+    "totalSixes": 41,
+    "totalBoundaryPct": 19.7,
     "normalBalls": 321,
     "normalRuns": 510,
     "normalSR": 158.9,
@@ -5318,10 +6604,14 @@
     "dismissalRate": 20.2,
     "dismissals": 6,
     "dotPct": 41.6,
+    "powerplaySR": 0,
+    "middleSR": 120.6,
+    "deathOverallSR": 174.1,
     "deathSR": 116.7,
     "chaseSR": 119.8,
     "consistencyScore": 64.7,
     "confidenceWeight": 0.88,
+    "trendDelta": 0.9,
     "rating": 45,
     "verdict": "Abdul Samad ranks #65 with an overall Batting Pressure Index of 45. Characterized by reliable baseline preservation under pressure. Across 10 high-leverage matches, scored 121 runs from 101 balls at an elite strike rate of 119.8, compared to a baseline of 158.9.",
     "seasons": {
@@ -5366,6 +6656,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 422,
+      "runs": 631,
+      "sr": 149.5
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -5392,6 +6692,12 @@
     "totalBalls": 468,
     "totalRuns": 584,
     "totalSR": 124.8,
+    "battingAvg": 11.9,
+    "highestScore": 67,
+    "highestScoreNotOut": false,
+    "totalFours": 57,
+    "totalSixes": 16,
+    "totalBoundaryPct": 15.6,
     "normalBalls": 400,
     "normalRuns": 507,
     "normalSR": 126.8,
@@ -5405,10 +6711,14 @@
     "dismissalRate": 5.5,
     "dismissals": 14,
     "dotPct": 38.2,
+    "powerplaySR": 0,
+    "middleSR": 120.2,
+    "deathOverallSR": 130.3,
     "deathSR": 125.6,
     "chaseSR": 113.2,
     "consistencyScore": 70.2,
     "confidenceWeight": 0.84,
+    "trendDelta": -1.6,
     "rating": 43.9,
     "verdict": "Wanindu Hasaranga ranks #66 with an overall Batting Pressure Index of 43.9. Characterized by reliable baseline preservation under pressure. Across 16 high-leverage matches, scored 77 runs from 68 balls at an elite strike rate of 113.2, compared to a baseline of 126.8.",
     "seasons": {
@@ -5459,6 +6769,16 @@
       "runs": 48,
       "sr": 109.1
     },
+    "iplTotal": {
+      "balls": 86,
+      "runs": 80,
+      "sr": 93
+    },
+    "t20iTotal": {
+      "balls": 382,
+      "runs": 504,
+      "sr": 131.9
+    },
     "country": "Sri Lanka",
     "country_code": "LK",
     "country_flag": "🇱🇰",
@@ -5481,6 +6801,12 @@
     "totalBalls": 182,
     "totalRuns": 224,
     "totalSR": 123.1,
+    "battingAvg": 12.4,
+    "highestScore": 32,
+    "highestScoreNotOut": true,
+    "totalFours": 12,
+    "totalSixes": 17,
+    "totalBoundaryPct": 15.9,
     "normalBalls": 120,
     "normalRuns": 158,
     "normalSR": 131.7,
@@ -5494,10 +6820,14 @@
     "dismissalRate": 8.3,
     "dismissals": 8,
     "dotPct": 51.6,
+    "powerplaySR": 50,
+    "middleSR": 116.7,
+    "deathOverallSR": 127.5,
     "deathSR": 120,
     "chaseSR": 106.5,
     "consistencyScore": 65.3,
     "confidenceWeight": 0.83,
+    "trendDelta": 8.4,
     "rating": 39.8,
     "verdict": "Shaheen Afridi ranks #67 with an overall Batting Pressure Index of 39.8. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 66 runs from 62 balls at an elite strike rate of 106.5, compared to a baseline of 131.7.",
     "seasons": {
@@ -5536,6 +6866,16 @@
       "runs": 66,
       "sr": 106.5
     },
+    "iplTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
+    "t20iTotal": {
+      "balls": 182,
+      "runs": 224,
+      "sr": 123.1
+    },
     "country": "Pakistan",
     "country_code": "PK",
     "country_flag": "🇵🇰",
@@ -5560,6 +6900,12 @@
     "totalBalls": 203,
     "totalRuns": 128,
     "totalSR": 63.1,
+    "battingAvg": 5.1,
+    "highestScore": 32,
+    "highestScoreNotOut": true,
+    "totalFours": 8,
+    "totalSixes": 2,
+    "totalBoundaryPct": 4.9,
     "normalBalls": 114,
     "normalRuns": 70,
     "normalSR": 61.4,
@@ -5573,10 +6919,14 @@
     "dismissalRate": 6.4,
     "dismissals": 9,
     "dotPct": 53.9,
+    "powerplaySR": 0,
+    "middleSR": 64.7,
+    "deathOverallSR": 62.5,
     "deathSR": 58.7,
     "chaseSR": 65.2,
     "consistencyScore": 46.9,
     "confidenceWeight": 0.86,
+    "trendDelta": -12.9,
     "rating": 35.6,
     "verdict": "Maheesh Theekshana ranks #68 with an overall Batting Pressure Index of 35.6. Characterized by reliable baseline preservation under pressure. Across 14 high-leverage matches, scored 58 runs from 89 balls at an elite strike rate of 65.2, compared to a baseline of 61.4.",
     "seasons": {
@@ -5627,6 +6977,16 @@
       "runs": 52,
       "sr": 70.3
     },
+    "iplTotal": {
+      "balls": 34,
+      "runs": 17,
+      "sr": 50
+    },
+    "t20iTotal": {
+      "balls": 169,
+      "runs": 111,
+      "sr": 65.7
+    },
     "country": "Sri Lanka",
     "country_code": "LK",
     "country_flag": "🇱🇰",
@@ -5651,6 +7011,12 @@
     "totalBalls": 145,
     "totalRuns": 187,
     "totalSR": 129,
+    "battingAvg": 11.7,
+    "highestScore": 32,
+    "highestScoreNotOut": false,
+    "totalFours": 12,
+    "totalSixes": 9,
+    "totalBoundaryPct": 14.5,
     "normalBalls": 92,
     "normalRuns": 131,
     "normalSR": 142.4,
@@ -5664,10 +7030,14 @@
     "dismissalRate": 9.3,
     "dismissals": 6,
     "dotPct": 45.3,
+    "powerplaySR": 0,
+    "middleSR": 106.1,
+    "deathOverallSR": 140.6,
     "deathSR": 81,
     "chaseSR": 105.7,
     "consistencyScore": 56,
     "confidenceWeight": 0.81,
+    "trendDelta": 23.7,
     "rating": 35,
     "verdict": "Jofra Archer ranks #69 with an overall Batting Pressure Index of 35. Characterized by reliable baseline preservation under pressure. Across 11 high-leverage matches, scored 56 runs from 53 balls at an elite strike rate of 105.7, compared to a baseline of 142.4.",
     "seasons": {
@@ -5706,6 +7076,16 @@
       "runs": 5,
       "sr": 71.4
     },
+    "iplTotal": {
+      "balls": 101,
+      "runs": 131,
+      "sr": 129.7
+    },
+    "t20iTotal": {
+      "balls": 44,
+      "runs": 56,
+      "sr": 127.3
+    },
     "country": "England",
     "country_code": "GB-ENG",
     "country_flag": "🏴",
@@ -5730,6 +7110,12 @@
     "totalBalls": 129,
     "totalRuns": 158,
     "totalSR": 122.5,
+    "battingAvg": 12.2,
+    "highestScore": 28,
+    "highestScoreNotOut": false,
+    "totalFours": 10,
+    "totalSixes": 7,
+    "totalBoundaryPct": 13.2,
     "normalBalls": 77,
     "normalRuns": 106,
     "normalSR": 137.7,
@@ -5743,10 +7129,14 @@
     "dismissalRate": 7.4,
     "dismissals": 7,
     "dotPct": 38.5,
+    "powerplaySR": 0,
+    "middleSR": 133.3,
+    "deathOverallSR": 118.3,
     "deathSR": 89.2,
     "chaseSR": 100,
     "consistencyScore": 68.5,
     "confidenceWeight": 0.81,
+    "trendDelta": -89.5,
     "rating": 33.5,
     "verdict": "Chris Jordan ranks #70 with an overall Batting Pressure Index of 33.5. Characterized by reliable baseline preservation under pressure. Across 9 high-leverage matches, scored 52 runs from 52 balls at an elite strike rate of 100.0, compared to a baseline of 137.7.",
     "seasons": {
@@ -5779,6 +7169,16 @@
       "runs": 45,
       "sr": 107.1
     },
+    "iplTotal": {
+      "balls": 20,
+      "runs": 17,
+      "sr": 85
+    },
+    "t20iTotal": {
+      "balls": 109,
+      "runs": 141,
+      "sr": 129.4
+    },
     "country": "England",
     "country_code": "GB-ENG",
     "country_flag": "🏴",
@@ -5806,6 +7206,12 @@
     "totalBalls": 216,
     "totalRuns": 296,
     "totalSR": 137,
+    "battingAvg": 13.5,
+    "highestScore": 68,
+    "highestScoreNotOut": false,
+    "totalFours": 27,
+    "totalSixes": 12,
+    "totalBoundaryPct": 18.1,
     "normalBalls": 151,
     "normalRuns": 233,
     "normalSR": 154.3,
@@ -5819,10 +7225,14 @@
     "dismissalRate": 9,
     "dismissals": 7,
     "dotPct": 41.5,
+    "powerplaySR": 0,
+    "middleSR": 152.2,
+    "deathOverallSR": 133.6,
     "deathSR": 115.9,
     "chaseSR": 96.9,
     "consistencyScore": 65.5,
     "confidenceWeight": 0.83,
+    "trendDelta": -57.9,
     "rating": 32.7,
     "verdict": "Shardul Thakur ranks #71 with an overall Batting Pressure Index of 32.7. Characterized by reliable baseline preservation under pressure. Across 12 high-leverage matches, scored 63 runs from 65 balls at an elite strike rate of 96.9, compared to a baseline of 154.3.",
     "seasons": {
@@ -5867,6 +7277,16 @@
       "runs": 0,
       "sr": 0
     },
+    "iplTotal": {
+      "balls": 216,
+      "runs": 296,
+      "sr": 137
+    },
+    "t20iTotal": {
+      "balls": 0,
+      "runs": 0,
+      "sr": 0
+    },
     "country": "India",
     "country_code": "IN",
     "country_flag": "🇮🇳",
@@ -5890,6 +7310,12 @@
     "totalBalls": 201,
     "totalRuns": 157,
     "totalSR": 78.1,
+    "battingAvg": 10.5,
+    "highestScore": 35,
+    "highestScoreNotOut": true,
+    "totalFours": 13,
+    "totalSixes": 3,
+    "totalBoundaryPct": 8,
     "normalBalls": 95,
     "normalRuns": 86,
     "normalSR": 90.5,
@@ -5903,10 +7329,14 @@
     "dismissalRate": 14.2,
     "dismissals": 5,
     "dotPct": 51.9,
+    "powerplaySR": 0,
+    "middleSR": 62.1,
+    "deathOverallSR": 80.8,
     "deathSR": 72.5,
     "chaseSR": 67,
     "consistencyScore": 63.9,
     "confidenceWeight": 0.88,
+    "trendDelta": -54.8,
     "rating": 32.3,
     "verdict": "Kuldeep Yadav ranks #72 with an overall Batting Pressure Index of 32.3. Characterized by reliable baseline preservation under pressure. Across 19 high-leverage matches, scored 71 runs from 106 balls at an elite strike rate of 67.0, compared to a baseline of 90.5.",
     "seasons": {
@@ -5950,6 +7380,16 @@
       "balls": 11,
       "runs": 3,
       "sr": 27.3
+    },
+    "iplTotal": {
+      "balls": 178,
+      "runs": 152,
+      "sr": 85.4
+    },
+    "t20iTotal": {
+      "balls": 23,
+      "runs": 5,
+      "sr": 21.7
     },
     "country": "India",
     "country_code": "IN",

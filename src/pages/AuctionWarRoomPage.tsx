@@ -1,30 +1,40 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import {
-  Gavel,
-  DollarSign,
   Users,
   Shield,
   Award,
   Sparkles,
-  Plus,
   Trash2,
   AlertCircle,
   CheckCircle2,
-  TrendingUp,
-  Zap,
   RefreshCw,
   Search,
-  Filter,
   Download,
-  Flame,
-  ChevronRight,
   Info,
   Crown,
+  Bookmark,
+  Sliders,
+  GitCompare,
+  Gavel,
+  Plus,
+  Zap,
 } from 'lucide-react';
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  Cell,
+} from 'recharts';
 import { AuctionPlayer, SquadPlayer } from '../types';
 import auctionPlayersData from '../data/auction_players.json';
 import { PlayerAvatar } from '../components/PlayerAvatar';
+import { useEcosystem } from '../context/EcosystemContext';
+import { playerDataService } from '../services/playerDataService';
 import {
   AuctionGavelIcon,
   RoyalCrestEmblem,
@@ -47,10 +57,29 @@ const RIVAL_FRANCHISES = [
 ];
 
 export const AuctionWarRoomPage: React.FC = () => {
+  const {
+    activeAuctionSquad,
+    setActiveAuctionSquad,
+    queuedAuctionTargetId,
+    clearQueuedAuctionTarget,
+    shortlist,
+    scenarios,
+    updateScenario,
+    resetScenarios,
+  } = useEcosystem();
+
   const allPlayers = useMemo(() => auctionPlayersData as AuctionPlayer[], []);
 
-  // State
-  const [squad, setSquad] = useState<SquadPlayer[]>([]);
+  // Configurable auction rules
+  const [totalPurseCr, setTotalPurseCr] = useState<number>(100.0);
+  const [minSquadRule, setMinSquadRule] = useState<number>(18);
+  const [maxSquadRule, setMaxSquadRule] = useState<number>(25);
+  const [maxOverseasRule, setMaxOverseasRule] = useState<number>(8);
+  const [showRulesConfig, setShowRulesConfig] = useState<boolean>(false);
+
+  // State synced with shared EcosystemContext so Overview & Squad Gap Analyzer stay in sync
+  const squad = activeAuctionSquad;
+  const setSquad = setActiveAuctionSquad;
   const [unsoldIds, setUnsoldIds] = useState<Set<string>>(new Set());
   const [activePlayer, setActivePlayer] = useState<AuctionPlayer | null>(allPlayers[0] || null);
   const [currentBid, setCurrentBid] = useState<number>(allPlayers[0]?.base_price_cr || 0.5);
@@ -60,6 +89,24 @@ export const AuctionWarRoomPage: React.FC = () => {
   const [evalModalOpen, setEvalModalOpen] = useState<boolean>(false);
   const [auctionNotice, setAuctionNotice] = useState<{ type: 'error' | 'info' | 'success'; message: string } | null>(null);
 
+  // Handle cross-module "Send to Auction Block" jumps
+  useEffect(() => {
+    if (queuedAuctionTargetId) {
+      const target = allPlayers.find((p) => p.player_id === queuedAuctionTargetId);
+      if (target) {
+        setActivePlayer(target);
+        setCurrentBid(target.base_price_cr);
+        setCurrentBidder('Base Price');
+        setBidHistory([{ bidder: 'Opening Base Price', amountCr: target.base_price_cr }]);
+        setAuctionNotice({
+          type: 'info',
+          message: `Loaded shortlisted target ${target.name} onto the live Auction Block.`,
+        });
+      }
+      clearQueuedAuctionTarget();
+    }
+  }, [queuedAuctionTargetId, allPlayers, clearQueuedAuctionTarget]);
+
   // Filters
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [roleFilter, setRoleFilter] = useState<string>('ALL');
@@ -67,7 +114,7 @@ export const AuctionWarRoomPage: React.FC = () => {
   const [sortBy, setSortBy] = useState<'bpi' | 'val' | 'base' | 'name'>('bpi');
 
   // Purse calculations (in ₹ Crores)
-  const TOTAL_PURSE_CR = 100.0;
+  const TOTAL_PURSE_CR = totalPurseCr;
   const spentPurseCr = useMemo(
     () => squad.reduce((sum, p) => sum + p.purchase_price_cr, 0),
     [squad]
@@ -78,9 +125,9 @@ export const AuctionWarRoomPage: React.FC = () => {
   );
 
   // Squad restrictions
-  const MIN_SQUAD = 18;
-  const MAX_SQUAD = 25;
-  const MAX_OVERSEAS = 8;
+  const MIN_SQUAD = minSquadRule;
+  const MAX_SQUAD = maxSquadRule;
+  const MAX_OVERSEAS = maxOverseasRule;
 
   const overseasCount = useMemo(
     () => squad.filter((p) => p.is_overseas).length,
@@ -118,7 +165,6 @@ export const AuctionWarRoomPage: React.FC = () => {
     if (squad.length === 0) return 0;
     const avgBPI = squad.reduce((sum, p) => sum + p.bpi_rating, 0) / squad.length;
 
-    // Balance points
     let balanceBonus = 0;
     if (roleCounts.batters >= 5) balanceBonus += 4;
     if (roleCounts.bowlers >= 5) balanceBonus += 4;
@@ -130,7 +176,43 @@ export const AuctionWarRoomPage: React.FC = () => {
     return Math.min(100, Math.max(20, Math.round(raw)));
   }, [squad, roleCounts, MIN_SQUAD]);
 
-  // AI Tactical Recommendations
+  // Filtered available player list — declared BEFORE aiRecommendations so there is NEVER a TDZ error!
+  const availablePlayers = useMemo(() => {
+    const squadSet = new Set(squad.map((p) => p.player_id));
+    return allPlayers
+      .filter((p) => {
+        if (squadSet.has(p.player_id)) return false;
+        if (unsoldIds.has(p.player_id)) return false;
+
+        if (
+          searchQuery &&
+          !p.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+          !p.country.toLowerCase().includes(searchQuery.toLowerCase())
+        ) {
+          return false;
+        }
+
+        if (roleFilter === 'BATTER' && p.role_type !== 'batter') return false;
+        if (roleFilter === 'BOWLER' && p.role_type !== 'bowler') return false;
+        if (roleFilter === 'ALLROUNDER' && !p.player_role.toLowerCase().includes('all-rounder'))
+          return false;
+        if (roleFilter === 'WICKETKEEPER' && !p.player_role.toLowerCase().includes('keeper'))
+          return false;
+
+        if (nationalityFilter === 'DOMESTIC' && p.is_overseas) return false;
+        if (nationalityFilter === 'OVERSEAS' && !p.is_overseas) return false;
+
+        return true;
+      })
+      .sort((a, b) => {
+        if (sortBy === 'bpi') return b.bpi_rating - a.bpi_rating;
+        if (sortBy === 'val') return b.estimated_valuation_cr - a.estimated_valuation_cr;
+        if (sortBy === 'base') return b.base_price_cr - a.base_price_cr;
+        return a.name.localeCompare(b.name);
+      });
+  }, [allPlayers, squad, unsoldIds, searchQuery, roleFilter, nationalityFilter, sortBy]);
+
+  // AI Tactical Recommendations (safely consumes initialized availablePlayers)
   const aiRecommendations = useMemo(() => {
     const list: string[] = [];
     if (squad.length === 0) {
@@ -140,17 +222,21 @@ export const AuctionWarRoomPage: React.FC = () => {
 
     if (roleCounts.wicketKeepers === 0) {
       const topKeeper = availablePlayers.find((p) => p.player_role.toLowerCase().includes('keeper'));
-      list.push(`Critical: No designated Wicketkeeper signed yet.${topKeeper ? ` Target ${topKeeper.name} (₹${topKeeper.base_price_cr.toFixed(2)} Cr base).` : ''}`);
+      list.push(
+        `Critical: No designated Wicketkeeper signed yet.${topKeeper ? ` Target ${topKeeper.name} (₹${topKeeper.base_price_cr.toFixed(2)} Cr base).` : ''}`
+      );
     }
     if (roleCounts.allRounders < 2) {
       const topAR = availablePlayers.find((p) => p.player_role.toLowerCase().includes('all-rounder'));
-      list.push(`Depth Alert: Acquire at least 2 All-rounders to lengthen batting depth.${topAR ? ` Top available: ${topAR.name} (BPI ${topAR.bpi_rating}).` : ''}`);
+      list.push(
+        `Depth Alert: Acquire at least 2 All-rounders to lengthen batting depth.${topAR ? ` Top available: ${topAR.name} (BPI ${topAR.bpi_rating}).` : ''}`
+      );
     }
     if (roleCounts.bowlers < 5) {
       list.push('Bowling Reserve Needed: Sign at least 5 specialist bowlers for tactical rotation across death and powerplay.');
     }
-    if (overseasCount >= 7) {
-      list.push('Overseas Limit Alert: You have used 7+ overseas slots. Prioritize elite domestic Indian talent.');
+    if (overseasCount >= Math.max(1, MAX_OVERSEAS - 1)) {
+      list.push(`Overseas Limit Alert: Used ${overseasCount}/${MAX_OVERSEAS} overseas slots. Prioritize Indian domestic talent.`);
     }
     if (remainingPurseCr < 15.0 && squad.length < MIN_SQUAD) {
       list.push(`Budget Constraint: ₹${remainingPurseCr} Cr remaining with ${MIN_SQUAD - squad.length} slots left to hit minimum quota.`);
@@ -159,50 +245,37 @@ export const AuctionWarRoomPage: React.FC = () => {
       list.push('Squad is optimally balanced across all core roles with formidable clutch ratings.');
     }
     return list;
-  }, [squad, roleCounts, overseasCount, remainingPurseCr, MIN_SQUAD]);
+  }, [squad, roleCounts, overseasCount, remainingPurseCr, MIN_SQUAD, MAX_OVERSEAS, availablePlayers]);
 
-  // Filtered available player list
-  const availablePlayers = useMemo(() => {
-    const squadSet = new Set(squad.map((p) => p.player_id));
-    return allPlayers.filter((p) => {
-      if (squadSet.has(p.player_id)) return false;
-      if (unsoldIds.has(p.player_id)) return false;
-
-      // Search
-      if (
-        searchQuery &&
-        !p.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !p.country.toLowerCase().includes(searchQuery.toLowerCase())
-      ) {
-        return false;
-      }
-
-      // Role Filter
-      if (roleFilter === 'BATTER' && p.role_type !== 'batter') return false;
-      if (roleFilter === 'BOWLER' && p.role_type !== 'bowler') return false;
-      if (
-        roleFilter === 'ALLROUNDER' &&
-        !p.player_role.toLowerCase().includes('all-rounder')
-      )
-        return false;
-      if (
-        roleFilter === 'WICKETKEEPER' &&
-        !p.player_role.toLowerCase().includes('keeper')
-      )
-        return false;
-
-      // Nationality Filter
-      if (nationalityFilter === 'DOMESTIC' && p.is_overseas) return false;
-      if (nationalityFilter === 'OVERSEAS' && !p.is_overseas) return false;
-
-      return true;
-    }).sort((a, b) => {
-      if (sortBy === 'bpi') return b.bpi_rating - a.bpi_rating;
-      if (sortBy === 'val') return b.estimated_valuation_cr - a.estimated_valuation_cr;
-      if (sortBy === 'base') return b.base_price_cr - a.base_price_cr;
-      return a.name.localeCompare(b.name);
+  // Budget spend breakdown by role for interactive visualizer
+  const budgetChartData = useMemo(() => {
+    let batSpend = 0;
+    let bwlSpend = 0;
+    let arSpend = 0;
+    let wkSpend = 0;
+    squad.forEach((p) => {
+      const r = p.player_role.toLowerCase();
+      if (r.includes('all-rounder')) arSpend += p.purchase_price_cr;
+      else if (r.includes('keeper')) wkSpend += p.purchase_price_cr;
+      else if (p.role_type === 'bowler') bwlSpend += p.purchase_price_cr;
+      else batSpend += p.purchase_price_cr;
     });
-  }, [allPlayers, squad, unsoldIds, searchQuery, roleFilter, nationalityFilter, sortBy]);
+    return [
+      { category: 'Batters', spend: parseFloat(batSpend.toFixed(2)), fill: '#E90074' },
+      { category: 'Bowlers', spend: parseFloat(bwlSpend.toFixed(2)), fill: '#7545C8' },
+      { category: 'All-Rounders', spend: parseFloat(arSpend.toFixed(2)), fill: '#38BDF8' },
+      { category: 'Keepers', spend: parseFloat(wkSpend.toFixed(2)), fill: '#F59E0B' },
+      { category: 'Remaining', spend: parseFloat(remainingPurseCr.toFixed(2)), fill: '#10B981' },
+    ];
+  }, [squad, remainingPurseCr]);
+
+  // Shortlisted targets present in Auction Pool
+  const shortlistedAuctionTargets = useMemo(() => {
+    const squadIds = new Set(squad.map((s) => s.player_id));
+    return shortlist
+      .map((s) => playerDataService.findAuctionCandidate(s.playerId) || playerDataService.findAuctionCandidate(s.name))
+      .filter((a): a is AuctionPlayer => Boolean(a) && !squadIds.has((a as AuctionPlayer).player_id));
+  }, [shortlist, squad]);
 
   // Handle placing a player on the auction block
   const handleSelectAuctionBlock = (player: AuctionPlayer) => {
@@ -360,27 +433,34 @@ export const AuctionWarRoomPage: React.FC = () => {
     confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 }, colors: ['#E90074', '#7545C8'] });
   };
 
-  // Auto-Assemble Balanced 18-Player RR Dream Squad respecting Purse, Overseas & Role Quotas
-  const handleAutoAssembleDreamSquad = () => {
-    setAuctionNotice(null);
-    const poolByBpi = [...allPlayers].sort((a, b) => b.bpi_rating - a.bpi_rating);
+  // Auto-Assemble Balanced RR Dream Squad respecting configured Purse, Min Squad & Overseas Quotas
+  const buildDraftSquad = (strategy: 'balanced' | 'spin-youth'): SquadPlayer[] => {
+    const pool = [...allPlayers].sort((a, b) => {
+      if (strategy === 'spin-youth') {
+        const aScore = a.bpi_rating / Math.max(0.5, a.base_price_cr) + (a.is_overseas ? 0 : 12);
+        const bScore = b.bpi_rating / Math.max(0.5, b.base_price_cr) + (b.is_overseas ? 0 : 12);
+        return bScore - aScore;
+      }
+      return b.bpi_rating - a.bpi_rating;
+    });
+
     const dream: SquadPlayer[] = [];
     const addedIds = new Set<string>();
-    let currentPurse = 100.0;
+    let currentPurse = TOTAL_PURSE_CR;
     let overseas = 0;
 
     const tryAdd = (p: AuctionPlayer, multiplier: number) => {
-      if (dream.length >= 18) return false;
+      if (dream.length >= MIN_SQUAD) return false;
       if (addedIds.has(p.player_id)) return false;
       if (p.is_overseas && overseas >= MAX_OVERSEAS) return false;
       const price = parseFloat((p.base_price_cr * multiplier).toFixed(2));
-      const minReserve = Math.max(0, 18 - (dream.length + 1)) * 0.2;
+      const minReserve = Math.max(0, MIN_SQUAD - (dream.length + 1)) * 0.2;
       if (currentPurse - price < minReserve) return false;
 
       dream.push({
         ...p,
         purchase_price_cr: price,
-        acquired_at: 'Dream Draft',
+        acquired_at: strategy === 'spin-youth' ? 'Youth & Value Draft' : 'Dream Draft',
       });
       addedIds.add(p.player_id);
       currentPurse = parseFloat((currentPurse - price).toFixed(2));
@@ -388,37 +468,38 @@ export const AuctionWarRoomPage: React.FC = () => {
       return true;
     };
 
-    // 1. Core Wicketkeepers (target 2)
     let wkCount = 0;
-    for (const p of poolByBpi) {
+    for (const p of pool) {
       if (wkCount >= 2) break;
-      if (p.player_role.toLowerCase().includes('keeper') && tryAdd(p, 1.4)) wkCount++;
+      if (p.player_role.toLowerCase().includes('keeper') && tryAdd(p, strategy === 'spin-youth' ? 1.15 : 1.4)) wkCount++;
     }
-    // 2. Core All-Rounders (target 3)
     let arCount = 0;
-    for (const p of poolByBpi) {
+    for (const p of pool) {
       if (arCount >= 3) break;
-      if (p.player_role.toLowerCase().includes('all-rounder') && tryAdd(p, 1.4)) arCount++;
+      if (p.player_role.toLowerCase().includes('all-rounder') && tryAdd(p, strategy === 'spin-youth' ? 1.15 : 1.4)) arCount++;
     }
-    // 3. Specialist Bowlers (target 6)
     let bwCount = 0;
-    for (const p of poolByBpi) {
+    for (const p of pool) {
       if (bwCount >= 6) break;
-      if (p.role_type === 'bowler' && !p.player_role.toLowerCase().includes('all-rounder') && tryAdd(p, 1.4)) bwCount++;
+      if (p.role_type === 'bowler' && !p.player_role.toLowerCase().includes('all-rounder') && tryAdd(p, strategy === 'spin-youth' ? 1.1 : 1.4)) bwCount++;
     }
-    // 4. Specialist Batters (target 5)
     let btCount = 0;
-    for (const p of poolByBpi) {
+    for (const p of pool) {
       if (btCount >= 5) break;
       const r = p.player_role.toLowerCase();
-      if (p.role_type === 'batter' && !r.includes('all-rounder') && !r.includes('keeper') && tryAdd(p, 1.4)) btCount++;
+      if (p.role_type === 'batter' && !r.includes('all-rounder') && !r.includes('keeper') && tryAdd(p, strategy === 'spin-youth' ? 1.1 : 1.4)) btCount++;
     }
-    // 5. Fill remaining slots up to 18 (prioritizing domestic budget gems if near purse/overseas ceiling)
-    for (const p of poolByBpi) {
-      if (dream.length >= 18) break;
-      if (!tryAdd(p, 1.2)) tryAdd(p, 1.0);
+    for (const p of pool) {
+      if (dream.length >= MIN_SQUAD) break;
+      if (!tryAdd(p, 1.15)) tryAdd(p, 1.0);
     }
+    return dream;
+  };
 
+  const handleAutoAssembleDreamSquad = () => {
+    setAuctionNotice(null);
+    const dream = buildDraftSquad('balanced');
+    const overseas = dream.filter((d) => d.is_overseas).length;
     setSquad(dream);
     setEvalModalOpen(true);
     setAuctionNotice({ type: 'success', message: `Assembled ${dream.length}-player balanced RR Dream Squad (${overseas}/${MAX_OVERSEAS} overseas).` });
@@ -456,7 +537,7 @@ export const AuctionWarRoomPage: React.FC = () => {
   const handleResetAuction = () => {
     setSquad([]);
     setUnsoldIds(new Set());
-    setAuctionNotice({ type: 'info', message: 'Auction War Room reset to full ₹100.00 Cr purse.' });
+    setAuctionNotice({ type: 'info', message: `Auction War Room reset to full ₹${TOTAL_PURSE_CR.toFixed(2)} Cr purse.` });
     if (allPlayers.length > 0) {
       handleSelectAuctionBlock(allPlayers[0]);
     }
@@ -500,6 +581,18 @@ export const AuctionWarRoomPage: React.FC = () => {
               Evaluate Squad
             </button>
             <button
+              onClick={() => setShowRulesConfig(!showRulesConfig)}
+              className={`p-2.5 border rounded-xl transition-all cursor-pointer inline-flex items-center gap-1.5 text-xs font-semibold ${
+                showRulesConfig
+                  ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                  : 'bg-[#171F35] border-[#29334C] text-[#929BB2] hover:text-white'
+              }`}
+              title="Configure Auction Rules"
+            >
+              <Sliders size={15} />
+              <span className="hidden sm:inline">Rules</span>
+            </button>
+            <button
               onClick={handleResetAuction}
               title="Reset Auction"
               className="p-2.5 bg-[#171F35] border border-[#29334C] text-[#929BB2] hover:text-white rounded-xl hover:border-red-500/40 transition-all cursor-pointer"
@@ -509,13 +602,72 @@ export const AuctionWarRoomPage: React.FC = () => {
           </div>
         </div>
 
+        {/* Configurable Auction Rules Bar */}
+        {showRulesConfig && (
+          <div className="mt-4 p-4 rounded-xl bg-[#0B1020]/90 border border-[#29334C] grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <div>
+              <label className="text-[10px] text-[#929BB2] uppercase font-bold block mb-1">
+                Starting Purse (₹ Cr)
+              </label>
+              <input
+                type="number"
+                min={50}
+                max={200}
+                step={5}
+                value={totalPurseCr}
+                onChange={(e) => setTotalPurseCr(Math.max(50, Number(e.target.value) || 100))}
+                className="w-full bg-[#121A2D] border border-[#29334C] rounded-lg px-2.5 py-1.5 text-white font-mono"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] text-[#929BB2] uppercase font-bold block mb-1">
+                Min Squad Size
+              </label>
+              <input
+                type="number"
+                min={11}
+                max={20}
+                value={minSquadRule}
+                onChange={(e) => setMinSquadRule(Math.max(11, Math.min(maxSquadRule, Number(e.target.value) || 18)))}
+                className="w-full bg-[#121A2D] border border-[#29334C] rounded-lg px-2.5 py-1.5 text-white font-mono"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] text-[#929BB2] uppercase font-bold block mb-1">
+                Max Squad Size
+              </label>
+              <input
+                type="number"
+                min={minSquadRule}
+                max={30}
+                value={maxSquadRule}
+                onChange={(e) => setMaxSquadRule(Math.max(minSquadRule, Number(e.target.value) || 25))}
+                className="w-full bg-[#121A2D] border border-[#29334C] rounded-lg px-2.5 py-1.5 text-white font-mono"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] text-[#929BB2] uppercase font-bold block mb-1">
+                Max Overseas Cap
+              </label>
+              <input
+                type="number"
+                min={4}
+                max={12}
+                value={maxOverseasRule}
+                onChange={(e) => setMaxOverseasRule(Math.max(4, Number(e.target.value) || 8))}
+                className="w-full bg-[#121A2D] border border-[#29334C] rounded-lg px-2.5 py-1.5 text-white font-mono"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Live Purse & Status Ribbon */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 mt-6 pt-6 border-t border-[#29334C]/60">
           <div className="bg-[#0B1020]/70 border border-[#29334C] rounded-xl p-3">
             <span className="text-[11px] text-[#929BB2] uppercase tracking-wider block font-medium">Purse Remaining</span>
             <div className="flex items-baseline gap-1 mt-1">
               <span className="text-xl font-bold text-[#E90074]">₹{remainingPurseCr.toFixed(2)}</span>
-              <span className="text-xs text-[#929BB2]">/ 100 Cr</span>
+              <span className="text-xs text-[#929BB2]">/ {TOTAL_PURSE_CR} Cr</span>
             </div>
             <div className="w-full bg-[#121A2D] h-1.5 rounded-full mt-2 overflow-hidden">
               <div
@@ -999,6 +1151,188 @@ export const AuctionWarRoomPage: React.FC = () => {
                 ))
               )}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pinned Shortlist Targets Strip + Budget Visualizer + Independent What-If Scenario Comparison */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        {/* Budget Spend Visualizer + Shortlisted Auction Queue */}
+        <div className="lg:col-span-5 bg-[#171F35] border border-[#29334C] rounded-2xl p-5 shadow-xl space-y-4">
+          <div className="flex items-center justify-between border-b border-[#29334C] pb-3">
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">
+                Auction Budget Visualizer
+              </h3>
+              <p className="text-[11px] text-[#929BB2]">
+                Role allocation vs unspent purse (₹{TOTAL_PURSE_CR} Cr simulation budget)
+              </p>
+            </div>
+            <span className="text-xs font-mono font-bold text-emerald-400">
+              ₹{remainingPurseCr.toFixed(1)} Cr Left
+            </span>
+          </div>
+
+          <div className="h-44 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={budgetChartData} margin={{ top: 8, right: 8, left: -18, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#29334C" vertical={false} />
+                <XAxis dataKey="category" stroke="#929BB2" fontSize={10} />
+                <YAxis stroke="#929BB2" fontSize={10} />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: '#121A2D',
+                    borderColor: '#29334C',
+                    borderRadius: '8px',
+                    fontSize: '12px',
+                    color: '#F7F7FB',
+                  }}
+                />
+                <Bar dataKey="spend" name="Purse (₹ Cr)" radius={[4, 4, 0, 0]}>
+                  {budgetChartData.map((entry) => (
+                    <Cell key={entry.category} fill={entry.fill} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Shortlist Auction Quick-Loader */}
+          <div className="pt-3 border-t border-[#29334C]">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-bold text-[#FF47A3] flex items-center gap-1.5">
+                <Bookmark size={13} /> Shortlisted Auction Targets ({shortlistedAuctionTargets.length})
+              </span>
+            </div>
+            {shortlistedAuctionTargets.length === 0 ? (
+              <p className="text-[11px] text-[#929BB2]">
+                Shortlist players anywhere in SupeRR Selector to queue them for fast auction bidding here.
+              </p>
+            ) : (
+              <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
+                {shortlistedAuctionTargets.map((t) => (
+                  <button
+                    key={t.player_id}
+                    onClick={() => handleSelectAuctionBlock(t)}
+                    className="px-2.5 py-1 rounded-lg bg-[#121A2D] hover:bg-[#E90074]/20 border border-[#29334C] hover:border-[#E90074]/50 text-[11px] text-[#F7F7FB] font-semibold inline-flex items-center gap-1 cursor-pointer"
+                  >
+                    <Gavel size={11} className="text-[#E90074]" />
+                    <span>{t.name}</span>
+                    <span className="text-[#929BB2] font-mono">₹{t.base_price_cr}Cr</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Independent What-If Scenario Comparison (Scenario A vs Scenario B) */}
+        <div className="lg:col-span-7 bg-[#171F35] border border-[#29334C] rounded-2xl p-5 shadow-xl space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#29334C] pb-3">
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                <GitCompare size={15} className="text-[#E90074]" />
+                What-If Scenario Comparison (Scenario A vs Scenario B)
+              </h3>
+              <p className="text-[11px] text-[#929BB2]">
+                Independent auction simulation sandboxes — test strategy tradeoffs without overwriting your live bid room
+              </p>
+            </div>
+            <button
+              onClick={resetScenarios}
+              className="text-[11px] font-semibold text-[#929BB2] hover:text-white underline cursor-pointer"
+            >
+              Reset Both Scenarios
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {(['A', 'B'] as const).map((key) => {
+              const sc = scenarios[key];
+              const scSpent = sc.squad.reduce((s, p) => s + p.purchase_price_cr, 0);
+              const scRemain = Math.max(0, sc.startingPurseCr - scSpent);
+              const scOs = sc.squad.filter((p) => p.is_overseas).length;
+              const scAvgBpi = sc.squad.length > 0 ? sc.squad.reduce((s, p) => s + p.bpi_rating, 0) / sc.squad.length : 0;
+              const scWk = sc.squad.filter((p) => p.player_role.toLowerCase().includes('keeper')).length;
+              const scAr = sc.squad.filter((p) => p.player_role.toLowerCase().includes('all-rounder')).length;
+              const scBat = sc.squad.filter((p) => p.role_type === 'batter' && !p.player_role.toLowerCase().includes('keeper') && !p.player_role.toLowerCase().includes('all-rounder')).length;
+              const scBwl = sc.squad.filter((p) => p.role_type === 'bowler' && !p.player_role.toLowerCase().includes('all-rounder')).length;
+
+              return (
+                <div
+                  key={key}
+                  className={`p-4 rounded-xl border space-y-3 ${
+                    key === 'A' ? 'bg-[#121A2D] border-[#E90074]/40' : 'bg-[#121A2D] border-[#7545C8]/40'
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded ${
+                        key === 'A' ? 'bg-[#E90074]/20 text-[#FF47A3]' : 'bg-[#7545C8]/25 text-purple-300'
+                      }`}>
+                        Simulation Scenario {key}
+                      </span>
+                      <h4 className="text-xs font-bold text-white mt-1.5">{sc.name}</h4>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 text-xs font-mono">
+                    <div className="p-2 rounded-lg bg-[#0B1020]">
+                      <span className="text-[10px] font-sans text-[#929BB2] block">Players / OS</span>
+                      <span className="font-bold text-white">{sc.squad.length} / {scOs} OS</span>
+                    </div>
+                    <div className="p-2 rounded-lg bg-[#0B1020]">
+                      <span className="text-[10px] font-sans text-[#929BB2] block">Spent / Left</span>
+                      <span className="font-bold text-emerald-400">₹{scSpent.toFixed(1)} / {scRemain.toFixed(1)}Cr</span>
+                    </div>
+                    <div className="p-2 rounded-lg bg-[#0B1020]">
+                      <span className="text-[10px] font-sans text-[#929BB2] block">Sim Avg BPI</span>
+                      <span className="font-bold text-amber-300">{scAvgBpi.toFixed(1)}</span>
+                    </div>
+                    <div className="p-2 rounded-lg bg-[#0B1020]">
+                      <span className="text-[10px] font-sans text-[#929BB2] block">Bat/Bwl/AR/WK</span>
+                      <span className="font-bold text-cyan-300">{scBat}/{scBwl}/{scAr}/{scWk}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    <button
+                      onClick={() =>
+                        updateScenario(key, (prev) => ({
+                          ...prev,
+                          startingPurseCr: TOTAL_PURSE_CR,
+                          squad: [...squad],
+                        }))
+                      }
+                      disabled={squad.length === 0}
+                      className="px-2.5 py-1 rounded-lg bg-[#171F35] hover:bg-[#232E52] disabled:opacity-40 text-[11px] font-semibold text-white border border-[#29334C] cursor-pointer"
+                    >
+                      Save Current Squad
+                    </button>
+                    <button
+                      onClick={() =>
+                        updateScenario(key, (prev) => ({
+                          ...prev,
+                          startingPurseCr: TOTAL_PURSE_CR,
+                          squad: buildDraftSquad(key === 'A' ? 'balanced' : 'spin-youth'),
+                        }))
+                      }
+                      className="px-2.5 py-1 rounded-lg bg-[#E90074]/15 hover:bg-[#E90074]/30 text-[11px] font-bold text-[#FF47A3] border border-[#E90074]/40 cursor-pointer"
+                    >
+                      Auto-Simulate {key}
+                    </button>
+                    {sc.squad.length > 0 && (
+                      <button
+                        onClick={() => setSquad([...sc.squad])}
+                        className="px-2.5 py-1 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-[11px] font-bold text-emerald-300 border border-emerald-500/30 cursor-pointer"
+                      >
+                        Load into Live Room
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

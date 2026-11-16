@@ -14,26 +14,28 @@ In high-stakes Twenty20 cricket, standard aggregate averages (overall Strike Rat
 
 1. Quantify match-context leverage for every delivery using a continuous dual-phase **Pressure Index** ($P \in [0, 1]$).
 2. Identify and rank the **Top 10 Batters** and **Top 10 Bowlers** under pressure relative to their own normal-situation baselines.
-3. Equip franchise analysts with integrated **Hidden Gem Detection**, **Young Talent Radar (Ages 15–24)**, **Ball-by-Ball Batter vs Bowler Matchups**, and an **AI Auction War Room** for balanced `₹100 Cr` squad building.
+3. Equip franchise analysts with an integrated **11-module scouting ecosystem** (`DISCOVER → ANALYZE → COMPARE → IDENTIFY → RECOMMEND → RECRUIT → SIMULATE`) spanning **Player DNA**, **Hidden Gem Detection**, **Young Talent Radar (Ages 15–24)**, **Matchup Intelligence Lab**, **Squad Gap Analyzer**, **AI Recruitment Assistant**, and an **AI Auction War Room** with configurable rules and `Scenario A/B` planning.
 
 ---
 
 ## Key Features & Modules
 
-### Core Analytics & Pressure Intelligence
-- **Overview Dashboard (`src/pages/OverviewPage.tsx`)** — Executive KPI board (`883` matches, `200,999` deliveries processed, `1,217` players evaluated, `14,422` high/extreme pressure deliveries, `141` competitions), pressure severity breakdowns, phase distribution (Powerplay / Middle / Death), season trends (`2022–2026`), and IPL vs T20I comparisons.
-- **Pressure Intelligence Engine (`src/pages/PressureIntelligencePage.tsx`)** — Interactive First Innings & Second Innings (chase) match-state simulator adjusting target, score, balls remaining, wickets lost, and required run rate, alongside historical high-pressure case studies.
-- **Batting Analytics (`src/pages/BattingAnalyticsPage.tsx`)** — Evaluates `72` qualified batters on Pressure Strike Rate, Strike Rate Delta ($\Delta\text{SR}$), boundary efficiency, team/competition filters, and interactive scatter visualizations.
-- **Bowling Analytics (`src/pages/BowlingAnalyticsPage.tsx`)** — Evaluates `84` qualified bowlers on Pressure Economy, Economy Suppression ($\Delta\text{Econ}$), dot-ball percentage, pace vs spin filtering, and minimum-overs thresholds.
-- **Player Rankings (`src/pages/PlayerRankingsPage.tsx`)** — Official Top 10 Pressure Batter and Bowler leaderboards (`top20_identities.json`) with podium hierarchy, detailed player modal dossiers, and CSV export (`src/utils/csvExport.ts`).
+### Core Performance, Analytics & Preserved Reference Views
+- **RR Command Center (`src/pages/OverviewPage.tsx`)** — Executive KPI board (`883` matches, `200,999` deliveries processed, `1,217` players evaluated, `14,422` high/extreme pressure deliveries, `141` competitions), Squad Readiness summary, automated Recruitment Alerts, U-24 emerging spotlight, and quick navigation across all modules.
+- **Batting Leaderboard (`src/pages/BattingAnalyticsPage.tsx`)** — Evaluates `72` qualified batters on Pressure Strike Rate, Strike Rate Delta ($\Delta\text{SR}$), batting average, highest score, boundaries (`4s`/`6s`/Boundary%), consistency, trend, shortlist controls, and one-click Player DNA links.
+- **Bowling Leaderboard (`src/pages/BowlingAnalyticsPage.tsx`)** — Evaluates `84` qualified bowlers on Pressure Economy, Economy Suppression ($\Delta\text{Econ}$), dot-ball percentage, maidens, best bowling figures, Powerplay/Middle/Death splits, shortlist controls, and DNA profiling.
+- **Official SupeRR 20 (`src/pages/PlayerRankingsPage.tsx`)** — Preserved Top 10 Pressure Batter and Top 10 Bowler leaderboards (`top20_identities.json`) with podium hierarchy, detailed player dossiers, and CSV export (`src/utils/csvExport.ts`).
+- **Pressure Intelligence Engine (`src/pages/PressureIntelligencePage.tsx`)** — Interactive Dual-Phase ($P \in [0, 1]$) First Innings & Second Innings (chase) match-state simulator with synchronized Overs Completed and Balls Remaining controls alongside dataset-grounded context specialists.
+- **Player DNA & Comparison Studio (`src/pages/PlayerComparisonStudio.tsx`)** — 1-Player 6-Axis DNA mode and 2/3-Player radar comparison (`computeBatterDNA` / `computeBowlerDNA`) with strengths/weaknesses diagnostics, Bayesian sample confidence warnings, and downloadable `.md` scouting reports.
 
-### Recruitment, Matchup & Strategy Modules
-- **AI Auction War Room (`src/pages/AuctionWarRoomPage.tsx`)** — Interactive IPL-style franchise auction simulator across `153` pooled players with a `₹100 Cr` purse tracker, incremental bidding (`+₹50 Lakhs`), simulated rival franchise bids, compliant Dream Squad generation, Overseas/Role cap checks, and squad evaluation audits.
-- **Hidden Gem Detector (`src/pages/HiddenGemsPage.tsx`)** — Algorithmic talent scanner scoring `139` profiles on baseline improvement delta, sample volume upside, and clutch consistency, with multi-player shortlisting and detailed scout reports.
-- **Batter vs Bowler Matrix (`src/pages/BatterBowlerPage.tsx`)** — Exact ball-by-ball head-to-head lookup engine covering `4,414` matchup records across IPL and T20I deliveries.
-- **Young Talent Radar (`src/pages/YoungTalentPage.tsx`)** — Discovery portal for `28` tracked emerging prospects (ages `15–24`) distinguishing verified CSV youth/domestic/IPL statistics from development potential projections, with an Emerging Indian Talent spotlight and Scout Watchlist.
-- **Player Comparison Studio (`src/pages/PlayerComparisonStudio.tsx`)** — Side-by-side radar and statistical comparison engine with quantitative verdict explanations.
-- **Methodology & Project Information (`src/pages/MethodologyPage.tsx`, `src/pages/AboutPage.tsx`)** — Transparent mathematical formulations (`BPI`, `BPI-Bowl`, Bayesian confidence shrinkage, chase closeness safeguards), preprocessing rules, and printable analytical documentation.
+### Talent Discovery, Recruitment Intelligence & Auction Management
+- **Hidden Gem Detector (`src/pages/HiddenGemsPage.tsx`)** — Algorithmic talent scanner scoring `139` profiles on baseline improvement delta, sample volume upside, and clutch consistency, with structured qualification breakdowns, Shortlist sync, DNA deep-links, and Auction routing.
+- **Young Talent Radar (`src/pages/YoungTalentPage.tsx`)** — Discovery portal for `28` tracked emerging prospects (ages `15–24`) distinguishing verified CSV youth/domestic/IPL statistics from development potential projections (`null`-safe `pressure_sr` formatting), synchronized bidirectionally with the platform Shortlist.
+- **Matchup Intelligence Lab (`src/pages/BatterBowlerPage.tsx`)** — Ball-by-ball Head-to-Head duel lookup (`head_to_head_matrix.json`), `< 6` balls statistical sample reliability warnings (`assessMatchupSample`), and aggregated Pace vs Spin and batting role splits.
+- **Squad Gap Analyzer (`src/pages/SquadGapAnalyzerPage.tsx`)** — 9-dimension structural squad evaluator across `RR Dataset Core`, `Sim Squad`, and `Shortlist` baselines with a Balance Meter, Recharts Priority Map, dataset-validated target recommendations, and Recruitment Decision Timeline.
+- **AI Recruitment Assistant (`src/pages/RecruitmentAssistantPage.tsx`)** — Deterministic zero-hallucination natural-language scouting console supporting prompt chips, dynamic `Compare A vs B` breakdowns, H2H queries, confidence warnings, and explicit out-of-scope caveats.
+- **Auction & Squad Simulator (`src/pages/AuctionWarRoomPage.tsx`)** — Interactive franchise auction simulator across `153` pooled players with configurable rules (`totalPurseCr`, min/max squad size, overseas cap), budget visualizer chart, Shortlist target queue integration, rival bidding, and independent `Scenario A` vs `Scenario B` What-If planning.
+- **Ecosystem State, Shortlist Drawer & Methodology (`src/context/EcosystemContext.tsx`, `src/components/ShortlistDrawer.tsx`, `src/pages/MethodologyPage.tsx`, `src/pages/AboutPage.tsx`)** — Cross-module navigation, canonical dataset unification (`src/services/playerDataService.ts`), `localStorage`-persisted Shortlist drawer, and transparent mathematical documentation.
 
 ---
 
@@ -91,6 +93,9 @@ npm run dev
 ### Other Scripts
 
 ```bash
+# Run unit tests (pressure math, Bayesian confidence & dataset integrity)
+npm test
+
 # Type-check and create production build in dist/
 npm run build
 
@@ -109,14 +114,16 @@ RR/
 ├── demo-assets/              # Browser demo automation scripts & dashboard thumbnail
 ├── reports/
 │   └── methodology/          # Technical methodology report
-├── scripts/                  # Node.js data ingestion & analytics generation pipeline
+├── scripts/                  # Data ingestion pipeline, formula core (lib/formulas.cjs) & Node tests
 ├── src/
-│   ├── components/           # Shared UI, Header, Sidebar, Modals, Cricket SVG icons
+│   ├── components/           # Shared UI, Header, Sidebar, ShortlistDrawer, Modals, Cricket SVG icons
+│   ├── context/              # Shared cross-module state & localStorage persistence (EcosystemContext.tsx)
 │   ├── data/                 # Generated JSON datasets consumed by the React app
-│   ├── pages/                # 12 interactive scouting, analytics & war-room modules
+│   ├── pages/                # 14 interactive analytics, scouting, gap-analysis, AI & auction pages
+│   ├── services/             # Canonical cross-dataset identity & report service (playerDataService.ts)
 │   ├── types/                # TypeScript domain interfaces
-│   ├── utils/                # CSV export and franchise theme helpers
-│   ├── App.tsx               # Application shell and module routing
+│   ├── utils/                # Client pressure/DNA engine (analyticsEngine.ts), CSV export & themes
+│   ├── App.tsx               # Application shell, EcosystemProvider wrapper & module routing
 │   └── main.tsx              # React DOM entry point
 ├── index.html
 ├── package.json

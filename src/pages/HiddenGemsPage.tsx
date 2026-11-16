@@ -1,20 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Sparkles,
   Search,
-  Filter,
-  Sliders,
-  Award,
-  TrendingUp,
-  ShieldAlert,
   CheckCircle2,
   AlertCircle,
   GitCompare,
   X,
-  ExternalLink,
   ChevronRight,
-  Flame,
-  Zap,
+  Bookmark,
+  Dna,
+  Eye,
+  Gavel,
 } from 'lucide-react';
 import { HiddenGemPlayer } from '../types';
 import hiddenGemsData from '../data/hidden_gems.json';
@@ -24,11 +19,12 @@ import {
   RoyalCrestEmblem,
   CricketBatIcon,
   CricketBallIcon,
-  AllRounderIcon,
-  BowlingMotionIcon,
 } from '../components/CricketIcons';
+import { useEcosystem } from '../context/EcosystemContext';
+import { playerDataService } from '../services/playerDataService';
 
 export const HiddenGemsPage: React.FC = () => {
+  const { isShortlisted, toggleShortlist, openPlayerProfile, openPlayerDNA, sendToAuctionBlock } = useEcosystem();
   const allGems = useMemo(() => hiddenGemsData as HiddenGemPlayer[], []);
 
   // Filter States
@@ -287,7 +283,11 @@ export const HiddenGemsPage: React.FC = () => {
                 </div>
 
                 {/* Player Identity Row */}
-                <div className="flex items-center gap-3">
+                <div
+                  onClick={() => openPlayerProfile(gem.player_id, gem.role_type)}
+                  className="flex items-center gap-3 cursor-pointer group/identity"
+                  title="Click to open Full Player Intelligence Profile & Pitch Map"
+                >
                   <PlayerAvatar
                     name={gem.name}
                     team={gem.team}
@@ -300,7 +300,9 @@ export const HiddenGemsPage: React.FC = () => {
                   />
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5">
-                      <h3 className="text-base font-extrabold text-[#F7F7FB] truncate">{gem.name}</h3>
+                      <h3 className="text-base font-extrabold text-[#F7F7FB] group-hover/identity:text-[#E90074] transition-colors truncate">
+                        {gem.name}
+                      </h3>
                       <span className="text-sm">{gem.country_flag}</span>
                     </div>
                     <div className="text-xs text-[#929BB2] flex items-center gap-2 mt-0.5">
@@ -336,12 +338,32 @@ export const HiddenGemsPage: React.FC = () => {
               </div>
 
               {/* Action Buttons Row */}
-              <div className="mt-5 pt-4 border-t border-[#29334C] flex items-center gap-2">
+              <div className="mt-5 pt-4 border-t border-[#29334C] flex items-center gap-1.5">
                 <button
                   onClick={() => setInspectedGem(gem)}
                   className="flex-1 py-2 px-3 bg-[#121A2D] hover:bg-[#E90074]/15 border border-[#29334C] hover:border-[#E90074]/50 text-xs font-semibold text-[#F7F7FB] rounded-xl transition-all cursor-pointer text-center"
                 >
-                  Why This Player?
+                  Why This Gem?
+                </button>
+
+                <button
+                  onClick={() => toggleShortlist(gem.player_id, 'Hidden Gem Detector', 'high')}
+                  className={`p-2 rounded-xl border transition-all cursor-pointer ${
+                    isShortlisted(gem.player_id) || isShortlisted(gem.name)
+                      ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                      : 'bg-[#121A2D] border-[#29334C] text-[#929BB2] hover:text-white hover:border-[#E90074]/40'
+                  }`}
+                  title={isShortlisted(gem.player_id) ? 'Remove from Shortlist' : 'Shortlist Gem'}
+                >
+                  <Bookmark size={15} className={isShortlisted(gem.player_id) ? 'fill-current' : ''} />
+                </button>
+
+                <button
+                  onClick={() => openPlayerDNA(gem.player_id, gem.role_type)}
+                  className="p-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 transition-all cursor-pointer"
+                  title="Inspect 6-Axis Player DNA"
+                >
+                  <Dna size={15} />
                 </button>
 
                 <button
@@ -461,7 +483,77 @@ export const HiddenGemsPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-2 flex justify-end">
+            {/* Structured Qualification Factor Breakdown */}
+            <div className="p-4 bg-[#121A2D] rounded-xl border border-purple-500/30 space-y-2">
+              <span className="text-xs font-bold text-purple-300 uppercase tracking-wider block">
+                Why This Player Qualifies as a Hidden Gem
+              </span>
+              <ul className="text-xs text-[#C9C3DF] space-y-1.5 list-disc pl-4">
+                <li>
+                  <strong className="text-white">Pressure-to-Baseline Outperformance:</strong> Delivers{' '}
+                  <span className="text-emerald-400 font-mono font-bold">
+                    {inspectedGem.delta >= 0 ? `+${inspectedGem.delta}` : inspectedGem.delta}
+                  </span>{' '}
+                  delta ({inspectedGem.pressure_metric} under pressure vs {inspectedGem.baseline_metric} baseline).
+                </li>
+                <li>
+                  <strong className="text-white">Peer-Group Value Gap:</strong> Combines BPI{' '}
+                  <span className="font-mono text-amber-300">{inspectedGem.bpi_rating}</span> and consistency{' '}
+                  <span className="font-mono text-cyan-300">{inspectedGem.consistency}/100</span> across{' '}
+                  <span className="font-mono">{inspectedGem.matches_analysed}</span> matches ({inspectedGem.pressure_matches} pressure).
+                </li>
+                <li>
+                  <strong className="text-white">Control / Boundary Signature:</strong>{' '}
+                  {inspectedGem.role_type === 'batter'
+                    ? `${inspectedGem.dot_or_boundary_pct}% boundary ball conversion under leverage`
+                    : `${inspectedGem.dot_or_boundary_pct}% dot ball containment under leverage`}
+                </li>
+              </ul>
+            </div>
+
+            <div className="pt-2 flex flex-wrap items-center justify-between gap-2">
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => {
+                    const id = inspectedGem.player_id;
+                    const rt = inspectedGem.role_type;
+                    setInspectedGem(null);
+                    openPlayerProfile(id, rt);
+                  }}
+                  className="px-3 py-2 rounded-xl bg-[#121A2D] hover:bg-[#1D2745] text-[#C9C3DF] border border-[#29334C] text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Eye size={13} className="text-[#E90074]" /> Full Profile
+                </button>
+                <button
+                  onClick={() => {
+                    const id = inspectedGem.player_id;
+                    const rt = inspectedGem.role_type;
+                    setInspectedGem(null);
+                    openPlayerDNA(id, rt);
+                  }}
+                  className="px-3 py-2 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Dna size={13} /> 6-Axis DNA
+                </button>
+                <button
+                  onClick={() => toggleShortlist(inspectedGem.player_id, 'Hidden Gem Detector', 'high')}
+                  className="px-3 py-2 rounded-xl bg-[#121A2D] hover:bg-[#1D2745] text-[#FF47A3] border border-[#E90074]/40 text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Bookmark size={13} /> {isShortlisted(inspectedGem.player_id) ? 'Shortlisted' : 'Shortlist'}
+                </button>
+                {playerDataService.findAuctionCandidate(inspectedGem.player_id) && (
+                  <button
+                    onClick={() => {
+                      const id = inspectedGem.player_id;
+                      setInspectedGem(null);
+                      sendToAuctionBlock(id);
+                    }}
+                    className="px-3 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <Gavel size={13} /> Auction Block
+                  </button>
+                )}
+              </div>
               <button
                 onClick={() => setInspectedGem(null)}
                 className="px-5 py-2 bg-[#E90074] hover:bg-[#E90074]/90 text-white font-semibold text-xs rounded-xl cursor-pointer"

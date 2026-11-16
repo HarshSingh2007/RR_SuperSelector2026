@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Target,
   Search,
   Filter,
   ArrowUpDown,
@@ -8,9 +7,13 @@ import {
   Eye,
   GitCompare,
   TrendingUp,
+  TrendingDown,
   Sparkles,
   LayoutGrid,
   Table as TableIcon,
+  Bookmark,
+  Dna,
+  Crown,
 } from 'lucide-react';
 import {
   BarChart,
@@ -31,6 +34,7 @@ import { PlayerCard } from '../components/PlayerCard';
 import { MetricTooltip } from '../components/MetricTooltip';
 import { exportToCSV } from '../utils/csvExport';
 import { BowlingMotionIcon, CricketBallIcon } from '../components/CricketIcons';
+import { useEcosystem } from '../context/EcosystemContext';
 
 interface BowlingAnalyticsPageProps {
   bowlers: Bowler[];
@@ -47,8 +51,10 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
   onSelectPlayer,
   onComparePlayer,
 }) => {
+  const { isShortlisted, toggleShortlist, openPlayerDNA } = useEcosystem();
   const [searchTerm, setSearchTerm] = useState('');
   const [teamFilter, setTeamFilter] = useState('ALL');
+  const [countryFilter, setCountryFilter] = useState('ALL');
   const [typeFilter, setTypeFilter] = useState('ALL');
   const [rrSpotlight, setRrSpotlight] = useState(false);
   const [sortField, setSortField] = useState<keyof Bowler>('rating');
@@ -65,6 +71,14 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
     return Array.from(set).sort();
   }, [bowlers]);
 
+  const uniqueCountries = useMemo(() => {
+    const set = new Set<string>();
+    bowlers.forEach((bw) => {
+      if (bw.country) set.add(bw.country);
+    });
+    return Array.from(set).sort();
+  }, [bowlers]);
+
   const filteredBowlers = useMemo(() => {
     return bowlers
       .filter((bw) => {
@@ -74,6 +88,7 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
           bw.bowlingType.toLowerCase().includes(searchTerm.toLowerCase());
 
         const matchesTeam = teamFilter === 'ALL' || bw.team === teamFilter || bw.teams.includes(teamFilter);
+        const matchesCountry = countryFilter === 'ALL' || bw.country === countryFilter;
 
         let matchesType = true;
         if (typeFilter === 'PACE') {
@@ -109,19 +124,19 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
           if (!hasSeason) return false;
         }
 
-        return matchesSearch && matchesTeam && matchesType && matchesOvers;
+        return matchesSearch && matchesTeam && matchesCountry && matchesType && matchesOvers;
       })
       .sort((a, b) => {
-        let valA = a[sortField];
-        let valB = b[sortField];
+        const valA = a[sortField] ?? 0;
+        const valB = b[sortField] ?? 0;
         if (typeof valA === 'string') {
           return sortAsc
             ? (valA as string).localeCompare(valB as string)
             : (valB as string).localeCompare(valA as string);
         }
-        return sortAsc ? (valA as number) - (valB as number) : (valB as number) - (valA as number);
+        return sortAsc ? Number(valA) - Number(valB) : Number(valB) - Number(valA);
       });
-  }, [bowlers, searchTerm, teamFilter, typeFilter, rrSpotlight, minOvers, sortField, sortAsc, selectedComp, selectedSeason]);
+  }, [bowlers, searchTerm, teamFilter, countryFilter, typeFilter, rrSpotlight, minOvers, sortField, sortAsc, selectedComp, selectedSeason]);
 
   const handleSort = (field: keyof Bowler) => {
     if (sortField === field) {
@@ -255,6 +270,71 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
         </div>
       </div>
 
+      {/* Top 3 Bowling Podium */}
+      {filteredBowlers.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          {filteredBowlers.slice(0, 3).map((bw, idx) => {
+            const podiumTheme =
+              idx === 0
+                ? 'border-amber-400/50 bg-gradient-to-br from-amber-500/10 via-[#121A2D] to-[#14192E]'
+                : idx === 1
+                  ? 'border-slate-300/40 bg-gradient-to-br from-slate-400/10 via-[#121A2D] to-[#14192E]'
+                  : 'border-amber-700/50 bg-gradient-to-br from-amber-700/15 via-[#121A2D] to-[#14192E]';
+            const badgeColor =
+              idx === 0 ? 'bg-amber-400 text-black' : idx === 1 ? 'bg-slate-300 text-black' : 'bg-amber-700 text-white';
+            return (
+              <div
+                key={bw.id}
+                onClick={() => onSelectPlayer(bw)}
+                className={`rr-glass-card p-4 cursor-pointer transition-all hover:scale-[1.01] ${podiumTheme}`}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className={`px-2 py-0.5 rounded-md text-[10px] font-black font-mono flex items-center gap-1 ${badgeColor}`}>
+                    {idx === 0 && <Crown size={11} />} PODIUM #{idx + 1}
+                  </span>
+                  <span className="text-xs font-mono font-bold text-[#7545C8]">BPI {bw.rating}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <PlayerAvatar
+                    name={bw.name}
+                    team={bw.team}
+                    role={bw.player_role || 'bowler'}
+                    size="md"
+                    avatarIcon={bw.avatar_icon}
+                    countryFlag={bw.country_flag}
+                    countryCode={bw.country_code}
+                  />
+                  <div className="min-w-0">
+                    <div className="font-bold text-sm text-white truncate">{bw.name}</div>
+                    <div className="text-[11px] text-[#929BB2] truncate">
+                      {bw.country_flag} {bw.team} · {bw.bowlingType}
+                    </div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-4 gap-1.5 mt-3 pt-2.5 border-t border-[#29334C]/60 text-center font-mono">
+                  <div>
+                    <span className="text-[9px] text-[#929BB2] block">WKTS</span>
+                    <span className="text-xs font-bold text-white">{bw.totalWickets}</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] text-[#929BB2] block">ECON</span>
+                    <span className="text-xs font-bold text-white">{bw.totalEcon.toFixed(2)}</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] text-[#929BB2] block">BEST</span>
+                    <span className="text-xs font-bold text-amber-300">{bw.bestBowling ?? 'N/A'}</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] text-[#929BB2] block">P-ECON</span>
+                    <span className="text-xs font-bold text-[#7545C8]">{bw.pressureEcon}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
       {/* Interactive Filters Bar */}
       <div className="rr-glass-card p-4 flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex flex-wrap items-center gap-2.5 flex-1 min-w-[280px]">
@@ -268,6 +348,23 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-[#121A2D] border border-[#29334C] rounded-xl pl-9 pr-3 py-2 text-xs text-[#F7F7FB] outline-none focus:border-[#7545C8]"
             />
+          </div>
+
+          {/* Country Filter */}
+          <div className="flex items-center gap-1.5 bg-[#121A2D] border border-[#29334C] rounded-xl px-2.5 py-1.5 text-xs text-[#929BB2]">
+            <select
+              value={countryFilter}
+              onChange={(e) => setCountryFilter(e.target.value)}
+              className="bg-transparent text-[#F7F7FB] outline-none cursor-pointer text-xs"
+              aria-label="Filter bowlers by country"
+            >
+              <option value="ALL" className="bg-[#171F35]">All Countries</option>
+              {uniqueCountries.map((c) => (
+                <option key={c} value={c} className="bg-[#171F35]">
+                  {c}
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* Style Filter */}
@@ -370,91 +467,63 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
             <table className="w-full text-left text-xs">
               <thead className="bg-[#121A2D] border-b border-[#29334C] text-[#929BB2] uppercase tracking-wider text-[10px]">
                 <tr>
-                  <th className="py-3 px-3 w-12 text-center">Rank</th>
-                  <th className="py-3 px-3">Player</th>
-                  <th className="py-3 px-3">Style / Team</th>
-                  <th
-                    onClick={() => handleSort('rating')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      BPI-Bowl <MetricTooltip term="BPI-Bowl" /> <ArrowUpDown size={11} />
-                    </div>
+                  <th className="py-3 px-2.5 w-11 text-center">Rank</th>
+                  <th className="py-3 px-2.5">Player</th>
+                  <th className="py-3 px-2.5">Style / Team</th>
+                  <th onClick={() => handleSort('rating')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">BPI <MetricTooltip term="BPI-Bowl" /> <ArrowUpDown size={10} /></div>
                   </th>
-                  <th
-                    onClick={() => handleSort('pressureEcon')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      Pressure Econ <MetricTooltip term="Pressure Economy" /> <ArrowUpDown size={11} />
-                    </div>
+                  <th onClick={() => handleSort('matchesAnalysed')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Mat <ArrowUpDown size={10} /></div>
                   </th>
-                  <th
-                    onClick={() => handleSort('normalEcon')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      Baseline Econ <MetricTooltip term="Baseline Economy" /> <ArrowUpDown size={11} />
-                    </div>
+                  <th onClick={() => handleSort('totalWickets')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Wkts (Ov) <ArrowUpDown size={10} /></div>
                   </th>
-                  <th
-                    onClick={() => handleSort('econDelta')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      Suppression <MetricTooltip term="Economy Suppression" /> <ArrowUpDown size={11} />
-                    </div>
+                  <th onClick={() => handleSort('totalEcon')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Econ <ArrowUpDown size={10} /></div>
                   </th>
-                  <th
-                    onClick={() => handleSort('pressureWickets')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      Pressure Wkts <ArrowUpDown size={11} />
-                    </div>
+                  <th onClick={() => handleSort('pressureEcon')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Press Econ <MetricTooltip term="Pressure Economy" /> <ArrowUpDown size={10} /></div>
                   </th>
-                  <th
-                    onClick={() => handleSort('dotPct')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      Dot Ball % <MetricTooltip term="Dot Ball %" /> <ArrowUpDown size={11} />
-                    </div>
+                  <th onClick={() => handleSort('overallBowlingAvg')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Avg / SR <ArrowUpDown size={10} /></div>
                   </th>
-                  <th
-                    onClick={() => handleSort('pressureOvers')}
-                    className="py-3 px-3 cursor-pointer hover:text-white"
-                  >
-                    <div className="flex items-center gap-1">
-                      Pressure Overs <ArrowUpDown size={11} />
-                    </div>
+                  <th onClick={() => handleSort('overallDotPct')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Dot% <MetricTooltip term="Dot Ball %" /> <ArrowUpDown size={10} /></div>
                   </th>
-                  <th className="py-3 px-3 text-right">Actions</th>
+                  <th onClick={() => handleSort('maidenOvers')} className="py-3 px-2.5 cursor-pointer hover:text-white">
+                    <div className="flex items-center gap-1">Mdn / Best <ArrowUpDown size={10} /></div>
+                  </th>
+                  <th className="py-3 px-2.5">PP / Mid / Dth</th>
+                  <th className="py-3 px-2.5 text-right">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#29334C]/50 text-[#F7F7FB]">
-                {filteredBowlers.map((bw) => (
+                {filteredBowlers.map((bw, displayIdx) => {
+                  const shortlisted = isShortlisted(bw.id) || isShortlisted(bw.name);
+                  const trend = bw.trendDelta ?? 0;
+                  return (
                   <tr
                     key={bw.id}
                     className="hover:bg-[#121A2D]/80 transition-colors group cursor-pointer"
                     onClick={() => onSelectPlayer(bw)}
                   >
-                    <td className="py-3 px-3 text-center font-mono font-bold">
+                    <td className="py-3 px-2.5 text-center font-mono font-bold">
                       <span
                         className={`inline-block w-6 h-6 rounded-md leading-6 text-center text-xs ${
-                          bw.rank === 1
+                          displayIdx === 0
                             ? 'bg-amber-400 text-black font-extrabold'
-                            : bw.rank === 2
+                            : displayIdx === 1
                             ? 'bg-slate-300 text-black font-extrabold'
-                            : bw.rank === 3
+                            : displayIdx === 2
                             ? 'bg-amber-700 text-white font-extrabold'
                             : 'text-[#929BB2]'
                         }`}
                       >
-                        {bw.rank}
+                        {displayIdx + 1}
                       </span>
                     </td>
-                    <td className="py-3 px-3 flex items-center gap-2.5">
+                    <td className="py-3 px-2.5 flex items-center gap-2">
                       <PlayerAvatar
                         name={bw.name}
                         team={bw.team}
@@ -476,53 +545,77 @@ export const BowlingAnalyticsPage: React.FC<BowlingAnalyticsPageProps> = ({
                         </span>
                       </div>
                     </td>
-                    <td className="py-3 px-3 text-[#929BB2]">
-                      <div>{bw.team}</div>
-                      <div className="text-[10px] text-[#64748B]">{bw.bowlingType}</div>
+                    <td className="py-3 px-2.5 text-[#929BB2]">
+                      <div className="truncate max-w-[110px]">{bw.team}</div>
+                      <div className="text-[10px] text-[#64748B] truncate max-w-[110px]">{bw.bowlingType}</div>
                     </td>
-                    <td className="py-3 px-3 font-mono font-bold text-[#7545C8] text-sm">
-                      {bw.rating}
+                    <td className="py-3 px-2.5 font-mono font-bold text-[#7545C8] text-sm">
+                      <div className="flex items-center gap-1">
+                        <span>{bw.rating}</span>
+                        {trend !== 0 && (
+                          <span title={`Pressure economy trend: ${trend > 0 ? '+' : ''}${trend}`} className="inline-flex">
+                            {trend > 0 ? <TrendingUp size={11} className="text-emerald-400" /> : <TrendingDown size={11} className="text-rose-400" />}
+                          </span>
+                        )}
+                      </div>
                     </td>
-                    <td className="py-3 px-3 font-mono font-bold">{bw.pressureEcon}</td>
-                    <td className="py-3 px-3 font-mono text-[#929BB2]">{bw.normalEcon}</td>
-                    <td className="py-3 px-3 font-mono font-semibold">
-                      <span
-                        className={`px-1.5 py-0.5 rounded text-[11px] ${
-                          bw.econDelta >= 0
-                            ? 'bg-emerald-500/10 text-emerald-400'
-                            : 'bg-rose-500/10 text-rose-400'
-                        }`}
-                      >
-                        {bw.econDelta >= 0 ? `+${bw.econDelta}` : bw.econDelta}
-                      </span>
+                    <td className="py-3 px-2.5 font-mono text-[#C9C3DF]">{bw.matchesAnalysed}</td>
+                    <td className="py-3 px-2.5 font-mono">
+                      <span className="font-bold text-amber-400">{bw.totalWickets}</span>{' '}
+                      <span className="text-[10px] text-[#929BB2]">({bw.totalOvers}ov)</span>
                     </td>
-                    <td className="py-3 px-3 font-mono font-bold text-amber-400">
-                      {bw.pressureWickets}
+                    <td className="py-3 px-2.5 font-mono text-[#C9C3DF]">{bw.totalEcon.toFixed(2)}</td>
+                    <td className="py-3 px-2.5 font-mono font-bold text-white">{bw.pressureEcon.toFixed(2)}</td>
+                    <td className="py-3 px-2.5 font-mono text-[11px] text-[#C9C3DF]">
+                      {bw.overallBowlingAvg?.toFixed(1) ?? 'N/A'} <span className="text-[#64748B]">/</span> {bw.overallWicketSR?.toFixed(1) ?? 'N/A'}b
                     </td>
-                    <td className="py-3 px-3 font-mono">{bw.dotPct}%</td>
-                    <td className="py-3 px-3 font-mono text-[#C9C3DF]">
-                      {bw.pressureOvers} ov
+                    <td className="py-3 px-2.5 font-mono">{(bw.overallDotPct ?? bw.dotPct).toFixed(1)}%</td>
+                    <td className="py-3 px-2.5 font-mono text-[11px]">
+                      <span className="text-[#929BB2]">{bw.maidenOvers ?? 0}m</span>{' '}
+                      <span className="text-amber-300 font-bold">{bw.bestBowling ?? 'N/A'}</span>
                     </td>
-                    <td className="py-3 px-3 text-right" onClick={(e) => e.stopPropagation()}>
-                      <div className="flex items-center justify-end gap-1.5">
+                    <td className="py-3 px-2.5 font-mono text-[10px] text-[#C9C3DF] whitespace-nowrap">
+                      {(bw.powerplayEcon ?? 0).toFixed(1)} / {(bw.middleEcon ?? 0).toFixed(1)} / {(bw.deathOverallEcon ?? bw.deathEcon).toFixed(1)}
+                    </td>
+                    <td className="py-3 px-2.5 text-right" onClick={(e) => e.stopPropagation()}>
+                      <div className="flex items-center justify-end gap-1">
+                        <button
+                          onClick={() => toggleShortlist(bw.id, 'Bowling Leaderboard')}
+                          className={`p-1.5 rounded-lg border transition-colors ${
+                            shortlisted
+                              ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                              : 'bg-[#121A2D] hover:bg-[#171F35] text-[#929BB2] hover:text-white border-[#29334C]'
+                          }`}
+                          title={shortlisted ? 'Remove from Shortlist' : 'Add to Shortlist'}
+                        >
+                          <Bookmark size={12} className={shortlisted ? 'fill-current' : ''} />
+                        </button>
+                        <button
+                          onClick={() => openPlayerDNA(bw, 'bowler')}
+                          className="p-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
+                          title="Inspect 6-Axis DNA"
+                        >
+                          <Dna size={12} />
+                        </button>
                         <button
                           onClick={() => onSelectPlayer(bw)}
                           className="p-1.5 rounded-lg bg-[#121A2D] hover:bg-[#171F35] text-[#929BB2] hover:text-[#F7F7FB] border border-[#29334C]"
                           title="View Full Analytical Dossier"
                         >
-                          <Eye size={13} />
+                          <Eye size={12} />
                         </button>
                         <button
                           onClick={() => onComparePlayer(bw)}
                           className="p-1.5 rounded-lg bg-[#7545C8]/15 hover:bg-[#7545C8]/30 text-[#C9C3DF] border border-[#7545C8]/40"
                           title="Compare in Studio"
                         >
-                          <GitCompare size={13} />
+                          <GitCompare size={12} />
                         </button>
                       </div>
                     </td>
                   </tr>
-                ))}
+                );
+                })}
               </tbody>
             </table>
           </div>

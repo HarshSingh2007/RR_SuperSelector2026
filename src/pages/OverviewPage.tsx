@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Layers,
   Flame,
@@ -14,6 +14,7 @@ import {
   ArrowRight,
   ShieldCheck,
   Zap,
+  Bookmark,
 } from 'lucide-react';
 import {
   PieChart,
@@ -35,6 +36,7 @@ import { StatCard } from '../components/StatCard';
 import { Badge } from '../components/Badge';
 import { PlayerAvatar } from '../components/PlayerAvatar';
 import { CricketPitchGraphic } from '../components/CricketPitchGraphic';
+import { useEcosystem } from '../context/EcosystemContext';
 import {
   CricketBatIcon,
   CricketBallIcon,
@@ -61,6 +63,9 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
   onNavigate,
   onSelectPlayer,
 }) => {
+  const { shortlist, setShortlistOpen, toggleShortlist, isShortlisted } = useEcosystem();
+  const [top10Tab, setTop10Tab] = useState<'batters' | 'bowlers'>('batters');
+
   // Pressure Distribution Data for Recharts Donut
   const pressurePieData = [
     { name: 'Normal (<0.38)', value: metadata.pressureDistribution.Normal, color: '#384666' },
@@ -497,6 +502,232 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               </div>
             </div>
           )}
+        </div>
+      </div>
+
+      {/* 3A. TOP 10 RECOMMENDED PLAYERS SHOWCASE (PROVEN LEVERAGE SPECIALISTS) */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <div className="flex items-center gap-2">
+              <Trophy size={18} className="text-amber-400" />
+              <h2 className="text-sm font-bold uppercase tracking-wider text-[#F7F7FB]">
+                TOP 10 RECOMMENDED PLAYERS (PROVEN LEVERAGE SPECIALISTS)
+              </h2>
+            </div>
+            <p className="text-xs text-[#929BB2] mt-0.5">
+              Verified high-pressure performers ranked by multi-factor BPI ratings across IPL & T20I matches
+            </p>
+          </div>
+
+          {/* Toggle between Batters and Bowlers */}
+          <div className="flex items-center bg-[#121A2D] p-1 rounded-xl border border-[#29334C]">
+            <button
+              onClick={() => setTop10Tab('batters')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                top10Tab === 'batters'
+                  ? 'bg-gradient-to-r from-[#E90074] to-[#FF47A3] text-white shadow-sm'
+                  : 'text-[#929BB2] hover:text-white'
+              }`}
+            >
+              <CricketBatIcon size={13} />
+              <span>Top 10 Batters</span>
+            </button>
+            <button
+              onClick={() => setTop10Tab('bowlers')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                top10Tab === 'bowlers'
+                  ? 'bg-gradient-to-r from-[#7545C8] to-[#9D71E8] text-white shadow-sm'
+                  : 'text-[#929BB2] hover:text-white'
+              }`}
+            >
+              <BowlingMotionIcon size={13} />
+              <span>Top 10 Bowlers</span>
+            </button>
+          </div>
+        </div>
+
+        {/* 10 Player Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3.5">
+          {top10Tab === 'batters'
+            ? top20Data.batters.map((player) => {
+                const isItemShortlisted = isShortlisted(player.id || player.player_id);
+                const rankColor =
+                  player.rank === 1
+                    ? 'border-amber-400/80 bg-amber-500/15 text-amber-300'
+                    : player.rank === 2
+                    ? 'border-slate-300/80 bg-slate-400/15 text-slate-200'
+                    : player.rank === 3
+                    ? 'border-amber-600/80 bg-amber-700/15 text-amber-400'
+                    : 'border-[#29334C] bg-[#0F1626] text-[#929BB2]';
+
+                return (
+                  <div
+                    key={player.id}
+                    className="rr-glass-card p-4 flex flex-col justify-between hover:border-[#E90074]/60 transition-all group relative overflow-hidden"
+                  >
+                    <div>
+                      {/* Rank & Shortlist Row */}
+                      <div className="flex items-center justify-between mb-2.5">
+                        <span className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded-md border ${rankColor}`}>
+                          #{player.rank} {player.rank === 1 ? '👑' : player.rank === 2 ? '🥈' : player.rank === 3 ? '🥉' : ''}
+                        </span>
+
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs">{player.country_flag}</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleShortlist(player.id, 'Top10Showcase', 'high');
+                            }}
+                            className="p-1 rounded-lg text-[#929BB2] hover:text-amber-400 hover:bg-[#121A2D] transition-colors"
+                            title="Shortlist Player"
+                          >
+                            <Bookmark size={13} className={isItemShortlisted ? 'fill-amber-400 text-amber-400' : ''} />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Player Identity */}
+                      <div
+                        onClick={() => onSelectPlayer(player as unknown as Batter, 'batter')}
+                        className="flex items-center gap-3 cursor-pointer"
+                      >
+                        <PlayerAvatar
+                          name={player.name}
+                          team={player.team}
+                          rank={player.rank}
+                          role={player.player_role || 'Batter'}
+                          size="md"
+                          avatarIcon={player.avatar_icon}
+                          countryFlag={player.country_flag}
+                          countryCode={player.country_code}
+                        />
+
+                        <div className="min-w-0 flex-1">
+                          <h4 className="text-sm font-bold text-white truncate group-hover:text-[#E90074] transition-colors">
+                            {player.name}
+                          </h4>
+                          <p className="text-[11px] text-[#929BB2] truncate">{player.team}</p>
+                          <span className="text-[10px] text-pink-400 font-mono font-bold block mt-0.5">
+                            {player.rating} BPI
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Key Stats Pill */}
+                      <div className="mt-3 grid grid-cols-2 gap-1.5 text-center text-xs pt-2.5 border-t border-[#29334C]/60">
+                        <div className="p-1.5 rounded-lg bg-[#121A2D]">
+                          <span className="text-[9px] text-[#929BB2] block">Pressure SR</span>
+                          <span className="font-mono font-bold text-[#E90074] text-[11px]">{player.pressureSR}</span>
+                        </div>
+                        <div className="p-1.5 rounded-lg bg-[#121A2D]">
+                          <span className="text-[9px] text-[#929BB2] block">SR Delta</span>
+                          <span className="font-mono font-bold text-emerald-400 text-[11px]">+{player.srDelta}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* View Profile Action */}
+                    <button
+                      onClick={() => onSelectPlayer(player as unknown as Batter, 'batter')}
+                      className="mt-3 w-full py-1.5 rounded-lg bg-[#121A2D] hover:bg-[#E90074] text-[#C9C3DF] hover:text-white border border-[#29334C] hover:border-[#E90074] text-[11px] font-bold transition-all flex items-center justify-center gap-1 group-hover:bg-[#E90074] group-hover:text-white"
+                    >
+                      <span>Full Profile</span>
+                      <ArrowUpRight size={12} />
+                    </button>
+                  </div>
+                );
+              })
+            : top20Data.bowlers.map((player) => {
+                const isItemShortlisted = isShortlisted(player.id || player.player_id);
+                const rankColor =
+                  player.rank === 1
+                    ? 'border-amber-400/80 bg-amber-500/15 text-amber-300'
+                    : player.rank === 2
+                    ? 'border-slate-300/80 bg-slate-400/15 text-slate-200'
+                    : player.rank === 3
+                    ? 'border-amber-600/80 bg-amber-700/15 text-amber-400'
+                    : 'border-[#29334C] bg-[#0F1626] text-[#929BB2]';
+
+                return (
+                  <div
+                    key={player.id}
+                    className="rr-glass-card p-4 flex flex-col justify-between hover:border-[#7545C8]/60 transition-all group relative overflow-hidden"
+                  >
+                    <div>
+                      {/* Rank & Shortlist Row */}
+                      <div className="flex items-center justify-between mb-2.5">
+                        <span className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded-md border ${rankColor}`}>
+                          #{player.rank} {player.rank === 1 ? '👑' : player.rank === 2 ? '🥈' : player.rank === 3 ? '🥉' : ''}
+                        </span>
+
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs">{player.country_flag}</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleShortlist(player.id, 'Top10Showcase', 'high');
+                            }}
+                            className="p-1 rounded-lg text-[#929BB2] hover:text-amber-400 hover:bg-[#121A2D] transition-colors"
+                            title="Shortlist Player"
+                          >
+                            <Bookmark size={13} className={isItemShortlisted ? 'fill-amber-400 text-amber-400' : ''} />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Player Identity */}
+                      <div
+                        onClick={() => onSelectPlayer(player as unknown as Bowler, 'bowler')}
+                        className="flex items-center gap-3 cursor-pointer"
+                      >
+                        <PlayerAvatar
+                          name={player.name}
+                          team={player.team}
+                          rank={player.rank}
+                          role={player.player_role || 'Bowler'}
+                          size="md"
+                          avatarIcon={player.avatar_icon}
+                          countryFlag={player.country_flag}
+                          countryCode={player.country_code}
+                        />
+
+                        <div className="min-w-0 flex-1">
+                          <h4 className="text-sm font-bold text-white truncate group-hover:text-[#7545C8] transition-colors">
+                            {player.name}
+                          </h4>
+                          <p className="text-[11px] text-[#929BB2] truncate">{player.team}</p>
+                          <span className="text-[10px] text-purple-400 font-mono font-bold block mt-0.5">
+                            {player.rating} BPI-Bowl
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Key Stats Pill */}
+                      <div className="mt-3 grid grid-cols-2 gap-1.5 text-center text-xs pt-2.5 border-t border-[#29334C]/60">
+                        <div className="p-1.5 rounded-lg bg-[#121A2D]">
+                          <span className="text-[9px] text-[#929BB2] block">Pressure Econ</span>
+                          <span className="font-mono font-bold text-[#7545C8] text-[11px]">{player.pressureEcon}</span>
+                        </div>
+                        <div className="p-1.5 rounded-lg bg-[#121A2D]">
+                          <span className="text-[9px] text-[#929BB2] block">Suppression</span>
+                          <span className="font-mono font-bold text-emerald-400 text-[11px]">+{player.econDelta}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* View Profile Action */}
+                    <button
+                      onClick={() => onSelectPlayer(player as unknown as Bowler, 'bowler')}
+                      className="mt-3 w-full py-1.5 rounded-lg bg-[#121A2D] hover:bg-[#7545C8] text-[#C9C3DF] hover:text-white border border-[#29334C] hover:border-[#7545C8] text-[11px] font-bold transition-all flex items-center justify-center gap-1 group-hover:bg-[#7545C8] group-hover:text-white"
+                    >
+                      <span>Full Profile</span>
+                      <ArrowUpRight size={12} />
+                    </button>
+                  </div>
+                );
+              })}
         </div>
       </div>
 

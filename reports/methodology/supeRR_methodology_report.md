@@ -58,12 +58,12 @@ $$\text{Pressure}_{\text{first}} = 0.40 \cdot \text{CollapseFactor}(W, \text{Ove
 ### 3. Rating Models
 
 #### Batting Pressure Index (BPI)
-$$\text{BPI} = \text{BPI}_{\text{raw}} \cdot \left[ 0.68 + 0.32 \cdot \sqrt{\frac{\min(\text{Balls}, 240)}{240}} \right]$$
+$$W_{\text{conf}} = \min\left(1.0, 0.65 + 0.35 \cdot \sqrt{\frac{\min(\text{Balls}, 240)}{240}}\right), \qquad \text{BPI} = \text{BPI}_{\text{raw}} \cdot \left(0.68 + 0.32 \cdot W_{\text{conf}}\right)$$
 where:
 $$\text{BPI}_{\text{raw}} = 0.35 \cdot \min\left(100, \frac{\text{SR}_{\text{press}}}{165} \cdot 100\right) + 0.25 \cdot \text{clamp}(50 + 1.4 \cdot \Delta\text{SR}, 0, 100) + 0.20 \cdot \min\left(100, \frac{\text{RPD}}{42} \cdot 100\right) + 0.10 \cdot \min\left(100, \frac{\text{Bdry}\%}{24} \cdot 100\right) + 0.10 \cdot \text{Consistency}$$
 
 #### Bowling Pressure Index (BPI-Bowl)
-$$\text{BPI}_{\text{bowl}} = \text{BPI}_{\text{bowl\_raw}} \cdot \left[ 0.68 + 0.32 \cdot \sqrt{\frac{\min(\text{Balls}, 240)}{240}} \right]$$
+$$W_{\text{conf}} = \min\left(1.0, 0.65 + 0.35 \cdot \sqrt{\frac{\min(\text{Balls}, 240)}{240}}\right), \qquad \text{BPI}_{\text{bowl}} = \text{BPI}_{\text{bowl\_raw}} \cdot \left(0.68 + 0.32 \cdot W_{\text{conf}}\right)$$
 where:
 $$\text{BPI}_{\text{bowl\_raw}} = 0.35 \cdot \text{clamp}\left(\frac{12.0 - \text{Econ}_{\text{press}}}{5.2} \cdot 100, 0, 100\right) + 0.25 \cdot \text{clamp}(50 + 14 \cdot \Delta\text{Econ}, 0, 100) + 0.20 \cdot \text{clamp}\left(\frac{30 - \min(30, \text{WktSR})}{20} \cdot 100, 0, 100\right) + 0.10 \cdot \min\left(100, \frac{\text{Dot}\%}{46} \cdot 100\right) + 0.10 \cdot \text{Consistency}$$
 

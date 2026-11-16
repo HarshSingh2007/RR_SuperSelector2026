@@ -11,12 +11,14 @@ build/
 out/
 .vite/
 .cache/
+.vercel
 *.tsbuildinfo
 coverage/
 
 # Environment variables, credentials & keys
 .env
 .env.*
+!.env.example
 *.env
 *.pem
 *.key

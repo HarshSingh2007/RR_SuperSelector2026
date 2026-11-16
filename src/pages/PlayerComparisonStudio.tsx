@@ -1,20 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
-  GitCompare,
-  Flame,
-  Target,
-  Trophy,
-  CheckCircle,
   Sparkles,
-  ArrowRight,
-  TrendingUp,
   Download,
-  ShieldAlert,
-  Search,
-  Printer,
-  ChevronDown,
-  Users,
-  FileText,
+  Bookmark,
+  Dna,
+  AlertTriangle,
+  CheckCircle2,
 } from 'lucide-react';
 import {
   Radar,
@@ -23,13 +14,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
 } from 'recharts';
 import { Batter, Bowler } from '../types';
 import { Badge } from '../components/Badge';
@@ -37,10 +22,12 @@ import { PlayerAvatar } from '../components/PlayerAvatar';
 import { MetricTooltip } from '../components/MetricTooltip';
 import {
   CricketBatIcon,
-  CricketBallIcon,
   AllRounderIcon,
   BowlingMotionIcon,
 } from '../components/CricketIcons';
+import { useEcosystem } from '../context/EcosystemContext';
+import { computeBatterDNA, computeBowlerDNA } from '../utils/analyticsEngine';
+import { downloadScoutingReport } from '../services/playerDataService';
 
 interface PlayerComparisonStudioProps {
   batters: Batter[];
@@ -53,26 +40,36 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
   batters,
   bowlers,
   comparisonQueue,
-  onClearQueue,
+  onClearQueue: _onClearQueue,
 }) => {
+  const { dnaFocusPlayer, clearDnaFocus, isShortlisted, toggleShortlist } = useEcosystem();
   const [role, setRole] = useState<'batter' | 'bowler'>('batter');
-  const [compareCount, setCompareCount] = useState<2 | 3>(2);
+  const [compareCount, setCompareCount] = useState<1 | 2 | 3>(2);
 
   // Select player A, B, and C
   const [playerAId, setPlayerAId] = useState<string>(() => {
     if (comparisonQueue.length >= 1) return comparisonQueue[0].id;
-    return role === 'batter' ? batters[0]?.id : bowlers[0]?.id;
+    return batters[0]?.id || '';
   });
 
   const [playerBId, setPlayerBId] = useState<string>(() => {
     if (comparisonQueue.length >= 2) return comparisonQueue[1].id;
-    return role === 'batter' ? batters[1]?.id : bowlers[1]?.id;
+    return batters[1]?.id || '';
   });
 
   const [playerCId, setPlayerCId] = useState<string>(() => {
     if (comparisonQueue.length >= 3) return comparisonQueue[2].id;
-    return role === 'batter' ? batters[2]?.id : bowlers[2]?.id;
+    return batters[2]?.id || '';
   });
+
+  useEffect(() => {
+    if (dnaFocusPlayer) {
+      setRole(dnaFocusPlayer.type);
+      setPlayerAId(dnaFocusPlayer.id);
+      setCompareCount(1);
+      clearDnaFocus();
+    }
+  }, [dnaFocusPlayer, clearDnaFocus]);
 
   const isBatter = role === 'batter';
 
@@ -94,128 +91,30 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
       : bowlers.find((bw) => bw.id === playerCId) || bowlers[2];
   }, [isBatter, playerCId, batters, bowlers]);
 
-  // Construct Multi-dimensional Radar Chart Data
-  const radarData = useMemo(() => {
-    if (!playerA || !playerB) return [];
+  const dnaA = useMemo(
+    () => (playerA ? (isBatter ? computeBatterDNA(playerA as Batter) : computeBowlerDNA(playerA as Bowler)) : null),
+    [playerA, isBatter]
+  );
+  const dnaB = useMemo(
+    () => (playerB ? (isBatter ? computeBatterDNA(playerB as Batter) : computeBowlerDNA(playerB as Bowler)) : null),
+    [playerB, isBatter]
+  );
+  const dnaC = useMemo(
+    () => (playerC ? (isBatter ? computeBatterDNA(playerC as Batter) : computeBowlerDNA(playerC as Bowler)) : null),
+    [playerC, isBatter]
+  );
 
-    if (isBatter) {
-      const bA = playerA as Batter;
-      const bB = playerB as Batter;
-      const bC = playerC as Batter;
-      return [
-        {
-          dimension: 'Pressure Strike Rate',
-          [bA.name]: Math.min(100, Math.round((bA.pressureSR / 220) * 100)),
-          [bB.name]: Math.min(100, Math.round((bB.pressureSR / 220) * 100)),
-          ...(compareCount === 3 && bC
-            ? { [bC.name]: Math.min(100, Math.round((bC.pressureSR / 220) * 100)) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'SR Improvement',
-          [bA.name]: Math.min(100, Math.max(10, Math.round(50 + bA.srDelta * 0.7))),
-          [bB.name]: Math.min(100, Math.max(10, Math.round(50 + bB.srDelta * 0.7))),
-          ...(compareCount === 3 && bC
-            ? { [bC.name]: Math.min(100, Math.max(10, Math.round(50 + bC.srDelta * 0.7))) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Boundary Power',
-          [bA.name]: Math.min(100, Math.round((bA.boundaryPct / 28) * 100)),
-          [bB.name]: Math.min(100, Math.round((bB.boundaryPct / 28) * 100)),
-          ...(compareCount === 3 && bC
-            ? { [bC.name]: Math.min(100, Math.round((bC.boundaryPct / 28) * 100)) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Dismissal Resistance',
-          [bA.name]: Math.min(100, Math.round((bA.dismissalRate / 45) * 100)),
-          [bB.name]: Math.min(100, Math.round((bB.dismissalRate / 45) * 100)),
-          ...(compareCount === 3 && bC
-            ? { [bC.name]: Math.min(100, Math.round((bC.dismissalRate / 45) * 100)) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Match Consistency',
-          [bA.name]: Math.round(bA.consistencyScore),
-          [bB.name]: Math.round(bB.consistencyScore),
-          ...(compareCount === 3 && bC ? { [bC.name]: Math.round(bC.consistencyScore) } : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Sample Volume',
-          [bA.name]: Math.round(bA.confidenceWeight * 100),
-          [bB.name]: Math.round(bB.confidenceWeight * 100),
-          ...(compareCount === 3 && bC
-            ? { [bC.name]: Math.round(bC.confidenceWeight * 100) }
-            : {}),
-          fullMark: 100,
-        },
-      ];
-    } else {
-      const bwA = playerA as Bowler;
-      const bwB = playerB as Bowler;
-      const bwC = playerC as Bowler;
-      return [
-        {
-          dimension: 'Pressure Economy',
-          [bwA.name]: Math.min(100, Math.max(10, Math.round(((12.0 - bwA.pressureEcon) / 6.0) * 100))),
-          [bwB.name]: Math.min(100, Math.max(10, Math.round(((12.0 - bwB.pressureEcon) / 6.0) * 100))),
-          ...(compareCount === 3 && bwC
-            ? { [bwC.name]: Math.min(100, Math.max(10, Math.round(((12.0 - bwC.pressureEcon) / 6.0) * 100))) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Economy Suppression',
-          [bwA.name]: Math.min(100, Math.max(10, Math.round(50 + bwA.econDelta * 15))),
-          [bwB.name]: Math.min(100, Math.max(10, Math.round(50 + bwB.econDelta * 15))),
-          ...(compareCount === 3 && bwC
-            ? { [bwC.name]: Math.min(100, Math.max(10, Math.round(50 + bwC.econDelta * 15))) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Dot Ball Ratio',
-          [bwA.name]: Math.min(100, Math.round((bwA.dotPct / 55) * 100)),
-          [bwB.name]: Math.min(100, Math.round((bwB.dotPct / 55) * 100)),
-          ...(compareCount === 3 && bwC
-            ? { [bwC.name]: Math.min(100, Math.round((bwC.dotPct / 55) * 100)) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Wicket Strike Rate',
-          [bwA.name]: Math.min(100, Math.max(10, Math.round(((25 - Math.min(25, bwA.wicketSR)) / 20) * 100))),
-          [bwB.name]: Math.min(100, Math.max(10, Math.round(((25 - Math.min(25, bwB.wicketSR)) / 20) * 100))),
-          ...(compareCount === 3 && bwC
-            ? { [bwC.name]: Math.min(100, Math.max(10, Math.round(((25 - Math.min(25, bwC.wicketSR)) / 20) * 100))) }
-            : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Match Consistency',
-          [bwA.name]: Math.round(bwA.consistencyScore),
-          [bwB.name]: Math.round(bwB.consistencyScore),
-          ...(compareCount === 3 && bwC ? { [bwC.name]: Math.round(bwC.consistencyScore) } : {}),
-          fullMark: 100,
-        },
-        {
-          dimension: 'Sample Volume',
-          [bwA.name]: Math.round(bwA.confidenceWeight * 100),
-          [bwB.name]: Math.round(bwB.confidenceWeight * 100),
-          ...(compareCount === 3 && bwC
-            ? { [bwC.name]: Math.round(bwC.confidenceWeight * 100) }
-            : {}),
-          fullMark: 100,
-        },
-      ];
-    }
-  }, [playerA, playerB, playerC, compareCount, isBatter]);
+  // Construct 6-Axis Player DNA Radar Chart Data
+  const radarData = useMemo(() => {
+    if (!dnaA || !playerA) return [];
+    return dnaA.dimensions.map((dim, idx) => ({
+      dimension: dim.axis,
+      [playerA.name]: dim.score,
+      ...(compareCount >= 2 && playerB && dnaB ? { [playerB.name]: dnaB.dimensions[idx]?.score ?? 50 } : {}),
+      ...(compareCount === 3 && playerC && dnaC ? { [playerC.name]: dnaC.dimensions[idx]?.score ?? 50 } : {}),
+      fullMark: 100,
+    }));
+  }, [dnaA, dnaB, dnaC, playerA, playerB, playerC, compareCount]);
 
   // Automated Explainable Comparative Verdict Generation
   const comparativeVerdict = useMemo(() => {
@@ -322,16 +221,24 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
         <div>
           <h2 className="text-xl sm:text-2xl font-bold text-[#F7F7FB] flex items-center gap-2">
             <AllRounderIcon size={24} className="text-[#E90074]" />
-            Player Comparison Studio
+            Player DNA &amp; Comparison Studio
           </h2>
           <p className="text-xs text-[#929BB2] mt-0.5">
-            Head-to-head multi-dimensional evaluation with explainable analytical reasoning
+            6-Axis Batter &amp; Bowler DNA fingerprints with head-to-head comparison and downloadable scouting dossiers
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2.5 self-start sm:self-auto">
-          {/* Comparison Mode: 2 Players vs 3 Players */}
+          {/* Studio Mode: 1 Player DNA vs 2 Players vs 3 Players */}
           <div className="flex items-center bg-[#171F35] p-1 rounded-xl border border-[#29334C]">
+            <button
+              onClick={() => setCompareCount(1)}
+              className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all flex items-center gap-1 ${
+                compareCount === 1 ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40' : 'text-[#929BB2]'
+              }`}
+            >
+              <Dna size={12} /> 1-Player DNA
+            </button>
             <button
               onClick={() => setCompareCount(2)}
               className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
@@ -391,7 +298,11 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
       {/* Player Selectors & Head-to-Head Cards */}
       <div
         className={`grid gap-4 ${
-          compareCount === 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-1 md:grid-cols-2'
+          compareCount === 1
+            ? 'grid-cols-1'
+            : compareCount === 3
+              ? 'grid-cols-1 md:grid-cols-3'
+              : 'grid-cols-1 md:grid-cols-2'
         }`}
       >
         {/* Player A Card */}
@@ -455,6 +366,7 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
         </div>
 
         {/* Player B Card */}
+        {compareCount >= 2 && (
         <div className="rr-glass-card p-5 border-l-4 border-l-[#7545C8]">
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#7545C8] block mb-2">
             Selected Player 2
@@ -513,6 +425,7 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
             </div>
           )}
         </div>
+        )}
 
         {/* Optional Player C Card (for 3-Way Tri-Comparison) */}
         {compareCount === 3 && (
@@ -577,35 +490,108 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
         )}
       </div>
 
-      {/* SECTION: WHO PERFORMS BETTER UNDER PRESSURE? */}
+      {/* SECTION: WHO PERFORMS BETTER UNDER PRESSURE? / SINGLE PLAYER DNA */}
       <div className="rr-glass-card p-6 border-[#E90074]/50 bg-gradient-to-r from-[#171F35] via-[#121A2D] to-[#171F35] relative overflow-hidden">
-        <div className="flex items-center gap-2 mb-2">
-          <Sparkles size={18} className="text-[#E90074]" />
-          <h3 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-[#F7F7FB]">
-            WHO PERFORMS BETTER UNDER PRESSURE?
-          </h3>
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <div className="flex items-center gap-2">
+            <Sparkles size={18} className="text-[#E90074]" />
+            <h3 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-[#F7F7FB]">
+              {compareCount === 1 && playerA
+                ? `${playerA.name.toUpperCase()} — 6-AXIS PLAYER DNA DIAGNOSTIC`
+                : 'WHO PERFORMS BETTER UNDER PRESSURE?'}
+            </h3>
+          </div>
+          {playerA && dnaA && (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono font-bold">
+                DNA Score: {dnaA.overallDNA}/100
+              </span>
+              <span
+                className={`px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold border ${
+                  dnaA.confidence.level === 'robust'
+                    ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30'
+                    : dnaA.confidence.level === 'moderate'
+                      ? 'bg-amber-500/15 text-amber-300 border-amber-500/30'
+                      : 'bg-rose-500/15 text-rose-300 border-rose-500/30'
+                }`}
+              >
+                {dnaA.confidence.label} ({dnaA.confidence.weight}x)
+              </span>
+              <button
+                onClick={() => toggleShortlist(playerA.id, 'Player DNA Studio')}
+                className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-bold transition-colors ${
+                  isShortlisted(playerA.id) || isShortlisted(playerA.name)
+                    ? 'bg-[#E90074]/20 border-[#E90074] text-[#FF47A3]'
+                    : 'bg-[#121A2D] border-[#29334C] text-[#C9C3DF] hover:text-white'
+                }`}
+              >
+                <Bookmark size={12} /> Shortlist {playerA.name.split(' ')[0]}
+              </button>
+              <button
+                onClick={() => downloadScoutingReport(playerA, role)}
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#121A2D] border border-[#29334C] text-xs font-bold text-[#C9C3DF] hover:text-white transition-colors"
+              >
+                <Download size={12} className="text-cyan-400" /> Scouting Report (.md)
+              </button>
+            </div>
+          )}
         </div>
         <p className="text-xs sm:text-sm text-[#C9C3DF] leading-relaxed">
-          {comparativeVerdict}
+          {compareCount === 1 && playerA && dnaA
+            ? `${playerA.name} scores ${dnaA.overallDNA}/100 on 6-axis ${isBatter ? 'Batting' : 'Bowling'} DNA across ${playerA.matchesAnalysed} matches (${playerA.pressureMatches} high-pressure). Key edge: ${dnaA.strengths[0]}.`
+            : comparativeVerdict}
         </p>
+
+        {/* DNA Strengths, Weaknesses & Sample Warnings */}
+        {dnaA && (
+          <div className="mt-4 pt-4 border-t border-[#29334C]/70 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div className="p-3 rounded-xl bg-[#0F1626] border border-emerald-500/25">
+              <span className="font-bold text-emerald-400 flex items-center gap-1.5 mb-1">
+                <CheckCircle2 size={13} /> {playerA?.name} Top DNA Strengths
+              </span>
+              <ul className="space-y-1 text-[#C9C3DF] list-disc pl-4">
+                {dnaA.strengths.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="p-3 rounded-xl bg-[#0F1626] border border-amber-500/25">
+              <span className="font-bold text-amber-400 flex items-center gap-1.5 mb-1">
+                <AlertTriangle size={13} /> Development &amp; Sample Flags
+              </span>
+              <ul className="space-y-1 text-[#C9C3DF] list-disc pl-4">
+                {dnaA.weaknesses.map((w) => (
+                  <li key={w}>{w}</li>
+                ))}
+                {dnaA.confidence.warning && <li className="text-amber-300">{dnaA.confidence.warning}</li>}
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Visual Comparison: Radar Chart & Metrics Difference Table */}
+      {/* Visual Comparison: 6-Axis DNA Radar & Metrics Difference Table */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Radar Chart */}
         <div className="lg:col-span-6 rr-glass-card p-5">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h3 className="text-sm font-bold text-[#F7F7FB]">Multi-Axis Skill Radar</h3>
-              <p className="text-xs text-[#929BB2]">Multi-dimensional pressure capabilities</p>
+              <h3 className="text-sm font-bold text-[#F7F7FB]">6-Axis Player DNA Fingerprint</h3>
+              <p className="text-xs text-[#929BB2]">
+                {isBatter
+                  ? 'Power Hitting · Strike Rotation · Consistency · Finishing · Pressure Perf. · Boundaries'
+                  : 'Economy · Wicket-Taking · Death · Powerplay · Middle Control · Consistency'}
+              </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 text-xs">
               <span className="flex items-center gap-1 text-[#E90074] font-semibold">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#E90074]" /> {playerA?.name.split(' ')[0]}
               </span>
-              <span className="flex items-center gap-1 text-[#7545C8] font-semibold">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#7545C8]" /> {playerB?.name.split(' ')[0]}
-              </span>
+              {compareCount >= 2 && playerB && (
+                <span className="flex items-center gap-1 text-[#7545C8] font-semibold">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#7545C8]" /> {playerB?.name.split(' ')[0]}
+                </span>
+              )}
               {compareCount === 3 && playerC && (
                 <span className="flex items-center gap-1 text-sky-400 font-semibold">
                   <span className="w-2.5 h-2.5 rounded-full bg-sky-400" /> {playerC?.name.split(' ')[0]}
@@ -627,13 +613,15 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
                   fill="#E90074"
                   fillOpacity={0.35}
                 />
-                <Radar
-                  name={playerB?.name}
-                  dataKey={playerB?.name}
-                  stroke="#7545C8"
-                  fill="#7545C8"
-                  fillOpacity={0.35}
-                />
+                {compareCount >= 2 && playerB && (
+                  <Radar
+                    name={playerB?.name}
+                    dataKey={playerB?.name}
+                    stroke="#7545C8"
+                    fill="#7545C8"
+                    fillOpacity={0.35}
+                  />
+                )}
                 {compareCount === 3 && playerC && (
                   <Radar
                     name={playerC?.name}
@@ -657,12 +645,36 @@ export const PlayerComparisonStudio: React.FC<PlayerComparisonStudioProps> = ({
           </div>
         </div>
 
-        {/* Direct Metrics Comparison Table */}
+        {/* Direct Metrics Comparison Table OR Single Player DNA Breakdown */}
         <div className="lg:col-span-6 rr-glass-card p-5">
-          <h3 className="text-sm font-bold text-[#F7F7FB] mb-1">Direct Statistical Comparison</h3>
-          <p className="text-xs text-[#929BB2] mb-4">Direct head-to-head metrics breakdown</p>
+          <h3 className="text-sm font-bold text-[#F7F7FB] mb-1">
+            {compareCount === 1 ? '6-Axis DNA Score Breakdown' : 'Direct Statistical Comparison'}
+          </h3>
+          <p className="text-xs text-[#929BB2] mb-4">
+            {compareCount === 1 && playerA
+              ? `Exact dimensional scores and underlying CSV basis for ${playerA.name}`
+              : 'Direct head-to-head metrics breakdown'}
+          </p>
 
-          {isBatter && playerA && playerB ? (
+          {compareCount === 1 && dnaA ? (
+            <div className="space-y-3 text-xs">
+              {dnaA.dimensions.map((d) => (
+                <div key={d.axis} className="p-3 rounded-xl bg-[#121A2D] border border-[#29334C]">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-bold text-white">{d.axis}</span>
+                    <span className="font-mono font-black text-cyan-300">{d.score} / 100</span>
+                  </div>
+                  <div className="w-full h-1.5 rounded-full bg-[#0B1020] overflow-hidden mb-1">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-[#E90074] to-cyan-400"
+                      style={{ width: `${d.score}%` }}
+                    />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#929BB2]">{d.rawLabel}</span>
+                </div>
+              ))}
+            </div>
+          ) : isBatter && playerA && playerB ? (
             <div className="space-y-3 text-xs">
               <div
                 className={`grid p-2.5 rounded-xl bg-[#121A2D] font-mono items-center ${
